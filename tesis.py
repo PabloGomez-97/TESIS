@@ -62,7 +62,7 @@ serie_1979.plot(figsize=(12,4), alpha=0.6) # Gráfico
 # %%
 
 # Definir umbral de precipitación (p. ej., 1 mm/día)
-umbral = 3.0
+umbral = 0.1
 prec = serie_1979.fillna(0)
 
 # Convertir a días secos = 1 si < umbral - dry es una serie binaria: 1 = seco, 0 = lluvioso
