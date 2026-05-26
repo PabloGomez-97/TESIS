@@ -1,0 +1,11 @@
+numpy
+pandas
+xarray
+netCDF4
+cftime
+h5netcdf
+dask
+scipy
+matplotlib
+cartopy
+shapely
