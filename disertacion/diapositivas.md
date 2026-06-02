@@ -36,11 +36,13 @@
 
 ## Diapositiva 4 — Datos y dominio común
 
-| Producto | Rol | Periodo principal |
-|----------|-----|-------------------|
-| CR2MET v2.5 | Referencia | 1980–2014 / P1–P2 según análisis |
-| ALADIN CHP12 histórico | Modelo regional | 1980–2014 |
-| Máscara Chile | Natural Earth sobre **grilla ALADIN** | ~3 587 celdas |
+
+| Producto               | Rol                                   | Periodo principal                |
+| ---------------------- | ------------------------------------- | -------------------------------- |
+| CR2MET v2.5            | Referencia                            | 1980–2014 / P1–P2 según análisis |
+| ALADIN CHP12 histórico | Modelo regional                       | 1980–2014                        |
+| Máscara Chile          | Natural Earth sobre **grilla ALADIN** | ~3 587 celdas                    |
+
 
 **Regrillado:** CR2MET (lat/lon 1D) → interpolación **lineal** a centros de celda ALADIN; ALADIN en grilla nativa.
 
@@ -60,6 +62,8 @@ flowchart LR
   P6 --> P7[P7 Climatología dry spells]
   P7 --> P8[P8 Tendencias ALADIN]
 ```
+
+
 
 **Mensaje:** primero se demuestra el sesgo; luego se separa señal climática en referencia vs modelo; la calibración habilita comparar dry spells; las tendencias cierran el periodo histórico.
 
@@ -96,11 +100,13 @@ flowchart LR
 
 **Pregunta 3 responde:** ¿En qué medida difieren CR2MET y ALADIN en **frecuencia de días húmedos** e **intensidad** sobre el mismo dominio y periodo **1980–2014**, usando wet day ≥ **1 mm/día**?
 
-| Métrica (media espacial Chile) | CR2MET | ALADIN | Δ |
-|-------------------------------|--------|--------|---|
-| Fracción wet days | **20,9 %** | **30,7 %** | +9,8 pp |
-| Precip. media (todos los días) | **2,60** mm/d | **5,42** mm/d | +2,82 |
-| Precip. media (solo wet days) | **8,66** mm/d | **13,55** mm/d | +4,89 |
+
+| Métrica (media espacial Chile) | CR2MET        | ALADIN         | Δ       |
+| ------------------------------ | ------------- | -------------- | ------- |
+| Fracción wet days              | **20,9 %**    | **30,7 %**     | +9,8 pp |
+| Precip. media (todos los días) | **2,60** mm/d | **5,42** mm/d  | +2,82   |
+| Precip. media (solo wet days)  | **8,66** mm/d | **13,55** mm/d | +4,89   |
+
 
 **Conclusión:** con el mismo 1 mm, ALADIN es más “lluvioso” en frecuencia e intensidad — no son intercambiables sin calibración.
 
@@ -112,11 +118,13 @@ flowchart LR
 
 **Pregunta 5 responde:** ¿Cómo cambió la climatología de precipitación en **CR2MET** entre **P1 (1980–2000)** y **P2 (2001–2021)** a escala Chile (~30 000 celdas)?
 
-| Métrica (media nacional) | P1 | P2 | Δ |
-|--------------------------|-----|-----|-----|
-| Fracción wet days (≥1 mm) | **37,1 %** | **36,2 %** | **−0,9 pp** |
-| Precip. media (todos los días) | **3,85** | **3,63** mm/d | **−0,21** |
-| Precip. media (wet days) | **8,84** | **8,40** mm/d | **−0,44** |
+
+| Métrica (media nacional)       | P1         | P2            | Δ           |
+| ------------------------------ | ---------- | ------------- | ----------- |
+| Fracción wet days (≥1 mm)      | **37,1 %** | **36,2 %**    | **−0,9 pp** |
+| Precip. media (todos los días) | **3,85**   | **3,63** mm/d | **−0,21**   |
+| Precip. media (wet days)       | **8,84**   | **8,40** mm/d | **−0,44**   |
+
 
 **Patrón espacial:** centro-sur con Δ negativos (sequedización); ~20–26 % de píxeles con Δ > 0.
 
@@ -128,17 +136,19 @@ flowchart LR
 
 ## Diapositiva 10 — Pregunta 4: risk ratio de dry spells largos
 
-**Pregunta 4 responde:** ¿Cambió la probabilidad de dry spells con duración ≥ **D** días entre **P1 y P2** en cuatro regiones, usando día seco CR2MET **&lt; 1 mm**?
+**Pregunta 4 responde:** ¿Cambió la probabilidad de dry spells con duración ≥ **D** días entre **P1 y P2** en cuatro regiones, usando día seco CR2MET **< 1 mm**?
 
 - **RR = P₂/P₁**; IC95 por **bootstrap** (1 000 réplicas, remuestreo de años de inicio de racha).
 - Rachas: inicio **marzo–noviembre**; regiones: Coquimbo, O'Higgins, La Araucanía, Los Lagos.
 
 **Resultado (τ = 1 mm, umbral 20 d):**
 
-| Región | RR@20d | IC95 | Significativo |
-|--------|--------|------|---------------|
-| Coquimbo | ~1,14 | 0,96–1,36 | No (IC incluye 1) |
-| Otras regiones | ~1,0–1,1 | amplios | No |
+
+| Región         | RR@20d   | IC95      | Significativo     |
+| -------------- | -------- | --------- | ----------------- |
+| Coquimbo       | ~1,14    | 0,96–1,36 | No (IC incluye 1) |
+| Otras regiones | ~1,0–1,1 | amplios   | No                |
+
 
 **Sensibilidad (τ = 0,1 mm):** Coquimbo RR ≈ **1,17**, IC **0,99–1,41** — aún no excluye 1.
 
@@ -154,14 +164,16 @@ flowchart LR
 
 **Definición:** fracción integrada = promedio espacial sobre Chile de (% días con pr ≥ τ) por celda, 1980–2014, 3 587 celdas.
 
-| τ referencia CR2MET | F integrada CR2MET | F ALADIN (mismo τ) | **τ* ALADIN** |
-|---------------------|--------------------|--------------------|---------------|
-| 0,1 mm | 23,47 % | 40,66 % | **3,67 mm** |
-| 1,0 mm | 20,94 % | 30,68 % | **5,285 mm** |
+
+| τ referencia CR2MET | F integrada CR2MET | F ALADIN (mismo τ) | *τ ALADIN**  |
+| ------------------- | ------------------ | ------------------ | ------------ |
+| 0,1 mm              | 23,47 %            | 40,66 %            | **3,67 mm**  |
+| 1,0 mm              | 20,94 %            | 30,68 %            | **5,285 mm** |
+
 
 **Referencia:** Martinez-Villalobos et al. (2022), §3b — umbral dependiente del modelo.
 
-**Opción B (P7–P8):** día seco CR2MET &lt; 1 mm; ALADIN &lt; **5,285 mm**.
+**Opción B (P7–P8):** día seco CR2MET < 1 mm; ALADIN < **5,285 mm**.
 
 *(Figura: `pregunta6_umbral_wetdays.ipynb` — curva F(τ) y τ*)*
 
@@ -171,10 +183,12 @@ flowchart LR
 
 **Pregunta 7 responde:** Con umbrales calibrados (Opción B), ¿Cómo difieren **duración media** y **extremos (t99)** de dry spells entre ALADIN y CR2MET en **1980–2014**?
 
-| Métrica (media espacial) | CR2MET | ALADIN | Δ (ALADIN−CR2MET) |
-|--------------------------|--------|--------|-------------------|
-| Duración media | **42,5 d** | **35,1 d** | **−7,9 d** |
-| t99 (p99) | **221,8 d** | **178,2 d** | **−44,7 d** |
+
+| Métrica (media espacial) | CR2MET      | ALADIN      | Δ (ALADIN−CR2MET) |
+| ------------------------ | ----------- | ----------- | ----------------- |
+| Duración media           | **42,5 d**  | **35,1 d**  | **−7,9 d**        |
+| t99 (p99)                | **221,8 d** | **178,2 d** | **−44,7 d**       |
+
 
 **Conclusión:** tras igualar frecuencia de wet days, ALADIN produce rachas **más cortas**, especialmente en la cola extrema — subestima persistencia de sequía respecto a CR2MET.
 
@@ -184,12 +198,14 @@ flowchart LR
 
 ## Diapositiva 13 — Pregunta 8: tendencias en ALADIN
 
-**Pregunta 8 responde:** ¿Existen **tendencias lineales significativas** (p &lt; 0,05) en duración de dry spells en ALADIN durante **1980–2014**?
+**Pregunta 8 responde:** ¿Existen **tendencias lineales significativas** (p < 0,05) en duración de dry spells en ALADIN durante **1980–2014**?
 
-| Métrica | Pendiente media (d/década) | % celdas p&lt;0,05 |
-|---------|------------------------------|-------------------|
-| Duración media | **−0,027** | **0,035 %** |
-| t99 | **+0,001** | **0,12 %** |
+
+| Métrica        | Pendiente media (d/década) | % celdas p<0,05 |
+| -------------- | -------------------------- | --------------- |
+| Duración media | **−0,027**                 | **0,035 %**     |
+| t99            | **+0,001**                 | **0,12 %**      |
+
 
 **Conclusión:** pendientes cercanas a cero y casi ninguna celda significativa → **sin tendencia robusta** a escala Chile en el histórico ALADIN.
 
