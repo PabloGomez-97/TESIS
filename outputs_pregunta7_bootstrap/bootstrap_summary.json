@@ -1,0 +1,62 @@
+[
+  {
+    "Escenario": "Forma A — Opcion B (tau* integrado)",
+    "Metrica": "Duracion media",
+    "Delta medio espacial (dias)": -7.867584845333646,
+    "Delta mediano espacial (dias)": -2.1806985421010943,
+    "% celdas significativas": 73.0387992070235,
+    "% ALADIN > CR2MET (sig.)": 7.618238459359955,
+    "% ALADIN < CR2MET (sig.)": 65.42056074766354,
+    "Celdas validas": 3531
+  },
+  {
+    "Escenario": "Forma A — Opcion B (tau* integrado)",
+    "Metrica": "t99 (p99)",
+    "Delta medio espacial (dias)": -44.7369725290286,
+    "Delta mediano espacial (dias)": -16.8599999999999,
+    "% celdas significativas": 46.530727839139054,
+    "% ALADIN > CR2MET (sig.)": 3.7099971679410935,
+    "% ALADIN < CR2MET (sig.)": 42.82073067119796,
+    "Celdas validas": 3531
+  },
+  {
+    "Escenario": "Forma B — Mismo umbral en CR2MET y ALADIN",
+    "Metrica": "Duracion media",
+    "Delta medio espacial (dias)": -27.46770524773632,
+    "Delta mediano espacial (dias)": -8.331888384519962,
+    "% celdas significativas": 97.97240214024218,
+    "% ALADIN > CR2MET (sig.)": 0.47873838355392845,
+    "% ALADIN < CR2MET (sig.)": 97.49366375668825,
+    "Celdas validas": 3551
+  },
+  {
+    "Escenario": "Forma B — Mismo umbral en CR2MET y ALADIN",
+    "Metrica": "t99 (p99)",
+    "Delta medio espacial (dias)": -135.38394818361022,
+    "Delta mediano espacial (dias)": -69.68000000000006,
+    "% celdas significativas": 93.21317938608843,
+    "% ALADIN > CR2MET (sig.)": 0.19712756969867645,
+    "% ALADIN < CR2MET (sig.)": 93.01605181638975,
+    "Celdas validas": 3551
+  },
+  {
+    "Escenario": "Forma C — tau* local (wet-day matching por pixel)",
+    "Metrica": "Duracion media",
+    "Delta medio espacial (dias)": -6.6534984503689465,
+    "Delta mediano espacial (dias)": -1.8862452297992363,
+    "% celdas significativas": 48.689893463864095,
+    "% ALADIN > CR2MET (sig.)": 0.17276130146847107,
+    "% ALADIN < CR2MET (sig.)": 48.51713216239562,
+    "Celdas validas": 3473
+  },
+  {
+    "Escenario": "Forma C — tau* local (wet-day matching por pixel)",
+    "Metrica": "t99 (p99)",
+    "Delta medio espacial (dias)": -35.296055283616454,
+    "Delta mediano espacial (dias)": -6.639999999999873,
+    "% celdas significativas": 30.348401957961418,
+    "% ALADIN > CR2MET (sig.)": 4.463000287935502,
+    "% ALADIN < CR2MET (sig.)": 25.885401670025914,
+    "Celdas validas": 3473
+  }
+]

@@ -1,0 +1,586 @@
+{
+  "summary": [
+    {
+      "Region": "Coquimbo",
+      "Periodo": "1980-2014",
+      "Dry spells totales": 165889,
+      "Spells >= 20 d": 25522,
+      "Probabilidad (%)": 15.385
+    },
+    {
+      "Region": "Coquimbo",
+      "Periodo": "2040-2074",
+      "Dry spells totales": 145899,
+      "Spells >= 20 d": 28571,
+      "Probabilidad (%)": 19.5827
+    },
+    {
+      "Region": "O'Higgins",
+      "Periodo": "1980-2014",
+      "Dry spells totales": 121591,
+      "Spells >= 20 d": 7015,
+      "Probabilidad (%)": 5.7693
+    },
+    {
+      "Region": "O'Higgins",
+      "Periodo": "2040-2074",
+      "Dry spells totales": 108403,
+      "Spells >= 20 d": 8159,
+      "Probabilidad (%)": 7.5265
+    },
+    {
+      "Region": "La Araucanía",
+      "Periodo": "1980-2014",
+      "Dry spells totales": 322205,
+      "Spells >= 20 d": 2397,
+      "Probabilidad (%)": 0.7439
+    },
+    {
+      "Region": "La Araucanía",
+      "Periodo": "2040-2074",
+      "Dry spells totales": 301531,
+      "Spells >= 20 d": 4118,
+      "Probabilidad (%)": 1.3657
+    },
+    {
+      "Region": "Los Lagos",
+      "Periodo": "1980-2014",
+      "Dry spells totales": 471361,
+      "Spells >= 20 d": 601,
+      "Probabilidad (%)": 0.1275
+    },
+    {
+      "Region": "Los Lagos",
+      "Periodo": "2040-2074",
+      "Dry spells totales": 451076,
+      "Spells >= 20 d": 1291,
+      "Probabilidad (%)": 0.2862
+    }
+  ],
+  "rr_table": [
+    {
+      "Region": "Coquimbo",
+      "Pixeles": 239,
+      "RR observado": 1.2728,
+      "RR bootstrap mediano": 1.2721,
+      "IC95 inferior": 1.0943,
+      "IC95 superior": 1.4772,
+      "Cruza RR=1": false,
+      "Sig aumento": true,
+      "Sig disminucion": false
+    },
+    {
+      "Region": "O'Higgins",
+      "Pixeles": 110,
+      "RR observado": 1.3046,
+      "RR bootstrap mediano": 1.3052,
+      "IC95 inferior": 1.0415,
+      "IC95 superior": 1.6254,
+      "Cruza RR=1": false,
+      "Sig aumento": true,
+      "Sig disminucion": false
+    },
+    {
+      "Region": "La Araucanía",
+      "Pixeles": 223,
+      "RR observado": 1.8358,
+      "RR bootstrap mediano": 1.8699,
+      "IC95 inferior": 1.1579,
+      "IC95 superior": 3.1185,
+      "Cruza RR=1": false,
+      "Sig aumento": true,
+      "Sig disminucion": false
+    },
+    {
+      "Region": "Los Lagos",
+      "Pixeles": 324,
+      "RR observado": 2.2447,
+      "RR bootstrap mediano": 2.3467,
+      "IC95 inferior": 0.913,
+      "IC95 superior": 9.0646,
+      "Cruza RR=1": true,
+      "Sig aumento": false,
+      "Sig disminucion": false
+    }
+  ],
+  "sig_table": [
+    {
+      "Region": "Coquimbo",
+      "RR @ 20d": 1.2728,
+      "IC95 inf": 1.0943,
+      "IC95 sup": 1.4772,
+      "Significancia": "aumento"
+    },
+    {
+      "Region": "O'Higgins",
+      "RR @ 20d": 1.3046,
+      "IC95 inf": 1.0415,
+      "IC95 sup": 1.6254,
+      "Significancia": "aumento"
+    },
+    {
+      "Region": "La Araucanía",
+      "RR @ 20d": 1.8358,
+      "IC95 inf": 1.1579,
+      "IC95 sup": 3.1185,
+      "Significancia": "aumento"
+    },
+    {
+      "Region": "Los Lagos",
+      "RR @ 20d": 2.2447,
+      "IC95 inf": 0.913,
+      "IC95 sup": 9.0646,
+      "Significancia": "no"
+    }
+  ],
+  "curves": {
+    "Coquimbo": [
+      {
+        "Umbral (dias)": 5,
+        "RR": 1.0637,
+        "RR bootstrap mediano": 1.0629,
+        "IC95 inferior": 0.9972,
+        "IC95 superior": 1.1335,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 59.0467,
+        "P2 (%)": 62.8051
+      },
+      {
+        "Umbral (dias)": 10,
+        "RR": 1.1417,
+        "RR bootstrap mediano": 1.1403,
+        "IC95 inferior": 1.0472,
+        "IC95 superior": 1.2461,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 35.616,
+        "P2 (%)": 40.6631
+      },
+      {
+        "Umbral (dias)": 15,
+        "RR": 1.2082,
+        "RR bootstrap mediano": 1.2061,
+        "IC95 inferior": 1.074,
+        "IC95 superior": 1.3639,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 23.0775,
+        "P2 (%)": 27.8823
+      },
+      {
+        "Umbral (dias)": 20,
+        "RR": 1.2728,
+        "RR bootstrap mediano": 1.2721,
+        "IC95 inferior": 1.0943,
+        "IC95 superior": 1.4772,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 15.385,
+        "P2 (%)": 19.5827
+      },
+      {
+        "Umbral (dias)": 25,
+        "RR": 1.2832,
+        "RR bootstrap mediano": 1.2788,
+        "IC95 inferior": 1.0735,
+        "IC95 superior": 1.5397,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 11.0905,
+        "P2 (%)": 14.2311
+      },
+      {
+        "Umbral (dias)": 30,
+        "RR": 1.4227,
+        "RR bootstrap mediano": 1.4206,
+        "IC95 inferior": 1.1801,
+        "IC95 superior": 1.6844,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 8.1886,
+        "P2 (%)": 11.6498
+      },
+      {
+        "Umbral (dias)": 35,
+        "RR": 1.4163,
+        "RR bootstrap mediano": 1.4148,
+        "IC95 inferior": 1.1697,
+        "IC95 superior": 1.6902,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 6.5206,
+        "P2 (%)": 9.2352
+      },
+      {
+        "Umbral (dias)": 40,
+        "RR": 1.3675,
+        "RR bootstrap mediano": 1.3661,
+        "IC95 inferior": 1.1556,
+        "IC95 superior": 1.6114,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 5.5278,
+        "P2 (%)": 7.5593
+      },
+      {
+        "Umbral (dias)": 50,
+        "RR": 1.3665,
+        "RR bootstrap mediano": 1.3625,
+        "IC95 inferior": 1.147,
+        "IC95 superior": 1.619,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 4.122,
+        "P2 (%)": 5.6327
+      },
+      {
+        "Umbral (dias)": 60,
+        "RR": 1.4251,
+        "RR bootstrap mediano": 1.4238,
+        "IC95 inferior": 1.2156,
+        "IC95 superior": 1.671,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 3.3233,
+        "P2 (%)": 4.7362
+      }
+    ],
+    "O'Higgins": [
+      {
+        "Umbral (dias)": 5,
+        "RR": 1.0414,
+        "RR bootstrap mediano": 1.04,
+        "IC95 inferior": 0.9666,
+        "IC95 superior": 1.1282,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 41.8288,
+        "P2 (%)": 43.5606
+      },
+      {
+        "Umbral (dias)": 10,
+        "RR": 1.1547,
+        "RR bootstrap mediano": 1.1521,
+        "IC95 inferior": 1.0217,
+        "IC95 superior": 1.3182,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 18.1272,
+        "P2 (%)": 20.9321
+      },
+      {
+        "Umbral (dias)": 15,
+        "RR": 1.1774,
+        "RR bootstrap mediano": 1.1767,
+        "IC95 inferior": 0.9989,
+        "IC95 superior": 1.4007,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 9.902,
+        "P2 (%)": 11.6583
+      },
+      {
+        "Umbral (dias)": 20,
+        "RR": 1.3046,
+        "RR bootstrap mediano": 1.3052,
+        "IC95 inferior": 1.0415,
+        "IC95 superior": 1.6254,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 5.7693,
+        "P2 (%)": 7.5265
+      },
+      {
+        "Umbral (dias)": 25,
+        "RR": 1.2628,
+        "RR bootstrap mediano": 1.2625,
+        "IC95 inferior": 0.9899,
+        "IC95 superior": 1.6127,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 3.9937,
+        "P2 (%)": 5.0432
+      },
+      {
+        "Umbral (dias)": 30,
+        "RR": 1.4319,
+        "RR bootstrap mediano": 1.4327,
+        "IC95 inferior": 1.1112,
+        "IC95 superior": 1.8473,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 2.7946,
+        "P2 (%)": 4.0017
+      },
+      {
+        "Umbral (dias)": 35,
+        "RR": 1.3801,
+        "RR bootstrap mediano": 1.3784,
+        "IC95 inferior": 1.048,
+        "IC95 superior": 1.7931,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 2.3275,
+        "P2 (%)": 3.2121
+      },
+      {
+        "Umbral (dias)": 40,
+        "RR": 1.3291,
+        "RR bootstrap mediano": 1.3271,
+        "IC95 inferior": 1.012,
+        "IC95 superior": 1.7677,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 1.8365,
+        "P2 (%)": 2.4409
+      },
+      {
+        "Umbral (dias)": 50,
+        "RR": 1.4038,
+        "RR bootstrap mediano": 1.4086,
+        "IC95 inferior": 1.0118,
+        "IC95 superior": 1.9584,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 1.3373,
+        "P2 (%)": 1.8773
+      },
+      {
+        "Umbral (dias)": 60,
+        "RR": 1.7278,
+        "RR bootstrap mediano": 1.7366,
+        "IC95 inferior": 1.174,
+        "IC95 superior": 2.5908,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.8948,
+        "P2 (%)": 1.5461
+      }
+    ],
+    "La Araucanía": [
+      {
+        "Umbral (dias)": 5,
+        "RR": 1.2132,
+        "RR bootstrap mediano": 1.2181,
+        "IC95 inferior": 1.0925,
+        "IC95 superior": 1.349,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 25.3007,
+        "P2 (%)": 30.695
+      },
+      {
+        "Umbral (dias)": 10,
+        "RR": 1.3509,
+        "RR bootstrap mediano": 1.3541,
+        "IC95 inferior": 1.1441,
+        "IC95 superior": 1.6129,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 7.0328,
+        "P2 (%)": 9.5008
+      },
+      {
+        "Umbral (dias)": 15,
+        "RR": 1.6401,
+        "RR bootstrap mediano": 1.6631,
+        "IC95 inferior": 1.2176,
+        "IC95 superior": 2.2635,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 2.0804,
+        "P2 (%)": 3.4119
+      },
+      {
+        "Umbral (dias)": 20,
+        "RR": 1.8358,
+        "RR bootstrap mediano": 1.8699,
+        "IC95 inferior": 1.1579,
+        "IC95 superior": 3.1185,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.7439,
+        "P2 (%)": 1.3657
+      },
+      {
+        "Umbral (dias)": 25,
+        "RR": 2.275,
+        "RR bootstrap mediano": 2.3354,
+        "IC95 inferior": 1.1482,
+        "IC95 superior": 5.0882,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.2477,
+        "P2 (%)": 0.5635
+      },
+      {
+        "Umbral (dias)": 30,
+        "RR": 3.7092,
+        "RR bootstrap mediano": 3.9762,
+        "IC95 inferior": 1.3713,
+        "IC95 superior": 12.5387,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0593,
+        "P2 (%)": 0.2199
+      },
+      {
+        "Umbral (dias)": 35,
+        "RR": 2.5765,
+        "RR bootstrap mediano": 2.3706,
+        "IC95 inferior": 0.5409,
+        "IC95 superior": 9.0756,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0332,
+        "P2 (%)": 0.0856
+      },
+      {
+        "Umbral (dias)": 40,
+        "RR": 4.6779,
+        "RR bootstrap mediano": 4.07,
+        "IC95 inferior": 0.506,
+        "IC95 superior": 26.6818,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.014,
+        "P2 (%)": 0.0653
+      },
+      {
+        "Umbral (dias)": 50,
+        "RR": 5.1586,
+        "RR bootstrap mediano": 4.0745,
+        "IC95 inferior": 0.0,
+        "IC95 superior": 75.7556,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.009,
+        "P2 (%)": 0.0464
+      },
+      {
+        "Umbral (dias)": 60,
+        "RR": 11.4336,
+        "RR bootstrap mediano": 8.2322,
+        "IC95 inferior": 0.0,
+        "IC95 superior": 115.8032,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0031,
+        "P2 (%)": 0.0355
+      }
+    ],
+    "Los Lagos": [
+      {
+        "Umbral (dias)": 5,
+        "RR": 1.2555,
+        "RR bootstrap mediano": 1.2618,
+        "IC95 inferior": 1.1112,
+        "IC95 superior": 1.4376,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 18.2238,
+        "P2 (%)": 22.8802
+      },
+      {
+        "Umbral (dias)": 10,
+        "RR": 1.4714,
+        "RR bootstrap mediano": 1.4727,
+        "IC95 inferior": 1.146,
+        "IC95 superior": 1.9237,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 3.3234,
+        "P2 (%)": 4.8899
+      },
+      {
+        "Umbral (dias)": 15,
+        "RR": 1.753,
+        "RR bootstrap mediano": 1.7477,
+        "IC95 inferior": 1.0099,
+        "IC95 superior": 3.3725,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.6585,
+        "P2 (%)": 1.1544
+      },
+      {
+        "Umbral (dias)": 20,
+        "RR": 2.2447,
+        "RR bootstrap mediano": 2.3467,
+        "IC95 inferior": 0.913,
+        "IC95 superior": 9.0646,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.1275,
+        "P2 (%)": 0.2862
+      },
+      {
+        "Umbral (dias)": 25,
+        "RR": 7.6413,
+        "RR bootstrap mediano": 8.2672,
+        "IC95 inferior": 1.9846,
+        "IC95 superior": 33.1811,
+        "Significativo aumento": true,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0102,
+        "P2 (%)": 0.0778
+      },
+      {
+        "Umbral (dias)": 30,
+        "RR": 21.7354,
+        "RR bootstrap mediano": 18.7539,
+        "IC95 inferior": 0.0,
+        "IC95 superior": 95.7849,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0011,
+        "P2 (%)": 0.0231
+      },
+      {
+        "Umbral (dias)": 35,
+        "RR": NaN,
+        "RR bootstrap mediano": NaN,
+        "IC95 inferior": NaN,
+        "IC95 superior": NaN,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0,
+        "P2 (%)": 0.012
+      },
+      {
+        "Umbral (dias)": 40,
+        "RR": NaN,
+        "RR bootstrap mediano": NaN,
+        "IC95 inferior": NaN,
+        "IC95 superior": NaN,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0,
+        "P2 (%)": 0.012
+      },
+      {
+        "Umbral (dias)": 50,
+        "RR": NaN,
+        "RR bootstrap mediano": NaN,
+        "IC95 inferior": NaN,
+        "IC95 superior": NaN,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0,
+        "P2 (%)": 0.0071
+      },
+      {
+        "Umbral (dias)": 60,
+        "RR": NaN,
+        "RR bootstrap mediano": NaN,
+        "IC95 inferior": NaN,
+        "IC95 superior": NaN,
+        "Significativo aumento": false,
+        "Significativo disminucion": false,
+        "P1 (%)": 0.0,
+        "P2 (%)": 0.0
+      }
+    ]
+  }
+}
