@@ -1,0 +1,13 @@
+criterio,cuenca,dataset,n_spells,mean_dias,median_dias,p90_dias,p99_dias,max_dias
+i_global,Loa,CR2MET (hist),55015,55.3,23,208,646,1419
+i_global,Loa,ALADIN (hist),64625,49.5,21,189,598,1433
+i_global,Loa,ALADIN (futuro),60949,52.4,22,210,699,1853
+i_global,Maipo,CR2MET (hist),137557,8.4,4,27,61,301
+i_global,Maipo,ALADIN (hist),150867,7.8,4,26,62,344
+i_global,Maipo,ALADIN (futuro),142213,8.1,4,29,74,399
+i_global,Maule,CR2MET (hist),159576,9.2,4,30,69,334
+i_global,Maule,ALADIN (hist),179317,8.2,4,28,65,349
+i_global,Maule,ALADIN (futuro),166996,8.8,4,31,78,419
+i_global,Biobio,CR2MET (hist),292423,5.7,3,17,40,127
+i_global,Biobio,ALADIN (hist),327068,5.3,3,16,38,137
+i_global,Biobio,ALADIN (futuro),313058,5.7,3,17,42,153
