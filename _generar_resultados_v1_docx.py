@@ -111,9 +111,9 @@ def build():
         "frecuencia de días húmedos (criterio i; R₀ = 5,285 mm día⁻¹ en ALADIN y "
         "R = 1 mm día⁻¹ en CR2MET), ¿reproduce ALADIN la distribución histórica de "
         "duraciones de dry spells? El hilo es climatología de referencia (§3.1), "
-        "sesgo espacial residual (§3.2), forma de las PDFs por cuenca (§3.3) y "
-        "ausencia de tendencia en el histórico del modelo (§3.4). El cambio futuro "
-        "se trata en §4.",
+        "sensibilidad al umbral (§3.2), sesgo espacial residual (§3.3), forma de las "
+        "PDFs por cuenca (§3.4) y ausencia de tendencia en el histórico del modelo "
+        "(§3.5). El cambio futuro se trata en §4.",
     )
 
     add_h(doc, "3.1 Climatología de persistencia en CR2MET", size=12)
@@ -144,7 +144,33 @@ def build():
         "cola de spells de cientos de días.",
     )
 
-    add_h(doc, "3.2 Sesgo espacial de persistencia: ALADIN versus CR2MET", size=12)
+    add_h(doc, "3.2 Sensibilidad al umbral de día húmedo", size=12)
+
+    add_body(
+        doc,
+        "Antes de evaluar el sesgo espacial con el criterio i, conviene mostrar cuánto "
+        "dependen las PDFs de la definición de día húmedo. En Loa, Maule y Biobío "
+        "(1980–2014), sin calibración ALADIN a 1 mm produce muchos más spells y de "
+        "menor duración: en Loa la media pasa de ~66 días en CR2MET a ~27 días en "
+        "ALADIN, porque el exceso de días húmedos fragmenta las rachas. Con R₀ global "
+        "o local, las PDFs de ALADIN se acercan a CR2MET en forma y en número de "
+        "eventos (Figura 4). Eso justifica el criterio i como configuración principal "
+        "para el resto del análisis; el mapa de R₀ local se reserva a material "
+        "suplementario.",
+    )
+
+    add_figure(
+        doc,
+        FIG / "fig04_calibracion_umbral_panel.png",
+        "Figura 4. Efecto de la calibración del umbral sobre las PDFs de duración "
+        "(1980–2014) en Loa, Maule y Biobío (escala log–log). Negro: CR2MET a 1 mm. "
+        "Rojo discontinuo: ALADIN a 1 mm (sin calibrar). Azul: ALADIN a R₀ global "
+        "(5,285 mm). Verde: ALADIN a R₀ local. Sin calibrar, ALADIN infla spells "
+        "cortos y pierde la cola; con R₀ las curvas se acercan a CR2MET.",
+        width=Inches(5.6),
+    )
+
+    add_h(doc, "3.3 Sesgo espacial de persistencia: ALADIN versus CR2MET", size=12)
 
     add_body(
         doc,
@@ -187,7 +213,7 @@ def build():
         width=Inches(6.2),
     )
 
-    add_h(doc, "3.3 PDFs por cuenca: acuerdo y diferencias regionales", size=12)
+    add_h(doc, "3.4 PDFs por cuenca: acuerdo y diferencias regionales", size=12)
 
     add_body(
         doc,
@@ -257,7 +283,7 @@ def build():
         width=Inches(6.2),
     )
 
-    add_h(doc, "3.4 Tendencias en ALADIN histórico: resultado nulo", size=12)
+    add_h(doc, "3.5 Tendencias en ALADIN histórico: resultado nulo", size=12)
 
     add_body(
         doc,

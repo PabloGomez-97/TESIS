@@ -135,12 +135,22 @@ def add_table(doc, headers, rows, col_widths=None):
 
 
 def copy_intro(src_doc, dst_doc):
-    """Copia la Introducción del usuario hasta (sin incluir) Datos y métodos."""
+    """Copia la Introducción del usuario hasta (sin incluir) Métodos."""
     for para in src_doc.paragraphs:
         t = para.text.strip()
-        if t in {"Datos y métodos", "Datos y Métodos", "2. Datos y métodos"}:
+        if t in {
+            "Datos y métodos",
+            "Datos y Métodos",
+            "2. Datos y métodos",
+            "2. Métodos",
+            "Métodos",
+            "Methods",
+            "2. Methods",
+        }:
             break
-        if para.style and para.style.name.startswith("Heading") and t.lower().startswith("datos"):
+        if para.style and para.style.name.startswith("Heading") and (
+            t.lower().startswith("datos") or t.lower().startswith("métodos") or t.lower() == "methods"
+        ):
             break
         p = dst_doc.add_paragraph()
         pf = p.paragraph_format
@@ -194,9 +204,9 @@ REFS = [
 
 
 def write_methods(doc):
-    add_h(doc, "2. Datos y métodos")
+    add_h(doc, "2. Métodos")
 
-    add_h(doc, "2.1 Conjuntos de datos, dominio y períodos", size=12)
+    add_h(doc, "2.1 Datos", size=12)
 
     add_body(
         doc,
@@ -316,21 +326,30 @@ def write_methods(doc):
         "en CR2MET sigue la convención ETCCDI/Climdex usada para CDD (Zhang et al., "
         "2011; Sillmann et al., 2013a) y la misma definición operativa de dry day que "
         "Latoja et al. (2025) y Herrera-Marín et al. (2026). Los días con valor faltante (NaN) no se tratan "
-        "como secos. Las rachas que comienzan en el primer día o terminan en el último "
-        "día de cada ventana temporal se excluyen, para evitar spells censurados por el "
-        "borde del período.",
+        "como secos. Sobre cada ventana temporal (1980–2014 o 2040–2074), primero se "
+        "identifican todas las rachas en la serie diaria completa. Se excluyen las "
+        "rachas censuradas: aquellas que comienzan el primer día de la ventana o "
+        "terminan el último día, porque su duración verdadera es desconocida. Las "
+        "rachas que ya estaban activas al inicio del período (p. ej., una sequía "
+        "multianual en curso en enero de 1980) no se cuentan como un nuevo evento "
+        "en 1980; solo entran spells cuyo inicio queda dentro de la ventana y cuya "
+        "duración está completamente observada. En Loa, donde las rachas pueden "
+        "superar varios años, esta regla evita subestimar o sobrestimar duraciones "
+        "en los bordes del período.",
     )
 
     add_body(
         doc,
         "A diferencia del índice CDD —el máximo anual de días secos consecutivos, que "
         "en muchas implementaciones se interrumpe al cambio de año (Sillmann et al., "
-        "2013a)—, aquí un dry spell puede cruzar el 1 de enero. En el norte árido eso "
-        "es esencial: las rachas de cientos de días no caben en un año calendario. "
-        "Tampoco se restringe el análisis al invierno austral, a diferencia de "
-        "Herrera-Marín et al. (2026), quienes modelan inicios de racha en mayo–agosto. "
-        "El objeto de estudio es, por tanto, la duración de cada racha a lo largo del "
-        "año, no el máximo anual ni la tasa de onsets.",
+        "2013a)—, aquí un dry spell puede cruzar el 1 de enero dentro de la ventana "
+        "de análisis: la racha se conserva entera y se etiqueta con el año calendario "
+        "de su inicio. En el norte árido eso es esencial, porque las rachas de "
+        "cientos de días no caben en un año calendario. Tampoco se restringe el "
+        "análisis al invierno austral, a diferencia de Herrera-Marín et al. (2026), "
+        "quienes modelan inicios de racha en mayo–agosto. El objeto de estudio es "
+        "la duración de cada racha a lo largo del año, no el máximo anual ni la tasa "
+        "de onsets.",
     )
 
     add_figure(
@@ -354,9 +373,9 @@ def write_methods(doc):
         "numerosos. Por ello el análisis principal adopta el criterio i (umbral global "
         "calibrado): CR2MET con R = 1 mm día⁻¹ y ALADIN con R₀ = 5,285 mm día⁻¹, "
         "elegido para igualar la fracción espacial media de wet days de CR2MET a 1 mm "
-        "(§2.3). Denotamos este umbral como R₀ —y no como τ*— para no confundirlo con "
-        "el exponente de leyes de potencia en PDFs de precipitación diaria "
-        "(Martinez-Villalobos et al., 2022).",
+        "(§2.3). La lógica de emparejar primero la frecuencia de días húmedos antes de "
+        "comparar estadísticas de rachas sigue Martinez-Villalobos et al. (2022; "
+        "JCLI-D-21-0590).",
     )
 
     add_body(
@@ -413,44 +432,27 @@ def write_methods(doc):
         doc,
         "Esta calibración sigue la lógica de emparejar la frecuencia de días húmedos "
         "antes de comparar estadísticas de rachas o intensidades (Martinez-Villalobos "
-        "et al., 2022). R₀ es un paso metodológico previo, no la pregunta científica "
-        "central. Igualar la fracción de wet days no implica igualdad en intensidad, "
-        "en variabilidad interanual ni en la distribución de duraciones: eso se verifica "
-        "en la evaluación histórica (§3). La variante local R₀(x,y) reduce residuos "
-        "espaciales del sesgo de wet days, pero introduce un campo de umbrales "
-        "heterogéneo; por ello se reserva a sensibilidad.",
+        "et al., 2022; JCLI-D-21-0590). R₀ es un paso metodológico previo, no la "
+        "pregunta científica central; la evaluación histórica (§3) verifica si, tras "
+        "igualar wet days, ALADIN reproduce la distribución de duraciones. La variante "
+        "local R₀(x,y) reduce residuos espaciales del sesgo de wet days, pero introduce "
+        "un campo de umbrales heterogéneo; por ello se reserva a sensibilidad (§2.7).",
     )
 
-    add_h(doc, "2.4 Construcción y normalización de las PDFs", size=12)
+    add_h(doc, "2.4 Construcción de las PDFs", size=12)
 
     add_body(
         doc,
         "Para caracterizar la distribución de duraciones se construyen PDFs empíricas "
-        "de la variable t (días). Los bins son aproximadamente uniformes en el espacio "
-        "log(t), de modo que la representación natural sea en escala log–log, siguiendo "
-        "la convención de PDFs de precipitación diaria (Martinez-Villalobos y Neelin, "
-        "2018; Martinez-Villalobos et al., 2022). En cada bin, f(t) es el cociente "
-        "entre el número de spells en el intervalo y el ancho del bin.",
-    )
-
-    add_body(
-        doc,
-        "A diferencia de una densidad clásica —cuya integral respecto de t iguala 1—, "
-        "aquí se normaliza de modo que",
-        indent=True,
-    )
-    add_eq(doc, "(1)    ∫₀^∞ f(t) dt = n_spells")
-    add_body(
-        doc,
-        "donde n_spells es el número total de dry spells del conjunto (cuenca × período "
-        "× producto). Esta convención preserva a la vez la forma de la distribución y "
-        "el número de eventos. Normalizar a 1 ocultaría si el futuro produce más o "
-        "menos spells que el histórico, información relevante cuando cambian "
-        "simultáneamente la frecuencia y la cola. La PDF no es una tendencia temporal: "
-        "describe cómo se reparten las rachas en un pool de eventos; una tendencia "
-        "describe la evolución año a año de un estadístico. Como complemento escalar se "
-        "reportan media, mediana, percentiles 90 y 99 (p90, p99) y el máximo del pool.",
-        indent=True,
+        "de la variable t (días). Se usan 25 bins con bordes aproximadamente uniformes "
+        "en log₁₀(t): primero se fijan los extremos como el mínimo y máximo entero de "
+        "las duraciones del panel, se generan 26 bordes con np.logspace entre esos "
+        "extremos y se redondean a enteros (bordes comunes para todos los productos y "
+        "períodos de una misma cuenca, de modo que las figuras sean comparables). En "
+        "cada bin, f(t) es el cociente entre el número de spells en el intervalo y el "
+        "ancho del bin; la normalización hace que el área bajo la curva sea igual al "
+        "número total de spells del pool (no a 1), de modo que cambios en frecuencia "
+        "y en forma sean visibles a la vez.",
     )
 
     add_h(doc, "2.5 Agrupación regional y estadísticas espaciales", size=12)
@@ -470,11 +472,16 @@ def write_methods(doc):
         doc,
         "Para los mapas se calculan, en cada píxel, la duración media y el percentil 99 "
         "de las duraciones (t99), y se reportan las diferencias Δ = ALADIN − CR2MET en "
-        "1980–2014. La significancia se evalúa con bootstrap por años: se remuestrean "
-        "años completos —no días sueltos— para respetar la autocorrelación temporal, se "
-        "reconstruye el pool de spells de los años sorteados y se recalcula la métrica "
-        "en cada réplica (1 000 réplicas). Una diferencia se considera significativa al "
-        "95 % cuando el intervalo de confianza de Δ no incluye el cero.",
+        "1980–2014. La significancia se evalúa con bootstrap por años (1 000 réplicas, "
+        "semilla fija). El procedimiento es el siguiente: (i) identificar spells "
+        "completos en la serie diaria de cada píxel; (ii) asignar cada spell al año "
+        "calendario de su inicio (los spells que cruzan el 1 de enero permanecen "
+        "enteros y se agrupan por año de onset); (iii) formar un diccionario {año: "
+        "duraciones} por píxel; (iv) en cada réplica, remuestrear años con reemplazo "
+        "(no bloques diarios), concatenar las duraciones de los años sorteados y "
+        "recalcular la métrica; (v) construir el IC95 como percentiles 2,5 y 97,5 de "
+        "la distribución bootstrap de Δ (no BCa). Una diferencia se considera "
+        "significativa al 95 % cuando el IC95 de Δ no incluye el cero.",
     )
 
     add_h(doc, "2.6 Risk ratios y cambios futuros", size=12)
@@ -505,8 +512,11 @@ def write_methods(doc):
         "rachas que empiezan en pleno verano reflejan en gran parte la estación seca "
         "esperada. Mar–nov enfoca las rachas que interrumpen la temporada de lluvias y "
         "la transición, más relevantes para recarga y agricultura. Se calculan curvas "
-        "RR versus D e intervalos de confianza al 95 % mediante bootstrap por años "
-        "(1 000 réplicas). Se interpreta aumento significativo cuando RR > 1 y el IC95 "
+        "RR versus D e intervalos de confianza al 95 % mediante el mismo bootstrap por "
+        "años de inicio descrito arriba: spells identificados en la serie completa, "
+        "agrupados por año de onset, remuestreo de años con reemplazo e IC95 por "
+        "percentiles 2,5 y 97,5 de la distribución bootstrap de RR (1 000 réplicas). "
+        "Se interpreta aumento significativo cuando RR > 1 y el IC95 queda por completo "
         "queda por completo por encima de 1. Cuando la probabilidad histórica de "
         "spells ≥ D es muy baja —típico del sur húmedo para D grandes—, el cociente "
         "puede volverse grande e inestable; un IC95 amplio refleja entonces rareza de "
@@ -517,40 +527,42 @@ def write_methods(doc):
 
     add_body(
         doc,
-        "Para documentar que las conclusiones históricas dependen del umbral, se "
-        "comparan en Loa, Maule y Biobío cuatro series en 1980–2014: CR2MET a 1 mm, "
-        "ALADIN a 1 mm, ALADIN a R₀ global y ALADIN a R₀ local (Figura 4). Sin "
-        "calibración, el modelo produce muchos más spells y de menor duración —en Loa, "
-        "la media pasa de ~66 días en CR2MET a ~27 días en ALADIN—, precisamente porque "
-        "el exceso de días húmedos parte las rachas. Con R₀ global o local, las PDFs de "
-        "ALADIN se acercan a CR2MET en forma y en número de eventos. Eso justifica el "
-        "criterio i como configuración principal. El mapa de R₀ local se reserva a "
-        "material suplementario.",
+        "Como experimento de sensibilidad, se comparan en Loa, Maule y Biobío cuatro "
+        "configuraciones en 1980–2014: CR2MET a 1 mm, ALADIN a 1 mm, ALADIN a R₀ "
+        "global y ALADIN a R₀ local. Para cada cuenca se construyen PDFs con el mismo "
+        "esquema de binning log (§2.4). Los resultados de este experimento —incluida la "
+        "Figura 4— se presentan en §3.2; aquí solo se define el diseño.",
     )
 
-    add_figure(
+    add_h(doc, "2.8 Tendencias en el histórico de ALADIN", size=12)
+
+    add_body(
         doc,
-        FIG / "fig04_calibracion_umbral_panel.png",
-        "Figura 4. Efecto de la calibración del umbral sobre las PDFs de duración "
-        "(1980–2014) en Loa, Maule y Biobío (escala log–log). Negro: CR2MET a 1 mm. "
-        "Rojo discontinuo: ALADIN a 1 mm (sin calibrar). Azul: ALADIN a R₀ global "
-        "(5,285 mm). Verde: ALADIN a R₀ local. Sin calibrar, ALADIN infla spells cortos "
-        "y pierde la cola; con R₀ las curvas se acercan a CR2MET. Esta figura justifica "
-        "el criterio i; las PDFs históricas y futuras del análisis principal se "
-        "presentan en Resultados.",
-        width=Inches(5.6),
+        "Para verificar si el propio modelo muestra deriva temporal en persistencia "
+        "secas (Figura 7), se construye por píxel una serie anual de duración media y "
+        "de t99. A diferencia del análisis principal (§2.2), aquí las rachas se "
+        "calculan dentro de cada año calendario por separado, de modo que no cruzan el "
+        "1 de enero. Solo se usan años con al menos un número mínimo de spells por "
+        "píxel (≥ 30 años válidos en 1980–2014). Sobre cada serie anual se ajusta una "
+        "regresión lineal ordinaria; la pendiente se reporta en días por década. La "
+        "significancia se evalúa con el p-valor bilateral de la correlación de Pearson "
+        "entre año y estadístico anual (prueba t con n − 2 grados de libertad). Un "
+        "píxel se marca como significativo al 5 % si p < 0,05.",
     )
 
     add_body(
         doc,
         "En síntesis, la cadena metodológica es: (1) alinear espacialmente CR2MET y "
-        "ALADIN; (2) definir wet/dry days y dry spells, permitiendo que las rachas "
-        "crucen el año calendario; (3) calibrar R₀ para una comparación histórica "
-        "equitativa de la frecuencia de días húmedos; (4) construir PDFs con "
-        "∫ f dt = n_spells mediante pool regional por cuenca; (5) mapear media y t99 "
-        "con significancia por bootstrap de años; y (6) cuantificar el cambio futuro "
-        "con RR(D) e IC95, dentro de ALADIN. Las secciones siguientes aplican este "
-        "marco a la evaluación histórica (§3) y a las proyecciones SSP5-8.5 (§4).",
+        "ALADIN; (2) definir wet/dry days y dry spells, excluyendo rachas censuradas "
+        "en los bordes del período y permitiendo que las rachas crucen el año "
+        "calendario dentro de la ventana; (3) calibrar R₀ para una comparación "
+        "histórica equitativa de la frecuencia de días húmedos; (4) construir PDFs "
+        "con bins log reproducibles y normalización a n_spells mediante pool regional "
+        "por cuenca; (5) mapear media y t99 con significancia por bootstrap de años "
+        "de inicio; (6) cuantificar el cambio futuro con RR(D) e IC95, dentro de "
+        "ALADIN; y (7) evaluar tendencias intra-anuales en el histórico del modelo. "
+        "Las secciones siguientes aplican este marco a la evaluación histórica (§3) y "
+        "a las proyecciones SSP5-8.5 (§4).",
     )
 
 
