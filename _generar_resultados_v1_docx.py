@@ -349,44 +349,47 @@ def build():
 
     add_body(
         doc,
-        "El risk ratio RR(D) = P_fut(t ≥ D) / P_hist(t ≥ D) se estima en pools de "
+        "El risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) se estima en pools de "
         "regiones administrativas, con spells de inicio en marzo–noviembre y bootstrap "
-        "por años (Figura 9; Tabla 4). A D = 20 días, Coquimbo pasa de 15,4 % a 19,6 % "
-        "(RR = 1,27; IC95 [1,09, 1,48]); O’Higgins, de 5,8 % a 7,5 % (RR = 1,30; "
-        "[1,04, 1,63]); La Araucanía, de 0,74 % a 1,37 % (RR = 1,84; [1,16, 3,12]). "
-        "En esas tres regiones el IC95 queda por completo sobre 1: el aumento es "
-        "significativo. Los Lagos tiene RR = 2,24 (0,13 % → 0,29 %), pero el IC95 "
-        "[0,91, 9,06] cruza 1: el cociente es inestable porque los spells ≥ 20 días "
-        "son raros en el histórico (601 eventos en 471 361 spells).",
+        "por años (Figura 9; Tabla 4). A D = 20 días, Coquimbo pasa de 25 522 a "
+        "28 571 spells largos (RR = 1,12; IC95 [1,01, 1,24]); La Araucanía, de "
+        "2 397 a 4 118 (RR = 1,72; [1,10, 2,88]). En esas dos regiones el IC95 queda "
+        "por completo sobre 1: el aumento es significativo. O’Higgins tiene RR = 1,16 "
+        "(7 015 → 8 159), pero el IC95 [0,96, 1,41] cruza 1 a D = 20; el aumento se "
+        "vuelve significativo recién a D ≈ 30 días (RR = 1,28; [1,01, 1,62]). Los "
+        "Lagos tiene RR = 2,15 (601 → 1 291), pero el IC95 [0,90, 8,50] cruza 1: el "
+        "cociente es inestable porque los spells ≥ 20 días son raros en el histórico.",
     )
 
     add_body(
         doc,
         "La señal no es un desplazamiento uniforme de toda la distribución. En "
-        "Coquimbo, a D = 5 días el RR es 1,06 y el IC95 aún toca 1; el aumento se "
-        "vuelve significativo desde D ≈ 10 días y se mantiene en la cola (p. ej. "
-        "RR = 1,42 a D = 30 días, IC95 [1,18, 1,68]). En La Araucanía el RR crece con "
-        "D y alcanza 3,71 a 30 días, con IC95 muy ancho ([1,37, 12,5]): hay más "
-        "probabilidad relativa de spells largos, pero la rareza histórica infla el "
-        "cociente. Eso es exactamente lo que un CDD anual no muestra: el cambio está "
-        "en la frecuencia de excedencias a lo largo de la cola, no en un único máximo "
-        "por año (Sillmann et al., 2013b; Wainwright et al., 2021).",
+        "Coquimbo, a D = 5 días el RR de conteos es 0,94 (IC95 por debajo de 1): hay "
+        "menos spells cortos, coherente con la caída de n_spells. El aumento se vuelve "
+        "significativo desde D = 20 días y se mantiene en la cola (p. ej. RR = 1,25 a "
+        "D = 30 días, IC95 [1,10, 1,42]). En La Araucanía el RR crece con D y alcanza "
+        "3,47 a 30 días, con IC95 amplio ([1,29, 11,8]): hay más ocurrencia de spells "
+        "largos, pero la rareza histórica infla el cociente. Eso es exactamente lo que "
+        "un CDD anual no muestra: el cambio está en la frecuencia de excedencias a lo "
+        "largo de la cola, no en un único máximo por año (Sillmann et al., 2013b; "
+        "Wainwright et al., 2021).",
     )
 
     add_caption(
         doc,
         "Tabla 4. Risk ratio a D = 20 días. Pools regionales, ALADIN, R₀ = 5,285 mm, "
-        "inicio marzo–noviembre. IC95 por bootstrap de años (1 000 réplicas). "
-        "Aumento significativo si RR > 1 y el IC no incluye 1.",
+        "inicio marzo–noviembre. RR = N_fut(t ≥ 20) / N_hist(t ≥ 20). IC95 por "
+        "bootstrap de años (1 000 réplicas). Aumento significativo si RR > 1 y el IC "
+        "no incluye 1.",
     )
     add_table(
         doc,
-        ["Región", "P_hist (t≥20)", "P_fut (t≥20)", "RR", "IC95", "¿Aumento sig.?"],
+        ["Región", "N_hist (t≥20)", "N_fut (t≥20)", "RR", "IC95", "¿Aumento sig.?"],
         [
-            ["Coquimbo", "15,4 %", "19,6 %", "1,27", "[1,09, 1,48]", "Sí"],
-            ["O’Higgins", "5,8 %", "7,5 %", "1,30", "[1,04, 1,63]", "Sí"],
-            ["La Araucanía", "0,74 %", "1,37 %", "1,84", "[1,16, 3,12]", "Sí"],
-            ["Los Lagos", "0,13 %", "0,29 %", "2,24", "[0,91, 9,06]", "No (IC cruza 1)"],
+            ["Coquimbo", "25 522", "28 571", "1,12", "[1,01, 1,24]", "Sí"],
+            ["O’Higgins", "7 015", "8 159", "1,16", "[0,96, 1,41]", "No (IC cruza 1)"],
+            ["La Araucanía", "2 397", "4 118", "1,72", "[1,10, 2,88]", "Sí"],
+            ["Los Lagos", "601", "1 291", "2,15", "[0,90, 8,50]", "No (IC cruza 1)"],
         ],
     )
     doc.add_paragraph()
@@ -394,12 +397,12 @@ def build():
     add_figure(
         doc,
         FIG / "fig08_rr_curves_aladin.png",
-        "Figura 9. Risk ratio RR(D) de dry spells con duración al menos D días. "
-        "ALADIN, SSP5-8.5 (2040–2074) respecto de 1980–2014, R₀ = 5,285 mm, inicio "
-        "marzo–noviembre. La banda es el IC95 por bootstrap de años. La línea "
-        "punteada marca RR = 1. Coquimbo, O’Higgins y La Araucanía superan 1 con "
-        "IC que no cruza 1 a D = 20 días; Los Lagos no. En el sur la banda se abre "
-        "cuando D crece y los eventos históricos escasean.",
+        "Figura 9. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) de dry spells con "
+        "duración al menos D días. ALADIN, SSP5-8.5 (2040–2074) respecto de 1980–2014, "
+        "R₀ = 5,285 mm, inicio marzo–noviembre. La banda es el IC95 por bootstrap de "
+        "años. La línea punteada marca RR = 1. Coquimbo y La Araucanía superan 1 con "
+        "IC que no cruza 1 a D = 20 días; O’Higgins y Los Lagos no. En el sur la banda "
+        "se abre cuando D crece y los eventos históricos escasean.",
         width=Inches(6.1),
     )
 

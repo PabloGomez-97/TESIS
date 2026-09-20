@@ -1,0 +1,38 @@
+1/4: Cargando ALADIN historico y futuro...
+Periodo hist: 1980-2014 (35 anos) | futuro: 2040-2074 (35 anos, ssp585)
+Dia seco ALADIN: pr < 5.285 mm/dia | Mar-Nov
+2/4: Extrayendo dry spells por region...
+  Coquimbo         | Coquimbo               | pixeles:  239 | spells: 311,788
+  O'Higgins        | Libertador General Bernardo O'Higgins | pixeles:  110 | spells: 229,994
+  La Araucanía     | La Araucanía           | pixeles:  223 | spells: 623,736
+  Los Lagos        | Los Lagos              | pixeles:  324 | spells: 922,437
+3/4: Risk ratio de conteos N_fut/N_hist (>= 20 dias)...
+
+--- Conteos ---
+      Region   Periodo  Dry spells totales  Spells >= 20 d
+    Coquimbo 1980-2014              165889           25522
+    Coquimbo 2040-2074              145899           28571
+   O'Higgins 1980-2014              121591            7015
+   O'Higgins 2040-2074              108403            8159
+La Araucanía 1980-2014              322205            2397
+La Araucanía 2040-2074              301531            4118
+   Los Lagos 1980-2014              471361             601
+   Los Lagos 2040-2074              451076            1291
+
+--- RR @ 20 dias (N_fut/N_hist) ---
+      Region  Pixeles  N_hist  N_fut  RR observado  RR bootstrap mediano  IC95 inferior  IC95 superior  Cruza RR=1  Sig aumento  Sig disminucion
+    Coquimbo      239   25522  28571         1.119                 1.121          1.010          1.244       False         True            False
+   O'Higgins      110    7015   8159         1.163                 1.164          0.963          1.413        True        False            False
+La Araucanía      223    2397   4118         1.718                 1.748          1.101          2.881       False         True            False
+   Los Lagos      324     601   1291         2.148                 2.236          0.903          8.502        True        False            False
+4/4: Curvas RR vs umbral...
+
+--- Significancia @ 20d ---
+      Region  N_hist @ 20d  N_fut @ 20d  RR @ 20d  IC95 inf  IC95 sup Significancia
+    Coquimbo         25522        28571     1.119     1.010     1.244       aumento
+   O'Higgins          7015         8159     1.163     0.963     1.413            no
+La Araucanía          2397         4118     1.718     1.101     2.881       aumento
+   Los Lagos           601         1291     2.148     0.903     8.502            no
+
+Figura guardada en outputs_pregunta5_aladin/rr_curves_aladin.png
+Copia paper: paper_figuras/fig08_rr_curves_aladin.png

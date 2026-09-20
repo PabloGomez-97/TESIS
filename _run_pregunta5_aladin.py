@@ -125,23 +125,25 @@ def extract_dry_spells_aladin(pr_da, region_mask, dry_threshold,
     return pd.DataFrame(records)
 
 
-def event_probability(spell_df, start_year, end_year, min_duration):
+def event_counts(spell_df, start_year, end_year, min_duration):
+    """Cuenta spells totales y spells con duración >= min_duration en un período."""
     subset = spell_df[
         (spell_df['start_year'] >= start_year) & (spell_df['start_year'] <= end_year)
     ]
     total_spells = int(len(subset))
     event_spells = int((subset['duration'] >= min_duration).sum())
-    probability = np.nan if total_spells == 0 else event_spells / total_spells
-    return subset, probability, event_spells, total_spells
+    return subset, event_spells, total_spells
 
 
-def risk_ratio(prob_period_2, prob_period_1):
-    if prob_period_1 == 0 or not np.isfinite(prob_period_1):
+def risk_ratio_counts(n_period_2, n_period_1):
+    """RR = N_fut(t>=D) / N_hist(t>=D). Compatible con PDFs que conservan n_spells."""
+    if n_period_1 == 0 or not np.isfinite(n_period_1):
         return np.nan
-    return prob_period_2 / prob_period_1
+    return n_period_2 / n_period_1
 
 
 def bootstrap_rr_by_year(spell_df, years_1, years_2, min_duration, n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED):
+    """Bootstrap por años de inicio: RR* = N_fut*(t>=D) / N_hist*(t>=D)."""
     rng = np.random.default_rng(seed)
     grouped = {
         year: spell_df.loc[spell_df['start_year'] == year, 'duration'].to_numpy()
@@ -157,25 +159,25 @@ def bootstrap_rr_by_year(spell_df, years_1, years_2, min_duration, n_iter=BOOTST
         sample_2 = np.concatenate([grouped[y] for y in draw_2 if y in grouped and grouped[y].size > 0])
         if sample_1.size == 0 or sample_2.size == 0:
             continue
-        p1 = np.mean(sample_1 >= min_duration)
-        p2 = np.mean(sample_2 >= min_duration)
-        if p1 > 0:
-            rr_values.append(p2 / p1)
+        n1 = int(np.sum(sample_1 >= min_duration))
+        n2 = int(np.sum(sample_2 >= min_duration))
+        if n1 > 0:
+            rr_values.append(n2 / n1)
     return np.array(rr_values)
 
 
 def bootstrap_rr_curve(spell_df, years_1, years_2, thresholds, n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED):
     rows = []
     for thr in thresholds:
-        _, p1, _, _ = event_probability(spell_df, PERIOD_1[0], PERIOD_1[1], thr)
-        _, p2, _, _ = event_probability(spell_df, PERIOD_2[0], PERIOD_2[1], thr)
+        _, n1, total_1 = event_counts(spell_df, PERIOD_1[0], PERIOD_1[1], thr)
+        _, n2, total_2 = event_counts(spell_df, PERIOD_2[0], PERIOD_2[1], thr)
         rr_boot = bootstrap_rr_by_year(spell_df, years_1, years_2, thr, n_iter=n_iter, seed=seed)
         if rr_boot.size == 0:
             ci_low = ci_high = ci_med = np.nan
         else:
             ci_low, ci_high = np.percentile(rr_boot, [2.5, 97.5])
             ci_med = np.median(rr_boot)
-        rr_obs = risk_ratio(p2, p1)
+        rr_obs = risk_ratio_counts(n2, n1)
         rows.append({
             'Umbral (dias)': thr,
             'RR': rr_obs,
@@ -184,8 +186,10 @@ def bootstrap_rr_curve(spell_df, years_1, years_2, thresholds, n_iter=BOOTSTRAP_
             'IC95 superior': ci_high,
             'Significativo aumento': np.isfinite(ci_low) and ci_low > 1.0,
             'Significativo disminucion': np.isfinite(ci_high) and ci_high < 1.0,
-            'P1 (%)': p1 * 100 if np.isfinite(p1) else np.nan,
-            'P2 (%)': p2 * 100 if np.isfinite(p2) else np.nan,
+            'N1': n1,
+            'N2': n2,
+            'Total1': total_1,
+            'Total2': total_2,
         })
     return pd.DataFrame(rows)
 
@@ -245,13 +249,18 @@ def main():
     years_1 = range(PERIOD_1[0], PERIOD_1[1] + 1)
     years_2 = range(PERIOD_2[0], PERIOD_2[1] + 1)
 
-    print(f'3/4: Risk ratio >= {EVENT_THRESHOLD} dias...')
+    out_dir = Path('outputs_pregunta5_aladin')
+    out_dir.mkdir(exist_ok=True)
+
+    print(f'3/4: Risk ratio de conteos N_fut/N_hist (>= {EVENT_THRESHOLD} dias)...')
     summary_rows, rr_rows = [], []
     for label in REGION_SPECS:
         spell_df = region_data[label]['spell_df']
-        _, prob_1, hits_1, total_1 = event_probability(spell_df, PERIOD_1[0], PERIOD_1[1], EVENT_THRESHOLD)
-        _, prob_2, hits_2, total_2 = event_probability(spell_df, PERIOD_2[0], PERIOD_2[1], EVENT_THRESHOLD)
-        rr_obs = risk_ratio(prob_2, prob_1)
+        safe = normalize_text(label).replace(' ', '_')
+        spell_df.to_csv(out_dir / f'spells_{safe}.csv', index=False)
+        _, hits_1, total_1 = event_counts(spell_df, PERIOD_1[0], PERIOD_1[1], EVENT_THRESHOLD)
+        _, hits_2, total_2 = event_counts(spell_df, PERIOD_2[0], PERIOD_2[1], EVENT_THRESHOLD)
+        rr_obs = risk_ratio_counts(hits_2, hits_1)
         rr_boot = bootstrap_rr_by_year(spell_df, years_1, years_2, EVENT_THRESHOLD)
         if rr_boot.size > 0:
             ci_low, ci_med, ci_high = np.percentile(rr_boot, [2.5, 50, 97.5])
@@ -259,12 +268,14 @@ def main():
             ci_low = ci_med = ci_high = np.nan
         summary_rows.extend([
             {'Region': label, 'Periodo': f'{PERIOD_1[0]}-{PERIOD_1[1]}', 'Dry spells totales': total_1,
-             f'Spells >= {EVENT_THRESHOLD} d': hits_1, 'Probabilidad (%)': prob_1 * 100},
+             f'Spells >= {EVENT_THRESHOLD} d': hits_1},
             {'Region': label, 'Periodo': f'{PERIOD_2[0]}-{PERIOD_2[1]}', 'Dry spells totales': total_2,
-             f'Spells >= {EVENT_THRESHOLD} d': hits_2, 'Probabilidad (%)': prob_2 * 100},
+             f'Spells >= {EVENT_THRESHOLD} d': hits_2},
         ])
         rr_rows.append({
-            'Region': label, 'Pixeles': region_data[label]['pixels'], 'RR observado': rr_obs,
+            'Region': label, 'Pixeles': region_data[label]['pixels'],
+            'N_hist': hits_1, 'N_fut': hits_2,
+            'RR observado': rr_obs,
             'RR bootstrap mediano': ci_med, 'IC95 inferior': ci_low, 'IC95 superior': ci_high,
             'Cruza RR=1': (ci_low <= 1 <= ci_high) if np.all(np.isfinite([ci_low, ci_high])) else np.nan,
             'Sig aumento': np.isfinite(ci_low) and ci_low > 1.0,
@@ -273,9 +284,9 @@ def main():
 
     summary_table = pd.DataFrame(summary_rows)
     rr_table = pd.DataFrame(rr_rows)
-    print('\n--- Probabilidades ---')
+    print('\n--- Conteos ---')
     print(summary_table.round(3).to_string(index=False))
-    print('\n--- RR @ 20 dias ---')
+    print('\n--- RR @ 20 dias (N_fut/N_hist) ---')
     print(rr_table.round(3).to_string(index=False))
 
     print('4/4: Curvas RR vs umbral...')
@@ -285,9 +296,6 @@ def main():
             region_data[label]['spell_df'], years_1, years_2, THRESHOLD_SWEEP,
             n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED,
         )
-
-    out_dir = Path('outputs_pregunta5_aladin')
-    out_dir.mkdir(exist_ok=True)
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharex=True)
     axes = axes.ravel()
@@ -305,14 +313,17 @@ def main():
         ax.axhline(1.0, color='gray', linestyle=':', linewidth=1.5)
         ax.set_title(label, fontweight='bold', color=color)
         ax.set_xlabel('Umbral de duracion (dias)')
-        ax.set_ylabel(f'Risk ratio ({PERIOD_2[0]}-{PERIOD_2[1]} / {PERIOD_1[0]}-{PERIOD_1[1]})')
+        ax.set_ylabel('RR = N_fut / N_hist')
         ax.set_ylim(0, RR_PLOT_YMAX)
     fig.suptitle(
-        f'ALADIN {FUTURE_SCENARIO} | pr < {DRY_THRESHOLD} mm/d | IC95 bootstrap por ano',
+        f'ALADIN {FUTURE_SCENARIO} | RR por conteos | pr < {DRY_THRESHOLD} mm/d | IC95 bootstrap por ano',
         fontweight='bold', y=1.02,
     )
     plt.tight_layout()
     fig.savefig(out_dir / 'rr_curves_aladin.png', dpi=150, bbox_inches='tight')
+    paper_fig = Path('paper_figuras')
+    paper_fig.mkdir(exist_ok=True)
+    fig.savefig(paper_fig / 'fig08_rr_curves_aladin.png', dpi=200, bbox_inches='tight')
     plt.close()
 
     sig_rows = []
@@ -320,6 +331,8 @@ def main():
         t20 = threshold_by_region[label].loc[threshold_by_region[label]['Umbral (dias)'] == EVENT_THRESHOLD].iloc[0]
         sig_rows.append({
             'Region': label,
+            'N_hist @ 20d': int(t20['N1']),
+            'N_fut @ 20d': int(t20['N2']),
             'RR @ 20d': t20['RR'],
             'IC95 inf': t20['IC95 inferior'],
             'IC95 sup': t20['IC95 superior'],
@@ -334,6 +347,7 @@ def main():
 
     # Save results JSON for notebook
     results = {
+        'definition': 'RR(D) = N_fut(t>=D) / N_hist(t>=D)',
         'summary': summary_table.round(4).to_dict(orient='records'),
         'rr_table': rr_table.round(4).to_dict(orient='records'),
         'sig_table': sig_table.round(4).to_dict(orient='records'),
@@ -342,6 +356,7 @@ def main():
     with open(out_dir / 'results.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f'\nFigura guardada en {out_dir / "rr_curves_aladin.png"}')
+    print(f'Copia paper: {paper_fig / "fig08_rr_curves_aladin.png"}')
     return results
 
 
