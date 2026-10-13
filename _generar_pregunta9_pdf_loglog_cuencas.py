@@ -163,17 +163,26 @@ def extract_basin_spell_records(pr, dry_threshold, basin_mask):
     return np.asarray(durations, dtype=np.int32)
 
 
-def pdf_from_durations(durations):
+def common_log_bins(durs_dict):
+    """Bordes log comunes a todos los productos/periodos de una cuenca, entre 1 dia y el maximo conjunto.
+
+    Las duraciones son enteras: los bordes se redondean a enteros, se eliminan los repetidos y se
+    desplazan -0.5 para que cada bin contenga un conjunto completo de dias (sin bins vacios por
+    construccion). El numero efectivo de bins es <= PDF_BINS.
+    """
+    hi = int(max(np.max(d) for d in durs_dict.values() if len(d)))
+    edges = np.unique(np.round(np.logspace(np.log10(MIN_DURATION), np.log10(hi + 1), PDF_BINS + 1)))
+    return edges - 0.5
+
+
+def pdf_from_durations(durations, bins):
     d = np.asarray(durations, dtype=float)
     d = d[np.isfinite(d) & (d >= MIN_DURATION)]
     if d.size < 50:
         return None, None, 0
-    lo, hi = max(float(np.min(d)), MIN_DURATION), float(np.max(d))
-    if hi <= lo:
-        return None, None, 0
-    bins = np.logspace(np.log10(lo), np.log10(hi), PDF_BINS + 1)
     counts, edges = np.histogram(d, bins=bins, density=False)
-    centers = np.sqrt(edges[:-1] * edges[1:])
+    lo_day, hi_day = edges[:-1] + 0.5, edges[1:] - 0.5
+    centers = np.sqrt(lo_day * hi_day)
     heights = counts / np.diff(edges)
     return centers, heights, int(d.size)
 
@@ -225,8 +234,9 @@ def load_or_compute_durations():
 
 def plot_basin_pdf_loglog(basin_name, durs_dict, save_path):
     fig, ax = plt.subplots(figsize=(9, 6))
+    bins = common_log_bins(durs_dict)
     for ds_name, style in DATASETS_STYLE.items():
-        centers, heights, n_spells = pdf_from_durations(durs_dict[ds_name])
+        centers, heights, n_spells = pdf_from_durations(durs_dict[ds_name], bins)
         if centers is None:
             continue
         yvals = np.where(heights > 0, heights, np.nan)
