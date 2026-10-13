@@ -2,61 +2,61 @@
   {
     "Escenario": "Forma A — Opcion B (tau* integrado)",
     "Metrica": "Duracion media",
-    "Delta medio espacial (dias)": -7.867584845333646,
-    "Delta mediano espacial (dias)": -2.1806985421010943,
-    "% celdas significativas": 73.0387992070235,
-    "% ALADIN > CR2MET (sig.)": 7.618238459359955,
-    "% ALADIN < CR2MET (sig.)": 65.42056074766354,
-    "Celdas validas": 3531
+    "Delta medio espacial (dias)": -8.230230764489356,
+    "Delta mediano espacial (dias)": -2.1789752387357404,
+    "% celdas significativas": 72.88712422007941,
+    "% ALADIN > CR2MET (sig.)": 7.543959160521838,
+    "% ALADIN < CR2MET (sig.)": 65.34316505955758,
+    "Celdas validas": 3526
   },
   {
     "Escenario": "Forma A — Opcion B (tau* integrado)",
     "Metrica": "t99 (p99)",
-    "Delta medio espacial (dias)": -44.7369725290286,
-    "Delta mediano espacial (dias)": -16.8599999999999,
-    "% celdas significativas": 46.530727839139054,
-    "% ALADIN > CR2MET (sig.)": 3.7099971679410935,
-    "% ALADIN < CR2MET (sig.)": 42.82073067119796,
-    "Celdas validas": 3531
+    "Delta medio espacial (dias)": -46.25985819625637,
+    "Delta mediano espacial (dias)": -17.164999999999964,
+    "% celdas significativas": 46.08621667612025,
+    "% ALADIN > CR2MET (sig.)": 3.488372093023256,
+    "% ALADIN < CR2MET (sig.)": 42.59784458309699,
+    "Celdas validas": 3526
   },
   {
     "Escenario": "Forma B — Mismo umbral en CR2MET y ALADIN",
     "Metrica": "Duracion media",
-    "Delta medio espacial (dias)": -27.46770524773632,
-    "Delta mediano espacial (dias)": -8.331888384519962,
-    "% celdas significativas": 97.97240214024218,
-    "% ALADIN > CR2MET (sig.)": 0.47873838355392845,
-    "% ALADIN < CR2MET (sig.)": 97.49366375668825,
-    "Celdas validas": 3551
+    "Delta medio espacial (dias)": -27.15135269444357,
+    "Delta mediano espacial (dias)": -8.342764785697181,
+    "% celdas significativas": 98.05579036348267,
+    "% ALADIN > CR2MET (sig.)": 0.4790081713158636,
+    "% ALADIN < CR2MET (sig.)": 97.57678219216682,
+    "Celdas validas": 3549
   },
   {
     "Escenario": "Forma B — Mismo umbral en CR2MET y ALADIN",
     "Metrica": "t99 (p99)",
-    "Delta medio espacial (dias)": -135.38394818361022,
-    "Delta mediano espacial (dias)": -69.68000000000006,
-    "% celdas significativas": 93.21317938608843,
-    "% ALADIN > CR2MET (sig.)": 0.19712756969867645,
-    "% ALADIN < CR2MET (sig.)": 93.01605181638975,
-    "Celdas validas": 3551
+    "Delta medio espacial (dias)": -134.8953423499577,
+    "Delta mediano espacial (dias)": -69.72000000000003,
+    "% celdas significativas": 93.09664694280079,
+    "% ALADIN > CR2MET (sig.)": 0.16906170752324598,
+    "% ALADIN < CR2MET (sig.)": 92.92758523527755,
+    "Celdas validas": 3549
   },
   {
     "Escenario": "Forma C — tau* local (wet-day matching por pixel)",
     "Metrica": "Duracion media",
-    "Delta medio espacial (dias)": -6.6534984503689465,
-    "Delta mediano espacial (dias)": -1.8862452297992363,
-    "% celdas significativas": 48.689893463864095,
-    "% ALADIN > CR2MET (sig.)": 0.17276130146847107,
-    "% ALADIN < CR2MET (sig.)": 48.51713216239562,
-    "Celdas validas": 3473
+    "Delta medio espacial (dias)": -6.758015391910858,
+    "Delta mediano espacial (dias)": -1.91395522647478,
+    "% celdas significativas": 49.1212906943244,
+    "% ALADIN > CR2MET (sig.)": 0.20167098818784213,
+    "% ALADIN < CR2MET (sig.)": 48.91961970613656,
+    "Celdas validas": 3471
   },
   {
     "Escenario": "Forma C — tau* local (wet-day matching por pixel)",
     "Metrica": "t99 (p99)",
-    "Delta medio espacial (dias)": -35.296055283616454,
-    "Delta mediano espacial (dias)": -6.639999999999873,
-    "% celdas significativas": 30.348401957961418,
-    "% ALADIN > CR2MET (sig.)": 4.463000287935502,
-    "% ALADIN < CR2MET (sig.)": 25.885401670025914,
-    "Celdas validas": 3473
+    "Delta medio espacial (dias)": -36.026545664073744,
+    "Delta mediano espacial (dias)": -6.490000000000009,
+    "% celdas significativas": 30.45231921636416,
+    "% ALADIN > CR2MET (sig.)": 4.4079515989628355,
+    "% ALADIN < CR2MET (sig.)": 26.044367617401328,
+    "Celdas validas": 3471
   }
 ]

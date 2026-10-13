@@ -1,4 +1,9 @@
-"""Ejecuta bootstrap de pregunta7 (dry spells CR2MET vs ALADIN) con paralelizacion."""
+"""Bootstrap de pregunta7 (dry spells CR2MET vs ALADIN) con paralelizacion.
+
+Genera tambien los mapas por pixel del criterio i (cache de la Figura 5) y el resumen espacial
+de los tres criterios, con las mismas reglas de spells que las PDFs por cuenca (§2.2): se excluyen
+las rachas censuradas en los bordes del periodo y los dias sin dato interrumpen la racha.
+"""
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -25,9 +30,13 @@ DOMAIN_MASK_RESOLUTION = '10m'
 BOOTSTRAP_ITER = 1000
 RANDOM_SEED = 42
 ALPHA = 0.05
-N_WORKERS = 4
+N_WORKERS = 8
+EXCLUDE_BOUNDARY_SPELLS = True
 BOOTSTRAP_METRICS = [('mean', 'Duracion media'), ('t99', 't99 (p99)')]
 OUT_DIR = Path('outputs_pregunta7_bootstrap')
+MAPS_DIR = Path('_pregunta7_outputs')
+MAPS_CACHE = MAPS_DIR / 'metrics_integrado_cache.npz'
+RESUMEN_CSV = MAPS_DIR / 'resumen_pregunta7.csv'
 
 
 def load_chile_geometry():
@@ -39,14 +48,12 @@ def load_chile_geometry():
 
 
 def build_chile_mask_on_aladin_grid(lat2d, lon2d, geometry):
-    prep_geom = prep(geometry)
-    ny, nx = lat2d.shape
-    mask = np.zeros((ny, nx), dtype=bool)
-    for j in range(ny):
-        for i in range(nx):
-            if prep_geom.contains(Point(float(lon2d[j, i]), float(lat2d[j, i]))):
-                mask[j, i] = True
-    return mask
+    prepared = prep(geometry)
+    return np.fromiter(
+        (prepared.contains(Point(float(x), float(y))) or geometry.touches(Point(float(x), float(y)))
+         for y, x in zip(lat2d.ravel(), lon2d.ravel())),
+        dtype=bool, count=lat2d.size,
+    ).reshape(lat2d.shape)
 
 
 def open_aladin_historical():
@@ -137,17 +144,19 @@ def extract_spell_groups_by_year(pr_masked, dry_threshold, mask_da):
     dry_stacked = is_dry.stack(cell=('y', 'x')).transpose('time', 'cell').compute()
     times = dry_stacked['time'].values
     dry_vals = dry_stacked.values
-    n_cells = dry_vals.shape[1]
+    n_time, n_cells = dry_vals.shape
     groups = [{} for _ in range(n_cells)]
     for idx in range(n_cells):
         col = dry_vals[:, idx]
-        if not np.any(col):
+        x = np.isfinite(col) & (col > 0.5)  # NaN no es seco: interrumpe la racha
+        if not np.any(x):
             continue
-        x = np.asarray(col, dtype=np.bool_)
         padded = np.r_[False, x, False]
         dx = np.diff(padded.astype(np.int8))
         starts, ends = np.where(dx == 1)[0], np.where(dx == -1)[0]
         for s, e in zip(starts, ends):
+            if EXCLUDE_BOUNDARY_SPELLS and (s == 0 or e == n_time):
+                continue
             duration = int(e - s)
             if duration <= 0:
                 continue
@@ -225,6 +234,27 @@ def bootstrap_paired_parallel(groups_cr2, groups_ala, mask_stacked, years_arr, m
     return obs, ci_low, ci_high, significant, sig_higher, sig_lower
 
 
+def full_period_metric(groups, mask_stacked, metric_name):
+    """Estadistico por celda sobre todos los spells del periodo (sin remuestrear)."""
+    out = np.full(len(groups), np.nan, dtype=np.float32)
+    for idx, g in enumerate(groups):
+        if mask_stacked[idx] and g:
+            out[idx] = spell_metric_from_durations(np.concatenate(list(g.values())), metric_name)
+    return out
+
+
+def resumen_rows(escenario, metric_label, cr2, ala):
+    rows = []
+    for name, arr in (('CR2MET', cr2), ('ALADIN', ala), ('DELTA', ala - cr2)):
+        v = arr[np.isfinite(arr)]
+        rows.append({
+            'escenario': escenario, 'metrica': metric_label, 'dataset': name,
+            'mean_espacial': float(np.mean(v)), 'median_espacial': float(np.median(v)),
+            'min': float(np.min(v)), 'max': float(np.max(v)), 'n_pixeles': int(v.size),
+        })
+    return rows
+
+
 def summarize_bootstrap(mask_stacked, obs, significant, sig_higher, escenario, metric_label):
     valid = mask_stacked & np.isfinite(obs)
     data = obs[valid]
@@ -287,7 +317,8 @@ def main():
         },
     }
 
-    summary_rows = []
+    summary_rows, resumen = [], []
+    ny, nx = chile_mask_bool.shape
     print('3/4: Bootstrap por escenario...', flush=True)
     for scen_key, cfg in scenarios.items():
         print(f"\n  {cfg['title']}", flush=True)
@@ -295,6 +326,24 @@ def main():
         groups_cr2, _ = extract_spell_groups_by_year(pr_cr2met_chile, cfg['thresh_cr2'], chile_mask)
         print('    Extrayendo spells ALADIN...', flush=True)
         groups_ala, _ = extract_spell_groups_by_year(pr_aladin_chile, cfg['thresh_ala'], chile_mask)
+
+        maps = {}
+        for metric_key, metric_label in BOOTSTRAP_METRICS:
+            cr2 = full_period_metric(groups_cr2, mask_stacked, metric_key)
+            ala = full_period_metric(groups_ala, mask_stacked, metric_key)
+            resumen += resumen_rows(scen_key, 'Duracion media' if metric_key == 'mean' else 't99', cr2, ala)
+            maps[metric_key] = (cr2.reshape(ny, nx), ala.reshape(ny, nx))
+        if scen_key == 'A_opcion_B_integrado':
+            MAPS_DIR.mkdir(exist_ok=True)
+            np.savez(
+                MAPS_CACHE,
+                lat=pr_aladin['lat'].values, lon=pr_aladin['lon'].values,
+                y=pr_aladin['y'].values, x=pr_aladin['x'].values, chile_mask=chile_mask_bool,
+                mean_cr2=maps['mean'][0], mean_ala=maps['mean'][1],
+                t99_cr2=maps['t99'][0], t99_ala=maps['t99'][1],
+            )
+            print(f'    Cache mapas guardado: {MAPS_CACHE}', flush=True)
+
         for metric_key, metric_label in BOOTSTRAP_METRICS:
             print(f'    Bootstrap: {metric_label}...', flush=True)
             obs, _, _, significant, sig_higher, _ = bootstrap_paired_parallel(
@@ -311,6 +360,8 @@ def main():
     out_json = OUT_DIR / 'bootstrap_summary.json'
     out_json.write_text(json.dumps(summary_rows, indent=2, ensure_ascii=False), encoding='utf-8')
     summary_df.round(3).to_csv(OUT_DIR / 'bootstrap_summary.csv', index=False)
+    pd.DataFrame(resumen).to_csv(RESUMEN_CSV, index=False)
+    print(pd.DataFrame(resumen).round(2).to_string(index=False), flush=True)
     print(f'\nGuardado: {out_json}', flush=True)
     return summary_df
 
