@@ -36,6 +36,7 @@ PERIOD_2 = (2040, 2074)
 THRESHOLD_SWEEP = [5, 10, 15, 20, 25, 30, 35, 40, 50, 60]
 SEASON_MONTH_MIN = 3
 SEASON_MONTH_MAX = 11
+EXCLUDE_BOUNDARY_SPELLS = True  # mismas reglas de spells que PDFs y mapas (§2.2)
 RR_PLOT_YMAX = 4.0
 
 REGION_SPECS = {
@@ -101,16 +102,19 @@ def extract_dry_spells_aladin(pr_da, region_mask, dry_threshold,
     stacked = is_dry.stack(cell=('y', 'x')).transpose('time', 'cell').compute()
     times = stacked['time'].values
     vals = stacked.values
+    n_time = vals.shape[0]
     records = []
     for idx in range(vals.shape[1]):
         col = vals[:, idx]
-        if not np.any(col):
+        x = np.isfinite(col) & (col > 0.5)  # NaN (fuera de la region) no es seco
+        if not np.any(x):
             continue
-        x = np.asarray(col, dtype=bool)
         padded = np.r_[False, x, False]
         dx = np.diff(padded.astype(np.int8))
         starts, ends = np.where(dx == 1)[0], np.where(dx == -1)[0]
         for s, e in zip(starts, ends):
+            if EXCLUDE_BOUNDARY_SPELLS and (s == 0 or e == n_time):
+                continue
             duration = int(e - s)
             if duration <= 0:
                 continue
