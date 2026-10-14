@@ -2,6 +2,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 
+import argparse
 import json
 import unicodedata
 from pathlib import Path
@@ -223,6 +224,14 @@ def load_region_spell_data(pr_hist, pr_fut, lat2d, lon2d, y_coord, x_coord, reco
 
 
 def main():
+    global DRY_THRESHOLD
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--umbral', type=float, default=DRY_THRESHOLD,
+                        help='Umbral de dia humedo ALADIN (mm/dia). Por defecto R0 global.')
+    DRY_THRESHOLD = parser.parse_args().umbral
+    is_main = DRY_THRESHOLD == 5.285
+    suffix = '' if is_main else f'_{DRY_THRESHOLD:g}mm'
+
     print('1/4: Cargando ALADIN historico y futuro...')
     pr_hist = open_aladin_period(HIST_START, HIST_END)
     pr_fut = open_aladin_period(FUT_START, FUT_END, scenario=FUTURE_SCENARIO)
@@ -253,7 +262,7 @@ def main():
     years_1 = range(PERIOD_1[0], PERIOD_1[1] + 1)
     years_2 = range(PERIOD_2[0], PERIOD_2[1] + 1)
 
-    out_dir = Path('outputs_pregunta5_aladin')
+    out_dir = Path(f'outputs_pregunta5_aladin{suffix}')
     out_dir.mkdir(exist_ok=True)
 
     print(f'3/4: Risk ratio de conteos N_fut/N_hist (>= {EVENT_THRESHOLD} dias)...')
@@ -327,7 +336,8 @@ def main():
     fig.savefig(out_dir / 'rr_curves_aladin.png', dpi=150, bbox_inches='tight')
     paper_fig = Path('paper_figuras')
     paper_fig.mkdir(exist_ok=True)
-    fig.savefig(paper_fig / 'fig08_rr_curves_aladin.png', dpi=200, bbox_inches='tight')
+    paper_name = 'fig08_rr_curves_aladin.png' if is_main else f'figS_rr_curves_aladin{suffix}.png'
+    fig.savefig(paper_fig / paper_name, dpi=200, bbox_inches='tight')
     plt.close()
 
     sig_rows = []
@@ -360,7 +370,7 @@ def main():
     with open(out_dir / 'results.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f'\nFigura guardada en {out_dir / "rr_curves_aladin.png"}')
-    print(f'Copia paper: {paper_fig / "fig08_rr_curves_aladin.png"}')
+    print(f'Copia paper: {paper_fig / paper_name}')
     return results
 
 
