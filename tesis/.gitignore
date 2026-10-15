@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.xdv
+*.synctex.gz
+tesis_overleaf.zip
+main.pdf
