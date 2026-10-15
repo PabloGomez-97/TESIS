@@ -224,13 +224,17 @@ def load_region_spell_data(pr_hist, pr_fut, lat2d, lon2d, y_coord, x_coord, reco
 
 
 def main():
-    global DRY_THRESHOLD
+    global DRY_THRESHOLD, FUTURE_SCENARIO
     parser = argparse.ArgumentParser()
     parser.add_argument('--umbral', type=float, default=DRY_THRESHOLD,
                         help='Umbral de dia humedo ALADIN (mm/dia). Por defecto R0 global.')
-    DRY_THRESHOLD = parser.parse_args().umbral
-    is_main = DRY_THRESHOLD == 5.285
-    suffix = '' if is_main else f'_{DRY_THRESHOLD:g}mm'
+    parser.add_argument('--escenario', default=FUTURE_SCENARIO, choices=['ssp585', 'ssp370'],
+                        help='Escenario futuro. Por defecto SSP5-8.5 (analisis principal).')
+    args = parser.parse_args()
+    DRY_THRESHOLD, FUTURE_SCENARIO = args.umbral, args.escenario
+    is_main = DRY_THRESHOLD == 5.285 and FUTURE_SCENARIO == 'ssp585'
+    suffix = ('' if DRY_THRESHOLD == 5.285 else f'_{DRY_THRESHOLD:g}mm') + \
+        ('' if FUTURE_SCENARIO == 'ssp585' else f'_{FUTURE_SCENARIO}')
 
     print('1/4: Cargando ALADIN historico y futuro...')
     pr_hist = open_aladin_period(HIST_START, HIST_END)
