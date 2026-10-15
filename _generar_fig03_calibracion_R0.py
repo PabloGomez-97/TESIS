@@ -1,4 +1,4 @@
-"""Regenera fig_p6_ftau.png con notacion R0 (en vez de tau*)."""
+"""Figura 3: calibracion del umbral R0 de ALADIN frente a CR2MET a 1 mm (1980-2014)."""
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -15,10 +15,9 @@ from shapely.ops import unary_union
 from shapely.prepared import prep
 
 ROOT = Path(__file__).resolve().parent
-OUTS = [
-    ROOT / 'presentacion_tesis' / 'figuras' / 'fig_p6_ftau.png',
-    ROOT / 'paper_figuras' / 'fig03_calibracion_R0_ftau.png',
-]
+OUTS = [ROOT / 'paper_figuras' / 'fig03_calibracion_R0_ftau.png']
+# Con R = 0 todo dia cuenta como humedo (pr >= 0): la curva parte en 0,1 mm para evitar ese artefacto.
+R_GRID = np.round(np.arange(0.1, 8.0001, 0.05), 3)
 
 
 def load_chile_geometry():
@@ -45,10 +44,9 @@ def chile_mask_aladin(lat2d, lon2d, geometry):
     ).reshape(lat2d.shape)
 
 
-def domain_fwet(pr, threshold, mask_da):
-    f = (pr >= threshold).mean('time') * 100
-    v = f.where(mask_da).values.ravel()
-    return float(np.nanmean(v[np.isfinite(v)]))
+def domain_fwet(pr, threshold):
+    """pr: array (tiempo, celdas). Media espacial (igual peso por celda) de la fraccion de dias pr >= R."""
+    return float(np.nanmean((pr >= threshold).mean(axis=0)) * 100)
 
 
 def main():
@@ -67,42 +65,52 @@ def main():
     )
 
     geom = load_chile_geometry()
-    mask = xr.DataArray(
-        chile_mask_aladin(pr_ala['lat'].values, pr_ala['lon'].values, geom),
-        dims=['y', 'x'],
-    )
+    mask = chile_mask_aladin(pr_ala['lat'].values, pr_ala['lon'].values, geom)
+    jj, ii = np.where(mask)
 
     print('Calculando F(R)...')
-    grid = np.linspace(0, 8, 161)
-    curve_ala = [domain_fwet(pr_ala, t, mask) for t in grid]
-    f_cr2_1 = domain_fwet(pr_cr2, 1.0, mask)
+    ala = pr_ala.values[:, jj, ii]
+    cr2 = pr_cr2.values[:, jj, ii]
+    curve_ala = [domain_fwet(ala, t) for t in R_GRID]
+    f_cr2_1 = domain_fwet(cr2, 1.0)
+    f_ala_1 = domain_fwet(ala, 1.0)
 
     lo, hi = 0.0, 15.0
     for _ in range(80):
         mid = 0.5 * (lo + hi)
-        if domain_fwet(pr_ala, mid, mask) > f_cr2_1:
+        if domain_fwet(ala, mid) > f_cr2_1:
             lo = mid
         else:
             hi = mid
     r0 = 0.5 * (lo + hi)
-    print(f'  F_CR2MET(1 mm) = {f_cr2_1:.2f}%')
+    print(f'  F_CR2MET(1 mm) = {f_cr2_1:.2f}% | F_ALADIN(1 mm) = {f_ala_1:.2f}%')
     print(f'  R0 = {r0:.3f} mm')
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
-    ax.plot(grid, curve_ala, 'steelblue', lw=2.2, label=r'ALADIN $F(R)$')
+    ax.plot(R_GRID, curve_ala, 'steelblue', lw=2.2, label=r'ALADIN $F(R)$')
+    ax.scatter(
+        [1.0], [f_ala_1], s=80, facecolors='steelblue', edgecolors='white', linewidth=1.2, zorder=5,
+        label=f'ALADIN a 1 mm ($F$ = {f_ala_1:.1f} %)'.replace('.', ','),
+    )
     ax.scatter(
         [1.0], [f_cr2_1], s=90, c='firebrick', zorder=5,
-        label=f'CR2MET @ 1 mm ($F$={f_cr2_1:.1f}%)',
+        label=f'CR2MET a 1 mm ($F$ = {f_cr2_1:.1f} %)'.replace('.', ','),
     )
     ax.scatter(
         [r0], [f_cr2_1], s=100, facecolors='white', edgecolors='firebrick',
         linewidth=2, marker='s', zorder=5,
-        label=f'ALADIN $R_0$={r0:.3f} mm',
+        label=f'ALADIN con $R_0$ = {r0:.3f} mm'.replace('.', ','),
     )
     ax.axhline(f_cr2_1, color='firebrick', ls=':', alpha=0.6)
-    ax.set_xlabel(r'Umbral $R$ (mm/dia)')
-    ax.set_ylabel('Fraccion espacial media de wet days Chile (%)')
-    ax.set_title(r'Calibracion $R_0$ ALADIN vs CR2MET (1980-2014)', fontweight='bold')
+    ax.annotate(
+        '', xy=(1.0, f_cr2_1 + 0.6), xytext=(1.0, f_ala_1 - 0.6),
+        arrowprops=dict(arrowstyle='<->', color='0.3', lw=1.3),
+    )
+    ax.text(1.12, 0.5 * (f_cr2_1 + f_ala_1), f'+{f_ala_1 - f_cr2_1:.1f} p.p.'.replace('.', ',', 1),
+            va='center', fontsize=10, color='0.25')
+    ax.set_xlabel(r'Umbral $R$ (mm día$^{-1}$)')
+    ax.set_ylabel('Fracción media de días húmedos en Chile (%)')
+    ax.set_xlim(0, 8.2)
     ax.legend(fontsize=9)
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
