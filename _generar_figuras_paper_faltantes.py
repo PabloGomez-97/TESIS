@@ -47,6 +47,21 @@ REGION_SPECS = {
     'Los Lagos': {'query': 'los lagos', 'color': '#4682B4'},
 }
 
+# Fig. 1: paletas separadas (cajas calidas, regiones frias) para no sugerir pares caja-region.
+FIG1_BASIN_STYLE = {
+    'Loa': ('Loa', '#D4A017'),
+    'Maipo': ('Maipo', '#C0392B'),
+    'Maule': ('Maule', '#E67E22'),
+    'Biobio': ('Biobío', '#C2185B'),
+}
+FIG1_REGION_STYLE = {
+    'Coquimbo': ('Coquimbo', '#7B68B5', None),
+    "O'Higgins": ("O'Higgins", '#2C7FB8', (-71.2, -34.65)),
+    'La Araucania': ('La Araucanía', '#2AA198', None),
+    'Los Lagos': ('Los Lagos', '#253494', None),
+}
+FIG1_REGION_LABEL_LON = -66.6
+
 
 def normalize_text(text):
     text = unicodedata.normalize('NFKD', str(text).lower())
@@ -120,47 +135,55 @@ def fig02_dominio():
         rec = find_region_record(spec['query'], admin_records)
         if rec is None:
             continue
+        label, color, target = FIG1_REGION_STYLE[name]
         ax.add_geometries(
             [rec.geometry], ccrs.PlateCarree(),
-            facecolor=spec['color'], edgecolor='white', linewidth=0.6,
-            alpha=0.35, zorder=1,
+            facecolor=color, edgecolor='white', linewidth=0.6,
+            alpha=0.45, zorder=1,
         )
-        rep = rec.geometry.representative_point()
-        ax.text(
-            rep.x, rep.y, name.replace('La Araucania', 'Araucania'),
-            transform=ccrs.PlateCarree(), fontsize=7, ha='center', va='center',
-            color='#1a1a1a', fontweight='bold', zorder=4,
+        if target is None:
+            rep = rec.geometry.representative_point()
+            target = (rep.x, rep.y)
+        ax.annotate(
+            label, xy=target, xytext=(FIG1_REGION_LABEL_LON, target[1]),
+            xycoords=ccrs.PlateCarree()._as_mpl_transform(ax),
+            textcoords=ccrs.PlateCarree()._as_mpl_transform(ax),
+            fontsize=8, ha='center', va='center', color=color, fontweight='bold',
+            arrowprops=dict(arrowstyle='-', color=color, lw=0.8),
+            bbox=dict(boxstyle='round,pad=0.2', fc='white', ec=color, lw=0.6, alpha=0.9),
+            zorder=7,
         )
 
     for name, spec in BASIN_SPECS.items():
+        label, color = FIG1_BASIN_STYLE[name]
         lon_min, lon_max, lat_min, lat_max = spec['bounds']
         rect = Rectangle(
             (lon_min, lat_min), lon_max - lon_min, lat_max - lat_min,
-            linewidth=2.2, edgecolor=spec['color'], facecolor='none',
+            linewidth=2.2, edgecolor=color, facecolor='none',
             transform=ccrs.PlateCarree(), zorder=5,
         )
         ax.add_patch(rect)
         cx, cy = 0.5 * (lon_min + lon_max), 0.5 * (lat_min + lat_max)
         ax.text(
-            cx, cy, name, transform=ccrs.PlateCarree(),
-            fontsize=9, ha='center', va='center', color=spec['color'],
+            cx, cy, label, transform=ccrs.PlateCarree(),
+            fontsize=9, ha='center', va='center', color=color,
             fontweight='bold', bbox=dict(boxstyle='round,pad=0.2', fc='white', ec='none', alpha=0.75),
             zorder=6,
         )
 
     legend_items = [
-        mpatches.Patch(facecolor=spec['color'], edgecolor='white', alpha=0.5, label=f'Region {n}')
-        for n, spec in REGION_SPECS.items()
+        mpatches.Patch(facecolor=color, edgecolor='white', alpha=0.6, label=f'Región {label}')
+        for label, color, _ in FIG1_REGION_STYLE.values()
     ]
     legend_items += [
-        Line2D([0], [0], color=spec['color'], lw=2.5, label=f'Cuenca {n}')
-        for n, spec in BASIN_SPECS.items()
+        Line2D([0], [0], color=color, lw=2.5, label=f'Ventana {label}')
+        for label, color in FIG1_BASIN_STYLE.values()
     ]
     ax.legend(handles=legend_items, loc='lower left', fontsize=7, framealpha=0.9, ncol=1)
 
     ax.set_title(
         'Dominio de estudio — Chile continental\n'
-        'Cuencas hidrograficas (PDFs) y regiones administrativas (risk ratios)',
+        'Ventanas para las PDFs y regiones administrativas para los risk ratios',
         fontweight='bold', fontsize=11,
     )
     plt.tight_layout()
