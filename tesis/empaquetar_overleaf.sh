@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 tmp=$(mktemp -d)
 mkdir -p "$tmp/tesis/figuras"
-cp main.tex referencias.bib "$tmp/tesis/"
+cp main.tex referencias.bib latexmkrc "$tmp/tesis/"
 mkdir -p "$tmp/tesis/capitulos" && cp capitulos/*.tex "$tmp/tesis/capitulos/"
 
 for fig in $(rg -o --no-filename 'includegraphics\[[^]]*\]\{[^}]+\}' capitulos | sed -E 's/.*\{([^}]+)\}$/\1/' | sort -u); do
