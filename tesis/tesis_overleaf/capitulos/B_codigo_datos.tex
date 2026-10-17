@@ -1,0 +1,33 @@
+\chapter{Código, datos y reproducibilidad}\label{anx:B}
+
+\pendiente{completar. Borrador de la relación entre scripts y resultados:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Resultado
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Script
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Figura~\ref{fig:dominio} (dominio) & \texttt{\_generar\_figuras\_paper\_faltantes.py} (función \texttt{fig02\_dominio}) \\
+Figura~\ref{fig:esquema} (esquema de dry spell) & \texttt{\_generar\_fig02\_esquema\_dryspell.py} \\
+Figura~\ref{fig:calibracion} (calibración de R₀) & \texttt{\_generar\_fig03\_calibracion\_R0.py} \\
+Figura~\ref{fig:mapas}, Tabla~\ref{tab:S1} y bootstrap de mapas & \texttt{\_run\_pregunta7\_bootstrap.py}, \texttt{\_generar\_fig32\_persistencia\_biases.py}, \texttt{\_generar\_tablaS1\_sensibilidad\_chile.py} \\
+Figura~\ref{fig:pdfs} y Tabla~\ref{tab:estadisticos} & \texttt{\_generar\_pregunta9\_pdf\_loglog\_cuencas.py} \\
+Figura~\ref{fig:mapas_futuro} & Sin script (pendiente) \\
+Figura~\ref{fig:rr}, Tabla~\ref{tab:rr}, Tabla~\ref{tab:S3}, Figura~\ref{fig:S3}, Tabla~\ref{tab:S5} y Figura~\ref{fig:S4} & \texttt{\_run\_pregunta5\_aladin.py} (opciones \texttt{-\/-umbral} y \texttt{-\/-escenario}) \\
+Figura~\ref{fig:S1} y Tabla~\ref{tab:S2} & \texttt{\_generar\_figS1\_sensibilidad\_umbral.py} \\
+Figura~\ref{fig:S2} & \texttt{\_generar\_figS2\_mapa\_R0\_local.py} \\
+S5 (regrillado) & \texttt{\_test\_regrillado\_conservativo.py} \\
+Conteo de rachas censuradas & \texttt{\_cuantificar\_censuradas.py} \\
+\end{longtable}
+}
+
+\textbf{Disponibilidad de datos (borrador).} CR2MET v2.5 está disponible públicamente en el Centro de Ciencia del Clima y la Resiliencia (CR2). Las simulaciones CNRM-ALADIN64 (dominio CHP12) fueron facilitadas por \pendiente{fuente original; preguntar al profesor} y están disponibles a solicitud.

@@ -1,0 +1,113 @@
+\chapter*{Hoja de ruta: qué falta para la tesis y cómo abordarlo}
+\addcontentsline{toc}{chapter}{Hoja de ruta}
+\emph{Esta sección es de trabajo y se borra en la versión final. El resto del documento es el paper copiado (texto normal) más la estructura de tesis; lo que falta está marcado como} \textbf{\pendiente{\ldots{}}}.
+
+\section*{A. Antes de escribir: definir con el profesor}\label{a.-antes-de-escribir-definir-con-el-profesor}
+\addcontentsline{toc}{section}{A. Antes de escribir: definir con el profesor}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Reglamento y formato del programa.} Extensión, estructura obligatoria, idioma del resumen, estilo de citas, portada y márgenes. \emph{Cómo:} pedir el reglamento o una plantilla de tesis del programa y ajustar este draft a esa estructura.
+\item
+  \textbf{Dónde van las pruebas de sensibilidad.} En el paper están en el material suplementario; en la tesis pueden ir en el cuerpo (secciones de robustez en los capítulos 4 y 5) o en un anexo. \emph{Cómo:} proponer cuerpo para S1 (umbral) y S6 (escenario) y anexo para el resto; confirmar con el profesor.
+\item
+  \textbf{Hipótesis.} Decidir si el programa exige hipótesis formales; hay un borrador en §1.2.
+\item
+  \textbf{Alcance adicional.} Decidir si se agregan las PDFs por cuenca con SSP3-7.0 o se deja SSP3-7.0 solo en los risk ratios.
+\end{enumerate}
+
+\section*{B. Contenido nuevo que la tesis necesita (el paper no lo tiene)}\label{b.-contenido-nuevo-que-la-tesis-necesita-el-paper-no-lo-tiene}
+\addcontentsline{toc}{section}{B. Contenido nuevo que la tesis necesita (el paper no lo tiene)}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Elemento
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Prioridad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cómo abordarlo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Resumen y abstract & Alta & Hay un borrador del resumen al inicio; ajustarlo al final y traducirlo. \\
+2 & Objetivos (general y específicos) y preguntas de investigación & Alta & Hay un borrador en §1.2, derivado de las dos preguntas del paper; validar con el profesor. \\
+3 & Capítulo 2: marco teórico y antecedentes & Alta & Expandir la introducción del paper en el esquema del Capítulo 2 (definiciones, clima de Chile, modelos y escenarios, estadística). Usar primero las referencias ya citadas; las nuevas sugeridas están marcadas para verificar. \\
+4 & Área de estudio con climatología & Media & Escribir §2.4 con la precipitación anual y su estacionalidad por ventana y región (ya calculamos los porcentajes de marzo--noviembre: 85--97 \%). Generar un mapa de precipitación anual de CR2MET. \\
+5 & Diagrama de flujo de la metodología & Media & Figura nueva que resuma los pasos: datos → regrillado → definición de rachas → calibración de R₀ → PDFs/mapas/bootstrap → risk ratios → sensibilidades. \\
+6 & Herramientas computacionales y reproducibilidad & Media & Escribir §3.8 y el Anexo B (software, scripts por figura y disponibilidad de datos). \\
+7 & Capítulo 7: conclusiones & Alta & Responder cada objetivo específico en un párrafo; hay viñetas de partida. \\
+8 & Discusión ampliada & Media & Agregar comparación con más literatura, posibles mecanismos (circulación, anticiclón), el papel de los aerosoles en SSP3-7.0 y las implicancias para la gestión. \\
+9 & Acrónimos, símbolos y glosario & Baja & Hay un borrador; completar al final. \\
+10 & Agradecimientos, índices y listas de figuras y tablas & Baja & Se generan al final con la herramienta de índices del procesador de texto. \\
+\end{longtable}
+}
+
+\section*{C. Pendientes heredados del paper (aplicarlos en el paper y en la tesis)}\label{c.-pendientes-heredados-del-paper-aplicarlos-en-el-paper-y-en-la-tesis}
+\addcontentsline{toc}{section}{C. Pendientes heredados del paper (aplicarlos en el paper y en la tesis)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Figuras regeneradas por reemplazar:} Figura 1 (dominio), 2 (esquema), 3 (calibración), 5 (mapas), 6 (PDFs) y 9 (risk ratios).
+\item
+  \textbf{Numeración de figuras:} el paper salta de la Figura 3 a la 5 y de la 6 a la 8. En la tesis conviene numerar por capítulo (p.~ej., Figura 3.1).
+\item
+  \textbf{Figura 8 sin script:} \texttt{mapas\_aladin\_pr\_anual\_y\_dryspells\_hist\_fut.png} no tiene un script que la genere y probablemente es anterior a la regla de rachas censuradas. \emph{Cómo:} escribir el script y regenerarla con las reglas actuales.
+\item
+  \textbf{Tabla 1:} en la fila de SSP5-8.5, columna Umbral, dejar solo ``Mismo R₀''.
+\item
+  \textbf{§3.1 (antes §2.1):} cambiar ``casos de estudio'' por ``ventanas representativas''; agregar la frase de convención ``por brevedad, cada ventana se designa con el nombre de su cuenca''; agregar la frase de sensibilidad del regrillado (S5).
+\item
+  \textbf{§3.4 (antes §2.4):} justificar los bins logarítmicos por el rango de los datos y aclarar que dividir por n daría la PDF de área 1.
+\item
+  \textbf{§3.7 (antes §2.7):} mencionar también S5 (regrillado) y S6 (SSP3-7.0).
+\item
+  \textbf{§6.3 (antes §5.3):} actualizar la primera limitación (un solo RCM; la señal se mantiene con SSP3-7.0) y el trabajo futuro (otros RCM y fin de siglo).
+\item
+  \textbf{Capítulo 5 (antes §4):} cambiar ``probabilidad de rachas prolongadas'' por ``frecuencia'' o ``número'', porque el risk ratio es un cociente de conteos.
+\item
+  \textbf{Referencias:} agregar Stechmann y Neelin (2014), Sun et al.~(2006) y Chen et al.~(2021), que se citan pero no están en la lista; ordenar alfabéticamente (Herrera-Marín está antes de Garreaud); verificar el artículo 172 de Herrera-Marín (2026); agregar una cita propia de CR2MET (documentación del producto) y de la simulación ALADIN CHP12.
+\item
+  \textbf{Disponibilidad de datos:} preguntar al profesor la fuente original de ALADIN CHP12 (los archivos indican CEAZA y un identificador ESGF).
+\item
+  \textbf{Verificar Martinez-Villalobos y Neelin (2018):} confirmar que usan bins logarítmicos y si trata precipitación diaria o acumulaciones por evento.
+\item
+  \textbf{Figura 5:} la barra de colores tapa el sur; opcionalmente marcar los píxeles significativos.
+\item
+  \textbf{Cerrar} los comentarios del profesor ya resueltos en el documento del paper.
+\end{enumerate}
+
+\section*{D. Orden de trabajo sugerido}\label{d.-orden-de-trabajo-sugerido}
+\addcontentsline{toc}{section}{D. Orden de trabajo sugerido}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reunión con el profesor para los puntos de la sección A.
+\item
+  Cerrar los pendientes del paper (sección C), porque se heredan a la tesis.
+\item
+  Objetivos y estructura definitivos (B2).
+\item
+  Capítulo 2 y área de estudio (B3, B4).
+\item
+  Metodología ampliada, diagrama y reproducibilidad (B5, B6).
+\item
+  Discusión ampliada y conclusiones (B7, B8).
+\item
+  Resumen, abstract, elementos formales y revisión final (B1, B9, B10).
+\end{enumerate}

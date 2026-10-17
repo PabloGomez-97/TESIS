@@ -54,69 +54,78 @@ def load_criterion_i_maps():
     }
 
 
-# La grilla ALADIN CHP12 entregada cubre 17,3-45,9 S: el mapa se recorta a esa zona.
-MAP_EXTENT = [-76, -66, -46.5, -17]
-
-
-def draw_spatial_comparison_maps(maps, *, suptitle=None, figsize=(11, 13)):
-    """Mapas 2x3 con colorbars verticales al costado de cada fila, para no tapar el sur de Chile."""
+def draw_spatial_comparison_maps(maps, *, suptitle=None, figsize=(11, 9)):
+    """Mapas 2x3 con colorbars debajo de cada fila (sin solapamiento)."""
     row_specs = [
-        ('mean', 'Duración media (días)', 'Δ duración media (días)'),
-        ('t99', 't99 (días)', 'Δ t99 (días)'),
+        ('mean', 'Duracion media (dias)'),
+        ('t99', 't99 — p99 (dias)'),
     ]
-    col_titles = ['CR2MET', 'ALADIN histórico', 'Δ = ALADIN − CR2MET']
+    col_titles = ['CR2MET (regrillado)', 'ALADIN historico', 'Delta = ALADIN - CR2MET']
     mask = maps['chile_mask']
 
-    fig = plt.figure(figsize=figsize)
-    # Columnas: mapa CR2MET | mapa ALADIN | barra comun | espacio | mapa delta | barra delta
-    gs = gridspec.GridSpec(
-        2, 6, figure=fig, width_ratios=[1, 1, 0.07, 0.42, 1, 0.07], wspace=0.08, hspace=0.10,
-    )
-    letters = iter('abcdef')
+    fig = plt.figure(figsize=(10, 10))
+    gs = gridspec.GridSpec(2, 3, figure=fig, wspace=0.02, hspace=0.42)
+    row_axes = []
 
-    for row_i, (key, main_label, delta_label) in enumerate(row_specs):
+    for row_i, (key, row_label) in enumerate(row_specs):
         cr2, ala, dlt = maps[key]
-        vals = np.concatenate([cr2.where(mask).values.ravel(), ala.where(mask).values.ravel()])
+        vals = np.concatenate([
+            cr2.where(mask).values.ravel(),
+            ala.where(mask).values.ravel(),
+        ])
         vals = vals[np.isfinite(vals)]
-        vmin, vmax = float(np.nanpercentile(vals, 2)), float(np.nanpercentile(vals, 98))
+        vmin = float(np.nanpercentile(vals, 2))
+        vmax = float(np.nanpercentile(vals, 98))
+
         dvals = dlt.where(mask).values.ravel()
         dvals = dvals[np.isfinite(dvals)]
         dv = max(float(np.nanpercentile(np.abs(dvals), 98)), 0.5)
 
+        axes_row = []
         im_main = im_delta = None
-        for da, title, col in zip([cr2, ala, dlt], col_titles, [0, 1, 4]):
-            ax = fig.add_subplot(gs[row_i, col], projection=ccrs.PlateCarree())
-            ax.add_feature(cfeature.LAND, facecolor='#EEEEEE', zorder=0)
-            ax.add_feature(cfeature.COASTLINE, linewidth=0.5)
+        for col_i, (da, title) in enumerate(zip([cr2, ala, dlt], col_titles)):
+            ax = fig.add_subplot(gs[row_i, col_i], projection=ccrs.PlateCarree())
+            ax.add_feature(cfeature.COASTLINE, linewidth=0.6)
             ax.add_feature(cfeature.BORDERS, linestyle=':', linewidth=0.4)
-            ax.set_extent(MAP_EXTENT, crs=ccrs.PlateCarree())
-            is_delta = col == 4
-            im = da.where(mask).plot.pcolormesh(
-                ax=ax, x='lon', y='lat', transform=ccrs.PlateCarree(), add_colorbar=False,
-                cmap='RdBu_r' if is_delta else 'viridis',
-                vmin=-dv if is_delta else vmin, vmax=dv if is_delta else vmax,
-            )
-            if is_delta:
-                im_delta = im
+            ax.set_extent(CHILE_EXTENT)
+            if col_i < 2:
+                im_main = da.plot.pcolormesh(
+                    ax=ax, x='lon', y='lat', transform=ccrs.PlateCarree(),
+                    cmap='viridis', vmin=vmin, vmax=vmax, add_colorbar=False,
+                )
             else:
-                im_main = im
-            ax.set_title(f'({next(letters)}) {title}', fontsize=10, fontweight='bold', pad=4)
+                im_delta = da.plot.pcolormesh(
+                    ax=ax, x='lon', y='lat', transform=ccrs.PlateCarree(),
+                    cmap='RdBu_r', vmin=-dv, vmax=dv, add_colorbar=False,
+                )
+            ax.set_title(title, fontsize=9.5, fontweight='bold', pad=4)
+            if col_i == 0:
+                ax.text(
+                    -0.12, 0.5, row_label, transform=ax.transAxes,
+                    fontsize=10, fontweight='bold', va='center', ha='center', rotation=90,
+                )
+            axes_row.append(ax)
 
-        cax_m = fig.add_subplot(gs[row_i, 2])
-        cb_m = fig.colorbar(im_main, cax=cax_m, extend='both')
-        cb_m.set_label(main_label, fontsize=9)
-        cb_m.ax.tick_params(labelsize=8)
-        cax_m.set_box_aspect(18)
+        cbar_m = fig.colorbar(
+            im_main, ax=axes_row[:2], orientation='horizontal',
+            fraction=0.046, pad=0.07, aspect=50, shrink=0.92,
+        )
+        cbar_m.set_label(row_label, fontsize=8)
+        cbar_m.ax.tick_params(labelsize=7)
 
-        cax_d = fig.add_subplot(gs[row_i, 5])
-        cb_d = fig.colorbar(im_delta, cax=cax_d, extend='both')
-        cb_d.set_label(delta_label, fontsize=9)
-        cb_d.ax.tick_params(labelsize=8)
-        cax_d.set_box_aspect(18)
+        cbar_d = fig.colorbar(
+            im_delta, ax=axes_row[2], orientation='horizontal',
+            fraction=0.046, pad=0.07, aspect=30, shrink=0.92,
+        )
+        cbar_d.set_label('Delta (dias)', fontsize=8)
+        cbar_d.ax.tick_params(labelsize=7)
+
+        row_axes.append(axes_row)
 
     if suptitle:
-        fig.suptitle(suptitle, fontsize=11, fontweight='bold', y=0.995)
-    fig.subplots_adjust(left=0.02, right=0.93, top=0.97, bottom=0.02)
+        fig.suptitle(suptitle, fontsize=11, fontweight='bold', y=0.98)
+
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.90, bottom=0.06)
     return fig
 
 
@@ -259,7 +268,14 @@ def build_figure():
 def build_spatial_only():
     """Version solo mapas (layout corregido)."""
     maps = load_criterion_i_maps()
-    fig = draw_spatial_comparison_maps(maps)
+    fig = draw_spatial_comparison_maps(
+        maps,
+        suptitle=(
+            'Persistencia de dry spells — CR2MET vs ALADIN\n'
+            'Criterio i (R0 = 5.285 mm) | 1980-2014'
+        ),
+        figsize=(11, 9.5),
+    )
     path = OUT / 'fig32_persistencia_spatial_only.png'
     fig.savefig(path, dpi=200, bbox_inches='tight', facecolor='white')
     plt.close(fig)
