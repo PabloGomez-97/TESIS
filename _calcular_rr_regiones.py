@@ -27,6 +27,10 @@ ESCENARIOS = {
     'ssp585':     ('aladin_hist',     'aladin_ssp585',     (1980, 2014), (2040, 2074)),
     'ssp370':     ('aladin_hist',     'aladin_ssp370',     (1980, 2014), (2040, 2074)),
     'ssp585_1mm': ('aladin_hist_1mm', 'aladin_ssp585_1mm', (1980, 2014), (2040, 2074)),
+    'ssp585_Rfrec': ('aladin_hist', 'aladin_ssp585_Rfrec', (1980, 2014), (2040, 2074)),
+    'ssp370_Rfrec': ('aladin_hist', 'aladin_ssp370_Rfrec', (1980, 2014), (2040, 2074)),
+    'ssp585_RfrecReg': ('aladin_hist', 'aladin_ssp585_RfrecReg', (1980, 2014), (2040, 2074)),
+    'ssp370_RfrecReg': ('aladin_hist', 'aladin_ssp370_RfrecReg', (1980, 2014), (2040, 2074)),
 }
 
 
