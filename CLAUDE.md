@@ -63,7 +63,17 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - Commits pequeños y descriptivos, en español, en la convención ya usada (`feat(tesis-capN): …`, `fix(…)`). No hacer commit ni push sin que el usuario lo pida.
 - No borrar archivos de resultados ni notebooks anteriores sin confirmación.
 
-## 7. Prohibido
+## 7. Decisiones registradas (18-oct-2026)
+
+- **Fuente de verdad**: el Google Doc «Draft tesis». `tesis/` (LaTeX) se ignora hasta el final.
+- **Modelo de formato**: tesis de Jorge Petit-Laurent (UAI, Magíster en Data Science, mismo profesor guía y mismo ALADIN CHP12). Estructura: Introducción (motivación, brecha, pregunta y objetivos, contribuciones y alcance, estructura) → Problema → Estado del arte por ejes → **Hipótesis formales y objetivos específicos** → Metodología → Resultados → Discusión → Conclusiones y trabajos futuros → Apéndices; resumen/abstract; página de «Publicaciones derivadas» y artículo(s) reproducidos en un apéndice. Comité: profesor guía + 3 miembros.
+- **Bootstrap histórico**: reemplazar el bootstrap pareado por remuestreos independientes (pedido del profesor).
+- **Fuente de ALADIN CHP12**: CNRM–CEAZA (contacto K. Goubanova); el usuario espera respuesta por correo. Citar ALADIN6.4 (Nabat et al. 2020), Roehrig et al. 2020 y CNRM-ESM2-1 (Séférian 2019) solo tras verificarlos.
+- **Modo de trabajo**: el usuario no ha leído Latoja 2025, Petrova 2024 ni Herrera-Marín 2026; al escribir cada sección Claude explica los conceptos y los papers antes de redactar (aprender juntos).
+- **Plazo**: más de 2 meses desde el 18-oct-2026.
+- «Chile continental» es incorrecto para el dominio: ALADIN CHP12 cubre ~17,7°S–45,9°S. Usar los límites reales.
+
+## 8. Prohibido
 
 - Decir que algo está verificado sin haberlo verificado.
 - Inventar o "recordar" referencias, DOIs o cifras.

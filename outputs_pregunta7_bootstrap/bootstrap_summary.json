@@ -4,9 +4,9 @@
     "Metrica": "Duracion media",
     "Delta medio espacial (dias)": -8.230230764489356,
     "Delta mediano espacial (dias)": -2.1789752387357404,
-    "% celdas significativas": 72.88712422007941,
-    "% ALADIN > CR2MET (sig.)": 7.543959160521838,
-    "% ALADIN < CR2MET (sig.)": 65.34316505955758,
+    "% celdas significativas": 74.0782756664776,
+    "% ALADIN > CR2MET (sig.)": 7.7992058990357345,
+    "% ALADIN < CR2MET (sig.)": 66.27906976744185,
     "Celdas validas": 3526
   },
   {
@@ -14,9 +14,9 @@
     "Metrica": "t99 (p99)",
     "Delta medio espacial (dias)": -46.25985819625637,
     "Delta mediano espacial (dias)": -17.164999999999964,
-    "% celdas significativas": 46.08621667612025,
-    "% ALADIN > CR2MET (sig.)": 3.488372093023256,
-    "% ALADIN < CR2MET (sig.)": 42.59784458309699,
+    "% celdas significativas": 46.79523539421441,
+    "% ALADIN > CR2MET (sig.)": 3.743618831537152,
+    "% ALADIN < CR2MET (sig.)": 43.05161656267725,
     "Celdas validas": 3526
   },
   {
@@ -24,9 +24,9 @@
     "Metrica": "Duracion media",
     "Delta medio espacial (dias)": -27.15135269444357,
     "Delta mediano espacial (dias)": -8.342764785697181,
-    "% celdas significativas": 98.05579036348267,
-    "% ALADIN > CR2MET (sig.)": 0.4790081713158636,
-    "% ALADIN < CR2MET (sig.)": 97.57678219216682,
+    "% celdas significativas": 97.94308255846718,
+    "% ALADIN > CR2MET (sig.)": 0.5071851225697379,
+    "% ALADIN < CR2MET (sig.)": 97.43589743589743,
     "Celdas validas": 3549
   },
   {
@@ -34,9 +34,9 @@
     "Metrica": "t99 (p99)",
     "Delta medio espacial (dias)": -134.8953423499577,
     "Delta mediano espacial (dias)": -69.72000000000003,
-    "% celdas significativas": 93.09664694280079,
+    "% celdas significativas": 93.46294730910115,
     "% ALADIN > CR2MET (sig.)": 0.16906170752324598,
-    "% ALADIN < CR2MET (sig.)": 92.92758523527755,
+    "% ALADIN < CR2MET (sig.)": 93.29388560157791,
     "Celdas validas": 3549
   },
   {
@@ -44,9 +44,9 @@
     "Metrica": "Duracion media",
     "Delta medio espacial (dias)": -6.758015391910858,
     "Delta mediano espacial (dias)": -1.91395522647478,
-    "% celdas significativas": 49.1212906943244,
-    "% ALADIN > CR2MET (sig.)": 0.20167098818784213,
-    "% ALADIN < CR2MET (sig.)": 48.91961970613656,
+    "% celdas significativas": 50.187265917603,
+    "% ALADIN > CR2MET (sig.)": 0.23048112935753384,
+    "% ALADIN < CR2MET (sig.)": 49.956784788245464,
     "Celdas validas": 3471
   },
   {
@@ -54,9 +54,9 @@
     "Metrica": "t99 (p99)",
     "Delta medio espacial (dias)": -36.026545664073744,
     "Delta mediano espacial (dias)": -6.490000000000009,
-    "% celdas significativas": 30.45231921636416,
-    "% ALADIN > CR2MET (sig.)": 4.4079515989628355,
-    "% ALADIN < CR2MET (sig.)": 26.044367617401328,
+    "% celdas significativas": 30.337078651685395,
+    "% ALADIN > CR2MET (sig.)": 4.379141457793144,
+    "% ALADIN < CR2MET (sig.)": 25.95793719389225,
     "Celdas validas": 3471
   }
 ]

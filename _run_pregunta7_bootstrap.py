@@ -187,9 +187,11 @@ def bootstrap_one_cell(groups_cr2, groups_ala, years_arr, metric_name, n_iter, s
     boots = np.empty(n_iter, dtype=np.float64)
     n_years = years_arr.size
     for b in range(n_iter):
-        draw = rng.choice(years_arr, size=n_years, replace=True)
-        bm_cr2 = spell_metric_from_durations(pool_spells_by_years(groups_cr2, draw), metric_name)
-        bm_ala = spell_metric_from_durations(pool_spells_by_years(groups_ala, draw), metric_name)
+        # Remuestreos independientes: los anos de ALADIN (simulacion libre) no son los mismos eventos que los de CR2MET.
+        draw_cr2 = rng.choice(years_arr, size=n_years, replace=True)
+        draw_ala = rng.choice(years_arr, size=n_years, replace=True)
+        bm_cr2 = spell_metric_from_durations(pool_spells_by_years(groups_cr2, draw_cr2), metric_name)
+        bm_ala = spell_metric_from_durations(pool_spells_by_years(groups_ala, draw_ala), metric_name)
         boots[b] = bm_ala - bm_cr2 if np.isfinite(bm_cr2) and np.isfinite(bm_ala) else np.nan
     boots = boots[np.isfinite(boots)]
     if boots.size < 50:
@@ -206,7 +208,7 @@ def _bootstrap_worker(args):
     return idx, out
 
 
-def bootstrap_paired_parallel(groups_cr2, groups_ala, mask_stacked, years_arr, metric_name,
+def bootstrap_parallel(groups_cr2, groups_ala, mask_stacked, years_arr, metric_name,
                               n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED, n_workers=N_WORKERS):
     n_cells = len(groups_cr2)
     obs = np.full(n_cells, np.nan)
@@ -346,7 +348,7 @@ def main():
 
         for metric_key, metric_label in BOOTSTRAP_METRICS:
             print(f'    Bootstrap: {metric_label}...', flush=True)
-            obs, _, _, significant, sig_higher, _ = bootstrap_paired_parallel(
+            obs, _, _, significant, sig_higher, _ = bootstrap_parallel(
                 groups_cr2, groups_ala, mask_stacked, years_common, metric_key,
             )
             summary_rows.append(
