@@ -63,7 +63,7 @@ def bootstrap(ch, cf, rng):
     return nh, nf
 
 
-def correr(tag):
+def correr(tag, sufijo=''):
     hist, fut, (h0, h1), (f0, f1) = ESCENARIOS[tag]
     g = np.load(OUT / 'grilla.npz')
     reg_de_celda = g['region_idx'][g['jj'], g['ii']].astype(np.int64)
@@ -93,7 +93,7 @@ def correr(tag):
                 aumento_sig=bool(estimable and lo > 1), descenso_sig=bool(estimable and hi < 1),
             ))
     df = pd.DataFrame(filas)
-    df.to_csv(OUT / f'rr_{tag}.csv', index=False)
+    df.to_csv(OUT / f'rr_{tag}{sufijo}.csv', index=False)
     return df
 
 
