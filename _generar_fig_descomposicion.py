@@ -40,7 +40,7 @@ def main():
         a2.plot([xi + 0.18] * 2, [rf.IC_low.iloc[xi], rf.IC_high.iloc[xi]], color='#0C447C', lw=1.6)
     a2.plot(x - 0.18, rr.RR.values, 'o', color='black', ms=7, label='Observado (R₀ fijo) con IC95 %')
     a2.plot(x, mk.RR_solo_frec.values, 's', color='#BA7517', ms=7, label='Esperado si solo cambia la frecuencia (Markov)')
-    a2.plot(x + 0.18, rf.RR.values, '^', color='#0C447C', ms=7, label='Umbral futuro que conserva la frecuencia, con IC95 %')
+    a2.plot(x + 0.18, rf.RR.values, '^', color='#0C447C', ms=7, label='Prueba de control: futuro con la misma frecuencia de días húmedos, con IC95 %')
     a2.set_yscale('log'); a2.set_yticks([0.6, 0.8, 1, 1.5, 2, 3, 5, 8]); a2.set_yticklabels(['0,6', '0,8', '1', '1,5', '2', '3', '5', '8'])
     a2.set_ylabel('RR(20)')
     a2.legend(fontsize=8, loc='upper left'); a2.grid(alpha=0.25)

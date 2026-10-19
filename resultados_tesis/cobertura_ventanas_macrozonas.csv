@@ -1,0 +1,12 @@
+tipo,nombre,celdas
+macrozona,Norte árido,1179
+macrozona,Norte semiárido,753
+macrozona,Centro mediterráneo,589
+macrozona,Sur templado,810
+ventana,Loa,298
+ventana,Maipo,154
+ventana,Maule,171
+ventana,Biobío,243
+resumen,celdas dentro de alguna ventana,866
+resumen,celdas en las 4 macrozonas,3331
+resumen,celdas de Chile en el dominio,3587
