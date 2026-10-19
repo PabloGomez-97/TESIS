@@ -348,8 +348,15 @@ def main():
 
         for metric_key, metric_label in BOOTSTRAP_METRICS:
             print(f'    Bootstrap: {metric_label}...', flush=True)
-            obs, _, _, significant, sig_higher, _ = bootstrap_parallel(
+            obs, ci_lo, ci_hi, significant, sig_higher, sig_lower = bootstrap_parallel(
                 groups_cr2, groups_ala, mask_stacked, years_common, metric_key,
+            )
+            Path('resultados_tesis').mkdir(exist_ok=True)
+            np.savez(
+                Path('resultados_tesis') / f'bootstrap_por_celda_{scen_key}_{metric_key}.npz',
+                delta=obs.reshape(ny, nx), ic_low=ci_lo.reshape(ny, nx), ic_high=ci_hi.reshape(ny, nx),
+                significativo=significant.reshape(ny, nx), mas_largo=sig_higher.reshape(ny, nx),
+                mas_corto=sig_lower.reshape(ny, nx), valida=(mask_stacked & np.isfinite(obs)).reshape(ny, nx),
             )
             summary_rows.append(
                 summarize_bootstrap(mask_stacked, obs, significant, sig_higher, cfg['title'], metric_label)
