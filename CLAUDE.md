@@ -66,6 +66,7 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 ## 7. Decisiones registradas (18-oct-2026)
 
 - **Fuente de verdad** (desde el 19-oct-2026): el Google Doc «Tesis: rachas secas en Chile (CR2MET y ALADIN) - documento de trabajo» (id `1ubaomROgPeX0ALOeJj-kJKygB0tB5xAORaF-9Mkt6cI`). El Google Doc «Draft tesis» queda solo como referencia y no se edita. `tesis/` (LaTeX) se ignora hasta el final.
+- **Dónde está el texto de la tesis**: enlace https://docs.google.com/document/d/1ubaomROgPeX0ALOeJj-kJKygB0tB5xAORaF-9Mkt6cI/edit?tab=t.0 . Claude **tiene acceso de lectura** con el conector de Google Docs (`read_doc`, `document_id` = el id de arriba) y debe leerlo él mismo cuando el usuario cite una sección («capítulo 3, sección 3.5»); no pedir que pegue el texto ni que indique dónde está. La respuesta es grande (~550 mil caracteres): se guarda en un archivo y se extrae la sección con `jq`/`python`, sin volcarla entera al contexto. Leer siempre la sección y su contexto antes de opinar.
 - **Edición del documento de trabajo**: Claude no lo edita directamente; entrega el texto exacto (qué reemplazar y por qué) y el usuario lo pega. No usar reemplazo de contenido completo vía Drive (pierde formato y comentarios anclados).
 - **Modelo de formato**: tesis de Jorge Petit-Laurent (UAI, Magíster en Data Science, mismo profesor guía y mismo ALADIN CHP12). Estructura: Introducción (motivación, brecha, pregunta y objetivos, contribuciones y alcance, estructura) → Problema → Estado del arte por ejes → **Hipótesis formales y objetivos específicos** → Metodología → Resultados → Discusión → Conclusiones y trabajos futuros → Apéndices; resumen/abstract; página de «Publicaciones derivadas» y artículo(s) reproducidos en un apéndice. Comité: profesor guía + 3 miembros.
 - **Bootstrap histórico**: reemplazar el bootstrap pareado por remuestreos independientes (pedido del profesor).
@@ -74,7 +75,22 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - **Plazo**: más de 2 meses desde el 18-oct-2026.
 - «Chile continental» es incorrecto para el dominio: ALADIN CHP12 cubre ~17,7°S–45,9°S. Usar los límites reales.
 
-## 8. Prohibido
+## 8. Qué va en cada capítulo (método vs. resultado)
+
+Criterio basado en la tesis modelo (Petit-Laurent): Cap. 4 Hipótesis y objetivos → Cap. 5 Metodología (5.1 arquitectura, 5.2 datos, luego un método por sección) → Cap. 6 Resultados organizados por objetivo, cerrando con síntesis → Cap. 7 Discusión (incluye limitaciones) → Cap. 8 Conclusiones. Las definiciones operativas están en el capítulo del problema (2.3), y los análisis de robustez y comparaciones de productos en apéndices.
+
+- **Introducción / Marco teórico**: motivación, brecha, objetivos, literatura, conceptos y contexto climático *tomado de la literatura*. Sin cifras propias.
+- **Metodología (solo método)**: arquitectura del estudio y qué objetivo usa cada paso; **Datos como una subsección** (fuente, versión, período, variables, unidades, calendario, procedencia); dominio y unidad de análisis; definiciones operativas; algoritmos y reglas; parámetros fijados *a priori* (mínimo de 30 rachas, 1 000 réplicas, semillas, D = 20, ventana mar–nov); supuestos; diseño de las sensibilidades (qué se varía y cómo); alternativas descartadas con su razón; reproducibilidad.
+- **Resultados**: toda cifra que sale del análisis (sesgos, Δ, RR, IC, % de celdas significativas, comparaciones entre productos), con su archivo de origen. Incluye lo que el método *produce*: el umbral calibrado R₀, la muestra efectiva (celdas válidas), el % de rachas censuradas, los valores de las sensibilidades.
+- **Discusión**: interpretación, comparación con la literatura, limitaciones ligadas a cada conclusión.
+- **Conclusiones**: solo lo que un resultado sostiene.
+- **Anexos**: tablas de detalle y la relación script → resultado.
+
+**Prueba para ubicar un número o una frase**: (1) ¿Lo podría escribir sin haber ejecutado ningún script? Si sí, es método. Si cambia al cambiar los datos o el código, es resultado. (2) ¿Contiene «por eso», «lo que indica», «las conclusiones no dependen de», «queda subestimada»? Es interpretación: Discusión. (3) ¿Ya está dicho en otro capítulo? Se dice una sola vez y el otro lugar remite.
+
+**Prohibido en Metodología**: Δ, sesgos, RR, intervalos, porcentajes de celdas, conteos que dependen del resultado (celdas válidas, rachas censuradas, réplicas descartadas), valores obtenidos de los datos (R₀ = 5,285 mm; frecuencias de días húmedos), interpretaciones y conclusiones. **Sí se permiten en Datos** los conteos que definen el dominio y no dependen del análisis de rachas (tamaño de la grilla, celdas dentro del polígono, celdas por región y macrozona, días por período). Si el método necesita nombrar un valor obtenido, usa el símbolo y remite («R₀, Sección 4.1»).
+
+## 9. Prohibido
 
 - Decir que algo está verificado sin haberlo verificado.
 - Inventar o "recordar" referencias, DOIs o cifras.
