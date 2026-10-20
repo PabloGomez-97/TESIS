@@ -1,0 +1,16 @@
+conjunto,macrozona,rachas_totales,censuradas,pct
+cr2met_hist,Norte árido,300684,2353,0.78
+cr2met_hist,Norte semiárido,302368,1473,0.49
+cr2met_hist,Centro mediterráneo,610083,939,0.15
+cr2met_hist,Sur templado,1307130,921,0.07
+cr2met_hist,14 regiones,2520265,5686,0.23
+aladin_hist,Norte árido,370169,1941,0.52
+aladin_hist,Norte semiárido,445892,1483,0.33
+aladin_hist,Centro mediterráneo,745511,1087,0.15
+aladin_hist,Sur templado,1494616,1351,0.09
+aladin_hist,14 regiones,3056188,5862,0.19
+aladin_ssp585,Norte árido,355436,2153,0.61
+aladin_ssp585,Norte semiárido,390307,1506,0.39
+aladin_ssp585,Centro mediterráneo,663724,1170,0.18
+aladin_ssp585,Sur templado,1423161,1617,0.11
+aladin_ssp585,14 regiones,2832628,6446,0.23

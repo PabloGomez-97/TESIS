@@ -21,7 +21,7 @@ def main():
     for met, nombre in (('mean', 'Duración media'), ('t99', 'Percentil 99')):
         z = np.load(OUT / f'bootstrap_por_celda_A_opcion_B_integrado_{met}.npz')
         val, corto, largo = z['valida'], z['mas_corto'], z['mas_largo']
-        unidades = [('pais', 'Todo el país', val)]
+        unidades = [('dominio', 'Las 14 regiones', val & (idx >= 0))]
         for m in MACROZONAS:
             unidades.append(('macrozona', m, val & np.isin(idx, [k for k, n in enumerate(NOMBRES_CORTOS) if MACROZONA_DE[n] == m])))
         for k, n in enumerate(NOMBRES_CORTOS):
@@ -36,7 +36,7 @@ def main():
                               pct_sin_diferencia=100 * (1 - corto[sel].mean() - largo[sel].mean())))
     df = pd.DataFrame(filas)
     df.to_csv(OUT / 'bootstrap_significancia_por_zona.csv', index=False)
-    print(df[df.nivel.isin(['pais', 'macrozona'])].round(1).to_string(index=False))
+    print(df[df.nivel.isin(['dominio', 'macrozona'])].round(1).to_string(index=False))
 
 
 if __name__ == '__main__':

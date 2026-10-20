@@ -2,7 +2,7 @@
 
 Diferencia por celda (ALADIN - CR2MET) de la duracion media y del percentil 99 (t99), usando las celdas con al
 menos 30 rachas en ambos productos (mismas celdas y mismas reglas del bootstrap del sesgo). Se informa el promedio
-y la mediana de las diferencias por macrozona y para todo el pais.
+y la mediana de las diferencias por macrozona y para las 14 regiones (Aysen queda fuera del analisis).
 
 Entrada: _pregunta7_outputs/metrics_integrado_cache.npz (generada por _run_pregunta7_bootstrap.py)
 Salidas: resultados_tesis/sesgo_por_macrozona.csv y paper_figuras/fig_sesgo_macrozonas.png
@@ -18,7 +18,7 @@ from geografia_tesis import NOMBRES_CORTOS, MACROZONAS, MACROZONA_DE
 
 ROOT = Path(__file__).resolve().parent
 COLOR = {'Norte árido': '#1D9E75', 'Norte semiárido': '#D85A30', 'Centro mediterráneo': '#534AB7',
-         'Sur templado': '#D4537E', 'Todo el país': '#888780'}
+         'Sur templado': '#D4537E', 'Las 14 regiones': '#888780'}
 
 
 def calcular():
@@ -29,9 +29,9 @@ def calcular():
         c, a = z[f'{met}_cr2'], z[f'{met}_ala']
         ok = np.isfinite(c) & np.isfinite(a) & z['chile_mask']
         d = a - c
-        for m in MACROZONAS + ['Todo el país']:
-            if m == 'Todo el país':
-                sel = ok
+        for m in MACROZONAS + ['Las 14 regiones']:
+            if m == 'Las 14 regiones':
+                sel = ok & (reg >= 0)
             else:
                 ks = [k for k, n in enumerate(NOMBRES_CORTOS) if MACROZONA_DE[n] == m]
                 sel = ok & np.isin(reg, ks)
@@ -43,7 +43,7 @@ def calcular():
 
 
 def figura(df):
-    zonas = MACROZONAS + ['Todo el país']
+    zonas = MACROZONAS + ['Las 14 regiones']
     fig, ejes = plt.subplots(1, 2, figsize=(11, 4.8), sharey=True)
     for ax, met in zip(ejes, ('Duración media', 'Percentil 99')):
         d = df[df.metrica == met].set_index('zona').loc[zonas]

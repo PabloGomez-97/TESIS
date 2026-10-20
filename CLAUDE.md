@@ -56,7 +56,7 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 
 ## 6. Flujo de trabajo
 
-- **Fuente de verdad única** para el texto de la tesis: la que defina el usuario (hoy hay dos copias: el Google Doc «Draft tesis» y `tesis/` en LaTeX). Mientras no esté definida, no editar dos copias en paralelo.
+- **Fuente de verdad única** para el texto de la tesis: la que defina el usuario (ver §7). No editar dos copias en paralelo.
 - Antes de escribir una sección nueva: (a) confirmar el objetivo al que responde, (b) listar las fuentes que la sustentan, (c) listar los números que usará y sus scripts.
 - Después de escribir: pasar el checklist de §3 y entregar la lista de problemas encontrados, no solo el texto.
 - Cuando falte información, **preguntar** en lugar de suponer. Cuando el usuario no sepa, anotarlo como pendiente para el profesor.
@@ -65,7 +65,8 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 
 ## 7. Decisiones registradas (18-oct-2026)
 
-- **Fuente de verdad**: el Google Doc «Draft tesis». `tesis/` (LaTeX) se ignora hasta el final.
+- **Fuente de verdad** (desde el 19-oct-2026): el Google Doc «Tesis: rachas secas en Chile (CR2MET y ALADIN) - documento de trabajo» (id `1ubaomROgPeX0ALOeJj-kJKygB0tB5xAORaF-9Mkt6cI`). El Google Doc «Draft tesis» queda solo como referencia y no se edita. `tesis/` (LaTeX) se ignora hasta el final.
+- **Edición del documento de trabajo**: Claude no lo edita directamente; entrega el texto exacto (qué reemplazar y por qué) y el usuario lo pega. No usar reemplazo de contenido completo vía Drive (pierde formato y comentarios anclados).
 - **Modelo de formato**: tesis de Jorge Petit-Laurent (UAI, Magíster en Data Science, mismo profesor guía y mismo ALADIN CHP12). Estructura: Introducción (motivación, brecha, pregunta y objetivos, contribuciones y alcance, estructura) → Problema → Estado del arte por ejes → **Hipótesis formales y objetivos específicos** → Metodología → Resultados → Discusión → Conclusiones y trabajos futuros → Apéndices; resumen/abstract; página de «Publicaciones derivadas» y artículo(s) reproducidos en un apéndice. Comité: profesor guía + 3 miembros.
 - **Bootstrap histórico**: reemplazar el bootstrap pareado por remuestreos independientes (pedido del profesor).
 - **Fuente de ALADIN CHP12**: CNRM–CEAZA (contacto K. Goubanova); el usuario espera respuesta por correo. Citar ALADIN6.4 (Nabat et al. 2020), Roehrig et al. 2020 y CNRM-ESM2-1 (Séférian 2019) solo tras verificarlos.
