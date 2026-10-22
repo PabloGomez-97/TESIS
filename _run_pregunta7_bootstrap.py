@@ -246,13 +246,20 @@ def full_period_metric(groups, mask_stacked, metric_name):
 
 
 def resumen_rows(escenario, metric_label, cr2, ala):
+    """Resumen espacial con la misma mascara para los tres renglones: celdas validas (>= 30 rachas) en CR2MET Y en ALADIN.
+
+    n_pixeles_propios es el numero de celdas validas de cada producto por separado (los mapas por producto las muestran
+    todas); los promedios de CR2MET y ALADIN se calculan sobre las celdas comunes para que cuadren con DELTA.
+    """
+    comun = np.isfinite(cr2) & np.isfinite(ala)
     rows = []
-    for name, arr in (('CR2MET', cr2), ('ALADIN', ala), ('DELTA', ala - cr2)):
-        v = arr[np.isfinite(arr)]
+    for name, arr, propio in (('CR2MET', cr2, cr2), ('ALADIN', ala, ala), ('DELTA', ala - cr2, ala - cr2)):
+        v = arr[comun]
         rows.append({
             'escenario': escenario, 'metrica': metric_label, 'dataset': name,
             'mean_espacial': float(np.mean(v)), 'median_espacial': float(np.median(v)),
             'min': float(np.min(v)), 'max': float(np.max(v)), 'n_pixeles': int(v.size),
+            'n_pixeles_propios': int(np.isfinite(propio).sum()),
         })
     return rows
 

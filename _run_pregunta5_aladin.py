@@ -148,7 +148,7 @@ def risk_ratio_counts(n_period_2, n_period_1):
 
 
 def bootstrap_rr_by_year(spell_df, years_1, years_2, min_duration, n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED):
-    """Bootstrap por años de inicio: RR* = N_fut*(t>=D) / N_hist*(t>=D)."""
+    """Bootstrap por años de inicio: RR* = N_fut*(t>=D) / N_hist*(t>=D). Devuelve (RR*, replicas descartadas)."""
     rng = np.random.default_rng(seed)
     grouped = {
         year: spell_df.loc[spell_df['start_year'] == year, 'duration'].to_numpy()
@@ -157,18 +157,22 @@ def bootstrap_rr_by_year(spell_df, years_1, years_2, min_duration, n_iter=BOOTST
     years_1 = np.array(list(years_1))
     years_2 = np.array(list(years_2))
     rr_values = []
+    descartadas = 0  # replicas sin rachas o con N_hist* = 0: no tienen RR definido; se cuentan y se informan
     for _ in range(n_iter):
         draw_1 = rng.choice(years_1, size=len(years_1), replace=True)
         draw_2 = rng.choice(years_2, size=len(years_2), replace=True)
         sample_1 = np.concatenate([grouped[y] for y in draw_1 if y in grouped and grouped[y].size > 0])
         sample_2 = np.concatenate([grouped[y] for y in draw_2 if y in grouped and grouped[y].size > 0])
         if sample_1.size == 0 or sample_2.size == 0:
+            descartadas += 1
             continue
         n1 = int(np.sum(sample_1 >= min_duration))
         n2 = int(np.sum(sample_2 >= min_duration))
         if n1 > 0:
             rr_values.append(n2 / n1)
-    return np.array(rr_values)
+        else:
+            descartadas += 1
+    return np.array(rr_values), descartadas
 
 
 def bootstrap_rr_curve(spell_df, years_1, years_2, thresholds, n_iter=BOOTSTRAP_ITER, seed=RANDOM_SEED):
@@ -176,7 +180,7 @@ def bootstrap_rr_curve(spell_df, years_1, years_2, thresholds, n_iter=BOOTSTRAP_
     for thr in thresholds:
         _, n1, total_1 = event_counts(spell_df, PERIOD_1[0], PERIOD_1[1], thr)
         _, n2, total_2 = event_counts(spell_df, PERIOD_2[0], PERIOD_2[1], thr)
-        rr_boot = bootstrap_rr_by_year(spell_df, years_1, years_2, thr, n_iter=n_iter, seed=seed)
+        rr_boot, n_desc = bootstrap_rr_by_year(spell_df, years_1, years_2, thr, n_iter=n_iter, seed=seed)
         if rr_boot.size == 0:
             ci_low = ci_high = ci_med = np.nan
         else:
@@ -195,6 +199,7 @@ def bootstrap_rr_curve(spell_df, years_1, years_2, thresholds, n_iter=BOOTSTRAP_
             'N2': n2,
             'Total1': total_1,
             'Total2': total_2,
+            'Replicas descartadas': n_desc,
         })
     return pd.DataFrame(rows)
 
@@ -278,7 +283,7 @@ def main():
         _, hits_1, total_1 = event_counts(spell_df, PERIOD_1[0], PERIOD_1[1], EVENT_THRESHOLD)
         _, hits_2, total_2 = event_counts(spell_df, PERIOD_2[0], PERIOD_2[1], EVENT_THRESHOLD)
         rr_obs = risk_ratio_counts(hits_2, hits_1)
-        rr_boot = bootstrap_rr_by_year(spell_df, years_1, years_2, EVENT_THRESHOLD)
+        rr_boot, n_desc = bootstrap_rr_by_year(spell_df, years_1, years_2, EVENT_THRESHOLD)
         if rr_boot.size > 0:
             ci_low, ci_med, ci_high = np.percentile(rr_boot, [2.5, 50, 97.5])
         else:
@@ -297,6 +302,7 @@ def main():
             'Cruza RR=1': (ci_low <= 1 <= ci_high) if np.all(np.isfinite([ci_low, ci_high])) else np.nan,
             'Sig aumento': np.isfinite(ci_low) and ci_low > 1.0,
             'Sig disminucion': np.isfinite(ci_high) and ci_high < 1.0,
+            'Replicas descartadas (de %d)' % BOOTSTRAP_ITER: n_desc,
         })
 
     summary_table = pd.DataFrame(summary_rows)

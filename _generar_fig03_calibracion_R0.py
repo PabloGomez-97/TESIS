@@ -1,7 +1,12 @@
-"""Figura 3: calibracion del umbral R0 de ALADIN frente a CR2MET a 1 mm (1980-2014)."""
+"""Figura 3: calibracion del umbral R0 de ALADIN frente a CR2MET a 1 mm (1980-2014).
+
+Guarda tambien los valores de la calibracion en resultados_tesis/calibracion_R0.json (R0 sin redondear, F de cada producto
+y F de ALADIN con el R0 redondeado a 3 decimales que usan todos los scripts, 5,285 mm).
+"""
 import warnings
 warnings.filterwarnings('ignore')
 
+import json
 from pathlib import Path
 
 import matplotlib
@@ -85,6 +90,16 @@ def main():
     r0 = 0.5 * (lo + hi)
     print(f'  F_CR2MET(1 mm) = {f_cr2_1:.2f}% | F_ALADIN(1 mm) = {f_ala_1:.2f}%')
     print(f'  R0 = {r0:.3f} mm')
+    r0_usado = 5.285  # valor redondeado que usan todos los scripts (TAU_ALADIN_DOMINIO)
+    calib = {
+        'periodo': '1980-2014', 'celdas': int(mask.sum()), 'umbral_cr2met_mm': 1.0,
+        'F_cr2met_1mm_pct': f_cr2_1, 'F_aladin_1mm_pct': f_ala_1, 'exceso_aladin_1mm_pp': f_ala_1 - f_cr2_1,
+        'R0_biseccion_mm': r0, 'R0_usado_mm': r0_usado, 'F_aladin_R0_usado_pct': domain_fwet(ala, r0_usado),
+    }
+    out_json = ROOT / 'resultados_tesis' / 'calibracion_R0.json'
+    out_json.parent.mkdir(exist_ok=True)
+    out_json.write_text(json.dumps(calib, indent=2), encoding='utf-8')
+    print(json.dumps(calib, indent=2))
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
     ax.plot(R_GRID, curve_ala, 'steelblue', lw=2.2, label=r'ALADIN $F(R)$')

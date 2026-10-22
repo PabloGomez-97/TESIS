@@ -62,7 +62,8 @@
       "IC95 superior": 1.3912,
       "Cruza RR=1": false,
       "Sig aumento": true,
-      "Sig disminucion": false
+      "Sig disminucion": false,
+      "Replicas descartadas (de 1000)": 0
     },
     {
       "Region": "O'Higgins",
@@ -75,7 +76,8 @@
       "IC95 superior": 1.4656,
       "Cruza RR=1": true,
       "Sig aumento": false,
-      "Sig disminucion": false
+      "Sig disminucion": false,
+      "Replicas descartadas (de 1000)": 0
     },
     {
       "Region": "La Araucanía",
@@ -88,7 +90,8 @@
       "IC95 superior": 16.9576,
       "Cruza RR=1": false,
       "Sig aumento": true,
-      "Sig disminucion": false
+      "Sig disminucion": false,
+      "Replicas descartadas (de 1000)": 0
     },
     {
       "Region": "Los Lagos",
@@ -101,7 +104,8 @@
       "IC95 superior": 28.075,
       "Cruza RR=1": true,
       "Sig aumento": false,
-      "Sig disminucion": false
+      "Sig disminucion": false,
+      "Replicas descartadas (de 1000)": 42
     }
   ],
   "sig_table": [
@@ -155,7 +159,8 @@
         "N1": 111395,
         "N2": 107932,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 10,
@@ -168,7 +173,8 @@
         "N1": 55499,
         "N2": 58778,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 15,
@@ -181,7 +187,8 @@
         "N1": 30806,
         "N2": 34504,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 20,
@@ -194,7 +201,8 @@
         "N1": 18366,
         "N2": 22266,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 25,
@@ -207,7 +215,8 @@
         "N1": 12418,
         "N2": 14994,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 30,
@@ -220,7 +229,8 @@
         "N1": 8547,
         "N2": 11185,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 35,
@@ -233,7 +243,8 @@
         "N1": 6559,
         "N2": 8368,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 40,
@@ -246,7 +257,8 @@
         "N1": 5408,
         "N2": 6699,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 50,
@@ -259,7 +271,8 @@
         "N1": 3886,
         "N2": 5047,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 60,
@@ -272,7 +285,8 @@
         "N1": 3086,
         "N2": 4202,
         "Total1": 223952,
-        "Total2": 205813
+        "Total2": 205813,
+        "Replicas descartadas": 0
       }
     ],
     "O'Higgins": [
@@ -287,7 +301,8 @@
         "N1": 46745,
         "N2": 46146,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 10,
@@ -300,7 +315,8 @@
         "N1": 17028,
         "N2": 18367,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 15,
@@ -313,7 +329,8 @@
         "N1": 8136,
         "N2": 8875,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 20,
@@ -326,7 +343,8 @@
         "N1": 4370,
         "N2": 5132,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 25,
@@ -339,7 +357,8 @@
         "N1": 2898,
         "N2": 3255,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 30,
@@ -352,7 +371,8 @@
         "N1": 1785,
         "N2": 2373,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 35,
@@ -365,7 +385,8 @@
         "N1": 1354,
         "N2": 1900,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 40,
@@ -378,7 +399,8 @@
         "N1": 1031,
         "N2": 1435,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 50,
@@ -391,7 +413,8 @@
         "N1": 640,
         "N2": 986,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 60,
@@ -404,7 +427,8 @@
         "N1": 370,
         "N2": 705,
         "Total1": 136121,
-        "Total2": 124356
+        "Total2": 124356,
+        "Replicas descartadas": 0
       }
     ],
     "La Araucanía": [
@@ -419,7 +443,8 @@
         "N1": 56649,
         "N2": 68705,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 10,
@@ -432,7 +457,8 @@
         "N1": 10350,
         "N2": 14437,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 15,
@@ -445,7 +471,8 @@
         "N1": 1812,
         "N2": 4069,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 20,
@@ -458,7 +485,8 @@
         "N1": 360,
         "N2": 1429,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 25,
@@ -471,7 +499,8 @@
         "N1": 29,
         "N2": 477,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 7
       },
       {
         "Umbral (dias)": 30,
@@ -484,7 +513,8 @@
         "N1": 1,
         "N2": 54,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 386
       },
       {
         "Umbral (dias)": 35,
@@ -497,7 +527,8 @@
         "N1": 0,
         "N2": 50,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 40,
@@ -510,7 +541,8 @@
         "N1": 0,
         "N2": 50,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 50,
@@ -523,7 +555,8 @@
         "N1": 0,
         "N2": 39,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 60,
@@ -536,7 +569,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 303771,
-        "Total2": 294275
+        "Total2": 294275,
+        "Replicas descartadas": 1000
       }
     ],
     "Los Lagos": [
@@ -551,7 +585,8 @@
         "N1": 47336,
         "N2": 61346,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 10,
@@ -564,7 +599,8 @@
         "N1": 4595,
         "N2": 8135,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 15,
@@ -577,7 +613,8 @@
         "N1": 633,
         "N2": 902,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 0
       },
       {
         "Umbral (dias)": 20,
@@ -590,7 +627,8 @@
         "N1": 107,
         "N2": 27,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 42
       },
       {
         "Umbral (dias)": 25,
@@ -603,7 +641,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 30,
@@ -616,7 +655,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 35,
@@ -629,7 +669,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 40,
@@ -642,7 +683,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 50,
@@ -655,7 +697,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       },
       {
         "Umbral (dias)": 60,
@@ -668,7 +711,8 @@
         "N1": 0,
         "N2": 0,
         "Total1": 389076,
-        "Total2": 382594
+        "Total2": 382594,
+        "Replicas descartadas": 1000
       }
     ]
   }

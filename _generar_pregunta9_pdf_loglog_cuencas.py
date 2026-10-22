@@ -20,7 +20,6 @@ from shapely.prepared import prep
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / '_pregunta9_outputs'
 PAPER = ROOT / 'paper_figuras'
-PRES = ROOT / 'presentacion_tesis' / 'figuras'
 CACHE_DURS = OUT / 'pdf_durations_i_global.pkl'
 
 HIST_START, HIST_END = '1980-01-01', '2014-12-31'
@@ -275,7 +274,6 @@ def build_panel(paths, out_path):
 def main():
     OUT.mkdir(exist_ok=True)
     PAPER.mkdir(exist_ok=True)
-    PRES.mkdir(parents=True, exist_ok=True)
 
     durs_by_basin = load_or_compute_durations()
 
@@ -288,16 +286,11 @@ def main():
         print(f'  -> {out}')
         paths.append(out)
 
-        # copias
-        for dest in (PAPER / fname, PRES / f'fig_p9_{basin.lower()}_i_global_loglog.png'):
-            dest.write_bytes(out.read_bytes())
+        (PAPER / fname).write_bytes(out.read_bytes())
 
     panel_out = PAPER / 'fig42_pdf_cuencas_loglog_panel.png'
     build_panel(paths, panel_out)
     print(f'  -> {panel_out}')
-
-    pres_panel = PRES / 'fig42_pdf_cuencas_loglog_panel.png'
-    pres_panel.write_bytes(panel_out.read_bytes())
     print('Listo.')
 
 

@@ -1,6 +1,6 @@
 # CLAUDE.md — Reglas de trabajo para la tesis
 
-Tesis de magíster sobre la distribución de duraciones de *dry spells* en Chile continental (CR2MET vs. CNRM-ALADIN64 CHP12; 1980–2014 y 2040–2074 bajo SSP5-8.5). Se deriva de un paper escrito con el profesor guía (Cristian Martínez, comentarios en el Google Doc del paper).
+Trabajo de magíster sobre la distribución de duraciones de *dry spells* en Chile (CR2MET vs. CNRM-ALADIN64 CHP12; 1980–2014 y 2040–2074 bajo SSP5-8.5). **Estado al 2026-10-21 (13:51, hora de Chile): el paper va primero; la tesis se reescribe desde cero después.** El paper se escribe con el profesor guía (Cristian Martínez; sus comentarios están en el Google Doc del paper).
 
 ## 1. Rol
 
@@ -43,7 +43,7 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - Los scripts deben ser reproducibles de extremo a extremo desde datos crudos; no depender de celdas ejecutadas en cierto orden ni de cachés sin regenerar.
 - Un cambio de regla metodológica (p. ej. censuradas, definición de RR) obliga a **regenerar todas** las figuras/tablas afectadas; listar cuáles son antes de dar el cambio por hecho.
 - No modificar archivos de salida a mano. No sobrescribir figuras sin conservar el script que las genera.
-- Registrar en el Anexo B la relación script → resultado cada vez que se agregue o cambie una figura/tabla.
+- Registrar en `REGISTRO_RESULTADOS.md` la relación script → resultado cada vez que se agregue o cambie una figura/tabla, y regenerar `resultados_tesis/sha256_salidas.txt`.
 
 ## 5. Reglas de redacción y de bibliografía
 
@@ -56,12 +56,15 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 
 ## 6. Flujo de trabajo
 
-- **Fuente de verdad única** para el texto de la tesis: la que defina el usuario (hoy hay dos copias: el Google Doc «Draft tesis» y `tesis/` en LaTeX). Mientras no esté definida, no editar dos copias en paralelo.
-- Antes de escribir una sección nueva: (a) confirmar el objetivo al que responde, (b) listar las fuentes que la sustentan, (c) listar los números que usará y sus scripts.
-- Después de escribir: pasar el checklist de §3 y entregar la lista de problemas encontrados, no solo el texto.
+- **Fuente de verdad del texto: el Google Doc del paper «Introducción v1»** (`1QG5xHTIcqvRqTvF8k3DVCsJ9If_iT5YmWFmIj3CDdJE`) y su **Material suplementario** (`1WbTTi7W3Z1LzmHBDiIljFgcH0cO4THieM43yMrFOeaU`). **El Doc del paper no se edita sin permiso explícito del usuario**: se entrega una lista de cambios y él los aplica. En el suplemento Claude puede leer y ajustar las **tablas** cuando una cifra cambie (permiso del 2026-10-21); el resto del texto del suplemento, no.
+- **La tesis se reinicia desde cero** en un Doc nuevo que creará el usuario. Hasta que el paper esté ajustado no se escribe ningún capítulo. El Doc de trabajo anterior (`1z1nzW-mBc13uHjdK9ldg-S0Nk71UeadhKrlnQLp50HY`) se vació el 2026-10-21 y el usuario lo eliminará: **no es fuente de nada**. No existe ya `tesis/` (LaTeX), ni `.docx` antiguos, ni presentaciones, ni notebooks.
+- **Fuente de verdad de los números:** `REGISTRO_RESULTADOS.md` (script → salida → figura/tabla, orden de ejecución, límites conocidos), `PROCEDENCIA_DATOS.md` (qué dicen los archivos de datos y qué no está documentado), `VERIFICACION_CITAS.md` (qué se leyó de cada referencia) y `CAMBIOS_AL_PAPER.md` (cambios pendientes en el paper). Un número que no esté en una salida registrada no se usa.
+- Al escribir o proponer texto: (a) confirmar a qué pregunta del paper responde, (b) listar las fuentes que lo sustentan, (c) listar los números que usa y sus scripts. Después, pasar el checklist de §3 y entregar la lista de problemas, no solo el texto.
 - Cuando falte información, **preguntar** en lugar de suponer. Cuando el usuario no sepa, anotarlo como pendiente para el profesor.
-- Commits pequeños y descriptivos, en español, en la convención ya usada (`feat(tesis-capN): …`, `fix(…)`). No hacer commit ni push sin que el usuario lo pida.
-- No borrar archivos de resultados ni notebooks anteriores sin confirmación.
+- Una afirmación sin evidencia se elimina, no se suaviza: el criterio es «si los datos propios no la sostienen, sale del texto».
+- Commits pequeños y descriptivos, en español (`feat(…)`, `fix(…)`). No hacer commit ni push sin que el usuario lo pida.
+- No borrar archivos de resultados sin confirmación; si el usuario confirma, respaldar primero en un zip fuera del repo y verificarlo (ver `~/Documents/respaldo_TESIS_*.zip`).
+- Entorno: `~/.pyenv/shims/python3.11` (tiene cartopy, xarray, shapely, scipy); el `python3` del sistema no tiene cartopy. No instalar paquetes sin pedirlo.
 
 ## 7. Prohibido
 
@@ -70,3 +73,26 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - Agregar contenido de relleno, análisis nuevos no pedidos o literatura decorativa.
 - Cerrar un pendiente solo moviendo el texto de lugar.
 - Dar el visto bueno a un capítulo con un hallazgo BLOQUEANTE abierto.
+
+## 8. Decisiones vigentes (actualizado 2026-10-21, 13:51)
+
+**Datos.** `pr/` (CR2MET v2.5, 672 archivos mensuales 1966–2021) y `pr1/` (8 archivos ALADIN CHP12: histórico 1950–1978 y 1979–2014, SSP5-8.5 y SSP3-7.0 en tres tramos 2015–2100), con hashes en `resultados_tesis/sha256_datos_crudos.txt`. Procedencia y metadatos inconsistentes: `PROCEDENCIA_DATOS.md`. Las celdas de Chile van de 17,7°S a 45,9°S (3 587 celdas); el paper debe decir esas latitudes, no «Chile continental».
+
+**Verificación hecha (2026-10-21).** Los scripts vigentes se ejecutaron desde datos crudos en una carpeta aparte y todas las salidas coinciden exactamente con las del repo; los RR de Coquimbo y La Araucanía se reprodujeron además con código independiente (`REGISTRO_RESULTADOS.md` §1). Un cambio de regla metodológica obliga a regenerar todo y a rehacer esa comparación.
+
+**Reglas metodológicas** (idénticas en todos los scripts): 1980–2014 / 2040–2074; R₀ = 5,285 mm en ALADIN y 1 mm en CR2MET; rachas censuradas excluidas; ≥ 30 rachas por celda (Δ y los promedios espaciales comparados entre productos usan solo las celdas válidas en ambos: 3 526 en el criterio i; la Fig. 5 también); bootstrap de años **independiente** para cada producto/período (pedido del profesor); RR = N_fut(t ≥ D)/N_hist(t ≥ D) con inicio mar–nov; réplicas sin N_hist* se cuentan y se informan. Detalle en `REGISTRO_RESULTADOS.md` §2.
+
+**Geografía.** Solo las 4 ventanas (Loa, Maipo, Maule, Biobío) para las PDFs y las 4 regiones (Coquimbo, O'Higgins, La Araucanía, Los Lagos) para los risk ratios. **Las macrozonas y las 14 regiones fueron rechazadas por el profesor: no reintroducirlas ni proponerlas.** Sensibilidades S4 (umbral 1 mm) y S6 (SSP3-7.0) solo para los risk ratios.
+
+**Lo que el análisis sostiene y lo que no** (no escribir en contra de esto sin nueva evidencia):
+- No hay evidencia de «reorganización temporal» ni de «agrupamiento» adicional. Con R₀ fijo la frecuencia seca sube en las 4 regiones (+2,1 a +3,9 pp, mar–nov; IC95 sin 0); la persistencia de 1.er orden ρ = P(seco|seco) − P(seco|húmedo) no cambia (IC95 incluye 0 en las 4 regiones); y el RR esperado solo por frecuencia cae dentro del IC95 del observado en 31 de 31 casos (`contraste_persistencia_regiones.csv`, `descomposicion_markov_rr_regiones.csv`). Límite: potencia baja y Markov de 1.er orden. La formulación permitida es «aumento de rachas largas de magnitud compatible con la menor frecuencia de días húmedos».
+- El sesgo histórico de ALADIN es negativo y robusto al umbral y al regrillado, pero su patrón entre ventanas depende de la métrica (absoluto/relativo) y del criterio de umbral; R₀ global no iguala la frecuencia dentro de las ventanas (Maipo +4,2 pp, Maule +3,3 pp).
+- Los RR de Coquimbo y La Araucanía son significativos solo en el análisis principal (y con 1 mm); con SSP3-7.0 sus IC cruzan 1, y con 1 mm Los Lagos da RR = 0,25. No se afirma «aumento en las cuatro regiones».
+- ALADIN llueve 2–4 veces lo de CR2MET en las 4 regiones; R₀ es un umbral estadístico, no físico.
+
+**Fuente de ALADIN.** Goubanova et al. 2024 (IMSC 2024, resumen p. 91) solo respalda: CNRM-ALADIN a 12 km para Chile norte-central, forzado por CNRM-ESM2-1, histórico+SSP5-8.5 1950–2100 y una corrida SSP3-7.0 2015–2100; no menciona precipitación, versión ni disponibilidad. La versión (6.4.1) consta en los atributos de los archivos, no en esa cita. Nabat et al. 2020 (que describiría ALADIN63) está sin verificar.
+
+**Reglas para una conversación nueva.**
+- No actuar por inercia: leer este archivo, `REGISTRO_RESULTADOS.md`, `CAMBIOS_AL_PAPER.md` y `MEMORY.md`, y confirmar qué se está haciendo.
+- No editar el Doc del paper; no escribir tesis; no restaurar lo eliminado (respaldos en `~/Documents/`); no hacer commit ni push; no instalar paquetes.
+- Toda cifra del texto debe salir de un script vigente registrado; si no, `[VERIFICAR]`.
