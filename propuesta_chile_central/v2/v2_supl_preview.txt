@@ -1,0 +1,187 @@
+H1 Material suplementario
+
+Este material complementa la sección 2.7 del artículo. Reúne las pruebas de sensibilidad a la elección del umbral de día húmedo: (i) el sesgo histórico de ALADIN respecto de CR2MET en Chile (17,7°S–45,9°S) con los tres criterios de la Tabla 2 (Tabla S1); (ii) las PDFs históricas por región con cuatro definiciones de umbral (Tabla S2, Figura S1); (iii) el mapa de R₀ local (Figura S2), (iv) los risk ratios futuros recalculados con 1 mm en ALADIN (Tabla S3, Figura S3); (v) la sensibilidad al método de regrillado (Tabla S4); (vi) la sensibilidad de los risk ratios al escenario SSP3-7.0 (Tabla S5, Figura S4), y (vii) la frecuencia de días secos y la persistencia de primer orden (Tabla S6). Salvo que se indique lo contrario, se aplican las mismas reglas que en el artículo: período histórico 1980–2014, futuro 2040–2074 (SSP5-8.5), CR2MET interpolado a la grilla de ALADIN, máscara de Chile (17,7°S–45,9°S) y exclusión de las rachas que tocan el inicio o el fin del período.
+
+H2 S1. Sensibilidad del sesgo histórico a la elección del umbral
+
+La Tabla S1 repite el análisis de mapas de §2.5 con los tres criterios de umbral. Los valores son promedios espaciales sobre las celdas con al menos 30 rachas en ambos productos; la significancia se evalúa con el bootstrap por años de §2.5, con remuestreos independientes para CR2MET y ALADIN (1000 réplicas, IC95).
+
+Tabla S1. Duración media y t99 de las rachas secas en Chile (17,7°S–45,9°S; 1980–2014) para CR2MET (1 mm) y ALADIN con cada criterio de umbral. Todos los valores se calculan sobre las celdas comunes de la última columna, es decir, las que tienen al menos 30 rachas en ambos productos. Δ = ALADIN − CR2MET, calculado píxel a píxel y promediado sobre esas celdas. Las dos columnas anteriores a «Celdas» indican el porcentaje de celdas donde la diferencia es significativa.
+
+[TABLA TS1]
+
+   Criterio | Métrica | CR2MET (días) | ALADIN (días) | Δ medio (días) | Δ mediano (días) | % celdas ALADIN < CR2MET | % celdas ALADIN > CR2MET | Celdas
+
+   i: R₀ global (5,285 mm) | Duración media | 41,0 | 32,8 | −8,2 | −2,2 | 66,3 | 7,8 | 3 526
+
+   i: R₀ global (5,285 mm) | t99 | 215,8 | 169,6 | −46,3 | −17,2 | 43,1 | 3,7 | 3 526
+
+   ii: 1 mm en ambos | Duración media | 42,1 | 14,9 | −27,2 | −8,3 | 97,4 | 0,5 | 3 549
+
+   ii: 1 mm en ambos | t99 | 221,1 | 86,2 | −134,9 | −69,7 | 93,3 | 0,2 | 3 549
+
+   iii: R₀ local | Duración media | 41,3 | 34,5 | −6,8 | −1,9 | 50,0 | 0,2 | 3 471
+
+   iii: R₀ local | t99 | 216,7 | 180,6 | −36,0 | −6,5 | 26,0 | 4,4 | 3 471
+
+Con el mismo umbral de 1 mm (criterio ii), ALADIN acorta las rachas en casi todo el país, porque produce demasiados días con lluvia débil que interrumpen las rachas. Al igualar la frecuencia de días húmedos con un umbral global (criterio i), el sesgo se reduce a cerca de un tercio. El umbral local (criterio iii) lo reduce algo más, pero a escala nacional no lo elimina, especialmente en la cola (t99).
+
+Sensibilidad al mínimo de rachas por celda. El análisis principal calcula la media y el t99 de cada celda con al menos 30 rachas por producto. Con tan pocas rachas, el t99 de una celda depende de sus dos o tres rachas más largas, y las celdas con pocas rachas se ubican en el norte árido. Este análisis se realizó después de conocer el resultado con 30 rachas, por lo que se presenta como sensibilidad y no reemplaza al análisis principal. Exigiendo al menos 50, 100 y 200 rachas en ambos productos (3 433, 3 167 y 2 750 celdas), Δ en t99 es −43,4, −33,9 y −21,6 días (−46,3 con 30 rachas) y Δ en la duración media es −7,9, −6,8 y −3,9 días (−8,2 con 30). La magnitud del sesgo disminuye porque se excluyen celdas del norte árido (latitud media de las celdas excluidas entre 20,8° y 24,0°S), donde Δ es mayor, pero su signo no cambia. El Δ mediano varía menos (t99: −17,2, −16,7, −15,1 y −10,5 días con 30, 50, 100 y 200 rachas), y el porcentaje de celdas donde ALADIN es significativamente más corto casi no cambia (66–69 % en la media y 43–44 % en t99).
+
+Tabla S1b. Sensibilidad del sesgo histórico (criterio i) al mínimo de rachas por celda. Δ = ALADIN − CR2MET, promediado sobre las celdas con al menos ese número de rachas en ambos productos; los porcentajes corresponden a las celdas donde ALADIN es significativamente más corto (bootstrap por años). El análisis principal usa 30 rachas; los otros mínimos se evaluaron después de conocer ese resultado.
+
+[TABLA TS1b]
+
+   Mínimo de rachas | Celdas | Δ media (días) | Δ t99 (días) | Δ mediano t99 (días) | % celdas ALADIN < CR2MET, media | % celdas ALADIN < CR2MET, t99
+
+   30 (análisis principal) | 3 526 | −8,2 | −46,3 | −17,2 | 66,3 | 43,1
+
+   50 | 3 433 | −7,9 | −43,4 | −16,7 | 67,2 | 43,7
+
+   100 | 3 167 | −6,8 | −33,9 | −15,1 | 69,0 | 44,3
+
+   200 | 2 750 | −3,9 | −21,6 | −10,5 | 68,7 | 43,6
+
+H2 S2. PDFs históricas por región con distintos umbrales
+
+Tabla S2. Estadísticos de duración de las rachas secas por región (1980–2014) para CR2MET con 1 mm y ALADIN con 1 mm (criterio ii), R₀ global (criterio i) y R₀ local (criterio iii). n = número de rachas.
+
+[TABLA TS2]
+
+   Región | Serie | n | Media (días) | Mediana (días) | p90 (días) | p99 (días) | Máximo (días)
+
+   Valparaíso | CR2MET 1 mm | 80 682 | 15,1 | 7 | 32 | 155 | 299
+
+   Valparaíso | ALADIN 1 mm | 144 103 | 7,1 | 4 | 15 | 64 | 181
+
+   Valparaíso | ALADIN R₀ global | 110 518 | 10,4 | 5 | 21 | 124 | 243
+
+   Valparaíso | ALADIN R₀ local | 78 995 | 14,1 | 6 | 28 | 169 | 270
+
+   Metropolitana | CR2MET 1 mm | 99 198 | 10,8 | 5 | 23 | 103 | 281
+
+   Metropolitana | ALADIN 1 mm | 146 317 | 6,0 | 3 | 13 | 49 | 166
+
+   Metropolitana | ALADIN R₀ global | 120 703 | 8,3 | 4 | 17 | 79 | 184
+
+   Metropolitana | ALADIN R₀ local | 96 542 | 10,7 | 5 | 22 | 125 | 226
+
+   O'Higgins | CR2MET 1 mm | 110 205 | 10,5 | 5 | 22 | 117 | 250
+
+   O'Higgins | ALADIN 1 mm | 157 215 | 6,2 | 3 | 14 | 50 | 159
+
+   O'Higgins | ALADIN R₀ global | 133 363 | 8,3 | 4 | 18 | 77 | 194
+
+   O'Higgins | ALADIN R₀ local | 114 776 | 9,7 | 4 | 21 | 97 | 198
+
+   Maule | CR2MET 1 mm | 210 284 | 8,8 | 4 | 19 | 76 | 206
+
+   Maule | ALADIN 1 mm | 279 644 | 5,5 | 3 | 12 | 36 | 142
+
+   Maule | ALADIN R₀ global | 250 908 | 7,0 | 4 | 16 | 55 | 160
+
+   Maule | ALADIN R₀ local | 225 837 | 8,0 | 4 | 18 | 66 | 194
+
+[FIGURA S1: figS1_sensibilidad_umbral_regiones.png]
+
+Figura S1. Sensibilidad de las PDFs históricas (1980–2014) de duración de rachas secas a la elección del umbral de día húmedo, en las regiones (a) Valparaíso, (b) Metropolitana, (c) O'Higgins y (d) Maule. Se comparan CR2MET con 1 mm (negro) y ALADIN con 1 mm (criterio ii, rojo), con R₀ global = 5,285 mm (criterio i, azul) y con R₀ local por píxel (criterio iii, verde). Ejes logarítmicos; los bins son comunes a las cuatro series de cada región (§2.4) y la integral de cada curva es igual a su número de rachas (n).
+
+Con 1 mm, ALADIN produce más rachas y más cortas que CR2MET en las cuatro regiones (mayor n y menor p99). La calibración del umbral acerca las PDFs de ALADIN a la de CR2MET; con R₀ local el p99 de ALADIN supera al de CR2MET en Valparaíso (169 frente a 155 días) y Metropolitana (125 frente a 103), mientras que en O'Higgins (97 frente a 117) y Maule (66 frente a 76) la cola de ALADIN sigue siendo más corta.
+
+H2 S3. Mapa de R₀ local
+
+[FIGURA S2: figS2_mapa_R0_local.png]
+
+Figura S2. Umbral local de día húmedo de ALADIN (R₀ local, criterio iii) en 1980–2014. En cada píxel, R₀ local es el umbral para el cual la fracción de días húmedos de ALADIN iguala la de CR2MET con 1 mm, obtenido por bisección. La línea negra en la barra de colores marca el R₀ global (5,285 mm). Los píxeles en blanco (82 de 3 587) no tienen solución dentro del intervalo de búsqueda (0–15 mm).
+
+El R₀ local tiene una mediana de 6,4 mm (p10 = 2,3 mm; p90 = 11,1 mm) y es inferior al R₀ global en el 39 % de los píxeles. Los valores más altos se concentran en la zona centro-norte (aproximadamente 25–36,5 °S) y los más bajos en el extremo norte y en el sur. Esta heterogeneidad es la razón por la que el análisis principal usa un único umbral global (§2.3): corrige la frecuencia de días húmedos sin introducir un campo de umbrales que varía de un píxel a otro.
+
+H2 S4. Robustez de la señal futura al umbral
+
+Para comprobar que el aumento futuro de rachas largas no es consecuencia de la calibración, los risk ratios de §2.6 se recalculan con 1 mm en ALADIN en ambos períodos, manteniendo todas las demás reglas (rachas iniciadas entre marzo y noviembre, bootstrap independiente por años, 1000 réplicas).
+
+Tabla S3. Risk ratio RR(20) = N_fut(t ≥ 20 d) / N_hist(t ≥ 20 d) por región con R₀ global (análisis principal, Tabla 4) y con 1 mm en ALADIN. Entre corchetes, el IC95 bootstrap. Son significativos los aumentos con IC95 completamente sobre 1 (Valparaíso y Maule con 1 mm; Valparaíso con R₀ global).
+
+[TABLA TS3]
+
+   Región | R₀ global: N_hist → N_fut | R₀ global: RR(20) [IC95] | 1 mm: N_hist → N_fut | 1 mm: RR(20) [IC95]
+
+   Valparaíso | 8 557 → 10 022 | 1,17 [1,01; 1,36] | 5 551 → 6 972 | 1,26 [1,03; 1,52]
+
+   Metropolitana | 6 248 → 7 373 | 1,18 [0,98; 1,43] | 3 773 → 4 639 | 1,23 [0,99; 1,54]
+
+   O'Higgins | 7 015 → 8 096 | 1,15 [0,95; 1,40] | 4 370 → 5 132 | 1,17 [0,96; 1,47]
+
+   Maule | 9 137 → 10 855 | 1,19 [0,95; 1,49] | 4 507 → 6 612 | 1,47 [1,12; 2,00]
+
+[FIGURA S3: figS_rr_regiones_1mm.png]
+
+Figura S3. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) en función del umbral de duración D para las cuatro regiones, calculado con 1 mm en ALADIN (SSP5-8.5, 2040–2074 frente a 1980–2014). La banda sombreada es el IC95 bootstrap por años; la línea punteada marca RR = 1.
+
+Con 1 mm, el RR(20) es mayor que 1 en las cuatro regiones (entre 1,17 y 1,47). El IC95 queda por encima de 1 en Valparaíso a D = 20, 25, 30 y 35 días, en Metropolitana a D = 30, 35, 50 y 60, en Maule a D = 15, 20 y 25 y en ningún valor de D en O'Higgins. En Metropolitana y O'Higgins el IC95 de RR(20) incluye 1 ([0,99; 1,54] y [0,96; 1,47]), igual que en el análisis principal. La señal futura no depende, por lo tanto, de la calibración del umbral.
+
+H2 S5. Sensibilidad al método de regrillado de CR2MET
+
+En el análisis principal, CR2MET se interpola linealmente a los centros de celda de ALADIN. Como alternativa, se calculó para cada celda de ALADIN el promedio de las celdas de CR2MET cuyo centro cae dentro de ella (mediana de 6 celdas), y se repitieron la calibración del umbral y los mapas de duración. El promedio por área aumenta la fracción de días húmedos de CR2MET en solo 0,006 puntos porcentuales, por lo que el umbral calibrado prácticamente no cambia. Las diferencias de duración entre ALADIN y CR2MET varían en menos de 0,4 días en la media y menos de 3 días en el percentil 99, en los tres criterios de umbral. Las estadísticas de CR2MET en las cuatro regiones cambian como máximo 0,06 días en la media, 0 días en el p90 y 3 días en el p99. Las conclusiones no dependen del método de regrillado.
+
+Tabla S4. Comparación entre la interpolación lineal (análisis principal) y el promedio por área de CR2MET sobre la grilla de ALADIN (1980–2014). Δ = ALADIN − CR2MET, promedio espacial sobre Chile (17,7°S–45,9°S).
+
+[TABLA TS4]
+
+    | Interpolación lineal | Promedio por área
+
+   Fracción de días húmedos CR2MET (≥ 1 mm) | 20,945 % | 20,951 %
+
+   R₀ calibrado (mm día⁻¹) | 5,285 | 5,280
+
+   Δ duración media, criterio i (días) | −8,2 | −7,9
+
+   Δ t99, criterio i (días) | −46,3 | −43,7
+
+   Δ duración media, criterio ii (días) | −27,2 | −26,9
+
+   Δ t99, criterio ii (días) | −134,9 | −132,9
+
+   Δ duración media, criterio iii (días) | −6,8 | −6,6
+
+   Δ t99, criterio iii (días) | −36,0 | −34,8
+
+H2 S6. Sensibilidad de los risk ratios al escenario de emisiones
+
+Los risk ratios se repitieron con el escenario SSP3-7.0 (2040–2074) de la misma simulación ALADIN, manteniendo el período histórico, el umbral R₀ = 5,285 mm día⁻¹ y la restricción a rachas iniciadas entre marzo y noviembre (Tabla S5; Figura S4). En las cuatro regiones, RR(20) es mayor que 1 en ambos escenarios. Con SSP3-7.0 los cambios son algo menores en Valparaíso, Metropolitana y Maule e iguales en O'Higgins (1,15 en ambos), y ninguno de los cuatro IC95 de RR(20) queda por encima de 1 (en el análisis principal, Valparaíso sí). La significancia de valores individuales cambia en los casos cercanos al límite, pero la dirección de la señal es la misma. Como ambos escenarios aún tienen forzamientos similares a mediados de siglo y se dispone de un solo miembro por escenario, las diferencias entre ellos no deben atribuirse al forzamiento.
+
+Tabla S5. Risk ratio RR(20) = N_fut(t ≥ 20 d) / N_hist(t ≥ 20 d) por región con SSP5-8.5 (análisis principal, Tabla 4) y SSP3-7.0. Entre corchetes, el intervalo de confianza del 95 % por bootstrap por años.
+
+[TABLA TS5]
+
+   Región | N_hist | SSP5-8.5: N_fut | SSP5-8.5: RR(20) | SSP3-7.0: N_fut | SSP3-7.0: RR(20)
+
+   Valparaíso | 8 557 | 10 022 | 1,17 [1,01; 1,36] | 9 813 | 1,15 [0,98; 1,33]
+
+   Metropolitana | 6 248 | 7 373 | 1,18 [0,98; 1,43] | 7 027 | 1,12 [0,95; 1,33]
+
+   O'Higgins | 7 015 | 8 096 | 1,15 [0,95; 1,40] | 8 039 | 1,15 [0,97; 1,37]
+
+   Maule | 9 137 | 10 855 | 1,19 [0,95; 1,49] | 10 409 | 1,14 [0,93; 1,41]
+
+[FIGURA S4: figS_rr_regiones_ssp370.png]
+
+Figura S4. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) en función del umbral de duración D para las cuatro regiones, con ALADIN bajo SSP3-7.0 (2040–2074) frente al histórico (1980–2014), R₀ = 5,285 mm día⁻¹ y rachas iniciadas entre marzo y noviembre. La banda sombreada es el intervalo de confianza del 95 % por bootstrap por años.
+
+H2 S7. Frecuencia seca y persistencia de primer orden
+
+Para evaluar si el aumento de rachas largas se acompaña de un cambio en el agrupamiento de los días secos, se comparan, en cada región, la frecuencia de días secos y la persistencia de primer orden ρ = P(seco hoy | seco ayer) − P(seco hoy | húmedo ayer) entre 1980–2014 y 2040–2074 (SSP5-8.5), con R₀ = 5,285 mm día⁻¹ y para los días de marzo a noviembre. Los parámetros se estiman por celda y mes y se promedian con igual peso sobre las celdas y los meses de cada región. El IC95 de la diferencia se obtiene con 1 000 réplicas de bootstrap por años, con sorteos independientes para cada período.
+
+Tabla S6. Frecuencia de días secos y persistencia de primer orden (ρ) en 1980–2014 y 2040–2074 (SSP5-8.5), marzo–noviembre, y su diferencia con IC95 por bootstrap de años. pp = puntos porcentuales.
+
+[TABLA TS6]
+
+   Región | Frecuencia seca, hist → fut (Δ [IC95], pp) | ρ hist → fut | Δρ [IC95] | IC95 de Δρ incluye 0
+
+   Valparaíso | 80,0 → 82,7 %; 2,6 [1,0; 4,3] | 0,297 → 0,296 | −0,001 [−0,032; 0,029] | Sí
+
+   Metropolitana | 74,0 → 76,9 %; 2,8 [0,8; 4,5] | 0,316 → 0,316 | 0,000 [−0,030; 0,030] | Sí
+
+   O'Higgins | 73,6 → 76,9 %; 3,3 [1,4; 5,0] | 0,303 → 0,311 | 0,008 [−0,022; 0,038] | Sí
+
+   Maule | 68,7 → 72,5 %; 3,8 [1,6; 5,8] | 0,317 → 0,328 | 0,011 [−0,018; 0,040] | Sí

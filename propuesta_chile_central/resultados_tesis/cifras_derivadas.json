@@ -1,0 +1,151 @@
+{
+ "unidades": {
+  "Valparaiso": {
+   "celdas": 108,
+   "lat_min": -33.892837169978726,
+   "lat_max": -32.05552765939491
+  },
+  "Metropolitana": {
+   "celdas": 100,
+   "lat_min": -34.263329170175766,
+   "lat_max": -33.05816319104706
+  },
+  "OHiggins": {
+   "celdas": 110,
+   "lat_min": -34.966326215919935,
+   "lat_max": -33.95383425588071
+  },
+  "Maule": {
+   "celdas": 184,
+   "lat_min": -36.44061094318739,
+   "lat_max": -34.80267871298413
+  }
+ },
+ "unidades_lat_total": {
+  "min": -36.44061094318739,
+  "max": -32.05552765939491
+ },
+ "bins_efectivos": {
+  "Valparaiso": 22,
+  "Metropolitana": 22,
+  "OHiggins": 22,
+  "Maule": 21
+ },
+ "max_cr2met": {
+  "Valparaiso": 299,
+  "Metropolitana": 281,
+  "OHiggins": 250,
+  "Maule": 206
+ },
+ "percentil_D20": {
+  "Maule": {
+   "frac_ge20_pct": 4.060762554053874,
+   "percentil": 95.93923744594612,
+   "total_hist": 225007,
+   "ge20_hist": 9137
+  },
+  "Metropolitana": {
+   "frac_ge20_pct": 5.79188876013905,
+   "percentil": 94.20811123986095,
+   "total_hist": 107875,
+   "ge20_hist": 6248
+  },
+  "O'Higgins": {
+   "frac_ge20_pct": 5.769341480866182,
+   "percentil": 94.23065851913381,
+   "total_hist": 121591,
+   "ge20_hist": 7015
+  },
+  "Valparaíso": {
+   "frac_ge20_pct": 8.495408289898238,
+   "percentil": 91.50459171010176,
+   "total_hist": 100725,
+   "ge20_hist": 8557
+  }
+ },
+ "tabla3_derivadas": {
+  "Valparaiso": {
+   "n_spells_cambio_pct": -12.934544599069831,
+   "media_cambio_pct": 17.1486020681731,
+   "p99_cambio_pct": 14.516129032258075,
+   "frac_ge20_hist": 10.943,
+   "frac_ge20_fut": 13.573,
+   "p99_cr2met": 155.0
+  },
+  "Metropolitana": {
+   "n_spells_cambio_pct": -11.569720719451881,
+   "media_cambio_pct": 16.010561689870386,
+   "p99_cambio_pct": 37.9746835443038,
+   "frac_ge20_hist": 8.338,
+   "frac_ge20_fut": 10.236,
+   "p99_cr2met": 103.0
+  },
+  "OHiggins": {
+   "n_spells_cambio_pct": -11.713893658660945,
+   "media_cambio_pct": 16.338843972487016,
+   "p99_cambio_pct": 27.27272727272727,
+   "frac_ge20_hist": 8.758,
+   "frac_ge20_fut": 10.577,
+   "p99_cr2met": 117.0
+  },
+  "Maule": {
+   "n_spells_cambio_pct": -10.78761936646101,
+   "media_cambio_pct": 16.185301687160415,
+   "p99_cambio_pct": 29.0909090909091,
+   "frac_ge20_hist": 7.15,
+   "frac_ge20_fut": 8.873,
+   "p99_cr2met": 76.0
+  }
+ },
+ "razon_p99_cr2met_mayor_menor": 2.039473684210526,
+ "precipitacion": {
+  "Valparaíso": {
+   "razon": 3.6084996836807735
+  },
+  "Metropolitana": {
+   "razon": 3.1320364551201636
+  },
+  "O'Higgins": {
+   "razon": 2.4111835416164
+  },
+  "Maule": {
+   "razon": 2.12607192912068
+  }
+ },
+ "precipitacion_razon_rango": {
+  "min": 2.12607192912068,
+  "max": 3.6084996836807735
+ },
+ "r0_local": {
+  "celdas": 3587,
+  "sin_solucion": 82,
+  "mediana": 6.38671875,
+  "p10": 2.2734375000000004,
+  "p90": 11.103515625,
+  "pct_menor_global_de_validas": 39.34379457917261,
+  "lat_cuartil_superior_p10_p90": [
+   -36.497370711617485,
+   -25.042563864519284
+  ]
+ },
+ "celdas_excluidas": {
+  "n": 61,
+  "lat_min": -22.477186018803522,
+  "lat_max": -18.363514496335704,
+  "comunes": 3526,
+  "chile": 3587
+ },
+ "regrillado": {
+  "dif_max_delta": {
+   "media": 0.3665178816412782,
+   "t99": 2.5932075870186253
+  },
+  "dif_fwet_pp": 0.006363369600901336,
+  "dif_max_regiones": {
+   "media": 0.059896334600404444,
+   "p90": 0.0,
+   "p99": 3.0
+  },
+  "mediana_centros": 6.0
+ }
+}

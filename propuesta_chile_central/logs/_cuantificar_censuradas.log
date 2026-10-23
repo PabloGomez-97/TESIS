@@ -1,0 +1,13 @@
+                  serie        cuenca  celdas  rachas_completas  censuradas  pct_censuradas  p99_completas  max_completas  mediana_censuradas  censuradas_sobre_p99
+CR2MET 1980-2014 (1 mm)    Valparaiso     108             80682         208            0.26          155.0            299                21.0                     0
+CR2MET 1980-2014 (1 mm) Metropolitana     100             99198         154            0.16          103.0            281                12.0                     0
+CR2MET 1980-2014 (1 mm)      OHiggins     110            110205         179            0.16          117.0            250                12.0                     0
+CR2MET 1980-2014 (1 mm)         Maule     184            210284         275            0.13           76.0            206                30.0                     0
+  ALADIN 1980-2014 (R0)    Valparaiso     108            110518         202            0.18          124.0            243                23.0                     0
+  ALADIN 1980-2014 (R0) Metropolitana     100            120703         167            0.14           79.0            184                23.0                     0
+  ALADIN 1980-2014 (R0)      OHiggins     110            133363         199            0.15           77.0            194                20.0                     0
+  ALADIN 1980-2014 (R0)         Maule     184            250908         345            0.14           55.0            160                 9.0                     0
+  ALADIN 2040-2074 (R0)    Valparaiso     108             96223         216            0.22          142.0            261                89.0                     0
+  ALADIN 2040-2074 (R0) Metropolitana     100            106738         200            0.19          109.0            221                53.0                     2
+  ALADIN 2040-2074 (R0)      OHiggins     110            117741         220            0.19           98.0            224                70.0                     1
+  ALADIN 2040-2074 (R0)         Maule     184            223841         360            0.16           71.0            188                30.0                    36

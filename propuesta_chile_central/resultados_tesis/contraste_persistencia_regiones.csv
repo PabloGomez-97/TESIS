@@ -1,0 +1,5 @@
+region,celdas,meses,frec_seca_hist,frec_seca_fut,frec_seca_delta,frec_seca_delta_IC95_inf,frec_seca_delta_IC95_sup,frec_seca_IC_incluye_0,p_dd_hist,p_dd_fut,p_dd_delta,p_dd_delta_IC95_inf,p_dd_delta_IC95_sup,p_dd_IC_incluye_0,rho_hist,rho_fut,rho_delta,rho_delta_IC95_inf,rho_delta_IC95_sup,rho_IC_incluye_0
+Valparaíso,108,mar-nov,0.80041,0.82651,0.02609,0.00966,0.04312,False,0.86804,0.88502,0.01698,0.00723,0.02629,False,0.29696,0.29606,-0.0009,-0.0323,0.02941,True
+Metropolitana,100,mar-nov,0.7402,0.76851,0.02831,0.00788,0.04511,False,0.83229,0.85108,0.01879,0.00589,0.03019,False,0.3162,0.31647,0.00027,-0.02964,0.02952,True
+O'Higgins,110,mar-nov,0.73623,0.7688,0.03257,0.01427,0.04977,False,0.82708,0.84901,0.02192,0.00991,0.03367,False,0.30305,0.31097,0.00792,-0.02173,0.03834,True
+Maule,184,mar-nov,0.68688,0.72466,0.03779,0.01649,0.05763,False,0.79696,0.82407,0.02711,0.01218,0.0411,False,0.3174,0.32847,0.01107,-0.01773,0.04033,True

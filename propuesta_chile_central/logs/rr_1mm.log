@@ -1,0 +1,38 @@
+1/4: Cargando ALADIN historico y futuro...
+Periodo hist: 1980-2014 (35 anos) | futuro: 2040-2074 (35 anos, ssp585)
+Dia seco ALADIN: pr < 1.0 mm/dia | Mar-Nov
+2/4: Extrayendo dry spells por region...
+  Valparaíso       | Valparaíso             | pixeles:  108 | spells: 236,602
+  Metropolitana    | Región Metropolitana de Santiago | pixeles:  100 | spells: 235,759
+  O'Higgins        | Libertador General Bernardo O'Higgins | pixeles:  110 | spells: 260,477
+  Maule            | Maule                  | pixeles:  184 | spells: 456,967
+3/4: Risk ratio de conteos N_fut/N_hist (>= 20 dias)...
+
+--- Conteos ---
+       Region   Periodo  Dry spells totales  Spells >= 20 d
+   Valparaíso 1980-2014              123439            5551
+   Valparaíso 2040-2074              113163            6972
+Metropolitana 1980-2014              122193            3773
+Metropolitana 2040-2074              113566            4639
+    O'Higgins 1980-2014              136121            4370
+    O'Higgins 2040-2074              124356            5132
+        Maule 1980-2014              237293            4507
+        Maule 2040-2074              219674            6612
+
+--- RR @ 20 dias (N_fut/N_hist) ---
+       Region  Pixeles  N_hist  N_fut  RR observado  RR bootstrap mediano  IC95 inferior  IC95 superior  Cruza RR=1  Sig aumento  Sig disminucion  Replicas descartadas (de 1000)
+   Valparaíso      108    5551   6972         1.256                 1.254          1.035          1.520       False         True            False                               0
+Metropolitana      100    3773   4639         1.230                 1.234          0.994          1.540        True        False            False                               0
+    O'Higgins      110    4370   5132         1.174                 1.180          0.956          1.466        True        False            False                               0
+        Maule      184    4507   6612         1.467                 1.491          1.119          1.998       False         True            False                               0
+4/4: Curvas RR vs umbral...
+
+--- Significancia @ 20d ---
+       Region  N_hist @ 20d  N_fut @ 20d  RR @ 20d  IC95 inf  IC95 sup Significancia
+   Valparaíso          5551         6972     1.256     1.035     1.520       aumento
+Metropolitana          3773         4639     1.230     0.994     1.540            no
+    O'Higgins          4370         5132     1.174     0.956     1.466            no
+        Maule          4507         6612     1.467     1.119     1.998       aumento
+
+Figura guardada en outputs_pregunta5_aladin_1mm/rr_curves_aladin.png
+Copia paper: paper_figuras/figS_rr_curves_aladin_1mm.png

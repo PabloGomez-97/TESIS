@@ -1,0 +1,11 @@
+       metrica            zona  celdas_ventana  celdas_validas  cr2met_prom  aladin_prom  delta_promedio  delta_mediana
+Duración media      Valparaiso             108             108        16.03        11.07           -4.96          -4.99
+Duración media   Metropolitana             100             100        11.69         8.81           -2.88          -2.54
+Duración media        OHiggins             110             110        11.10         8.56           -2.55          -2.75
+Duración media           Maule             184             184         9.08         7.09           -1.99          -2.01
+Duración media Todo el dominio            3587            3526        40.99        32.76           -8.23          -2.18
+  Percentil 99      Valparaiso             108             108       140.11       108.51          -31.59         -27.16
+  Percentil 99   Metropolitana             100             100       102.31        81.03          -21.28         -18.08
+  Percentil 99        OHiggins             110             110       109.20        77.43          -31.76         -34.58
+  Percentil 99           Maule             184             184        77.19        54.13          -23.06         -21.64
+  Percentil 99 Todo el dominio            3587            3526       215.82       169.56          -46.26         -17.16

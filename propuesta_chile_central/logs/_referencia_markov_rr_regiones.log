@@ -1,0 +1,9 @@
+Celdas por region: {'Valparaíso': 108, 'Metropolitana': 100, "O'Higgins": 110, 'Maule': 184}
+  celdas 200/502
+  celdas 400/502
+  celdas 502/502
+       region  D  N_hist_obs  N_fut_obs  N_hist_markov  N_fut_markov  N_fut_solo_frec  cobertura_markov_hist  RR_obs  RR_markov  RR_markov_sd  RR_solo_frec  RR_solo_frec_sd  f_persist  f_residuo  IC95_obs_inf  IC95_obs_sup  solo_frec_dentro_IC95_obs
+   Valparaíso 20        8557      10022       8636.175      9996.325         9998.400                  1.009   1.171      1.158         0.007         1.158            0.007      1.000      1.012         1.013         1.357                       True
+Metropolitana 20        6248       7373       6121.925      7432.575         7500.850                  0.980   1.180      1.214         0.008         1.225            0.009      0.991      0.972         0.980         1.428                       True
+    O'Higgins 20        7015       8096       6807.050      8298.950         8507.875                  0.970   1.154      1.219         0.008         1.250            0.008      0.975      0.947         0.949         1.402                       True
+        Maule 20        9137      10855       8368.875     11353.150        11746.525                  0.916   1.188      1.357         0.008         1.404            0.009      0.967      0.876         0.946         1.486                       True

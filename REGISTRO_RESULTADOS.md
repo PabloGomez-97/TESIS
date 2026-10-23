@@ -23,7 +23,7 @@ Entorno: Python 3.11.12 (`~/.pyenv/shims/python3.11`), numpy 2.3.4, pandas 2.3.3
 | ALADIN | pr × 86 400; criterio i: R₀ = 5,285 mm; ii: 1 mm; iii: R₀ local por píxel (bisección) |
 | Calibración de R₀ | F(R) medio espacial con igual peso por celda; `calibracion_R0.json` |
 | Racha seca | días consecutivos con pr < umbral; se **excluyen** las censuradas (empiezan el 1.er día o terminan el último de la ventana); se asigna al año de inicio |
-| Estadísticos por celda | solo con ≥ 30 rachas; los mapas por producto de la Fig. 5 ahora también se dibujan solo en las celdas comunes (la caché sigue guardando las celdas válidas de cada producto: 3 549 CR2MET, 3 550 ALADIN en el criterio i). **Δ, su significancia, los promedios espaciales de cada producto (resumen y Tabla S1) y los paneles de la Fig. 5: solo las celdas comunes** (3 526 en el criterio i; 3 549 en ii; 3 471 en iii) |
+| Estadísticos por celda | solo con ≥ 30 rachas; los mapas por producto de la Fig. 4 ahora también se dibujan solo en las celdas comunes (la caché sigue guardando las celdas válidas de cada producto: 3 549 CR2MET, 3 550 ALADIN en el criterio i). **Δ, su significancia, los promedios espaciales de cada producto (resumen y Tabla S1) y los paneles de la Fig. 4: solo las celdas comunes** (3 526 en el criterio i; 3 549 en ii; 3 471 en iii) |
 | Bootstrap del sesgo | 1 000 réplicas, semilla 42 + índice de celda; **años sorteados de forma independiente** para CR2MET y ALADIN |
 | Risk ratios | rachas con inicio mar–nov, D = 5…60 d; 1 000 réplicas, semilla 42; años de cada período sorteados de forma independiente; réplicas sin N_hist* se cuentan y se informan |
 | Markov | 1.er orden por celda y mes; R = 40 réplicas; semilla 7 |
@@ -41,36 +41,37 @@ Entorno: Python 3.11.12 (`~/.pyenv/shims/python3.11`), numpy 2.3.4, pandas 2.3.3
    _run_pregunta5_aladin.py --escenario ssp370
 6. _referencia_markov_rr_regiones.py         → necesita el paso 5 (principal)
    _contraste_persistencia_regiones.py       → necesita el paso 6 (importa sus funciones)
-7. _generar_pregunta9_pdf_loglog_cuencas.py  → duraciones por ventana y Fig. 6 (borrar el .pkl para recalcular)
+7. _generar_pregunta9_pdf_loglog_cuencas.py  → duraciones por ventana y Fig. 5 (borrar el .pkl para recalcular)
 8. _calcular_tabla3_ventanas.py              → necesita 7 y 10
 9. _calcular_frecuencia_humeda_ventanas.py, _calcular_estacionalidad_marnov_regiones.py
 10. _generar_figS1_sensibilidad_umbral.py     → necesita 7 (importa sus funciones)
     _generar_figS2_mapa_R0_local.py
 11. _test_regrillado_conservativo.py         → caché de CR2MET lineal vs área (350 MB)
 12. _cuantificar_censuradas.py, _generar_figT01_referencia_sin_memoria.py   → necesitan 11
-13. _generar_fig_pdfs_ventanas.py (necesita el paso 7), _generar_fig_rr_regiones.py (necesita el paso 5), _generar_fig05_mapas_persistencia.py, _generar_fig_dominio_ventanas_regiones.py, _generar_fig02_esquema_dryspell.py
+13. _generar_fig_rr_regiones.py (necesita el paso 5), _generar_fig05_mapas_persistencia.py, _generar_fig_dominio_ventanas_regiones.py, _generar_fig02_esquema_dryspell.py
+14. _sensibilidad_minimo_rachas.py              → necesita el paso 2 (caché de mapas y bootstrap por celda); reimporta sus funciones
 ```
 
 ## 4. Mapa de resultados
 
-Numeración de las figuras y tablas = la del Doc del paper (que salta de la 3 a la 5, y de la 6 a la 8: ver `CAMBIOS_AL_PAPER.md`).
+Numeración de las figuras y tablas = la del Doc del paper al 2026-10-22 (Fig. 1–6: dominio, esquema, calibración, mapas, PDFs por ventana, RR). `CAMBIOS_AL_PAPER.md` usa la numeración anterior.
 
 | Elemento | Script | Salida |
 |---|---|---|
 | Fig. 1 (dominio, ventanas, regiones) | `_generar_fig_dominio_ventanas_regiones.py` | `paper_figuras/fig02_dominio_cuencas_regiones.png` |
 | Fig. 2 (esquema; ilustrativa, sin datos) | `_generar_fig02_esquema_dryspell.py` | `paper_figuras/fig_esquema_dryspell.png` |
 | Fig. 3; F = 20,94 / 30,68 %; R₀ = 5,285 | `_generar_fig03_calibracion_R0.py` | `paper_figuras/fig03_calibracion_R0_ftau.png`, `resultados_tesis/calibracion_R0.json` |
-| Fig. 5 (mapas media y t99; los tres paneles de cada fila muestran las mismas 3 526 celdas, ≥ 30 rachas en ambos productos) | `_generar_fig05_mapas_persistencia.py` (lee la caché del paso 2) | `paper_figuras/fig05_mapas_persistencia_criterio_i.png` |
+| Fig. 4 (mapas media y t99; los tres paneles de cada fila muestran las mismas 3 526 celdas, ≥ 30 rachas en ambos productos) | `_generar_fig05_mapas_persistencia.py` (lee la caché del paso 2) | `paper_figuras/fig05_mapas_persistencia_criterio_i.png` |
 | Δ medio −8,2 d, t99 −46,3 d; % de celdas significativas; Tabla S1 | `_run_pregunta7_bootstrap.py` → `_generar_tablaS1_sensibilidad_chile.py` | `_pregunta7_outputs/resumen_pregunta7.csv`, `outputs_pregunta7_bootstrap/bootstrap_summary.csv`, `paper_figuras/tablaS1_sensibilidad_umbral_chile.csv`, `resultados_tesis/bootstrap_por_celda_*.npz` |
 | Sesgo por ventana (promedio de Δ por celda) | `_calcular_sesgo_ventanas.py` | `resultados_tesis/sesgo_por_ventana.csv` |
-| Fig. 6 (PDFs por ventana) | `_generar_pregunta9_pdf_loglog_cuencas.py` | `paper_figuras/fig42_pdf_cuencas_loglog_panel.png`, `paper_figuras/pdf_*_i_global_loglog.png`, `_pregunta9_outputs/pdf_durations_i_global.pkl` |
-| Fig. de las PDFs por ventana, versión 2×2 con leyenda única, marcas del p99 y círculos huecos en bins con < 10 rachas (reemplaza el panel `fig42_…` en el paper) | `_generar_fig_pdfs_ventanas.py` (lee `pdf_durations_i_global.pkl`; no recalcula rachas) | `paper_figuras/fig_pdfs_ventanas.png` |
+| Fig. 5 (PDFs por ventana; vigente: panel `fig42_…`, sin letras (a)–(d) en la imagen) | `_generar_pregunta9_pdf_loglog_cuencas.py` | `paper_figuras/fig42_pdf_cuencas_loglog_panel.png`, `paper_figuras/pdf_*_i_global_loglog.png`, `_pregunta9_outputs/pdf_durations_i_global.pkl` |
 | Tabla 3 | `_calcular_tabla3_ventanas.py` | `resultados_tesis/tabla3_estadisticos_ventanas.csv` |
+| Sensibilidad del sesgo (criterio i) al mínimo de rachas por celda (30, 50, 100, 200): Δ media, Δ t99, medianas, % de celdas significativas. Decidida **después** de ver el resultado con 30; va al suplemento como sensibilidad | `_sensibilidad_minimo_rachas.py` | `resultados_tesis/sensibilidad_minimo_rachas.csv` |
 | Sesgo relativo por ventana y criterio (i, ii, iii) | `_calcular_tabla3_ventanas.py` | `resultados_tesis/sesgo_relativo_criterios_ventanas.csv` |
 | Frecuencia de días húmedos por ventana; cambio futuro con R₀ fijo | `_calcular_frecuencia_humeda_ventanas.py` | `resultados_tesis/frecuencia_humeda_ventanas.csv` |
 | Rachas censuradas (< 1,1 % Loa; < 0,2 % resto) | `_cuantificar_censuradas.py` | `_test_regrillado/rachas_censuradas_por_cuenca.csv` |
 | Fig. de las curvas RR(D) por región, versión 2×2 con eje y logarítmico, banda IC95 solo donde no se descartó ninguna réplica y RR/N a D = 20 anotados (reemplaza `fig08_rr_curves_aladin.png` en el paper) | `_generar_fig_rr_regiones.py` (lee `outputs_pregunta5_aladin/results.json`; no recalcula) | `paper_figuras/fig_rr_regiones.png` |
-| Fig. 9 y Tabla 4 (RR principal) | `_run_pregunta5_aladin.py` | `outputs_pregunta5_aladin/results.json`, `paper_figuras/fig08_rr_curves_aladin.png` (nombre de archivo ≠ número de figura), `spells_*.csv` |
+| Fig. 6 (versión antigua; la vigente es `fig_rr_regiones.png`) y Tabla 4 (RR principal) | `_run_pregunta5_aladin.py` | `outputs_pregunta5_aladin/results.json`, `paper_figuras/fig08_rr_curves_aladin.png` (nombre de archivo ≠ número de figura), `spells_*.csv` |
 | RR con 1 mm (S4) | `_run_pregunta5_aladin.py --umbral 1` | `outputs_pregunta5_aladin_1mm/results.json`, `paper_figuras/figS_rr_curves_aladin_1mm.png` |
 | RR con SSP3-7.0 (S6) | `_run_pregunta5_aladin.py --escenario ssp370` | `outputs_pregunta5_aladin_ssp370/results.json`, `paper_figuras/figS_rr_curves_aladin_ssp370.png` |
 | Frecuencia vs agrupamiento: RR esperado solo por frecuencia | `_referencia_markov_rr_regiones.py` | `resultados_tesis/descomposicion_markov_rr_regiones.csv` |
