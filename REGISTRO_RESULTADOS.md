@@ -1,6 +1,6 @@
 # Registro de trazabilidad: script → salida → figura/tabla/cifra
 
-Estado al **2026-10-21**. Fuente única de qué archivo respalda qué número. Todo lo que no figura aquí no está respaldado y no debe citarse.
+Estado al **2026-10-24**. Fuente única de qué archivo respalda qué número. Todo lo que no figura aquí no está respaldado y no debe citarse.
 Procedencia de los datos crudos: `PROCEDENCIA_DATOS.md`. Hashes SHA-256: `resultados_tesis/sha256_datos_crudos.txt` (entradas) y `resultados_tesis/sha256_salidas.txt` (salidas).
 
 ## 1. Verificación hecha el 2026-10-21
@@ -14,6 +14,12 @@ Procedencia de los datos crudos: `PROCEDENCIA_DATOS.md`. Hashes SHA-256: `result
 Entorno: Python 3.11.12 (`~/.pyenv/shims/python3.11`), numpy 2.3.4, pandas 2.3.3, xarray 2025.10.1, scipy 1.17.1, shapely 2.1.2, cartopy 0.25.0, matplotlib 3.10.7. `python3` del sistema **no** tiene cartopy.
 
 ## 2. Reglas vigentes (idénticas en todos los scripts)
+
+**Reproducción completa del 2026-10-24:** se ejecutaron los 21 scripts científicos en 23 comandos, en un directorio nuevo sin cachés ni salidas previas y con solo los NetCDF de entrada enlazados. Se verificaron los 680 hashes de datos crudos. Las **68 salidas** coinciden: 67 por SHA-256 y una imagen T01 auxiliar con píxeles idénticos y solo distinta etiqueta de versión de Matplotlib. Pasaron los **90 controles cruzados** de las salidas nuevas. Datos, scripts científicos, geometrías y salidas originales quedaron intactos. Duración: 18 min 36 s.
+
+Informe y evidencia: [REPRODUCCION_COMPLETA_PAPER_2026-10-24.md](REPRODUCCION_COMPLETA_PAPER_2026-10-24.md). Procedimiento repetible: `reproducibilidad/ejecutar.py`; controles: `reproducibilidad/verificar_consistencia.py`; inventario de datos: `reproducibilidad/inventariar_datos.py`. Esa ejecución corresponde a la versión anterior a la corrección de precipitación descrita a continuación.
+
+**Corrección posterior del 2026-10-24 — precipitación de calendario:** `_calcular_estacionalidad_marnov_regiones.py` reemplaza la media diaria mensual multiplicada por 30,4375 por la suma de los días reales de cada mes y el promedio de sus acumulados en 1980–2014. Conserva máscaras, interpolación, período y columnas del CSV, suma en float64 y comprueba años completos sin huecos ni duplicados. Salida afectada: solo `resultados_tesis/estacionalidad_marnov_regiones.csv`; ningún otro script de la raíz consume ese CSV. Se regeneró desde NetCDF y se repitió en una carpeta aislada. Deben usarse estas cifras en §2.6 y §4.3 del paper. Evidencia de la comprobación incremental: `~/Documents/TESIS_reproducciones/correccion_precipitacion_2026-10-24_003845/`. Los resultados de rachas, RR, bootstrap, calibración y figuras se conservan.
 
 | Regla | Valor |
 |---|---|
@@ -42,10 +48,10 @@ Entorno: Python 3.11.12 (`~/.pyenv/shims/python3.11`), numpy 2.3.4, pandas 2.3.3
 6. _referencia_markov_rr_regiones.py         → necesita el paso 5 (principal)
    _contraste_persistencia_regiones.py       → necesita el paso 6 (importa sus funciones)
 7. _generar_pregunta9_pdf_loglog_cuencas.py  → duraciones por ventana y Fig. 5 (borrar el .pkl para recalcular)
-8. _calcular_tabla3_ventanas.py              → necesita 7 y 10
-9. _calcular_frecuencia_humeda_ventanas.py, _calcular_estacionalidad_marnov_regiones.py
-10. _generar_figS1_sensibilidad_umbral.py     → necesita 7 (importa sus funciones)
+8. _generar_figS1_sensibilidad_umbral.py      → necesita 7 (importa sus funciones)
     _generar_figS2_mapa_R0_local.py
+9. _calcular_tabla3_ventanas.py              → necesita 7 y 8 (ambos pickles de duraciones)
+10. _calcular_frecuencia_humeda_ventanas.py, _calcular_estacionalidad_marnov_regiones.py
 11. _test_regrillado_conservativo.py         → caché de CR2MET lineal vs área (350 MB)
 12. _cuantificar_censuradas.py, _generar_figT01_referencia_sin_memoria.py   → necesitan 11
 13. _generar_fig_rr_regiones.py (necesita el paso 5), _generar_fig05_mapas_persistencia.py, _generar_fig_dominio_ventanas_regiones.py, _generar_fig02_esquema_dryspell.py
@@ -76,7 +82,7 @@ Numeración de las figuras y tablas = la del Doc del paper al 2026-10-22 (Fig. 1
 | RR con SSP3-7.0 (S6) | `_run_pregunta5_aladin.py --escenario ssp370` | `outputs_pregunta5_aladin_ssp370/results.json`, `paper_figuras/figS_rr_curves_aladin_ssp370.png` |
 | Frecuencia vs agrupamiento: RR esperado solo por frecuencia | `_referencia_markov_rr_regiones.py` | `resultados_tesis/descomposicion_markov_rr_regiones.csv` |
 | ¿Cambia la persistencia de 1.er orden? Δ de frecuencia seca, p_dd y ρ por región (mar–nov), IC95 bootstrap de años | `_contraste_persistencia_regiones.py` | `resultados_tesis/contraste_persistencia_regiones.csv` |
-| Fracción de precipitación mar–nov (CR2MET 85,0–97,3 %; ALADIN 81,4–95,8 %) | `_calcular_estacionalidad_marnov_regiones.py` | `resultados_tesis/estacionalidad_marnov_regiones.csv` |
+| Precipitación anual y fracción mar–nov con calendario real (CR2MET 85,1–97,3 %; ALADIN 81,6–95,9 %) | `_calcular_estacionalidad_marnov_regiones.py` | `resultados_tesis/estacionalidad_marnov_regiones.csv` |
 | Fig. S1 | `_generar_figS1_sensibilidad_umbral.py` | `paper_figuras/figS1_sensibilidad_umbral_cuencas.png`, `_pregunta9_calibracion_outputs/resumen_sensibilidad_umbral_4cuencas.csv` y `.pkl` |
 | Fig. S2 (R₀ local) | `_generar_figS2_mapa_R0_local.py` | `paper_figuras/figS2_mapa_R0_local.png`, `_pregunta7_outputs/R0_local_map.npz` |
 | Regrillado lineal vs área | `_test_regrillado_conservativo.py` | `_test_regrillado/*.csv`, `r0_lineal_vs_area.json` |
@@ -86,7 +92,7 @@ Numeración de las figuras y tablas = la del Doc del paper al 2026-10-22 (Fig. 1
 
 1. **R₀ global no iguala la frecuencia dentro de las ventanas.** Fracción de días húmedos CR2MET (1 mm) / ALADIN (R₀): Loa 3,20 / 2,96 %; Maipo 16,12 / 20,27 %; Maule 19,89 / 23,18 %; Biobío 30,74 / 31,64 % (`frecuencia_humeda_ventanas.csv`). El sesgo de persistencia en Maipo y Maule con el criterio i incluye ese exceso residual.
 2. **Con R₀ local el sesgo cambia de patrón** (`sesgo_relativo_criterios_ventanas.csv`, media de las duraciones del pool): Loa −23,0 %, Maipo −3,5 %, Maule −13,5 %, Biobío −12,6 %. Con el criterio i: −16,7 / −21,2 / −22,4 / −14,7 %.
-3. **ALADIN tiene un sesgo húmedo grande en total anual** (media regional 1980–2014, `estacionalidad_marnov_regiones.csv`): Coquimbo 247 mm (CR2MET) frente a 1 090 mm (ALADIN); O'Higgins 949 / 2 288; La Araucanía 2 048 / 3 635; Los Lagos 2 722 / 5 016. R₀ = 5,285 mm es un umbral estadístico (igual frecuencia), no un umbral físico de «día seco».
+3. **ALADIN tiene un sesgo húmedo grande en total anual** (media regional 1980–2014, calendario real, `estacionalidad_marnov_regiones.csv`): Coquimbo 248 mm (CR2MET) frente a 1 093 mm (ALADIN); O'Higgins 953 / 2 299; La Araucanía 2 055 / 3 647; Los Lagos 2 728 / 5 026. R₀ = 5,285 mm es un umbral estadístico (igual frecuencia), no un umbral físico de «día seco».
 4. **61 de 3 587 celdas** no entran en Δ (menos de 30 rachas en algún producto), todas entre 18,4°S y 22,5°S (verificado en la caché de mapas): 23 solo con CR2MET válida, 24 solo con ALADIN válida y 14 con ninguna. Son celdas con muy pocas rachas por período; el promedio de Δ del dominio no las incluye.
 5. **Rachas censuradas excluidas**: las más largas se pierden; en Loa, 22–40 rachas censuradas por producto superan el p99 de las completas, y en Maule y Maipo (ALADIN futuro) 39 y 12.
 6. **Réplicas bootstrap sin RR definido** (`results.json`, campo «Replicas descartadas»): en el análisis principal 0 a D = 20; Los Lagos pierde 128 de 1 000 a D = 30 y todas desde D = 35; La Araucanía 2 / 39 / 101 a D = 40 / 50 / 60. Con 1 mm, Los Lagos a D = 20 pierde 42 (RR = 0,25, IC [0,014; 28,1]: inestimable).

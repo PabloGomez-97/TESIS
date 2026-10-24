@@ -1,0 +1,21 @@
+ALADIN historico (1980-2014):
+  leido pr_CHP12_CNRM-ESM2-1_historical_r1i1p1f2_CNRM-ALADIN64_v1_day_19790101-20141231_chile.nc: 12784 dias usados (1980-01-01 a 2014-12-31); unidad original kg m-2 s-1
+ALADIN historico: 12784 dias (esperado 12784); 1980-01-01 a 2014-12-31; fechas unicas 12784; saltos distintos de 1 dia: 0; 29-feb: 9
+   NaN: 0; negativos: 0; maximo diario 278.0 mm; dias >= 0,1 mm: 41.16 %
+   lluvia anual media (mm) por region: Valparaíso 1656; Metropolitana 2289; O'Higgins 2299; Maule 2763; dominio 2329
+ALADIN SSP5-8.5 (2040-2074):
+  leido pr_CHP12_CNRM-ESM2-1_ssp585_r1i1p1f2_CNRM-ALADIN64_v1_day_20400101-20641231_chile.nc: 9132 dias usados (2040-01-01 a 2064-12-31); unidad original kg m-2 s-1
+  leido pr_CHP12_CNRM-ESM2-1_ssp585_r1i1p1f2_CNRM-ALADIN64_v1_day_20650101-21001231_chile.nc: 3652 dias usados (2065-01-01 a 2074-12-31); unidad original kg m-2 s-1
+ALADIN SSP5-8.5: 12784 dias (esperado 12784); 2040-01-01 a 2074-12-31; fechas unicas 12784; saltos distintos de 1 dia: 0; 29-feb: 9
+   NaN: 0; negativos: 0; maximo diario 295.2 mm; dias >= 0,1 mm: 36.10 %
+   lluvia anual media (mm) por region: Valparaíso 1422; Metropolitana 2051; O'Higgins 2036; Maule 2515; dominio 2082
+ALADIN SSP3-7.0 (2040-2074):
+  leido pr_CHP12_CNRM-ESM2-1_ssp370_r1i1p1f2_CNRM-ALADIN64_v1_day_20400101-20641231_chile.nc: 9132 dias usados (2040-01-01 a 2064-12-31); unidad original kg m-2 s-1
+  leido pr_CHP12_CNRM-ESM2-1_ssp370_r1i1p1f2_CNRM-ALADIN64_v1_day_20650101-21001231_chile.nc: 3652 dias usados (2065-01-01 a 2074-12-31); unidad original kg m-2 s-1
+ALADIN SSP3-7.0: 12784 dias (esperado 12784); 2040-01-01 a 2074-12-31; fechas unicas 12784; saltos distintos de 1 dia: 0; 29-feb: 9
+   NaN: 0; negativos: 0; maximo diario 259.8 mm; dias >= 0,1 mm: 36.56 %
+   lluvia anual media (mm) por region: Valparaíso 1411; Metropolitana 2007; O'Higgins 1991; Maule 2470; dominio 2045
+CR2MET (paso 1.1) frente a ALADIN historico:
+   mismas fechas, una a una: True (12784 frente a 12784); horas de CR2MET: [0]
+   celdas y regiones coinciden: True
+   correlacion diaria (promedio del dominio) con ALADIN adelantado/atrasado k dias: k=-2: 0.131; k=-1: 0.145; k=+0: 0.147; k=+1: 0.134; k=+2: 0.117

@@ -1,0 +1,4 @@
+Celda 845 (lat -33.40, lon -70.68); R0 = 5.742 mm
+CR2MET, rachas que empiezan entre el 1-ene y el 15-abr de 1980 (inicio, duracion, censurada): [('1980-01-01', 13, True), ('1980-01-15', 15, False), ('1980-01-31', 1, False), ('1980-02-02', 7, False), ('1980-02-11', 8, False), ('1980-02-21', 47, False), ('1980-04-13', 3, False)]
+ALADIN i, rachas que empiezan entre el 1-ene y el 15-abr de 1980 (inicio, duracion, censurada): [('1980-01-01', 23, True), ('1980-01-26', 17, False), ('1980-02-13', 8, False), ('1980-02-23', 6, False), ('1980-03-01', 3, False), ('1980-03-06', 20, False), ('1980-03-27', 20, False)]
+Panel B: racha de CR2MET que empieza el 1988-12-07 y dura 143 d (termina el 1989-04-28): anio asignado 1988

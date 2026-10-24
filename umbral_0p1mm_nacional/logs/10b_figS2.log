@@ -1,0 +1,5 @@
+Biseccion en 3587 pixeles...
+Pixeles Chile: 3587 | con R0 local: 3582 | sin solucion: 5
+R0 local: mediana 4.23 | p10 1.14 | p90 8.20 | min 0.01 | max 15.00 mm/d
+% pixeles con R0 local < 3.668: 42.5
+-> /Users/pablogomez/Documents/GitHub/TESIS/umbral_0p1mm_nacional/paper_figuras/figS2_mapa_R0_local.png

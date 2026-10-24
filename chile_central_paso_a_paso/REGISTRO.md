@@ -1,0 +1,25 @@
+# Registro script → salida → figura/tabla (Chile central, paso a paso; versión con umbral de CR2MET = 0,1 mm)
+
+Reinicio del 2026-10-23: la versión con 1 mm (registro, scripts y salidas) está en `previo_umbral_1mm/` y no es fuente de cifras. Entorno: `~/.pyenv/shims/python3.11`. Enlaces de solo lectura: `pr` → `../pr`, `pr1` → `../pr1`.
+
+| Paso | Script | Salidas | Figura/tabla |
+|---|---|---|---|
+| 0.1 Dominio y máscara (regenerado 2026-10-23; sin cambio de resultado) | `paso_0_1_dominio.py` | `salidas/paso_0_1_mascara_dominio.npz`, `salidas/paso_0_1_celdas_por_region.csv`, `salidas/paso_0_1_chequeos.txt` | `figuras/paso_0_1_dominio_celdas.png` |
+| 1.1 Interpolación bilineal de CR2MET a las 502 celdas (regenerado; chequeos de fracción húmeda y de sensibilidad con 0,1 mm) | `paso_1_1_interpolacion.py` | `salidas/paso_1_1_cr2met_interpolado_dominio.nc`, `salidas/paso_1_1_chequeos.txt` | `figuras/paso_1_1_interpolacion_dia.png` |
+| 1.2 Alineación de períodos y calendarios (regenerado; chequeos con 0,1 mm) | `paso_1_2_alineacion.py` | `salidas/paso_1_2_aladin_hist_1980_2014.nc`, `..._ssp585_2040_2074.nc`, `..._ssp370_2040_2074.nc`, `salidas/paso_1_2_chequeos.txt` | — |
+
+Resultados 0.1 y 1.2: idénticos a los de la versión anterior (502 celdas: 108, 100, 110, 184; 12 784 días por serie; 0 NaN; fechas coincidentes).
+
+**Resultado del paso 1.1 con 0,1 mm (nuevo, ver `salidas/paso_1_1_chequeos.txt`):** fracción de días con pr ≥ 0,1 mm del dominio: interpolada 19,40 % frente a 18,83 % con el vecino más cercano (+0,56 pp); por región (interpolada | vecino más cercano): Valparaíso 13,76 | 13,20; Metropolitana 18,95 | 18,30; O'Higgins 19,37 | 18,82; Maule 22,97 | 22,44 %. Días-celda con 0 < pr < 0,1 mm: 0,83 % (interpolada) frente a 0,30 % (vecino más cercano); con pr exactamente 0: 79,77 % frente a 80,87 %. Ningún día-celda con pr exactamente 0,1 mm. La interpolación suma días húmedos pequeños al promediar vecinas.
+
+| 1.3 Inspección: series diarias e intensidad (rehecho con 0,1 mm; figura de comprensión, no va al paper) | `paso_1_3_inspeccion.py` | `salidas/paso_1_3_intensidad_por_tramo.csv`, `salidas/paso_1_3_chequeos.txt` | `figuras/paso_1_3_series_e_intensidad.png` |
+| 2.1 Fracción de días húmedos de CR2MET con 0,1 mm (objetivo de la calibración) | `paso_2_1_fraccion_cr2met.py` | `salidas/paso_2_1_fraccion_humeda_cr2met.csv`, `salidas/paso_2_1_objetivo_F.json`, `salidas/paso_2_1_chequeos.txt` | `figuras/paso_2_1_fraccion_humeda_cr2met.png` |
+| 2.2 Fracción de días húmedos de ALADIN con 0,1 mm y exceso frente a CR2MET | `paso_2_2_fraccion_aladin.py` | `salidas/paso_2_2_fraccion_humeda_aladin.csv`, `salidas/paso_2_2_chequeos.txt` | `figuras/paso_2_2_fraccion_humeda_aladin.png` |
+
+Resultados 1.3 (2026-10-23): año típico 1994 (regla de la mediana, sin cambio); mar–nov 1994, días ≥ 0,1 mm: Santiago CR2MET 32, ALADIN 113 (de 275); Talca 61 y 138. Tramos de intensidad sin cambio (80,6 | 58,8; 2,1 | 10,4; 6,0 | 8,9; 3,9 | 5,0; 4,4 | 7,9; 3,0 | 9,0 % de los días). Días ≥ 0,1 mm: CR2MET 19,40 %, ALADIN 41,16 %.
+Resultados 2.1: **F_CR2MET (≥ 0,1 mm) = 19,3963 %** (1 244 771 de 6 417 568 celda-días); por región: Valparaíso 13,76; Metropolitana 18,95; O'Higgins 19,37; Maule 22,97 %. Por celda: mín. 7,71, mediana 18,95, máx. 32,10 %. Máximo mensual en junio (35,8 %), mínimo en enero (7,4 %); 89,6 % de los días húmedos cae en mar–nov. Interanual 13,96 % (1998) a 27,52 % (1982), desviación estándar 3,27 pp. Sensibilidad al umbral exacto: 19,66 % con 0,05 mm y 19,20 % con 0,15 mm. Ningún día-celda con exactamente 0,1 mm.
+Resultados 2.2: **F_ALADIN (≥ 0,1 mm) = 41,1643 %**; exceso de **21,77 pp** (razón 2,12). Por región (CR2MET | ALADIN | exceso): Valparaíso 13,76 | 36,73 | +22,97; Metropolitana 18,95 | 41,49 | +22,55; O'Higgins 19,37 | 40,04 | +20,68; Maule 22,97 | 44,26 | +21,29. ALADIN > CR2MET en las 502 celdas (exceso mín. +10,8, mediana +20,4, máx. +46,8 pp). Correlación espacial del patrón de F: 0,834.
+
+| 2.3 Calibración de R₀ por bisección con CR2MET = 0,1 mm (2026-10-23) | `paso_2_3_calibracion_R0.py` (lee `salidas/paso_1_2_aladin_hist_1980_2014.nc`, `salidas/paso_1_1_cr2met_interpolado_dominio.nc` y `salidas/paso_2_1_objetivo_F.json`) | `salidas/paso_2_3_R0.json` (**R₀ vigente del análisis**), `salidas/paso_2_3_biseccion.csv`, `salidas/paso_2_3_chequeos.txt`, `logs/paso_2_3.log` | — (la figura es el paso 2.4) |
+
+Resultados 2.3: objetivo F_CR2MET = 19,3963 % (≥ 0,1 mm). **R₀ = 7,177 mm** (bisección 7,177353 mm; 17 iteraciones; tolerancia 1e-6 en la fracción); con R₀ = 7,177 mm F_ALADIN = 19,3967 % (diferencia +4,2e-4 pp por el redondeo a 3 decimales). Control por cuantil exacto: 7,177486 mm (diferencia 1,3e-4 mm). Sensibilidad: R₀ ± 0,1 mm mueve F en ∓0,10 pp; ± 0,5 mm en ∓0,5 pp. Mediana de los días húmedos (mm/día): ALADIN con R₀ 23,10; ALADIN con 0,1 mm 6,07; CR2MET con 0,1 mm 6,64. R₀ es un umbral estadístico, no físico: con él, los días húmedos de ALADIN son mucho más intensos (mediana 23,1 mm/día) que los de CR2MET (6,6 mm/día).

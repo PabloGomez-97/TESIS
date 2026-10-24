@@ -1,0 +1,9 @@
+ALADIN: 12784 dias x 502 celdas; NaN 0
+F ALADIN (>= 1.0 mm), dominio: 30.8027 %; F CR2MET (paso 2.1): 17.2480 % (json: 17.2480 %)
+Exceso de ALADIN: 13.55 puntos porcentuales; razon ALADIN/CR2MET: 1.79; dias humedos de ALADIN por cada 100 de CR2MET: 179
+Celda-dias con pr exactamente 1.0 mm en ALADIN: 0
+Por region (CR2MET | ALADIN | exceso, %/pp): Valparaíso 11.34 | 25.27 | +13.93; Metropolitana 16.02 | 31.24 | +15.21; O'Higgins 17.51 | 29.96 | +12.45; Maule 21.22 | 34.32 | +13.09
+Por celda, ALADIN: min 14.60 %, mediana 28.82 %, max 62.58 %; exceso por celda: min +5.55, mediana +11.62, max +39.41 pp; celdas con ALADIN > CR2MET: 502 de 502
+Por mes, exceso (pp): 01: +7.2; 02: +5.0; 03: +7.2; 04: +10.4; 05: +13.1; 06: +18.7; 07: +22.6; 08: +20.6; 09: +18.9; 10: +17.1; 11: +13.3; 12: +7.9
+Correlacion entre celdas del patron espacial de F (ALADIN frente a CR2MET): 0.850
+Dias con 0,1 <= pr < 1 mm: ALADIN 10.36 %, CR2MET 2.15 % (esos dias NO cuentan como humedos con 1 mm)

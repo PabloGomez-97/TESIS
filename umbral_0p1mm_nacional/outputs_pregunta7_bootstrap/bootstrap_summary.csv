@@ -1,0 +1,7 @@
+Escenario,Metrica,Delta medio espacial (dias),Delta mediano espacial (dias),% celdas significativas,% ALADIN > CR2MET (sig.),% ALADIN < CR2MET (sig.),Celdas validas
+Forma A — Opcion B (tau* integrado),Duracion media,-0.106,-1.083,73.427,12.42,61.007,3575
+Forma A — Opcion B (tau* integrado),t99 (p99),2.106,-2.81,33.203,9.65,23.552,3575
+Forma B — Mismo umbral en CR2MET y ALADIN,Duracion media,-21.375,-7.708,98.995,0.028,98.967,3583
+Forma B — Mismo umbral en CR2MET y ALADIN,t99 (p99),-108.447,-50.47,95.925,0.0,95.925,3583
+Forma C — tau* local (wet-day matching por pixel),Duracion media,-4.247,-1.48,53.661,0.922,52.739,3578
+Forma C — tau* local (wet-day matching por pixel),t99 (p99),-11.492,-2.0,26.411,11.207,15.204,3578

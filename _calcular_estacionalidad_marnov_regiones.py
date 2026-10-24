@@ -1,8 +1,9 @@
 """Fraccion de la precipitacion anual que cae entre marzo y noviembre en las 4 regiones de los risk ratios.
 
 Respalda (o cuestiona) la restriccion de los risk ratios a rachas que empiezan entre marzo y noviembre (§2.6).
-Para cada region (mismas mascaras que _run_pregunta5_aladin.py) se calcula la precipitacion mensual media de la region
-(promedio espacial de la climatologia mensual por celda, 1980-2014) y la fraccion mar-nov del total anual.
+Para cada region (mismas mascaras que _run_pregunta5_aladin.py) se suman los dias reales de cada mes y se promedian
+los acumulados mensuales de 1980-2014. Se respeta la duracion de los meses y los anios bisiestos, sin asumir meses
+de igual duracion. Se calcula el promedio espacial por celda y la fraccion mar-nov del total anual.
 CR2MET se interpola linealmente a la grilla ALADIN (igual que en los demas scripts); ALADIN usa pr x 86 400.
 
 Entrada: pr/ y pr1/ (historico 1980-2014). Salida: resultados_tesis/estacionalidad_marnov_regiones.csv
@@ -21,14 +22,22 @@ import _run_pregunta5_aladin as rr
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'resultados_tesis' / 'estacionalidad_marnov_regiones.csv'
-DIAS_MES = 30.4375
 
 
 def climatologia_mensual(da, mask):
-    """Precipitacion mensual media (mm/mes) promediada sobre las celdas de la region: vector de 12."""
-    sel = da.where(mask)
-    clim = sel.groupby('time.month').mean('time')
-    return clim.mean(dim=('y', 'x')).compute().values * DIAS_MES
+    """Media de acumulados mensuales de calendario (mm/mes), con igual peso por celda.
+
+    Los meses con dias sin dato no se convierten en acumulados parciales; fuera de
+    la mascara se mantienen los NaN. La suma en float64 evita acumular en float32.
+    """
+    fechas = pd.DatetimeIndex(da['time'].values)
+    esperadas = pd.date_range(f'{fechas[0].year}-01-01', f'{fechas[-1].year}-12-31', freq='D')
+    if not fechas.equals(esperadas):
+        raise ValueError('Se requieren anios completos de datos diarios, sin huecos ni duplicados.')
+    sel = da.where(mask).astype(np.float64)
+    mensuales = sel.resample(time='MS').sum('time', skipna=False)
+    clim = mensuales.groupby('time.month').mean('time')
+    return clim.mean(dim=('y', 'x')).compute().values
 
 
 def main():

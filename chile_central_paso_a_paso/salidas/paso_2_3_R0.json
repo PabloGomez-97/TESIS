@@ -1,0 +1,12 @@
+{
+  "periodo": "1980-2014",
+  "celdas": 502,
+  "F_objetivo_cr2met_pct": 19.396304020463827,
+  "R0_biseccion_mm": 7.1773529052734375,
+  "R0_usado_mm": 7.177,
+  "F_aladin_R0_usado_pct": 19.396724740587086,
+  "F_aladin_0p1mm_pct": 41.16431645134107,
+  "iteraciones": 17,
+  "tolerancia_fraccion": 1e-06,
+  "definicion": "dia humedo de ALADIN: pr >= R0; dia seco: pr < R0"
+}

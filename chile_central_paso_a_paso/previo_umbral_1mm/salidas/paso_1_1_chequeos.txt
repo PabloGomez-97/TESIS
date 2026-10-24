@@ -1,0 +1,14 @@
+Periodo: 1980-01-01 a 2014-12-31; dias: 12784; dias unicos: 12784; esperado 12784 (35 anios con 9 bisiestos)
+Celdas: 502
+NaN en CR2MET recortado (caja completa, incluye mar/Argentina si corresponde): 5382064
+NaN en la serie interpolada (dias x celdas = 6417568): 0; celdas con algun NaN: 0
+Rango de pr interpolada: min 0.000 mm, max 320.3 mm; valores negativos: 0
+Bilineal calculada a mano frente a xarray (5 celdas x dias al azar): diferencia maxima 1.89e-08 mm
+Correlacion diaria interpolada-vecino mas cercano (todas las celdas): 0.9993
+Lluvia anual media del dominio: interpolada 929 mm; vecino mas cercano 927 mm
+Por region: celdas | lluvia anual interpolada (mm) | dias >= 1 mm interpolados (%) | dias >= 1 mm vecino mas cercano (%)
+  Valparaíso      108 |     459 | 11.34 | 11.30
+  Metropolitana   100 |     730 | 16.02 | 16.01
+  O'Higgins       110 |     953 | 17.51 | 17.46
+  Maule           184 |    1299 | 21.22 | 21.13
+  Dominio         502 |     929 | 17.25 | 17.19

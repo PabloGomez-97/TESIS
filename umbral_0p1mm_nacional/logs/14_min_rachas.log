@@ -1,0 +1,13 @@
+                                  0        1        2        3
+minimo_rachas                 30.00    50.00   100.00   200.00
+celdas                      3575.00  3527.00  3355.00  2961.00
+celdas_excluidas_vs_30         0.00    48.00   220.00   614.00
+lat_media_excluidas             NaN   -20.33   -21.45   -23.44
+delta_media_promedio          -0.11    -1.00    -3.05    -2.53
+delta_media_mediana           -1.08    -1.09    -1.16    -1.07
+pct_media_ALADIN_menor_sig    61.01    61.61    64.20    65.92
+pct_media_ALADIN_mayor_sig    12.42    11.85     9.84     8.58
+delta_t99_promedio             2.11    -0.25    -6.89    -6.69
+delta_t99_mediana             -2.81    -2.96    -3.00    -2.71
+pct_t99_ALADIN_menor_sig      23.55    23.65    24.47    25.19
+pct_t99_ALADIN_mayor_sig       9.65     9.44     8.49     7.77

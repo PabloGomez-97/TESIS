@@ -1,0 +1,9 @@
+Objetivo F_CR2MET (dominio, 0,1 mm): 19.396304 %; celda-dias de ALADIN: 6417568; NaN: 0
+F_ALADIN(0) = 100.000 % ; F_ALADIN(0,1 mm) = 41.1643 % ; F_ALADIN(50 mm) = 3.32782 % (el objetivo cae entre F(50) y F(0): se puede biseccionar)
+Biseccion: 17 iteraciones; R0 = 7.177353 mm; F(R0) = 19.396382 % (diferencia con el objetivo +7.79e-05 pp)
+R0 usado (redondeado a 3 decimales) = 7.177 mm; F(R0 usado) = 19.396725 % (diferencia +4.21e-04 pp)
+Control por cuantil (k = 1244771 celda-dias mas lluviosos): R0 = 7.177486 mm; F(R0) = 19.396304 %; diferencia con la biseccion: 1.34e-04 mm
+Sensibilidad: F con R0 7.167 = 19.407 %; con R0 7.187 = 19.386 %
+Sensibilidad: F con R0 7.077 = 19.498 %; con R0 7.277 = 19.296 %
+Sensibilidad: F con R0 6.677 = 19.919 %; con R0 7.677 = 18.902 %
+Mediana de los dias humedos (mm/dia): ALADIN con R0 23.10; ALADIN con 0,1 mm 6.07; CR2MET con 0,1 mm 6.64

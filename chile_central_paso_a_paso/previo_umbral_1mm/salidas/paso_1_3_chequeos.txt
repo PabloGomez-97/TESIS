@@ -1,0 +1,6 @@
+Anio tipico (mediana de la lluvia anual media del dominio en CR2MET, 35 anios): 1994 (854 mm; mediana 854 mm)
+Santiago: celda 375, region 1; marzo-noviembre 1994: dias >= 1 mm CR2MET 28, ALADIN 85 de 275
+Talca: celda 115, region 3; marzo-noviembre 1994: dias >= 1 mm CR2MET 53, ALADIN 92 de 275
+Dias del dominio por tramo de intensidad (%), CR2MET | ALADIN: < 0,1: 80.6 | 58.8; 0,1 – 1: 2.1 | 10.4; 1 – 5: 6.0 | 8.9; 5 – 10: 3.9 | 5.0; 10 – 25: 4.4 | 7.9; ≥ 25: 3.0 | 9.0
+Suma de tramos: CR2MET 100.00 %, ALADIN 100.00 %
+Dias >= 1 mm: CR2MET 17.25 %, ALADIN 30.80 %; dias con 0,1-1 mm: CR2MET 2.15 %, ALADIN 10.36 %

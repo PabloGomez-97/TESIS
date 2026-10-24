@@ -1,0 +1,5 @@
+minimo_rachas,celdas,celdas_excluidas_vs_30,lat_media_excluidas,delta_media_promedio,delta_media_mediana,pct_media_ALADIN_menor_sig,pct_media_ALADIN_mayor_sig,delta_t99_promedio,delta_t99_mediana,pct_t99_ALADIN_menor_sig,pct_t99_ALADIN_mayor_sig
+30,3575,0,,-0.106,-1.083,61.007,12.42,2.106,-2.81,23.552,9.65
+50,3527,48,-20.332,-1.002,-1.09,61.61,11.851,-0.254,-2.96,23.646,9.441
+100,3355,220,-21.454,-3.049,-1.156,64.203,9.836,-6.894,-3.0,24.471,8.495
+200,2961,614,-23.443,-2.532,-1.073,65.924,8.578,-6.69,-2.71,25.194,7.768

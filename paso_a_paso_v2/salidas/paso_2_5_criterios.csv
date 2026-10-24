@@ -1,0 +1,4 @@
+criterio,umbral_cr2met_mm,umbral_aladin_mm,uso
+i,"0,1","5.742 (global, un valor para todo el dominio)",análisis principal
+ii,"0,1","0,1",sensibilidad: sesgo sin calibrar
+iii,"0,1","local por celda (mediana 6.14, de 1.51 a 20.02)",sensibilidad espacial

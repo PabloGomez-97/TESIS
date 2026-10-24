@@ -1,0 +1,13 @@
+Matriz: 12784 dias x 972 celdas = 12426048 celda-dias; NaN: 0
+Fraccion de dias humedos (pr >= 0.1 mm) del dominio: 27.1856 % (3378099 de 12426048 celda-dias)
+Promedio simple de las fracciones por celda: 27.1856 % (debe coincidir: mismos dias en todas las celdas)
+Celda-dias con pr exactamente 0.1 mm (los afectaria usar > en vez de >=): 0; fraccion con > 0.1: 27.1856 %
+Para ver cuan sensible es al umbral exacto: fraccion con pr >= 0.05 mm: 27.410 %
+Para ver cuan sensible es al umbral exacto: fraccion con pr >= 0.095 mm: 27.206 %
+Para ver cuan sensible es al umbral exacto: fraccion con pr >= 0.105 mm: 27.166 %
+Para ver cuan sensible es al umbral exacto: fraccion con pr >= 0.2 mm: 26.854 %
+Por region (%): Valparaíso 13.76; Metropolitana 18.95; O'Higgins 19.37; Maule 22.97; Ñuble 26.21; Biobío 32.32; La Araucanía 41.42
+Por celda: min 7.71 %, mediana 27.17 %, max 51.07 %
+Por mes (%): 01: 11.6; 02: 12.5; 03: 15.1; 04: 24.5; 05: 38.2; 06: 47.0; 07: 41.1; 08: 40.0; 09: 33.3; 10: 27.3; 11: 20.1; 12: 14.9
+Por anio: min 19.00 % (1998), max 35.02 % (1982), desviacion estandar 3.53 pp
+Fraccion marzo-noviembre: 31.84 %; diciembre-febrero: 13.01 %; porcentaje de los dias humedos que caen en mar-nov: 88.2 %

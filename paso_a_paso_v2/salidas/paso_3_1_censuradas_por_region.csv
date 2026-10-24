@@ -1,0 +1,50 @@
+serie,region,completas,censuradas,p99_completas_region,censuradas_mayores_p99_region,censuradas_ge20
+cr2met_hist,Valparaíso,93923,205,119.0,0,84
+cr2met_hist,Metropolitana,112859,153,71.0,0,50
+cr2met_hist,O'Higgins,120734,177,80.0,0,81
+cr2met_hist,Maule,224595,265,57.0,0,133
+cr2met_hist,Ñuble,114604,108,45.0,0,75
+cr2met_hist,Biobío,235828,218,34.0,83,83
+cr2met_hist,La Araucanía,373653,226,23.0,20,20
+aladin_hist_i,Valparaíso,108215,202,130.0,0,136
+aladin_hist_i,Metropolitana,118521,168,83.80000000000291,0,98
+aladin_hist_i,O'Higgins,131540,200,78.0,0,102
+aladin_hist_i,Maule,248493,346,56.0,0,74
+aladin_hist_i,Ñuble,127773,174,42.0,0,2
+aladin_hist_i,Biobío,260334,320,34.6699999999837,0,0
+aladin_hist_i,La Araucanía,399488,429,24.0,0,0
+aladin_hist_ii,Valparaíso,182844,157,28.0,1,12
+aladin_hist_ii,Metropolitana,162696,137,29.0,3,8
+aladin_hist_ii,O'Higgins,180399,175,28.0,0,4
+aladin_hist_ii,Maule,303981,311,24.0,0,0
+aladin_hist_ii,Ñuble,146839,141,20.0,0,0
+aladin_hist_ii,Biobío,281063,186,16.0,0,0
+aladin_hist_ii,La Araucanía,395178,56,11.0,0,0
+aladin_hist_iii,Valparaíso,99380,202,140.0,0,147
+aladin_hist_iii,Metropolitana,113535,171,90.0,0,101
+aladin_hist_iii,O'Higgins,127648,204,82.0,0,103
+aladin_hist_iii,Maule,241668,349,61.0,0,77
+aladin_hist_iii,Ñuble,125979,174,44.0,0,2
+aladin_hist_iii,Biobío,260073,317,34.0,0,0
+aladin_hist_iii,La Araucanía,405555,376,21.0,0,0
+aladin_ssp585_i,Valparaíso,94021,216,149.0,0,146
+aladin_ssp585_i,Metropolitana,104924,200,110.0,2,122
+aladin_ssp585_i,O'Higgins,115949,220,102.0,1,169
+aladin_ssp585_i,Maule,221188,363,73.0,41,219
+aladin_ssp585_i,Ñuble,116740,174,55.0,26,87
+aladin_ssp585_i,Biobío,242130,320,39.0,19,130
+aladin_ssp585_i,La Araucanía,376480,443,29.0,43,65
+aladin_ssp585_ii,Valparaíso,166011,175,38.0,26,35
+aladin_ssp585_ii,Metropolitana,150067,174,41.0,19,33
+aladin_ssp585_ii,O'Higgins,166388,179,38.0,5,67
+aladin_ssp585_ii,Maule,287895,324,31.0,0,108
+aladin_ssp585_ii,Ñuble,140303,168,26.0,6,59
+aladin_ssp585_ii,Biobío,274621,237,19.0,12,12
+aladin_ssp585_ii,La Araucanía,397967,254,13.0,0,0
+aladin_ssp370_i,Valparaíso,95829,216,143.0,0,209
+aladin_ssp370_i,Metropolitana,106682,200,105.0,0,154
+aladin_ssp370_i,O'Higgins,117774,220,100.0,0,161
+aladin_ssp370_i,Maule,226434,368,63.0,63,139
+aladin_ssp370_i,Ñuble,119371,174,47.0,0,39
+aladin_ssp370_i,Biobío,248870,317,37.0,0,32
+aladin_ssp370_i,La Araucanía,382956,401,27.0,0,1

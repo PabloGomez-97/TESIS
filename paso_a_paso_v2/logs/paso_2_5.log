@@ -1,0 +1,15 @@
+Objetivo por celda: dias >= 0,1 mm de CR2MET, min 986, mediana 3474, max 6529 (de 12784); k > 0 en todas: True
+Biseccion por celda: 79 iteraciones; celdas con conteo exacto (= objetivo): 972 de 972
+Control por cuantil: R0 local dentro de (v_(k+1), v_k] en 972 de 972 celdas; diferencia maxima con v_k: 0.072 mm (es el ancho del intervalo en que el conteo no cambia)
+F por celda con R0 local: max |F_ALADIN - F_CR2MET| = 0.0000 pp; dominio: ALADIN 27.1856 % frente a CR2MET 27.1856 %
+R0 local (mm): min 1.51, p10 2.95, mediana 6.14, p90 9.49, max 20.02; R0 global 5.742
+Celdas con R0 local menor que el global: 417; mayor: 555; con R0 local < 0,1 mm: 0
+  Valparaíso     R0 local: mediana 7.45 mm (p10 5.26, p90 10.18); celdas con local > global: 92 de 108
+  Metropolitana  R0 local: mediana 6.68 mm (p10 4.25, p90 10.02); celdas con local > global: 72 de 100
+  O'Higgins      R0 local: mediana 6.65 mm (p10 4.41, p90 9.39); celdas con local > global: 78 de 110
+  Maule          R0 local: mediana 6.85 mm (p10 5.36, p90 9.70); celdas con local > global: 151 de 184
+  Ñuble          R0 local: mediana 6.17 mm (p10 4.46, p90 10.73); celdas con local > global: 57 de 87
+  Biobío         R0 local: mediana 5.41 mm (p10 3.46, p90 9.47); celdas con local > global: 67 de 160
+  La Araucanía   R0 local: mediana 3.54 mm (p10 2.29, p90 6.92); celdas con local > global: 38 de 223
+Con R0 global, F_ALADIN - F_CR2MET por celda (pp): min -13.23, mediana +0.46, max +18.66; celdas con exceso > +5 pp: 79; con defecto < -5 pp: 125
+Correlacion entre R0 local y lluvia anual de CR2MET por celda: -0.011; con la fraccion humeda de CR2MET: -0.402

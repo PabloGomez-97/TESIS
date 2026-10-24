@@ -1,0 +1,10 @@
+Celda 845
+CR2MET (0,1 mm): 940 rachas completas; suma de duraciones 11017 d; media = 11017 / 940 = 11.720 d; mediana 6.0 d; maximo 164 d
+   p99 a mano: lista ordenada de 940 duraciones; posicion 0,99 x (940 - 1) = 929.610; entre el valor en la posicion 929 (84 d) y el siguiente (85 d) -> 84.610 d; numpy.percentile da 84.610 d; coinciden: True
+   rachas que duran mas de 85 d: 10 (1.06 % de las 940); las 8 mas largas: [np.int64(87), np.int64(97), np.int64(99), np.int64(111), np.int64(115), np.int64(132), np.int64(143), np.int64(164)]
+   cuantas rachas hay de 1, 2, 3, 4, 5, 6-10, 11-20, 21-50, >50 dias: [125, 103, 86, 71, 55, 202, 158, 106, 34]
+ALADIN criterio i (R₀ = 5,742 mm): 1123 rachas completas; suma de duraciones 10628 d; media = 10628 / 1123 = 9.464 d; mediana 5.0 d; maximo 130 d
+   p99 a mano: lista ordenada de 1123 duraciones; posicion 0,99 x (1123 - 1) = 1110.780; entre el valor en la posicion 1110 (82 d) y el siguiente (84 d) -> 83.560 d; numpy.percentile da 83.560 d; coinciden: True
+   rachas que duran mas de 84 d: 12 (1.07 % de las 1123); las 8 mas largas: [np.int64(93), np.int64(99), np.int64(101), np.int64(102), np.int64(103), np.int64(104), np.int64(127), np.int64(130)]
+   cuantas rachas hay de 1, 2, 3, 4, 5, 6-10, 11-20, 21-50, >50 dias: [191, 150, 122, 85, 74, 228, 163, 76, 34]
+Diferencia ALADIN - CR2MET en esta celda: media -2.26 d; p99 -1.05 d (esto es lo que el paso 4.1 calculara para cada una de las 972 celdas y dibujara en un mapa)

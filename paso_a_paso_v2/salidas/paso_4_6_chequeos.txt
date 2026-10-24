@@ -1,0 +1,29 @@
+Regrillado por area: puntos CR2MET (0,05 deg) dentro de cada celda de ALADIN: min 4, mediana 6, max 9; celdas sin puntos: 0; NaN en la serie por area: 0
+Frecuencia de dias >= 0,1 mm en el dominio: bilineal 27.186 %; promedio por area 27.694 % (diferencia +0.508 pp); lluvia anual media: bilineal 1371 mm, area 1368 mm; correlacion diaria (promedio del dominio) 1.0000
+R0 recalibrado con CR2MET por area: 5.397 mm (R0 del criterio i: 5.742 mm); F ALADIN con ese R0: 27.6936 % (objetivo 27.6936 %)
+cr2met_area: rachas 1291395 (censuradas 1339); dias secos 72.31 %
+aladin_area_i: rachas 1406428 (censuradas 1838); dias secos 72.31 %
+i (principal): Delta observado dentro del IC95 por celda: media 972/972, p99 972/972; correlacion espacial: media 0.968, p99 0.950
+ii (0,1 mm en ambos): Delta observado dentro del IC95 por celda: media 972/972, p99 972/972; correlacion espacial: media 0.823, p99 0.725
+iii (R₀ local): Delta observado dentro del IC95 por celda: media 972/972, p99 972/972; correlacion espacial: media 0.988, p99 0.966
+iv (regrillado por área): Delta observado dentro del IC95 por celda: media 972/972, p99 972/972; correlacion espacial: media 0.966, p99 0.946
+DOMINIO i (principal): Delta media -0.88 d [-1.35; -0.43] (-11.1 %); celdas ALADIN mas corto 61 % / mas largo 7 % | Delta p99 +1.92 d [-3.05; +6.72] (+3.6 %); celdas mas corto 5 % / mas largo 13 %
+DOMINIO ii (0,1 mm en ambos): Delta media -4.02 d [-4.36; -3.69] (-50.8 %); celdas ALADIN mas corto 100 % / mas largo 0 % | Delta p99 -33.08 d [-36.40; -29.59] (-62.2 %); celdas mas corto 99 % / mas largo 0 %
+DOMINIO iii (R₀ local): Delta media -0.64 d [-1.12; -0.18] (-8.2 %); celdas ALADIN mas corto 50 % / mas largo 3 % | Delta p99 +5.16 d [+0.12; +10.14] (+9.7 %); celdas mas corto 9 % / mas largo 25 %
+DOMINIO iv (regrillado por área): Delta media -0.82 d [-1.27; -0.39] (-10.6 %); celdas ALADIN mas corto 60 % / mas largo 6 % | Delta p99 +2.23 d [-2.65; +6.83] (+4.3 %); celdas mas corto 6 % / mas largo 14 %
+Delta de la media por region [IC95] (dias), por alternativa:
+  Valparaíso     i -2.32 [-3.49;-1.16] | ii -8.77 [-9.79;-7.93] | iii -1.11 [-2.33;+0.21] | iv -2.14 [-3.27;-1.01]
+  Metropolitana  i -0.94 [-1.67;-0.18] | ii -5.33 [-5.90;-4.80] | iii -0.42 [-1.19;+0.36] | iv -0.79 [-1.50;-0.05]
+  O'Higgins      i -1.23 [-1.94;-0.49] | ii -5.28 [-5.82;-4.77] | iii -0.84 [-1.58;-0.08] | iv -1.13 [-1.82;-0.43]
+  Maule          i -1.09 [-1.66;-0.62] | ii -4.00 [-4.41;-3.64] | iii -0.75 [-1.33;-0.25] | iv -1.04 [-1.58;-0.58]
+  Ñuble          i -0.88 [-1.32;-0.49] | ii -3.21 [-3.55;-2.86] | iii -0.69 [-1.13;-0.29] | iv -0.87 [-1.30;-0.49]
+  Biobío         i -0.56 [-0.85;-0.26] | ii -2.65 [-2.90;-2.39] | iii -0.58 [-0.87;-0.28] | iv -0.56 [-0.84;-0.27]
+  La Araucanía   i -0.03 [-0.24;+0.20] | ii -1.81 [-1.98;-1.63] | iii -0.37 [-0.58;-0.15] | iv -0.04 [-0.25;+0.19]
+Delta del p99 por region [IC95] (dias), por alternativa:
+  Valparaíso     i +5.03 [-6.61;+17.31] | ii -79.78 [-87.95;-70.29] | iii +19.35 [+7.26;+31.83] | iv +6.50 [-5.03;+17.82]
+  Metropolitana  i +10.82 [-0.22;+21.66] | ii -46.53 [-54.59;-37.38] | iii +17.27 [+5.96;+28.53] | iv +11.93 [+0.69;+22.16]
+  O'Higgins      i +3.88 [-8.00;+16.08] | ii -49.33 [-55.45;-41.80] | iii +9.10 [-2.61;+21.51] | iv +4.26 [-6.67;+16.69]
+  Maule          i +0.44 [-6.70;+7.52] | ii -32.19 [-37.18;-27.58] | iii +4.87 [-2.50;+13.00] | iv +0.76 [-6.34;+7.57]
+  Ñuble          i -2.44 [-8.55;+2.90] | ii -23.95 [-29.41;-19.46] | iii -0.76 [-6.89;+4.95] | iv -2.93 [-8.94;+2.39]
+  Biobío         i -1.79 [-5.21;+1.77] | ii -18.24 [-21.40;-15.59] | iii -1.89 [-5.33;+1.44] | iv -1.85 [-5.15;+1.58]
+  La Araucanía   i +1.06 [-1.74;+3.37] | ii -11.37 [-13.77;-9.59] | iii -1.49 [-4.10;+0.61] | iv +0.94 [-1.78;+3.15]

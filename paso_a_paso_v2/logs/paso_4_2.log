@@ -1,0 +1,15 @@
+1000 replicas, semilla 42; sorteos independientes para CR2MET y ALADIN (mismo sorteo en todas las celdas); anios 1980-2014 (35)
+Control del sorteo: peso total por replica = [35] y [35]; anios no sorteados por replica (promedio): CR2MET 12.6, ALADIN 12.7 (esperado ≈ 12.7)
+Comprobacion contra la lista expandida (6 celdas x 2 productos x 3 replicas): diferencia maxima en media y p99 = 0.00e+00 d
+Bootstrap hecho en 19 s; replicas-celda sin rachas en algun producto: 0 de 972000; Delta* con NaN: media 0, p99 0
+media: el Delta observado cae dentro de su IC95 en 972 de 972 celdas; mediana de (mediana de Delta* - Delta observado) = +0.000 d
+p99: el Delta observado cae dentro de su IC95 en 972 de 972 celdas; mediana de (mediana de Delta* - Delta observado) = +0.000 d
+Dominio (972 celdas): MEDIA: ALADIN mas corto 61.3 %, mas largo 6.6 %, sin diferencia clara 32.1 % | P99: mas corto 5.3 %, mas largo 12.7 %, sin diferencia clara 82.0 %
+Valparaíso (108 celdas): MEDIA: ALADIN mas corto 76.9 %, mas largo 5.6 %, sin diferencia clara 17.6 % | P99: mas corto 7.4 %, mas largo 23.1 %, sin diferencia clara 69.4 %
+Metropolitana (100 celdas): MEDIA: ALADIN mas corto 54.0 %, mas largo 14.0 %, sin diferencia clara 32.0 % | P99: mas corto 8.0 %, mas largo 34.0 %, sin diferencia clara 58.0 %
+O'Higgins (110 celdas): MEDIA: ALADIN mas corto 62.7 %, mas largo 11.8 %, sin diferencia clara 25.5 % | P99: mas corto 3.6 %, mas largo 26.4 %, sin diferencia clara 70.0 %
+Maule (184 celdas): MEDIA: ALADIN mas corto 78.3 %, mas largo 1.1 %, sin diferencia clara 20.7 % | P99: mas corto 4.9 %, mas largo 8.2 %, sin diferencia clara 87.0 %
+Ñuble (87 celdas): MEDIA: ALADIN mas corto 94.3 %, mas largo 0.0 %, sin diferencia clara 5.7 % | P99: mas corto 3.4 %, mas largo 0.0 %, sin diferencia clara 96.6 %
+Biobío (160 celdas): MEDIA: ALADIN mas corto 75.6 %, mas largo 1.9 %, sin diferencia clara 22.5 % | P99: mas corto 11.2 %, mas largo 1.2 %, sin diferencia clara 87.5 %
+La Araucanía (223 celdas): MEDIA: ALADIN mas corto 19.3 %, mas largo 11.7 %, sin diferencia clara 69.1 % | P99: mas corto 0.9 %, mas largo 8.1 %, sin diferencia clara 91.0 %
+Ancho del IC95 del Delta (dias), mediana entre celdas: media 0.89; p99 16.0 (p10 6.8, p90 54.7)

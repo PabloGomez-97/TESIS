@@ -1,0 +1,12 @@
+1000 replicas (los sorteos de anios guardados en el paso 4.2); 972 celdas
+Control: diferencia maxima entre Delta* recalculado y el guardado en 4.2: media 4.48e-07 d; p99 3.66e-06 d
+Dominio (972 celdas): MEDIA CR2MET 7.90, ALADIN 7.02; Delta -0.88 d [-1.35; -0.43] (mediano -0.62), relativo -11.1 % [-16.4; -5.6] | P99 CR2MET 53.2, ALADIN 55.1; Delta +1.92 d [-3.05; +6.72] (mediano +0.42), relativo +3.6 % [-5.6; +13.3]
+Valparaíso: MEDIA CR2MET 13.67, ALADIN 11.36; Delta -2.32 d [-3.49; -1.16] (mediano -2.74), relativo -17.0 % [-24.0; -8.8] | P99 CR2MET 106.8, ALADIN 111.8; Delta +5.03 d [-6.61; +17.31] (mediano +3.41), relativo +4.7 % [-6.0; +17.6]
+Metropolitana: MEDIA CR2MET 9.98, ALADIN 9.04; Delta -0.94 d [-1.67; -0.18] (mediano -0.90), relativo -9.4 % [-16.0; -1.9] | P99 CR2MET 73.8, ALADIN 84.7; Delta +10.82 d [-0.22; +21.66] (mediano +7.94), relativo +14.7 % [-0.3; +32.5]
+O'Higgins: MEDIA CR2MET 9.96, ALADIN 8.73; Delta -1.23 d [-1.94; -0.49] (mediano -1.14), relativo -12.3 % [-18.8; -5.1] | P99 CR2MET 76.8, ALADIN 80.7; Delta +3.88 d [-8.00; +16.08] (mediano +2.67), relativo +5.1 % [-10.0; +22.6]
+Maule: MEDIA CR2MET 8.31, ALADIN 7.22; Delta -1.09 d [-1.66; -0.62] (mediano -1.13), relativo -13.2 % [-19.0; -7.7] | P99 CR2MET 55.0, ALADIN 55.4; Delta +0.44 d [-6.70; +7.52] (mediano +0.07), relativo +0.8 % [-11.8; +14.5]
+Ñuble: MEDIA CR2MET 7.22, ALADIN 6.34; Delta -0.88 d [-1.32; -0.49] (mediano -0.82), relativo -12.2 % [-17.6; -7.0] | P99 CR2MET 43.9, ALADIN 41.5; Delta -2.44 d [-8.55; +2.90] (mediano -1.95), relativo -5.6 % [-17.5; +7.4]
+Biobío: MEDIA CR2MET 5.93, ALADIN 5.37; Delta -0.56 d [-0.85; -0.26] (mediano -0.56), relativo -9.5 % [-13.8; -4.6] | P99 CR2MET 33.4, ALADIN 31.6; Delta -1.79 d [-5.21; +1.77] (mediano -1.48), relativo -5.4 % [-14.5; +5.6]
+La Araucanía: MEDIA CR2MET 4.49, ALADIN 4.46; Delta -0.03 d [-0.24; +0.20] (mediano +0.04), relativo -0.6 % [-5.3; +4.6] | P99 CR2MET 22.6, ALADIN 23.6; Delta +1.06 d [-1.74; +3.37] (mediano +1.00), relativo +4.7 % [-7.0; +15.5]
+Correlacion espacial entre las 972 celdas, media: Pearson 0.968; Spearman 0.968
+Correlacion espacial entre las 972 celdas, p99: Pearson 0.950; Spearman 0.953

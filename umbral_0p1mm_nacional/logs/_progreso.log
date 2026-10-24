@@ -1,0 +1,45 @@
+[22:27:39] INICIO 01_fig03 _generar_fig03_calibracion_R0.py
+[22:28:07] FIN 01_fig03 (exit 0)
+[22:28:07] INICIO 02_bootstrap7 _run_pregunta7_bootstrap.py
+[22:37:49] FIN 02_bootstrap7 (exit 0)
+[22:37:49] INICIO 03_sesgo_ventanas _calcular_sesgo_ventanas.py
+[22:37:49] FIN 03_sesgo_ventanas (exit 0)
+[22:37:49] INICIO 04_tablaS1 _generar_tablaS1_sensibilidad_chile.py
+[22:37:50] FIN 04_tablaS1 (exit 0)
+[22:37:50] INICIO 05a_rr_principal _run_pregunta5_aladin.py
+[22:38:28] FIN 05a_rr_principal (exit 0)
+[22:38:28] INICIO 05b_rr_0p1mm _run_pregunta5_aladin.py --umbral 0.1
+[22:39:06] FIN 05b_rr_0p1mm (exit 0)
+[22:39:06] INICIO 05c_rr_ssp370 _run_pregunta5_aladin.py --escenario ssp370
+[22:39:45] FIN 05c_rr_ssp370 (exit 0)
+[22:39:45] INICIO 06a_markov _referencia_markov_rr_regiones.py
+[22:40:02] FIN 06a_markov (exit 0)
+[22:40:02] INICIO 06b_contraste _contraste_persistencia_regiones.py
+[22:40:10] FIN 06b_contraste (exit 0)
+[22:40:10] INICIO 07_pdfs _generar_pregunta9_pdf_loglog_cuencas.py
+[22:40:45] FIN 07_pdfs (exit 0)
+[22:40:45] INICIO 08_tabla3 _calcular_tabla3_ventanas.py
+[22:40:46] FIN 08_tabla3 (exit 0)
+[22:40:46] INICIO 09a_frec_humeda _calcular_frecuencia_humeda_ventanas.py
+[22:41:02] FIN 09a_frec_humeda (exit 0)
+[22:41:02] INICIO 09b_estacionalidad _calcular_estacionalidad_marnov_regiones.py
+[22:41:29] FIN 09b_estacionalidad (exit 0)
+[22:41:29] INICIO 10a_figS1 _generar_figS1_sensibilidad_umbral.py
+[22:42:14] FIN 10a_figS1 (exit 0)
+[22:42:14] INICIO 10b_figS2 _generar_figS2_mapa_R0_local.py
+[22:42:28] FIN 10b_figS2 (exit 0)
+[22:42:28] INICIO 11_regrillado _test_regrillado_conservativo.py
+[22:43:29] FIN 11_regrillado (exit 0)
+[22:43:29] INICIO 12a_censuradas _cuantificar_censuradas.py
+[22:43:34] FIN 12a_censuradas (exit 0)
+[22:43:34] INICIO 12b_figT01 _generar_figT01_referencia_sin_memoria.py
+[22:43:39] FIN 12b_figT01 (exit 0)
+[22:43:39] INICIO 13a_fig_rr _generar_fig_rr_regiones.py
+[22:43:40] FIN 13a_fig_rr (exit 0)
+[22:43:40] INICIO 13b_fig05 _generar_fig05_mapas_persistencia.py
+[22:43:43] FIN 13b_fig05 (exit 0)
+[22:43:43] INICIO 13c_dominio _generar_fig_dominio_ventanas_regiones.py
+[22:43:47] FIN 13c_dominio (exit 0)
+[22:43:47] INICIO 14_min_rachas _sensibilidad_minimo_rachas.py
+[22:46:10] FIN 14_min_rachas (exit 0)
+[22:46:10] TODO TERMINADO

@@ -1,0 +1,11 @@
+Celdas con al menos una racha completa: CR2MET 972 de 972; ALADIN 972 de 972; validas en ambas (celdas comunes): 972
+Rachas completas por celda: CR2MET min 549, mediana 1366, max 1821; ALADIN min 686, mediana 1468, max 1930
+Control con el paso 3.3 (celda 845): CR2MET media 11.720, p99 84.610; ALADIN media 9.464, p99 83.560 (a mano: 11,720 / 84,610 y 9,464 / 83,560)
+Dominio (celdas comunes) (972 celdas): media CR2MET 7.90 d, ALADIN 7.02 d, Delta promedio -0.88 (mediana -0.62); p99 CR2MET 53.2 d, ALADIN 55.1 d, Delta promedio +1.92 (mediana +0.42); celdas con ALADIN mas corto: media 764, p99 436
+Valparaíso (108 celdas): media CR2MET 13.67 d, ALADIN 11.36 d, Delta promedio -2.32 (mediana -2.74); p99 CR2MET 106.8 d, ALADIN 111.8 d, Delta promedio +5.03 (mediana +3.41); celdas con ALADIN mas corto: media 98, p99 48
+Metropolitana (100 celdas): media CR2MET 9.98 d, ALADIN 9.04 d, Delta promedio -0.94 (mediana -0.90); p99 CR2MET 73.8 d, ALADIN 84.7 d, Delta promedio +10.82 (mediana +7.94); celdas con ALADIN mas corto: media 71, p99 28
+O'Higgins (110 celdas): media CR2MET 9.96 d, ALADIN 8.73 d, Delta promedio -1.23 (mediana -1.14); p99 CR2MET 76.8 d, ALADIN 80.7 d, Delta promedio +3.88 (mediana +2.67); celdas con ALADIN mas corto: media 90, p99 46
+Maule (184 celdas): media CR2MET 8.31 d, ALADIN 7.22 d, Delta promedio -1.09 (mediana -1.13); p99 CR2MET 55.0 d, ALADIN 55.4 d, Delta promedio +0.44 (mediana +0.07); celdas con ALADIN mas corto: media 172, p99 89
+Ñuble (87 celdas): media CR2MET 7.22 d, ALADIN 6.34 d, Delta promedio -0.88 (mediana -0.82); p99 CR2MET 43.9 d, ALADIN 41.5 d, Delta promedio -2.44 (mediana -1.95); celdas con ALADIN mas corto: media 87, p99 63
+Biobío (160 celdas): media CR2MET 5.93 d, ALADIN 5.37 d, Delta promedio -0.56 (mediana -0.56); p99 CR2MET 33.4 d, ALADIN 31.6 d, Delta promedio -1.79 (mediana -1.48); celdas con ALADIN mas corto: media 150, p99 98
+La Araucanía (223 celdas): media CR2MET 4.49 d, ALADIN 4.46 d, Delta promedio -0.03 (mediana +0.04); p99 CR2MET 22.6 d, ALADIN 23.6 d, Delta promedio +1.06 (mediana +1.00); celdas con ALADIN mas corto: media 96, p99 64

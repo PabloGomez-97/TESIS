@@ -1,0 +1,3 @@
+Regrillado por area: puntos CR2MET (0,05 deg) dentro de cada celda de ALADIN: min 4, mediana 6, max 9; celdas sin puntos: 0; NaN en la serie por area: 0
+Frecuencia de dias >= 0,1 mm en el dominio: bilineal 27.186 %; promedio por area 27.694 % (diferencia +0.508 pp); lluvia anual media: bilineal 1371 mm, area 1368 mm; correlacion diaria (promedio del dominio) 1.0000
+R0 recalibrado con CR2MET por area: 5.397 mm (R0 del criterio i: 5.742 mm); F ALADIN con ese R0: 27.6936 % (objetivo 27.6936 %)

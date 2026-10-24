@@ -1,0 +1,25 @@
+/Users/pablogomez/Documents/GitHub/TESIS/chile_central_paso_a_paso/paso_1_1_interpolacion.py:30: FutureWarning: In a future version of xarray the default value for data_vars will change from data_vars='all' to data_vars=None. This is likely to lead to different results when multiple datasets have matching variables with overlapping values. To opt in to new defaults and get rid of these warnings now use `set_options(use_new_combine_kwarg_defaults=True) or set data_vars explicitly.
+  ds = xr.open_mfdataset(sorted(glob.glob(str(ROOT / 'pr' / 'CR2MET_pr_v2.5_day_*.nc'))), chunks={'time': 366}, combine='by_coords')
+CR2MET recortado: (12784, 108, 77) -36.925 -31.575 -73.175 -69.375
+Periodo: 1980-01-01 a 2014-12-31; dias: 12784; dias unicos: 12784; esperado 12784 (35 anios con 9 bisiestos)
+Celdas: 502
+NaN en CR2MET recortado (caja completa, incluye mar/Argentina si corresponde): 5382064
+NaN en la serie interpolada (dias x celdas = 6417568): 0; celdas con algun NaN: 0
+Rango de pr interpolada: min 0.000 mm, max 320.3 mm; valores negativos: 0
+Bilineal calculada a mano frente a xarray (5 celdas x dias al azar): diferencia maxima 1.89e-08 mm
+Correlacion diaria interpolada-vecino mas cercano (todas las celdas): 0.9993
+Lluvia anual media del dominio: interpolada 929 mm; vecino mas cercano 927 mm
+Por region: celdas | lluvia anual interpolada (mm) | dias >= 0,1 mm interpolados (%) | dias >= 0,1 mm vecino mas cercano (%)
+  Valparaíso      108 |     459 | 13.76 | 13.20
+  Metropolitana   100 |     730 | 18.95 | 18.30
+  O'Higgins       110 |     953 | 19.37 | 18.82
+  Maule           184 |    1299 | 22.97 | 22.44
+  Dominio         502 |     929 | 19.40 | 18.83
+Sensibilidad con el umbral de CR2MET (0,1 mm):
+  dias-celda con 0 < pr < 0,1 mm: interpolada 0.83 %; vecino mas cercano 0.30 %
+  dias-celda con pr exactamente 0: interpolada 79.77 %; vecino mas cercano 80.87 %
+  dias-celda con pr exactamente 0,1 mm (borde de la definicion >=): interpolada 0; vecino mas cercano 0
+  diferencia en la fraccion humeda del dominio, interpolada menos vecino mas cercano: +0.561 pp
+  referencia de ruido: fraccion con pr >= 0.05 mm: interpolada 19.66 %; vecino mas cercano 18.99 %
+  referencia de ruido: fraccion con pr >= 0.15 mm: interpolada 19.19 %; vecino mas cercano 18.71 %
+figura lista; dia mostrado: 2008-08-15

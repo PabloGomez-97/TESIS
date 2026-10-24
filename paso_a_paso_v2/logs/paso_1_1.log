@@ -1,0 +1,24 @@
+CR2MET recortado: (12784, 173, 96) -40.175 -31.575 -74.125 -69.375
+Periodo: 1980-01-01 a 2014-12-31; dias: 12784; dias unicos: 12784; esperado 12784 (35 anios con 9 bisiestos)
+Celdas: 972
+NaN en CR2MET recortado (caja completa, incluye mar/Argentina si corresponde): 32752608
+NaN en la serie interpolada (dias x celdas = 12426048): 0; celdas con algun NaN: 0
+Rango de pr interpolada: min 0.000 mm, max 320.3 mm; valores negativos: 0
+Bilineal calculada a mano frente a xarray (5 celdas x dias al azar): diferencia maxima 4.30e-07 mm
+Correlacion diaria interpolada-vecino mas cercano (todas las celdas): 0.9993
+Lluvia anual media del dominio: interpolada 1371 mm; vecino mas cercano 1368 mm
+Sensibilidad al umbral exacto: fraccion con pr >= 0.05 mm: interpolada 27.41 %; vecino mas cercano 26.76 %
+Sensibilidad al umbral exacto: fraccion con pr >= 0.095 mm: interpolada 27.21 %; vecino mas cercano 26.66 %
+Sensibilidad al umbral exacto: fraccion con pr >= 0.105 mm: interpolada 27.17 %; vecino mas cercano 26.64 %
+Sensibilidad al umbral exacto: fraccion con pr >= 0.2 mm: interpolada 26.85 %; vecino mas cercano 26.44 %
+Diferencia interpolada - vecino mas cercano en la fraccion >= 0,1 mm: +0.55 pp (relativa: +2.1 %)
+Por region: celdas | lluvia anual interpolada (mm) | dias >= 0,1 mm interpolados (%) | dias >= 0,1 mm vecino mas cercano (%)
+  Valparaíso      108 |     459 | 13.76 | 13.20
+  Metropolitana   100 |     730 | 18.95 | 18.30
+  O'Higgins       110 |     953 | 19.37 | 18.82
+  Maule           184 |    1299 | 22.97 | 22.44
+  Ñuble            87 |    1486 | 26.21 | 25.76
+  Biobío          160 |    1741 | 32.32 | 31.78
+  La Araucanía    223 |    2054 | 41.42 | 40.85
+  Dominio         972 |    1371 | 27.19 | 26.64
+figura lista; dia mostrado: 1997-06-19

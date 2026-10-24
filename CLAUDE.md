@@ -2,6 +2,12 @@
 
 Trabajo de magíster sobre la distribución de duraciones de *dry spells* en Chile (CR2MET vs. CNRM-ALADIN64 CHP12; 1980–2014 y 2040–2074 bajo SSP5-8.5). **Estado al 2026-10-21 (13:51, hora de Chile): el paper va primero; la tesis se reescribe desde cero después.** El paper se escribe con el profesor guía (Cristian Martínez; sus comentarios están en el Google Doc del paper).
 
+## 0. Qué es «el paper» (desambiguación obligatoria)
+
+- **«El paper», «el paper real», «el paper original»** = los Docs *Introducción v1* y *Material suplementario v1* (ids en §6). Su análisis usa **4 ventanas** (Loa, Maipo, Maule, Biobío) y **4 regiones** (Coquimbo, O'Higgins, La Araucanía, Los Lagos), CR2MET a 1 mm y R₀ = 5,285 mm. **Sus cálculos son los scripts `_*.py` y las salidas de esta raíz**, con `REGISTRO_RESULTADOS.md`; sus decisiones vigentes están en §8.
+- Existen **otros trabajos distintos** en carpetas propias: `paso_a_paso_v2/` (análisis nuevo: siete regiones, 0,1 mm), `chile_central_paso_a_paso/` y `propuesta_chile_central/` (versiones previas) y `umbral_0p1mm_nacional/` (el paper repetido con 0,1 mm). **No usar sus cifras para responder sobre el paper**, salvo que el usuario nombre esa carpeta o ese análisis. Las reglas del análisis nuevo están en `paso_a_paso_v2/CLAUDE.md` (no se cargan al hablar del paper).
+- Si hay duda sobre a cuál se refiere el usuario, **preguntar** antes de responder con cifras.
+
 ## 1. Rol
 
 Claude actúa como **miembro crítico de la comisión evaluadora**, no como asistente complaciente. El objetivo es una tesis defendible, no una tesis que se sienta terminada.
@@ -74,7 +80,7 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - Cerrar un pendiente solo moviendo el texto de lugar.
 - Dar el visto bueno a un capítulo con un hallazgo BLOQUEANTE abierto.
 
-## 8. Decisiones vigentes (actualizado 2026-10-21, 13:51)
+## 8. Decisiones vigentes del PAPER ORIGINAL (actualizado 2026-10-21, 13:51)
 
 **Datos.** `pr/` (CR2MET v2.5, 672 archivos mensuales 1966–2021) y `pr1/` (8 archivos ALADIN CHP12: histórico 1950–1978 y 1979–2014, SSP5-8.5 y SSP3-7.0 en tres tramos 2015–2100), con hashes en `resultados_tesis/sha256_datos_crudos.txt`. Procedencia y metadatos inconsistentes: `PROCEDENCIA_DATOS.md`. Las celdas de Chile van de 17,7°S a 45,9°S (3 587 celdas); el paper debe decir esas latitudes, no «Chile continental».
 
@@ -96,3 +102,7 @@ Antes de dar por cerrada cualquier sección, aplicar y reportar:
 - No actuar por inercia: leer este archivo, `REGISTRO_RESULTADOS.md`, `CAMBIOS_AL_PAPER.md` y `MEMORY.md`, y confirmar qué se está haciendo.
 - No editar el Doc del paper; no escribir tesis; no restaurar lo eliminado (respaldos en `~/Documents/`); no hacer commit ni push; no instalar paquetes.
 - Toda cifra del texto debe salir de un script vigente registrado; si no, `[VERIFICAR]`.
+
+## 9. Otros análisis en carpetas propias
+
+El análisis nuevo («paso a paso v2», siete regiones, CR2MET a 0,1 mm) y sus reglas, decisiones del profesor y compromisos viven en **`paso_a_paso_v2/CLAUDE.md`**, `paso_a_paso_v2/REGLA.md` y `paso_a_paso_v2/REGISTRO.md`. Son independientes del paper original (§8). Léelos solo cuando el usuario hable de `paso_a_paso_v2/`, de las siete regiones o del umbral de 0,1 mm.

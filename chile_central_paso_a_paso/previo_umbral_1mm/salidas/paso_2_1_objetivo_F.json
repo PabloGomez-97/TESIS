@@ -1,0 +1,13 @@
+{
+  "periodo": "1980-2014",
+  "celdas": 502,
+  "umbral_mm": 1.0,
+  "definicion": "dia humedo: pr >= umbral",
+  "F_cr2met_dominio_pct": 17.247951248821984,
+  "F_por_region_pct": {
+    "Valparaíso": 11.343316877578454,
+    "Metropolitana": 16.02401439299124,
+    "O'Higgins": 17.508675617248834,
+    "Maule": 21.223030146378623
+  }
+}

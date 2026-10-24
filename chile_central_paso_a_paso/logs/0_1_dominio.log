@@ -1,0 +1,20 @@
+Valparaiso -> Valparaíso
+Metropolitana -> Región Metropolitana de Santiago
+OHiggins -> Libertador General Bernardo O'Higgins
+Maule -> Maule
+         region  celdas  lat_min  lat_max  lon_min  lon_max
+     Valparaíso     108   -33.89   -32.06   -71.74   -70.04
+  Metropolitana     100   -34.26   -33.06   -71.59   -69.87
+      O'Higgins     110   -34.97   -33.95   -71.99   -70.07
+          Maule     184   -36.44   -34.80   -72.72   -70.39
+Dominio (unión)     502   -36.44   -32.06   -72.72   -69.87
+Grilla ALADIN: 255 x 68 = 17340 celdas (archivo pr_CHP12_CNRM-ESM2-1_historical_r1i1p1f2_CNRM-ALADIN64_v1_day_19790101-20141231_chile.nc)
+Celdas cuyo centro cae en dos regiones a la vez (debe ser 0): 0
+Celdas del dominio: 502; suma por region: 502
+Celdas con el centro exactamente sobre el borde de un poligono: 0
+Tamano de celda en el dominio (aprox.): alto 13.1 km, ancho 13.1 km -> area 171 km2 por celda; area total ≈ 85688 km2
+Santiago: celda más cercana (lat -33.40, lon -70.68) -> Metropolitana (esperada: Metropolitana)
+Rancagua: celda más cercana (lat -34.19, lon -70.77) -> O'Higgins (esperada: O'Higgins)
+Talca: celda más cercana (lat -35.46, lon -71.65) -> Maule (esperada: Maule)
+Valparaíso (ciudad): celda más cercana (lat -33.10, lon -71.64) -> Valparaíso (esperada: Valparaíso)
+figura lista
