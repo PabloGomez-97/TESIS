@@ -1,0 +1,447 @@
+{
+  "passed": true,
+  "checks": 88,
+  "failures": [],
+  "details": [
+    {
+      "check": "Duraciones positivas enteras: Loa/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Loa/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Loa/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Loa/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Loa/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Loa/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Loa/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Loa/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Loa/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Loa/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Loa/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maipo/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maipo/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maipo/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maipo/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maipo/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maipo/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maipo/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maipo/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maipo/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Maipo/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Maipo/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maule/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maule/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maule/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maule/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maule/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maule/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Maule/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Maule/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Maule/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Maule/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Maule/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Biobio/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Biobio/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Biobio/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Biobio/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Biobio/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Biobio/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duraciones positivas enteras: Biobio/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Tabla 3 desde duraciones: Biobio/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Histograma conserva eventos: Biobio/ALADIN (futuro)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Biobio/CR2MET (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF principal y sensibilidad coinciden: Biobio/ALADIN (hist)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: /Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: /Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: /O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: /O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: /La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: /La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: /Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: /Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _0.1mm/Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _0.1mm/Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _0.1mm/O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _0.1mm/O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _0.1mm/La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _0.1mm/La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _0.1mm/Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _0.1mm/Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _ssp370/Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _ssp370/Coquimbo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _ssp370/O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _ssp370/O'Higgins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _ssp370/La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _ssp370/La Araucanía",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Meses permitidos RR: _ssp370/Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "10 RR y bootstrap independiente por conteos anuales: _ssp370/Los Lagos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Máscara Chile de 3587 celdas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Máscara común principal mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Delta mapa y bootstrap mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Máscara común principal t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Delta mapa y bootstrap t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: A_opcion_B_integrado/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: A_opcion_B_integrado/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: A_opcion_B_integrado/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: A_opcion_B_integrado/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: B_mismo_umbral/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: B_mismo_umbral/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: B_mismo_umbral/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: B_mismo_umbral/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: C_umbral_local/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: C_umbral_local/mean",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Significancia desde intervalos: C_umbral_local/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resumen desde NPZ: C_umbral_local/t99",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Conteos independientes Markov y RR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Rachas completas en diagnóstico de censura y PDFs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "R0 global de referencia coincide con su calibración escalar",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "archivo": "Figura_01.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig02_dominio_cuencas_regiones.png",
+    "redibujado": false,
+    "sha256": "f23a0b2a1e5cc706b90d8c79f724af16c21952a5d47fa2685a9b021916c92e9d"
+  },
+  {
+    "archivo": "Figura_02.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig_esquema_dryspell.png",
+    "redibujado": false,
+    "sha256": "9a10b267945247c98e6d77c9219f88cef2ce065830641388c7b8daaf26a1d42e"
+  },
+  {
+    "archivo": "Figura_03.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig03_calibracion_R0_ftau.png",
+    "redibujado": false,
+    "sha256": "dbcdbe93e86125b1a0e506681beb8389c2830aad8dcd762f8850bc2044b3ff6a"
+  },
+  {
+    "archivo": "Figura_04.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig05_mapas_persistencia_criterio_i.png",
+    "redibujado": false,
+    "sha256": "14a0e945085b144a040e806394b555b48d8172e106f16a8d791a64a31a668633"
+  },
+  {
+    "archivo": "Figura_05.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig42_pdf_cuencas_loglog_panel.png",
+    "redibujado": true,
+    "sha256": "12187de639e8960ef0d2ebb8e8cb864498ad04f0352ccc42cd2fa3d2aed8f244"
+  },
+  {
+    "archivo": "Figura_06.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig08_rr_curves_aladin.png",
+    "redibujado": true,
+    "sha256": "3801f384af4444c002b0c8b1b36c1b53f6baf99eff64be65fe637b66e85d5ea3"
+  },
+  {
+    "archivo": "Figura_S1.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS1_sensibilidad_umbral_cuencas.png",
+    "redibujado": false,
+    "sha256": "c59a25a354bdcd795b806880be3abeec20336e96ca976bd0b632b5f896e0400f"
+  },
+  {
+    "archivo": "Figura_S2.png",
+    "fuente": "temporal_umbral_por_celda_0p1mm_2026-10-25/comparativa/comparacion_mapas_umbrales.png",
+    "redibujado": false,
+    "sha256": "af2dff8ab629776e56cbbd56f4db8bfd57a95ba04ad5e0d3f3f75fd0dc1b649f"
+  },
+  {
+    "archivo": "Figura_S3.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS_rr_curves_aladin_1mm.png",
+    "redibujado": true,
+    "sha256": "f3b54f0dbcb86997814a583a906d62116bbb84052f62a747aaa94ffbfd8447f6"
+  },
+  {
+    "archivo": "Figura_S4.png",
+    "fuente": "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS_rr_curves_aladin_ssp370.png",
+    "redibujado": true,
+    "sha256": "784169a888be993930d9999178fb7ed314ddefc7376ea7b904cdecb4697fe081"
+  },
+  {
+    "archivo": "Figura_S5.png",
+    "fuente": "temporal_umbral_por_celda_0p1mm_2026-10-25/comparativa/comparacion_RR.png",
+    "redibujado": false,
+    "sha256": "8417f5e63fa0b4dd6d1e1905e54d7a5bcdf2cf8371d3031f01fd42ebb8d8f743"
+  }
+]

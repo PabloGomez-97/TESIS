@@ -1,0 +1,374 @@
+{
+  "file": "manuscrito_umbral_local_2026-10-25/fuentes/Introducción v1 (3).docx",
+  "comment_count": 16,
+  "comments": [
+    {
+      "id": "0",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T23:53:51Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Estoy dando un ejemplo justificado, ¿es coherente hacerlo?, ¿por qué hablo de Loa y no de las demás ventanas?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Se define wet day (día húmedo) como un día con precipitación diaria pr ≥ R, donde R es un umbral en mm día⁻¹, y dry day (día seco) como un día con pr < R. Un dry spell es una racha consecutiva de dry "
+            },
+            {
+              "where": "end",
+              "text": "Se define wet day (día húmedo) como un día con precipitación diaria pr ≥ R, donde R es un umbral en mm día⁻¹, y dry day (día seco) como un día con pr < R. Un dry spell es una racha consecutiva de dry "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T18:15:49Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Creo que podemos simplificar bastante la presentación de la calibración del umbral. Actualmente su motivación y los distintos criterios se explican en sec 2.2, nuevamente en sec 2.3 y después en sec 2.7. Sugiero concentrar la explicación y justificación en sec 2.3, dejar sec 2.2 principalmente para las definiciones y utilizar sec 2.7 solo para describir las pruebas de sensibilidad. También consideraría mover la Figura 2 al suplemento, ya que ilustra una definición bastante estándar. La Figura 3 podría ir al suplemento si necesitamos reducir la extensión del texto principal. La calibración es importante, pero no debería ocupar tanto protagonismo frente al análisis de las distribuciones y sus cambios futuros.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figura 2. Definición operativa. Un día es húmedo si pr ≥ R y seco si pr < R. Un dry spell es la racha consecutiva de días secos; su duración t es el número de días de la racha. En el ejemplo, R = 1 mm"
+            },
+            {
+              "where": "end",
+              "text": "Figura 2. Definición operativa. Un día es húmedo si pr ≥ R y seco si pr < R. Un dry spell es la racha consecutiva de días secos; su duración t es el número de días de la racha. En el ejemplo, R = 1 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T18:16:54Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Lo dejo como recordatorio, el cambio ya está hecho.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figura 2. Definición operativa. Un día es húmedo si pr ≥ R y seco si pr < R. Un dry spell es la racha consecutiva de días secos; su duración t es el número de días de la racha. En el ejemplo, R = 1 mm"
+            },
+            {
+              "where": "end",
+              "text": "Figura 2. Definición operativa. Un día es húmedo si pr ≥ R y seco si pr < R. Un dry spell es la racha consecutiva de días secos; su duración t es el número de días de la racha. En el ejemplo, R = 1 mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T23:55:40Z",
+      "initials": null,
+      "resolved": false,
+      "text": "casilla, pixel",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Con R = 1 mm día⁻¹ en ambos productos, ALADIN presenta una fracción de días húmedos sustancialmente mayor que CR2MET, coherente con el sesgo de llovizna de los modelos (Stephens et al., 2010; Petrova "
+            },
+            {
+              "where": "end",
+              "text": "Con R = 1 mm día⁻¹ en ambos productos, ALADIN presenta una fracción de días húmedos sustancialmente mayor que CR2MET, coherente con el sesgo de llovizna de los modelos (Stephens et al., 2010; Petrova "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T18:38:03Z",
+      "initials": null,
+      "resolved": false,
+      "text": "¿Por qué calibraste con la frecuencia de días húmedos y no con otra cosa?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            },
+            {
+              "where": "end",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T18:38:41Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Lo que se estudia es la duración de las rachas de días secos, y la duración la determina sobre todo cuántos días son secos. Si no igualas esa frecuencia, lo que mides en las rachas es en gran parte el exceso de lluvia débil de ALADIN, no cómo organiza el tiempo. Calibrar con la duración misma sería circular, porque estarías forzando el resultado que quieres evaluar.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            },
+            {
+              "where": "end",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T23:56:20Z",
+      "initials": null,
+      "resolved": false,
+      "text": "No sé si dejaría los porcentajes, ¿es necesario?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            },
+            {
+              "where": "end",
+              "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "author": "Pablo Gómez",
+      "date": "2026-10-22T16:47:33Z",
+      "initials": null,
+      "resolved": false,
+      "text": "¿En Método o en resultados debiese ir?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Para los mapas se calculan, en cada píxel, la duración media y el percentil 99 de las duraciones (t99), y se reportan las diferencias Δ = ALADIN − CR2MET en 1980–2014. Los estadísticos se calculan sol"
+            },
+            {
+              "where": "end",
+              "text": "Para los mapas se calculan, en cada píxel, la duración media y el percentil 99 de las duraciones (t99), y se reportan las diferencias Δ = ALADIN − CR2MET en 1980–2014. Los estadísticos se calculan sol"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "author": "Pablo Gómez",
+      "date": "2026-10-22T16:48:25Z",
+      "initials": null,
+      "resolved": false,
+      "text": "¿Justifiqué por que si una celda con menos de 50 réplicas válidas se considera no significativa?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "En cada réplica se sortean 35 años calendario con reemplazo, de forma independiente para CR2MET y ALADIN. Se concatenan las duraciones de todos los spells cuyo año de inicio figura en el sorteo y se r"
+            },
+            {
+              "where": "end",
+              "text": "En cada réplica se sortean 35 años calendario con reemplazo, de forma independiente para CR2MET y ALADIN. Se concatenan las duraciones de todos los spells cuyo año de inicio figura en el sorteo y se r"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "author": "Pablo Gómez",
+      "date": "2026-10-21T23:59:21Z",
+      "initials": null,
+      "resolved": false,
+      "text": "¿No es muy obvio que el intervalo de confianza al 95% corresponden a esos percentiles?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "En cada réplica se sortean 35 años calendario con reemplazo, de forma independiente para CR2MET y ALADIN. Se concatenan las duraciones de todos los spells cuyo año de inicio figura en el sorteo y se r"
+            },
+            {
+              "where": "end",
+              "text": "En cada réplica se sortean 35 años calendario con reemplazo, de forma independiente para CR2MET y ALADIN. Se concatenan las duraciones de todos los spells cuyo año de inicio figura en el sorteo y se r"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "author": "Pablo Gómez",
+      "date": "2026-10-22T00:03:42Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Si estamos hablando de risk ratios y cambios en el futuro, ¿qué tiene que ver las PDFs acá?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Los risk ratios se calculan sobre pools de las cuatro regiones administrativas (§2.1), considerando solo spells cuyo día de inicio cae entre marzo y noviembre (otoño, invierno y primavera), meses que "
+            },
+            {
+              "where": "end",
+              "text": "Los risk ratios se calculan sobre pools de las cuatro regiones administrativas (§2.1), considerando solo spells cuyo día de inicio cae entre marzo y noviembre (otoño, invierno y primavera), meses que "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "author": "Pablo Gómez",
+      "date": "2026-10-24T04:20:48Z",
+      "initials": null,
+      "resolved": false,
+      "text": "la media es de -8,2 días y la mediana es de -2,2 días, esto sucede porque el norte tiene pocas cantidades de rachas que hacen agrandar mucho",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Con el criterio i, ALADIN reproduce el patrón espacial —norte persistente, sur de rachas cortas— pero subestima la duración. Sobre el dominio de estudio, la duración media espacial (celdas comunes) es"
+            },
+            {
+              "where": "end",
+              "text": "Con el criterio i, ALADIN reproduce el patrón espacial —norte persistente, sur de rachas cortas— pero subestima la duración. Sobre el dominio de estudio, la duración media espacial (celdas comunes) es"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "author": "Pablo Gómez",
+      "date": "2026-10-24T04:29:48Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Lo que nosotros hicimos antes de bootstrap era decir ALADIN subestima la duración media de las rachas y además la cola, pero no podíamos respaldar que realmente era así y por eso hicimos bootstrap",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Con el criterio i, ALADIN reproduce el patrón espacial —norte persistente, sur de rachas cortas— pero subestima la duración. Sobre el dominio de estudio, la duración media espacial (celdas comunes) es"
+            },
+            {
+              "where": "end",
+              "text": "Con el criterio i, ALADIN reproduce el patrón espacial —norte persistente, sur de rachas cortas— pero subestima la duración. Sobre el dominio de estudio, la duración media espacial (celdas comunes) es"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "author": "Pablo Gómez",
+      "date": "2026-10-22T00:09:26Z",
+      "initials": null,
+      "resolved": false,
+      "text": "¿Si lo reduce algo más, por qué no usamos R0 local?, ¿por qué nos quedamos con R0 global?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Ese residuo no se explica solo por el umbral. Con 1 mm en ambos productos (criterio ii) el sesgo aumenta mucho (Δ media ≈ −27 días; Δ t99 ≈ −135 días). El R₀ global (criterio i) lo reduce sustancialme"
+            },
+            {
+              "where": "end",
+              "text": "Ese residuo no se explica solo por el umbral. Con 1 mm en ambos productos (criterio ii) el sesgo aumenta mucho (Δ media ≈ −27 días; Δ t99 ≈ −135 días). El R₀ global (criterio i) lo reduce sustancialme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "author": "Pablo Gómez",
+      "date": "2026-10-13T14:18:18Z",
+      "initials": null,
+      "resolved": false,
+      "text": "Post it (recordatorio de ayuda)\nBuscamos la racha más larga de las 3 series, en Maipo, la racha más larga de las tres series es de 283 días (CR2MET), así que las cajas van de 1 a 284 días. Se generan 25 cajas (26 bordes) en escala logarítmica: cada borde es el anterior multiplicado por 1,2535 (1,2535²⁵ ≈ 284). Los bordes se redondean a enteros y se eliminan los repetidos, por lo que quedan 22 cajas: angostas para las rachas cortas (de 1 día) y anchas para las rachas largas (de hasta 57 días). Las tres curvas usan las mismas cajas.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": ""
+            },
+            {
+              "where": "end",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "author": "Pablo Gómez",
+      "date": "2026-10-22T00:33:31Z",
+      "initials": null,
+      "resolved": false,
+      "text": "No sé si el hecho de recalcar esto",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "El máximo muestral es un estadístico ruidoso y no debe usarse solo. En Biobío, por ejemplo, el máximo del pool baja aunque media, p90, p99 y la fracción de spells de al menos 20 días suben (de 4,1 a 5"
+            },
+            {
+              "where": "end",
+              "text": "El máximo muestral es un estadístico ruidoso y no debe usarse solo. En Biobío, por ejemplo, el máximo del pool baja aunque media, p90, p99 y la fracción de spells de al menos 20 días suben (de 4,1 a 5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

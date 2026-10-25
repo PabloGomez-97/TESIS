@@ -1,0 +1,5 @@
+Cargando R0 local desde cache: /Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta7_outputs/R0_local_map.npz
+Pixeles Chile: 3587 | con R0 local: 3587 | sin solucion: 0
+R0 local: mediana 6.49 | p10 2.29 | p90 11.60 | min 0.04 | max 25.03 mm/d
+% pixeles con R0 local < 5.285: 38.4
+-> /Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS2_mapa_R0_local.png

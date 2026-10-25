@@ -1,0 +1,36 @@
+{
+  "paper": {
+    "success": true,
+    "converted": true,
+    "fileId": "1BiCAE9vKjmsqR63y0cyy3zhMOAFY82Egdx6j-e5z5R0",
+    "title": "Artículo — rachas secas de Chile — umbral local por celda — CR2MET 1 mm",
+    "mimeType": "application/vnd.google-apps.document",
+    "url": "https://docs.google.com/document/d/1BiCAE9vKjmsqR63y0cyy3zhMOAFY82Egdx6j-e5z5R0/edit?usp=drivesdk",
+    "documentId": "1BiCAE9vKjmsqR63y0cyy3zhMOAFY82Egdx6j-e5z5R0",
+    "parentId": "1xKBfsO1a9JTGqkcUiXu4K6lmZtxGzmX7",
+    "document_url": "https://docs.google.com/document/d/1BiCAE9vKjmsqR63y0cyy3zhMOAFY82Egdx6j-e5z5R0"
+  },
+  "suplemento": {
+    "success": true,
+    "converted": true,
+    "fileId": "1dLK4AE0VxNbvg3pbd837EAGyKftSYLvSQdkbWLozl7E",
+    "title": "Material suplementario — umbral local por celda — 1 mm y sensibilidad 0,1 mm",
+    "mimeType": "application/vnd.google-apps.document",
+    "url": "https://docs.google.com/document/d/1dLK4AE0VxNbvg3pbd837EAGyKftSYLvSQdkbWLozl7E/edit?usp=drivesdk",
+    "documentId": "1dLK4AE0VxNbvg3pbd837EAGyKftSYLvSQdkbWLozl7E",
+    "parentId": "1xKBfsO1a9JTGqkcUiXu4K6lmZtxGzmX7",
+    "document_url": "https://docs.google.com/document/d/1dLK4AE0VxNbvg3pbd837EAGyKftSYLvSQdkbWLozl7E"
+  },
+  "verificacion": {
+    "paper": {
+      "tables": 4,
+      "images": 6,
+      "characters": 38809
+    },
+    "suplemento": {
+      "tables": 13,
+      "images": 5,
+      "characters": 21338
+    }
+  }
+}

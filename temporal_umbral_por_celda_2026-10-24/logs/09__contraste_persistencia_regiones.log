@@ -1,0 +1,20 @@
+                                 0          1             2          3
+region                    Coquimbo  O'Higgins  La Araucanía  Los Lagos
+frec_seca_hist              0.8945      0.778        0.5477     0.3863
+frec_seca_fut               0.9107     0.8056        0.5864     0.4119
+frec_seca_delta             0.0162     0.0276        0.0387     0.0256
+frec_seca_delta_IC95_inf    0.0044      0.009         0.018     0.0058
+frec_seca_delta_IC95_sup    0.0283     0.0429        0.0576     0.0448
+frec_seca_IC_incluye_0       False      False         False      False
+p_dd_hist                   0.9276     0.8508         0.709     0.6232
+p_dd_fut                    0.9382     0.8693         0.739     0.6549
+p_dd_delta                  0.0106     0.0186          0.03     0.0317
+p_dd_delta_IC95_inf         0.0038     0.0061        0.0124     0.0079
+p_dd_delta_IC95_sup         0.0174     0.0296        0.0484     0.0551
+p_dd_IC_incluye_0            False      False         False      False
+rho_hist                    0.2794     0.2835        0.3501     0.3823
+rho_fut                     0.2644     0.2883        0.3527     0.4053
+rho_delta                   -0.015     0.0048        0.0026     0.0231
+rho_delta_IC95_inf          -0.044     -0.029        -0.022    -0.0007
+rho_delta_IC95_sup          0.0173     0.0364        0.0259      0.047
+rho_IC_incluye_0              True       True          True       True

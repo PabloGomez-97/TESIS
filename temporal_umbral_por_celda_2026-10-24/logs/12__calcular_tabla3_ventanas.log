@@ -1,0 +1,26 @@
+ventana    producto  n_spells  media  mediana   p90   p99    max  n_ge20  frac_ge20_pct  media_sesgo_rel_pct  p99_sesgo_rel_pct
+    Loa CR2MET hist     55015  65.58     23.0 185.0 456.0 1419.0   28777          52.31                  NaN                NaN
+    Loa ALADIN hist     71662  50.49     21.0 127.0 353.0 1150.0   37066          51.72               -23.01             -22.59
+    Loa  ALADIN fut     69351  52.20     23.0 138.0 368.5 1438.0   37449          54.00                  NaN                NaN
+  Maipo CR2MET hist    150209  10.96      5.0  23.0 119.0  283.0   18571          12.36                  NaN                NaN
+  Maipo ALADIN hist    157567  10.43      5.0  21.0 121.0  226.0   17692          11.23                -4.80               1.68
+  Maipo  ALADIN fut    139345  11.98      5.0  25.0 138.0  261.0   18482          13.26                  NaN                NaN
+  Maule CR2MET hist    184462   9.46      5.0  21.0  83.0  206.0   20451          11.09                  NaN                NaN
+  Maule ALADIN hist    213758   8.17      4.0  19.0  67.0  194.0   19747           9.24               -13.62             -19.28
+  Maule  ALADIN fut    186180   9.62      4.0  21.0  89.0  201.0   21253          11.42                  NaN                NaN
+ Biobio CR2MET hist    344251   6.22      4.0  14.0  44.0  109.0   17659           5.13                  NaN                NaN
+ Biobio ALADIN hist    395037   5.44      3.0  12.0  35.0  153.0   17273           4.37               -12.63             -20.45
+ Biobio  ALADIN fut    366529   6.11      3.0  14.0  41.0  145.0   20657           5.64                  NaN                NaN
+ventana       criterio  n_spells_ALADIN  n_spells_CR2MET  media_ALADIN  media_CR2MET  media_sesgo_rel_pct  p99_ALADIN  p99_CR2MET  p99_sesgo_rel_pct
+    Loa      ii (1 mm)           129292            55015          27.0          65.6                -58.9       206.0       456.0              -54.8
+    Loa  i (R0 global)            66267            55015          54.6          65.6                -16.7       360.0       456.0              -21.1
+    Loa iii (R0 local)            71662            55015          50.5          65.6                -23.0       353.0       456.0              -22.6
+  Maipo      ii (1 mm)           217952           150209           6.3          11.0                -42.1        55.0       119.0              -53.8
+  Maipo  i (R0 global)           181049           150209           8.6          11.0                -21.2        87.0       119.0              -26.9
+  Maipo iii (R0 local)           157567           150209          10.4          11.0                 -4.8       121.0       119.0                1.7
+  Maule      ii (1 mm)           257231           184462           5.8           9.5                -38.7        39.0        83.0              -53.0
+  Maule  i (R0 global)           228077           184462           7.3           9.5                -22.3        57.0        83.0              -31.3
+  Maule iii (R0 local)           213758           184462           8.2           9.5                -13.6        67.0        83.0              -19.3
+ Biobio      ii (1 mm)           423294           344251           4.2           6.2                -32.7        22.0        44.0              -50.0
+ Biobio  i (R0 global)           399130           344251           5.3           6.2                -14.7        34.0        44.0              -22.7
+ Biobio iii (R0 local)           395037           344251           5.4           6.2                -12.6        35.0        44.0              -20.5

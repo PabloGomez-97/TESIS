@@ -1,0 +1,345 @@
+{
+  "source": "/Users/pablogomez/Downloads/Material suplementario.docx",
+  "sha256": "baaa264ba4c304681f79cc0f4286aa59114b6cb4414d696e708b80194cc12bf2",
+  "sections": [
+    {
+      "width": 8.5,
+      "height": 11.0,
+      "margins": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "styles": {
+    "Normal": {
+      "font": null,
+      "size": "None",
+      "spacing": "None"
+    },
+    "Title": {
+      "font": null,
+      "size": "330200",
+      "spacing": "None"
+    },
+    "Heading 1": {
+      "font": null,
+      "size": "254000",
+      "spacing": "None"
+    },
+    "Heading 2": {
+      "font": null,
+      "size": "203200",
+      "spacing": "None"
+    }
+  },
+  "paragraphs": [
+    {
+      "i": 0,
+      "style": "Heading 1",
+      "text": "Material suplementario"
+    },
+    {
+      "i": 1,
+      "style": "normal",
+      "text": "Este material complementa la sección 2.7 del artículo. Reúne las pruebas de sensibilidad a la elección del umbral de día húmedo: (i) el sesgo histórico de ALADIN respecto de CR2MET en Chile (17,7°S–45,9°S) con los tres criterios de la Tabla 2 (Tabla S1); (ii) las PDFs históricas por cuenca con cuatro definiciones de umbral (Tabla S2, Figura S1); (iii) el mapa de R₀ local (Figura S2), (iv) los risk ratios futuros recalculados con 1 mm en ALADIN (Tabla S3, Figura S3); (v) la sensibilidad al método de regrillado (Tabla S4); (vi) la sensibilidad de los risk ratios al escenario SSP3-7.0 (Tabla S5, Figura S4), y (vii) la frecuencia de días secos y la persistencia de primer orden (Tabla S6). Salvo que se indique lo contrario, se aplican las mismas reglas que en el artículo: período histórico 1980–2014, futuro 2040–2074 (SSP5-8.5), CR2MET interpolado a la grilla de ALADIN, máscara de Chile (17,7°S–45,9°S) y exclusión de las rachas que tocan el inicio o el fin del período."
+    },
+    {
+      "i": 2,
+      "style": "Heading 2",
+      "text": "S1. Sensibilidad del sesgo histórico a la elección del umbral"
+    },
+    {
+      "i": 3,
+      "style": "normal",
+      "text": "La Tabla S1 repite el análisis de mapas de §2.5 con los tres criterios de umbral. Los valores son promedios espaciales sobre las celdas con al menos 30 rachas en ambos productos; la significancia se evalúa con el bootstrap por años de §2.5, con remuestreos independientes para CR2MET y ALADIN (1000 réplicas, IC95)."
+    },
+    {
+      "i": 4,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 5,
+      "style": "normal",
+      "text": "Tabla S1. Duración media y t99 de las rachas secas en Chile (17,7°S–45,9°S; 1980–2014) para CR2MET (1 mm) y ALADIN con cada criterio de umbral. Todos los valores se calculan sobre las celdas comunes de la última columna, es decir, las que tienen al menos 30 rachas en ambos productos. Δ = ALADIN − CR2MET, calculado píxel a píxel y promediado sobre esas celdas. Las dos columnas anteriores a «Celdas» indican el porcentaje de celdas donde la diferencia es significativa."
+    },
+    {
+      "i": 6,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 7,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 8,
+      "style": "normal",
+      "text": "Con el mismo umbral de 1 mm (criterio ii), ALADIN acorta las rachas en casi todo el país, porque produce demasiados días con lluvia débil que interrumpen las rachas. Al igualar la frecuencia de días húmedos con un umbral global (criterio i), el sesgo se reduce a cerca de un tercio. El umbral local (criterio iii) lo reduce algo más, pero a escala nacional no lo elimina, especialmente en la cola (t99)."
+    },
+    {
+      "i": 9,
+      "style": "normal",
+      "text": "Sensibilidad al mínimo de rachas por celda. El análisis principal calcula la media y el t99 de cada celda con al menos 30 rachas por producto. Con tan pocas rachas, el t99 de una celda depende de sus dos o tres rachas más largas, y las celdas con pocas rachas se ubican en el norte árido. Este análisis se realizó después de conocer el resultado con 30 rachas, por lo que se presenta como sensibilidad y no reemplaza al análisis principal. Exigiendo al menos 50, 100 y 200 rachas en ambos productos (3 433, 3 167 y 2 750 celdas), Δ en t99 es −43,4, −33,9 y −21,6 días (−46,3 con 30 rachas) y Δ en la duración media es −7,9, −6,8 y −3,9 días (−8,2 con 30). La magnitud del sesgo disminuye porque se excluyen celdas del norte árido (latitud media de las celdas excluidas entre 20,8° y 24,0°S), donde Δ es mayor, pero su signo no cambia. El Δ mediano varía menos (t99: −17,2, −16,7, −15,1 y −10,5 días con 30, 50, 100 y 200 rachas), y el porcentaje de celdas donde ALADIN es significativamente más corto casi no cambia (66–69 % en la media y 43–44 % en t99)."
+    },
+    {
+      "i": 10,
+      "style": "Heading 2",
+      "text": "Tabla S1b. Sensibilidad del sesgo histórico (criterio i) al mínimo de rachas por celda. Δ = ALADIN − CR2MET, promediado sobre las celdas con al menos ese número de rachas en ambos productos; los porcentajes corresponden a las celdas donde ALADIN es significativamente más corto (bootstrap por años). El análisis principal usa 30 rachas; los otros mínimos se evaluaron después de conocer ese resultado."
+    },
+    {
+      "i": 11,
+      "style": "Heading 2",
+      "text": "S2. PDFs históricas por cuenca con distintos umbrales"
+    },
+    {
+      "i": 12,
+      "style": "normal",
+      "text": "Tabla S2. Estadísticos de duración de las rachas secas por cuenca (1980–2014) para CR2MET con 1 mm y ALADIN con 1 mm (criterio ii), R₀ global (criterio i) y R₀ local (criterio iii). n = número de rachas."
+    },
+    {
+      "i": 13,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 14,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 15,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 16,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 17,
+      "style": "normal",
+      "text": "Figura S1. Sensibilidad de las PDFs históricas (1980–2014) de duración de rachas secas a la elección del umbral de día húmedo, en las cuencas (a) Loa, (b) Maipo, (c) Maule y (d) Biobío. Se comparan CR2MET con 1 mm (negro) y ALADIN con 1 mm (criterio ii, rojo), con R₀ global = 5,285 mm (criterio i, azul) y con R₀ local por píxel (criterio iii, verde). Ejes logarítmicos; los bins son comunes a las cuatro series de cada cuenca (§2.4) y la integral de cada curva es igual a su número de rachas (n)."
+    },
+    {
+      "i": 18,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 19,
+      "style": "normal",
+      "text": "Con 1 mm, ALADIN sobreestima las rachas cortas y subestima las largas en las cuatro cuencas. La calibración del umbral acerca las PDFs de ALADIN a la de CR2MET; en Loa y Maule la cola de ALADIN sigue terminando antes que la de CR2MET y en Biobío el p99 de ALADIN sigue siendo menor, aunque unas pocas rachas superan el máximo de CR2MET, mientras que en Maipo el R₀ local prácticamente iguala la cola observada (p99 de 124 días frente a 119 días en CR2MET)."
+    },
+    {
+      "i": 20,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 21,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 22,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 23,
+      "style": "Heading 2",
+      "text": "S3. Mapa de R₀ local"
+    },
+    {
+      "i": 24,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 25,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 26,
+      "style": "normal",
+      "text": "Figura S2. Umbral local de día húmedo de ALADIN (R₀ local, criterio iii) en 1980–2014. En cada píxel, R₀ local es el umbral para el cual la fracción de días húmedos de ALADIN iguala la de CR2MET con 1 mm, obtenido por bisección. La línea negra en la barra de colores marca el R₀ global (5,285 mm). Los píxeles en blanco (82 de 3587) no tienen solución dentro del intervalo de búsqueda (0–15 mm)."
+    },
+    {
+      "i": 27,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 28,
+      "style": "normal",
+      "text": "El R₀ local tiene una mediana de 6,4 mm (p10 = 2,3 mm; p90 = 11,1 mm) y es inferior al R₀ global en el 39 % de los píxeles. Los valores más altos se concentran en la zona centro-norte (aproximadamente 25–37 °S) y los más bajos en el extremo norte y en el sur. Esta heterogeneidad es la razón por la que el análisis principal usa un único umbral global (§2.2): corrige la frecuencia de días húmedos sin introducir un campo de umbrales que varía de un píxel a otro."
+    },
+    {
+      "i": 29,
+      "style": "Heading 2",
+      "text": "S4. Robustez de la señal futura al umbral"
+    },
+    {
+      "i": 30,
+      "style": "normal",
+      "text": "Para comprobar que el aumento futuro de rachas largas no es consecuencia de la calibración, los risk ratios de §2.6 se recalculan con 1 mm en ALADIN en ambos períodos, manteniendo todas las demás reglas (rachas iniciadas entre marzo y noviembre, bootstrap independiente por años, 1000 réplicas)."
+    },
+    {
+      "i": 31,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 32,
+      "style": "normal",
+      "text": "Tabla S3. Risk ratio RR(20) = N_fut(t ≥ 20 d) / N_hist(t ≥ 20 d) por región con R₀ global (análisis principal, Tabla 4) y con 1 mm en ALADIN. Entre corchetes, el IC95 bootstrap. En negrita, los aumentos significativos (IC95 completamente sobre 1)."
+    },
+    {
+      "i": 33,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 34,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 35,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 36,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 37,
+      "style": "normal",
+      "text": "Figura S3. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) en función del umbral de duración D para las cuatro regiones, calculado con 1 mm en ALADIN (SSP5-8.5, 2040–2074 frente a 1980–2014). La banda sombreada es el IC95 bootstrap por años; la línea punteada marca RR = 1. Los puntos faltantes corresponden a umbrales sin rachas en el período histórico."
+    },
+    {
+      "i": 38,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 39,
+      "style": "normal",
+      "text": "Con 1 mm, el aumento de rachas largas se mantiene en Coquimbo, donde es significativo para todos los umbrales entre 15 y 60 días, y en La Araucanía. En O'Higgins el RR es mayor que 1 en casi todos los umbrales, pero el intervalo incluye 1, igual que en el análisis principal. En Los Lagos, ALADIN con 1 mm casi no produce rachas de 20 días o más (107 en 35 años), por lo que el RR(20) no es informativo; para duraciones cortas el aumento es significativo (RR(5) = 1,30 [1,10; 1,56]; RR(10) = 1,77 [1,11; 2,82]). La señal futura no depende, por lo tanto, de la calibración del umbral en las regiones donde hay rachas suficientes para evaluarla."
+    },
+    {
+      "i": 40,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 41,
+      "style": "Heading 3",
+      "text": "S5. Sensibilidad al método de regrillado de CR2MET"
+    },
+    {
+      "i": 42,
+      "style": "normal",
+      "text": "En el análisis principal, CR2MET se interpola linealmente a los centros de celda de ALADIN. Como alternativa, se calculó para cada celda de ALADIN el promedio de las celdas de CR2MET cuyo centro cae dentro de ella (mediana de 6 celdas), y se repitieron la calibración del umbral y los mapas de duración. El promedio de las celdas de CR2MET cuyos centros caen dentro de cada celda de ALADIN aumenta la fracción de días húmedos de CR2MET en solo 0,006 puntos porcentuales, por lo que el umbral calibrado prácticamente no cambia. Las diferencias de duración entre ALADIN y CR2MET varían en menos de 0,4 días en la media y menos de 3 días en el percentil 99, en los tres criterios de umbral. Las estadísticas de CR2MET en las cuatro cajas (media, p90 y p99) cambian como mucho 1 día. Las conclusiones no dependen del método de regrillado."
+    },
+    {
+      "i": 43,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 44,
+      "style": "normal",
+      "text": "Tabla S4. Comparación entre la interpolación lineal (análisis principal) y el promedio por área de CR2MET sobre la grilla de ALADIN (1980–2014). Δ = ALADIN − CR2MET, promedio espacial sobre Chile (17,7°S–45,9°S)."
+    },
+    {
+      "i": 45,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 46,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 47,
+      "style": "Heading 2",
+      "text": "S6. Sensibilidad de los risk ratios al escenario de emisiones"
+    },
+    {
+      "i": 48,
+      "style": "normal",
+      "text": "Los risk ratios se repitieron con el escenario SSP3-7.0 (2040–2074) de la misma simulación ALADIN, manteniendo el período histórico, el umbral R₀ = 5,285 mm día⁻¹ y la restricción a rachas iniciadas entre marzo y noviembre (Tabla S5; Figura S4). En las cuatro regiones, RR(20) es mayor que 1 en ambos escenarios. Con SSP3-7.0 los cambios son algo menores en Coquimbo y La Araucanía, similares en O'Higgins y mayores en Los Lagos. La significancia de valores individuales cambia en los casos cercanos al límite, pero la dirección de la señal es la misma. Como ambos escenarios aún tienen forzamientos similares a mediados de siglo y se dispone de un solo miembro por escenario, las diferencias entre ellos no deben atribuirse al forzamiento."
+    },
+    {
+      "i": 49,
+      "style": "normal",
+      "text": "Tabla S5. Risk ratio RR(20) = N_fut(t ≥ 20 d) / N_hist(t ≥ 20 d) por región con SSP5-8.5 (análisis principal, Tabla 4) y SSP3-7.0. Entre corchetes, el intervalo de confianza del 95 % por bootstrap por años."
+    },
+    {
+      "i": 50,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 51,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 52,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 53,
+      "style": "normal",
+      "text": "Figura S4. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) en función del umbral de duración D para las cuatro regiones, con ALADIN bajo SSP3-7.0 (2040–2074) frente al histórico (1980–2014), R₀ = 5,285 mm día⁻¹ y rachas iniciadas entre marzo y noviembre. La banda sombreada es el intervalo de confianza del 95 % por bootstrap por años."
+    },
+    {
+      "i": 54,
+      "style": "Heading 2",
+      "text": "S7. Frecuencia seca y persistencia de primer orden"
+    },
+    {
+      "i": 55,
+      "style": "normal",
+      "text": "Para evaluar si el aumento de rachas largas se acompaña de un cambio en el agrupamiento de los días secos, se comparan, en cada región de los risk ratios, la frecuencia de días secos y la persistencia de primer orden ρ = P(seco hoy | seco ayer) − P(seco hoy | húmedo ayer) entre 1980–2014 y 2040–2074 (SSP5-8.5), con R₀ = 5,285 mm día⁻¹ y para los días de marzo a noviembre. Los parámetros se estiman por celda y mes y se promedian con igual peso sobre las celdas y los meses de cada región. El IC95 de la diferencia se obtiene con 1 000 réplicas de bootstrap por años, con sorteos independientes para cada período."
+    },
+    {
+      "i": 56,
+      "style": "normal",
+      "text": "Tabla S6. Frecuencia de días secos y persistencia de primer orden (ρ) en 1980–2014 y 2040–2074 (SSP5-8.5), marzo–noviembre, y su diferencia con IC95 por bootstrap de años. pp = puntos porcentuales."
+    },
+    {
+      "i": 57,
+      "style": "normal",
+      "text": ""
+    }
+  ],
+  "parts": {
+    "word/numbering.xml": "d2a3e08465525eee874ea10d780540816951a37b115e90f1cd56aefdd76adc2e",
+    "word/settings.xml": "26f2853fde05b88d4b0a9da0bb016d56a896901f60c9272dddf33c3f3fa61e4a",
+    "word/fontTable.xml": "07ec5f78df156db89ab606fa95394bdfcbb46a6d80ab847db3338deb6bf0f87c",
+    "word/styles.xml": "677201f6b48d0400c08baa491cd26e900b8afb46d15223b5ca6c373e1acfc86c",
+    "word/document.xml": "9d903addf564673551d9c9fcd0633b0b3eaf474f9db74598c7afc36ee36fd964",
+    "word/_rels/document.xml.rels": "b33a00eae62b3df9a634abd587b7a0d13f8db5e831bde8bfa26d748515aa61e6",
+    "_rels/.rels": "1cc87395d4a229f21c23af406724de12dd9454071925f983e4b648a7b2be8cc5",
+    "word/media/image2.png": "ec0c3971c2697019d7d44fa52eede8f60511149b0f3846c6360c6172f9566921",
+    "word/theme/theme1.xml": "b2295d3198893d2c03f5e584c749a15751b798aefdcd9bee2889f13903d68cb2",
+    "word/media/image3.png": "09bebc5d827d13bc827b664a9ec36437c1541d82ea6e6aa109b50ebd969ea4fb",
+    "word/media/image1.png": "0214cdcd6e9a8be774d513a42fd126b21ff6aa04431084c68c040bceadf698ba",
+    "word/media/image4.png": "9fcaa61f83f180ac832b65337d8b7c56a3dded6a96eec053e977bd988405e9fa",
+    "[Content_Types].xml": "4aaf861188615e0540b711f3b4273b2be5bdc602ccdea1490d5ab7be62b830dd"
+  }
+}

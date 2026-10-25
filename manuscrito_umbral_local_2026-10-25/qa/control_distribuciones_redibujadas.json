@@ -1,0 +1,89 @@
+{
+  "fuente": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_durations_i_global.pkl",
+  "controles": [
+    {
+      "ventana": "Loa",
+      "serie": "CR2MET (hist)",
+      "rachas": 55015,
+      "integral": 55015.0,
+      "bins": 23
+    },
+    {
+      "ventana": "Loa",
+      "serie": "ALADIN (hist)",
+      "rachas": 71662,
+      "integral": 71662.0,
+      "bins": 23
+    },
+    {
+      "ventana": "Loa",
+      "serie": "ALADIN (futuro)",
+      "rachas": 69351,
+      "integral": 69351.0,
+      "bins": 23
+    },
+    {
+      "ventana": "Maipo",
+      "serie": "CR2MET (hist)",
+      "rachas": 150209,
+      "integral": 150209.0,
+      "bins": 22
+    },
+    {
+      "ventana": "Maipo",
+      "serie": "ALADIN (hist)",
+      "rachas": 157567,
+      "integral": 157567.0,
+      "bins": 22
+    },
+    {
+      "ventana": "Maipo",
+      "serie": "ALADIN (futuro)",
+      "rachas": 139345,
+      "integral": 139345.0,
+      "bins": 22
+    },
+    {
+      "ventana": "Maule",
+      "serie": "CR2MET (hist)",
+      "rachas": 184462,
+      "integral": 184462.0,
+      "bins": 21
+    },
+    {
+      "ventana": "Maule",
+      "serie": "ALADIN (hist)",
+      "rachas": 213758,
+      "integral": 213758.0,
+      "bins": 21
+    },
+    {
+      "ventana": "Maule",
+      "serie": "ALADIN (futuro)",
+      "rachas": 186180,
+      "integral": 186180.0,
+      "bins": 21
+    },
+    {
+      "ventana": "Biobio",
+      "serie": "CR2MET (hist)",
+      "rachas": 344251,
+      "integral": 344251.0,
+      "bins": 21
+    },
+    {
+      "ventana": "Biobio",
+      "serie": "ALADIN (hist)",
+      "rachas": 395037,
+      "integral": 395037.0,
+      "bins": 21
+    },
+    {
+      "ventana": "Biobio",
+      "serie": "ALADIN (futuro)",
+      "rachas": 366529,
+      "integral": 366529.0,
+      "bins": 21
+    }
+  ]
+}

@@ -1,0 +1,1766 @@
+{
+  "_calcular_estacionalidad_marnov_regiones.py": {
+    "sha256": "1a6747645cb42e75f38bdf745129a74e94cdd44af6ad2f68a4dbca849821ed0f",
+    "bytes": 3553
+  },
+  "_calcular_frecuencia_humeda_ventanas.py": {
+    "sha256": "9f16a3fcfc7726925c70d6006fb865688c14f48fec3fd86e836b7096ff73dcc1",
+    "bytes": 2827
+  },
+  "_calcular_sesgo_ventanas.py": {
+    "sha256": "8f469d21a4e1a2e2dff50b01e16084c77af42cdb7a9bff258250cef6486b871b",
+    "bytes": 2393
+  },
+  "_calcular_tabla3_ventanas.py": {
+    "sha256": "a1aa5b039032e657a391aba1cc6af4ce33e50e09d9619701a1eca043dac3d2ef",
+    "bytes": 3706
+  },
+  "_contraste_persistencia_regiones.py": {
+    "sha256": "acb584459c2c225404f5f2b861e262db9a93fa657dfa10d86dfb8326502d8f8c",
+    "bytes": 4423
+  },
+  "_cuantificar_censuradas.py": {
+    "sha256": "833173a51f544c677bfee8ee3282e05e847d4c28c6530288be3de500662eba1e",
+    "bytes": 3327
+  },
+  "_generar_fig02_esquema_dryspell.py": {
+    "sha256": "83c006c14e9d4ee2e25db5019fa9bfa1957a6f47663f0285f253d796ab1e98d1",
+    "bytes": 2339
+  },
+  "_generar_fig03_calibracion_R0.py": {
+    "sha256": "45fe47de2ebddf997bdc3fe6f5bdf7412a806154492df474b1350e51c86d019f",
+    "bytes": 5212
+  },
+  "_generar_fig05_mapas_persistencia.py": {
+    "sha256": "aafe039cb2fd635f9e9dfdb6b572f11dd3e2ff0990adb51c49568c25d2c4f299",
+    "bytes": 5400
+  },
+  "_generar_figS1_sensibilidad_umbral.py": {
+    "sha256": "f75dde1c75e82af85a3bf9df7963008a0314ffb935fa83f1728aa57af8cf8b3c",
+    "bytes": 5304
+  },
+  "_generar_figS2_mapa_R0_local.py": {
+    "sha256": "73bc6b567be897fa501b60530c8403a78ee4fe89ff3f2739aa49fe36217543bc",
+    "bytes": 3328
+  },
+  "_generar_figT01_referencia_sin_memoria.py": {
+    "sha256": "3d2aa4510fb86a0875b1aa7c8e48f4b6ca8416d8263820a723f220a631e49e0a",
+    "bytes": 6991
+  },
+  "_generar_fig_dominio_ventanas_regiones.py": {
+    "sha256": "57c325cfa86c66f4a8129aec48f97cd6d9c6402b69171be04efd9dcc45166897",
+    "bytes": 6489
+  },
+  "_generar_fig_rr_regiones.py": {
+    "sha256": "04eedc653fe4b26683ef39ffabd5bfdc1f885839a4a543202c08ac39fc255fcb",
+    "bytes": 5376
+  },
+  "_generar_pregunta9_pdf_loglog_cuencas.py": {
+    "sha256": "8bc1c7ec8e330697cdb46357019509a305d1906fa3a7a0569de9d6885b178d19",
+    "bytes": 10801
+  },
+  "_generar_tablaS1_sensibilidad_chile.py": {
+    "sha256": "8791f40deed14831ebad8c63fe3662bb56dd687212666b9a97d2ee03c4fb4e50",
+    "bytes": 1943
+  },
+  "_pregunta7_outputs/R0_local_map.npz": {
+    "sha256": "b0e40ab5d423ddc7484a62b7a5d42e3daece7cfc6723a9a764c86a532c8f7dce",
+    "bytes": 365116
+  },
+  "_pregunta7_outputs/metrics_integrado_cache.npz": {
+    "sha256": "a8a38de46be7774a94032f98aa1056bf7e74a9e457f310a5e01c7b9ae026b557",
+    "bytes": 577010
+  },
+  "_pregunta7_outputs/resumen_pregunta7.csv": {
+    "sha256": "f65af3b020c2ee8342f08a4132381affd81bacdaddd29c3df74dd9fc0cd1ec98",
+    "bytes": 2077
+  },
+  "_pregunta9_calibracion_outputs/resumen_sensibilidad_umbral_4cuencas.csv": {
+    "sha256": "96d5e5cda192e652e72898b8e4a3538061dac17d85ecc3552a983d8b563f8fbc",
+    "bytes": 921
+  },
+  "_pregunta9_calibracion_outputs/spell_durations_sensibilidad_4cuencas.pkl": {
+    "sha256": "d822c9891ab3f565788fcd80ce87bf5307ad3fd832b200c2433a24d13a30b7f0",
+    "bytes": 13865876
+  },
+  "_pregunta9_outputs/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "4e46a3b7d878565d3a4049003de61ba2abe57f470765b788e2ed1af007ebf46f",
+    "bytes": 127056
+  },
+  "_pregunta9_outputs/pdf_Loa_i_global_loglog.png": {
+    "sha256": "20573f31d5196c84b5ffecb822ca73e7bb2afd44c8a5a81d7a443df112841408",
+    "bytes": 131221
+  },
+  "_pregunta9_outputs/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "7f840f621d2e30a53146e44333b436d1eee4caeb5ff52dbd5f70a62495bbadd1",
+    "bytes": 124915
+  },
+  "_pregunta9_outputs/pdf_Maule_i_global_loglog.png": {
+    "sha256": "4e83ab57cf1b330249aa81930779af3d112b97d32ba34b4008f9c0529ae3fa9d",
+    "bytes": 123955
+  },
+  "_pregunta9_outputs/pdf_durations_i_global.pkl": {
+    "sha256": "30210927f8cecb0e8360ee62dfd8384a7e0434debe1eabf52dc41cdad8a9d02f",
+    "bytes": 9621225
+  },
+  "_referencia_markov_rr_regiones.py": {
+    "sha256": "2cffaf745b90e47e8969658c761681eece65666d4a252af09c0aa66fd15785e8",
+    "bytes": 8231
+  },
+  "_run_pregunta5_aladin.py": {
+    "sha256": "3f9f6bb62bab8f01e6eaa750db94c3e29294bd1ea7f9a4a22f91678cc1ee4da9",
+    "bytes": 15945
+  },
+  "_run_pregunta7_bootstrap.py": {
+    "sha256": "5365c038d999ebf5c18fad216ed040d2e680f8ecce9279ea072c0fc843c45d63",
+    "bytes": 16612
+  },
+  "_sensibilidad_minimo_rachas.py": {
+    "sha256": "367855391380e8d26635880293e73e7e1f1cb4efd38ea0a8132eff9c45ac76da",
+    "bytes": 4619
+  },
+  "_test_regrillado/cr2met_lineal_vs_area.npz": {
+    "sha256": "4396a3aca7443d57b33e8fbabe59cb8ddb9138a620c00228912a89f77e2d9e50",
+    "bytes": 366879108
+  },
+  "_test_regrillado/cuencas_cr2met_lineal_vs_area.csv": {
+    "sha256": "08115ac0129efe23087f8e5115aba4fdc84cef1090d919e32447545a9acc72d1",
+    "bytes": 452
+  },
+  "_test_regrillado/mapas_lineal_vs_area.csv": {
+    "sha256": "f578d723b31a5de2d2920c7dfdc00f8ffa15f2272a7ec4c777c1a523658f38cd",
+    "bytes": 953
+  },
+  "_test_regrillado/r0_lineal_vs_area.json": {
+    "sha256": "bc90afb3bd1f5b53f8cbd580dfab9123e8b651844b280591665dd2a89e5ca8d4",
+    "bytes": 453
+  },
+  "_test_regrillado/rachas_censuradas_por_cuenca.csv": {
+    "sha256": "e211ac58df0777867072e45057f4ae96be64ec06aa5a453cb5d3d4eaad701ffb",
+    "bytes": 1090
+  },
+  "_test_regrillado_conservativo.py": {
+    "sha256": "876de664928f36ffcb9fd4f97d6824a17f4f90a74408e2710fdb5a059a0b0689",
+    "bytes": 9185
+  },
+  "outputs_pregunta5_aladin/results.json": {
+    "sha256": "2db538dac726e39313b5c5b2358dee9eb5b405cbb19ad29f306066f07d44ec29",
+    "bytes": 18896
+  },
+  "outputs_pregunta5_aladin/rr_curves_aladin.png": {
+    "sha256": "e836b4369dd25453f286de9d8e64e147bd3a92b6df9ddbee5f7157958eb54f89",
+    "bytes": 121306
+  },
+  "outputs_pregunta5_aladin/spells_coquimbo.csv": {
+    "sha256": "3a8a2ffa3de6c9e5f4332a650386660bfc7f004d38f2837e5f9ccd00d3119723",
+    "bytes": 2971231
+  },
+  "outputs_pregunta5_aladin/spells_la_araucania.csv": {
+    "sha256": "6f251da53b354b258de0da2a44920e55392525069962650fc8f949d33af6be7c",
+    "bytes": 5802879
+  },
+  "outputs_pregunta5_aladin/spells_los_lagos.csv": {
+    "sha256": "27205565db6589a7f30576671592476e83f3d812f898838829204af40226c71f",
+    "bytes": 8552040
+  },
+  "outputs_pregunta5_aladin/spells_o'higgins.csv": {
+    "sha256": "cef98ea2260e858a599e64868c387e534030d5ae28f11ace8dc612c3fb76f1a5",
+    "bytes": 2155931
+  },
+  "outputs_pregunta5_aladin_1mm/results.json": {
+    "sha256": "6af8464d6ffbe709b9b948652914f533dd6a0413d305de0aaf5002fade163e13",
+    "bytes": 18809
+  },
+  "outputs_pregunta5_aladin_1mm/rr_curves_aladin.png": {
+    "sha256": "13724f6b3ad17968dd5dd11174e9e13105d84b9994b92aafb6f2e37cab1e33f7",
+    "bytes": 116251
+  },
+  "outputs_pregunta5_aladin_1mm/spells_coquimbo.csv": {
+    "sha256": "443e3151d9d7cf465ac1cbc5669bb39ffde28e0f2caf8275673ac6a75ae491ad",
+    "bytes": 4061033
+  },
+  "outputs_pregunta5_aladin_1mm/spells_la_araucania.csv": {
+    "sha256": "8b431f509005fa32f55c32872f4f5e1adf62088c006d766937348a1cfde32ced",
+    "bytes": 5554625
+  },
+  "outputs_pregunta5_aladin_1mm/spells_los_lagos.csv": {
+    "sha256": "770bd3dc3933a3dd6e691dbfcd94a8669304d8e4199c98d8f0afe4ac582a690d",
+    "bytes": 7144652
+  },
+  "outputs_pregunta5_aladin_1mm/spells_o'higgins.csv": {
+    "sha256": "f841a47652cef037ee4beb2043a94471d1e3d233f5990e4bee7610c29483cfb8",
+    "bytes": 2434116
+  },
+  "outputs_pregunta5_aladin_ssp370/results.json": {
+    "sha256": "d20f35b851727627d92ac3a007c2e1a538303b39366f87a5d12635ceafa93117",
+    "bytes": 18885
+  },
+  "outputs_pregunta5_aladin_ssp370/rr_curves_aladin.png": {
+    "sha256": "7ffd1deaa26c0bc68adcb334149e2bd0c26a2418597762e6cc1598e408d98dfb",
+    "bytes": 126539
+  },
+  "outputs_pregunta5_aladin_ssp370/spells_coquimbo.csv": {
+    "sha256": "725fdd02b6f62826b07ee016953f917b47c71d30ab40f31ed42beae33f338f11",
+    "bytes": 3004057
+  },
+  "outputs_pregunta5_aladin_ssp370/spells_la_araucania.csv": {
+    "sha256": "1412958744a08fe443a1c63872870f082b5b93c725450d700b85a789c1328e50",
+    "bytes": 5832097
+  },
+  "outputs_pregunta5_aladin_ssp370/spells_los_lagos.csv": {
+    "sha256": "bc4291ec7c3e75b96e59454ae2b02436bea1a42a3240b8602b8f4edff3073722",
+    "bytes": 8531191
+  },
+  "outputs_pregunta5_aladin_ssp370/spells_o'higgins.csv": {
+    "sha256": "52d7c54bb6e1135be9004fcab949f18362cb7cf77854ea94f347635835ea03b4",
+    "bytes": 2168304
+  },
+  "outputs_pregunta7_bootstrap/bootstrap_summary.csv": {
+    "sha256": "a09a2a241f76b1da9367ade26cc5fcad03c0437c358b3a3eed659979d9fca23b",
+    "bytes": 744
+  },
+  "outputs_pregunta7_bootstrap/bootstrap_summary.json": {
+    "sha256": "ba48f79267669505af9f6a84fa9146e879ce948362f7ca5af66e83f2eba58b22",
+    "bytes": 2380
+  },
+  "paper_figuras/fig02_dominio_cuencas_regiones.png": {
+    "sha256": "f23a0b2a1e5cc706b90d8c79f724af16c21952a5d47fa2685a9b021916c92e9d",
+    "bytes": 396360
+  },
+  "paper_figuras/fig03_calibracion_R0_ftau.png": {
+    "sha256": "f22018bf1789e62e3189d1ee5489cb8401da38d8130cc4df80efc1679a386b25",
+    "bytes": 93505
+  },
+  "paper_figuras/fig05_mapas_persistencia_criterio_i.png": {
+    "sha256": "6402ce2280efe9fa3c6b43f4a54275dc4cb14f2a5ac4acdfb76aa1b186cc9c6b",
+    "bytes": 530144
+  },
+  "paper_figuras/fig08_rr_curves_aladin.png": {
+    "sha256": "f3b9fd8e560882a931484c1d1ed3a01e87508b07a4d9a8bbfc071e4a4350da5b",
+    "bytes": 170760
+  },
+  "paper_figuras/fig42_pdf_cuencas_loglog_panel.png": {
+    "sha256": "0e9a8a29603c471f6e63cce5c49fa571c7ffe8d87b345d7dcb6cad420ea95fa2",
+    "bytes": 439209
+  },
+  "paper_figuras/figS1_sensibilidad_umbral_cuencas.png": {
+    "sha256": "54f44524bf5548f2b2fd6c222be74ba03f72036c48975e8ba4fd66978f55a169",
+    "bytes": 504403
+  },
+  "paper_figuras/figS2_mapa_R0_local.png": {
+    "sha256": "b657611cad83557d31de83e45539f9f21300a2792407aefea1335b2092869d2d",
+    "bytes": 181269
+  },
+  "paper_figuras/figS_rr_curves_aladin_1mm.png": {
+    "sha256": "d3569c9f3a87f925ccb291c2cd0a9e7769ffde13e465579dc5c80af910f1a35f",
+    "bytes": 162006
+  },
+  "paper_figuras/figS_rr_curves_aladin_ssp370.png": {
+    "sha256": "cc4bcb806e4e29bf5bd99dbbf9968b848407fc8ace749a94081eb43ff9da4974",
+    "bytes": 176354
+  },
+  "paper_figuras/figT01_referencia_sin_memoria.csv": {
+    "sha256": "c1183d63812c3ef941e7f0c18272781de6be92dbe7aa19515517e9d8b5b66721",
+    "bytes": 1136
+  },
+  "paper_figuras/figT01_referencia_sin_memoria.png": {
+    "sha256": "d66c52c382cb262047fdea1a80a50f88efc869ad5179c31526aaad323fba031d",
+    "bytes": 303606
+  },
+  "paper_figuras/fig_esquema_dryspell.png": {
+    "sha256": "9a10b267945247c98e6d77c9219f88cef2ce065830641388c7b8daaf26a1d42e",
+    "bytes": 51374
+  },
+  "paper_figuras/fig_rr_regiones.png": {
+    "sha256": "a91171be16f92c09045ab87aba97c80a212b13b2da5cea37c133170aabc0e26b",
+    "bytes": 304832
+  },
+  "paper_figuras/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "4e46a3b7d878565d3a4049003de61ba2abe57f470765b788e2ed1af007ebf46f",
+    "bytes": 127056
+  },
+  "paper_figuras/pdf_Loa_i_global_loglog.png": {
+    "sha256": "20573f31d5196c84b5ffecb822ca73e7bb2afd44c8a5a81d7a443df112841408",
+    "bytes": 131221
+  },
+  "paper_figuras/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "7f840f621d2e30a53146e44333b436d1eee4caeb5ff52dbd5f70a62495bbadd1",
+    "bytes": 124915
+  },
+  "paper_figuras/pdf_Maule_i_global_loglog.png": {
+    "sha256": "4e83ab57cf1b330249aa81930779af3d112b97d32ba34b4008f9c0529ae3fa9d",
+    "bytes": 123955
+  },
+  "paper_figuras/tablaS1_sensibilidad_umbral_chile.csv": {
+    "sha256": "9dac08e7c51bbb04759c4066b8aa491e49501b94da6985b8d6952fb1a2b84856",
+    "bytes": 587
+  },
+  "resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_mean.npz": {
+    "sha256": "47b6e5c56491b3b6cc659624e1e1fb496968e06b31bc0ccc0ee70dc7f545a7d4",
+    "bytes": 487276
+  },
+  "resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_t99.npz": {
+    "sha256": "c4bde41e6247475b1681d17cb0963364fdd091f80db1c3a388bd716fe6e0fd63",
+    "bytes": 487276
+  },
+  "resultados_tesis/bootstrap_por_celda_B_mismo_umbral_mean.npz": {
+    "sha256": "0420ced82c5f79a033a3eee2a0ed62d154c8faff4b49e50466cdba6adcaf6c54",
+    "bytes": 487276
+  },
+  "resultados_tesis/bootstrap_por_celda_B_mismo_umbral_t99.npz": {
+    "sha256": "7242ccb943b323158ce89cda2a2b82c9751c58bd1b58b8ce4f6f03f07d923835",
+    "bytes": 487276
+  },
+  "resultados_tesis/bootstrap_por_celda_C_umbral_local_mean.npz": {
+    "sha256": "98d37a36f9e4a8ade63683d66991ba7c54aee69d605a149acb880668e9ddb4a0",
+    "bytes": 487276
+  },
+  "resultados_tesis/bootstrap_por_celda_C_umbral_local_t99.npz": {
+    "sha256": "7d2a7f3168e450679d5d7411755b3cf2da2b2125f8a47a3e18fc31b512f8ae2b",
+    "bytes": 487276
+  },
+  "resultados_tesis/calibracion_R0.json": {
+    "sha256": "51f7f9719071c8ce9047f5d98a43cfb7b639d006df4b376e349cd45f87a41e89",
+    "bytes": 309
+  },
+  "resultados_tesis/contraste_persistencia_regiones.csv": {
+    "sha256": "94b60e1e5e489c78424b54e588ba4b8385f29f2dd9ee93bb8de99cf07302ce20",
+    "bytes": 946
+  },
+  "resultados_tesis/descomposicion_markov_rr_regiones.csv": {
+    "sha256": "51e86501dd72aef9ea3c2c71af83fdb21472163c62e71cc2db416da1de9da199",
+    "bytes": 8587
+  },
+  "resultados_tesis/estacionalidad_marnov_regiones.csv": {
+    "sha256": "3d17ce5dd615fba4eb49ddae41a718cfa6ac8b64af1dbb0b3333a41d3e5b586b",
+    "bytes": 397
+  },
+  "resultados_tesis/frecuencia_humeda_ventanas.csv": {
+    "sha256": "df2bd5c87c1a6df78bd16ab728dea2c8345591481df26839582d394b937dcf6e",
+    "bytes": 546
+  },
+  "resultados_tesis/sensibilidad_minimo_rachas.csv": {
+    "sha256": "9a32b93783353d24e0cfa737df1ff273dcd527a08b677dee4583be688a92ad33",
+    "bytes": 537
+  },
+  "resultados_tesis/sesgo_por_ventana.csv": {
+    "sha256": "96b1db528ddbd5a1f0a610c6b0c244aaa46f9c7f6087830dfd4d86bf5c467889",
+    "bytes": 1118
+  },
+  "resultados_tesis/sesgo_relativo_criterios_ventanas.csv": {
+    "sha256": "93c66ff3e2b34247011c3a3e91c4ac5f3f7e14781aacf05e339028f7c7549524",
+    "bytes": 990
+  },
+  "resultados_tesis/tabla3_estadisticos_ventanas.csv": {
+    "sha256": "0e00e505267d0cc8095c8c9a890f69fa5204bd4a8bb2a5ea81f2c95034b10bf9",
+    "bytes": 956
+  },
+  "temporal_umbral_por_celda_2026-10-24/CLAUDE.md": {
+    "sha256": "7a2c6ecb8ba0ba2d121d6b3dd3a1ddf20bc80b6c9c2318aa05fb6a59501036ac",
+    "bytes": 14720
+  },
+  "temporal_umbral_por_celda_2026-10-24/GUIA_EXPLICATIVA_DEL_PAPER_PARA_TESIS.md": {
+    "sha256": "2d4497f8bf0af1fddecf4c201f1846d5b89534b1db45923db9b7d46e213a509f",
+    "bytes": 21155
+  },
+  "temporal_umbral_por_celda_2026-10-24/INFORME_COMPARATIVO.md": {
+    "sha256": "7a3738e40c19f68a508eb52af56efd9de9fb9cb927c04e87fba855d09f2799f4",
+    "bytes": 26368
+  },
+  "temporal_umbral_por_celda_2026-10-24/PROCEDENCIA_DATOS.md": {
+    "sha256": "61566782fbf80af4a09fb3b25aec025c611ec64f545ee273c966d950ef194692",
+    "bytes": 4252
+  },
+  "temporal_umbral_por_celda_2026-10-24/README.md": {
+    "sha256": "2b4a2a3a8fb25950da850da72d957876bee8f31931cefdb37c494874e3ef6188",
+    "bytes": 2908
+  },
+  "temporal_umbral_por_celda_2026-10-24/REGISTRO_RESULTADOS.md": {
+    "sha256": "4f3690bd667436fdcf6738f74fd6f87808c2696dbba19fc3531e080b90965b9d",
+    "bytes": 17913
+  },
+  "temporal_umbral_por_celda_2026-10-24/cache_herramientas/ejecutar.cpython-311.pyc": {
+    "sha256": "694f78c753318fd7d0c0764598295f2120e44768f6a8f3810319e1f48142e8fe",
+    "bytes": 30209
+  },
+  "temporal_umbral_por_celda_2026-10-24/cambios_codigo.diff": {
+    "sha256": "0a975943039ad72dd0b1265f5a014bdaa42366ab0f50236dd197d0e2d9c42669",
+    "bytes": 20382
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/01_frecuencia_ventanas.csv": {
+    "sha256": "2efcbea8824de52baabe1e911edd3414818a89b4c53dfda14e767d35a7698e77",
+    "bytes": 2058
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/02_sesgo_por_ventana.csv": {
+    "sha256": "f30e137594dd714b7185aa10b5287c310c96ca41298faa9cf6fd9e9497ca7404",
+    "bytes": 2934
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/03_tabla3_completa.csv": {
+    "sha256": "7c066c1b8ad8428ef9e2658b6d397b3cbf16c2fca047d6a534874783e2226749",
+    "bytes": 2825
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/04_cambios_futuros_ventanas.csv": {
+    "sha256": "fb0dd199c22894acfe12e9f2b3af807a554a39c4149bff87126e6a2cd34d98e5",
+    "bytes": 1175
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/05_RR_D20.csv": {
+    "sha256": "c7db1d37d1a47089a30562e4f18a0220859f0e98a9a17e246ec277ff1d30be98",
+    "bytes": 1710
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/06_RR_todas_duraciones.csv": {
+    "sha256": "d1b641a4329dac65869fe0a352c5a0dafee72bc29fbf34469378e388a90c4a12",
+    "bytes": 17158
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/07_persistencia.csv": {
+    "sha256": "c926ad3576083075ff2216681aa68cb84c15050ed5649de08eae5faeab22c7b1",
+    "bytes": 3675
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/08_markov.csv": {
+    "sha256": "4116fa064fd7211f88f22636156c03b69394df40867de1ee2c7c18684ca7b199",
+    "bytes": 26588
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/09_censuradas.csv": {
+    "sha256": "0847e6a0f566b1d95851c60a889611299dae6ef9b08202acb2e987600faf52ee",
+    "bytes": 2576
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/10_minimo_rachas.csv": {
+    "sha256": "7e67e08448ef5b18b0d78e3cd00479a7666ba84de15e6fef4dc194e56a48cd48",
+    "bytes": 2092
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/11_resumen_espacial.csv": {
+    "sha256": "e16e3eb6ffc0f3871ebb82ef736bb4bc3af62251b3889db2221a84f80145f0ad",
+    "bytes": 998
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/12_metricas_todas_celdas.csv": {
+    "sha256": "d824e9a765a58effa8d3a689efdebfbeb05951c4af5d8fe5284b0016e5946ec6",
+    "bytes": 1103127
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/13_inventario_salidas.csv": {
+    "sha256": "196037c94594a59dc52d29566b24a191ea432be8bdadf1bd7f588eea8e38f7eb",
+    "bytes": 5119
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/comparacion_RR.png": {
+    "sha256": "1fad6f2d8dd7c15476f3c60304715febac6554934a643124aed07d158b796bd1",
+    "bytes": 272191
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/comparacion_calibracion.png": {
+    "sha256": "720e48027408ea6a9ce46ad61501f378d5058fd201538885a091a75d839bc4c7",
+    "bytes": 69126
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/comparacion_sesgos_ventanas.png": {
+    "sha256": "563dce64fa3c52faa2e43af9bd2bcb304e4fa1edf5a41bbe5651d83686156f5a",
+    "bytes": 45636
+  },
+  "temporal_umbral_por_celda_2026-10-24/comparativa/control_local_previo.json": {
+    "sha256": "1dbb85f58111898f6b856a6d287067d75cccd239dc75df856a45afccebddf653",
+    "bytes": 145
+  },
+  "temporal_umbral_por_celda_2026-10-24/configuracion.json": {
+    "sha256": "27e412300965d3fcb2d292430c80a3bc06970e65b17796eadf0eb266ff4d9629",
+    "bytes": 370
+  },
+  "temporal_umbral_por_celda_2026-10-24/controles_comparativa.json": {
+    "sha256": "7963692421b9f558e774dba7d912d029454a9d97eeea99b73750ec6e42b8c387",
+    "bytes": 1572
+  },
+  "temporal_umbral_por_celda_2026-10-24/controles_consistencia.json": {
+    "sha256": "190b4f14def3f44e4d2e50c2e805a60bf3c3db2d98c32a8d4a0a6441fd01f450",
+    "bytes": 10933
+  },
+  "temporal_umbral_por_celda_2026-10-24/controles_consistencia_preliminares.json": {
+    "sha256": "190b4f14def3f44e4d2e50c2e805a60bf3c3db2d98c32a8d4a0a6441fd01f450",
+    "bytes": 10933
+  },
+  "temporal_umbral_por_celda_2026-10-24/datos_sha256_registrados.txt": {
+    "sha256": "cf87d7f8be794a64b8008f6589de89567b32830fa639b8ee792d6ded6b5bea95",
+    "bytes": 71903
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/__pycache__/_referencia_markov_rr_regiones.cpython-311.pyc": {
+    "sha256": "d40e3232391c3c9e8f7ce7a4df81430fab78359bdf724e8698ae09695db5f2aa",
+    "bytes": 17836
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/__pycache__/_run_pregunta5_aladin.cpython-311.pyc": {
+    "sha256": "357f9fb2d49f7d26d92c93c12c251ef6184e3b13bd1689f8f71b75c0a06a0659",
+    "bytes": 27255
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/__pycache__/umbral_local.cpython-311.pyc": {
+    "sha256": "32ee185f7e0c1698121fe95e80afdd93ee7f060de2fde55f36782d0fb975d8ed",
+    "bytes": 1515
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_calcular_estacionalidad_marnov_regiones.py": {
+    "sha256": "1a6747645cb42e75f38bdf745129a74e94cdd44af6ad2f68a4dbca849821ed0f",
+    "bytes": 3553
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_calcular_frecuencia_humeda_ventanas.py": {
+    "sha256": "3c584fabe97e16f00aec5254700aeedc7bbd3df8eb25cdeed0842b77449d4de6",
+    "bytes": 2911
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_calcular_sesgo_ventanas.py": {
+    "sha256": "da6c14c28e7d175bf43a5056b41f17a29d8ba1a484458808d3d071ca4bf9a75b",
+    "bytes": 2405
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_calcular_tabla3_ventanas.py": {
+    "sha256": "e3d23d0585bfc6970b5152743b36eb7f8df71a3b15a1b94aef4a0fd82a78ca40",
+    "bytes": 3738
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_contraste_persistencia_regiones.py": {
+    "sha256": "f21a71d389660380a1da8354936487d80b5c2b78e3ad9388485f36874eb4be06",
+    "bytes": 4473
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_cuantificar_censuradas.py": {
+    "sha256": "eb45456d02b9c9b20404ac428934fb78a107a85189dcf407eaf17fc714f0299b",
+    "bytes": 3496
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_fig02_esquema_dryspell.py": {
+    "sha256": "83c006c14e9d4ee2e25db5019fa9bfa1957a6f47663f0285f253d796ab1e98d1",
+    "bytes": 2339
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_fig03_calibracion_R0.py": {
+    "sha256": "45fe47de2ebddf997bdc3fe6f5bdf7412a806154492df474b1350e51c86d019f",
+    "bytes": 5212
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_fig05_mapas_persistencia.py": {
+    "sha256": "01c070f4e07cace6f3d55f3eb5ca20fe72f34bd6f779e9c94e6d0e017d04aaf0",
+    "bytes": 5435
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_figS1_sensibilidad_umbral.py": {
+    "sha256": "a6054d9fea4d80acfa4916e21d5b7db3016c1e72e8c156a03387e262c1c027fb",
+    "bytes": 5288
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_figS2_mapa_R0_local.py": {
+    "sha256": "2480accfa88cc64ea93a63763b4af1ea6e74c8254a6acd6086db392cae98deaf",
+    "bytes": 3304
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_figT01_referencia_sin_memoria.py": {
+    "sha256": "3d2aa4510fb86a0875b1aa7c8e48f4b6ca8416d8263820a723f220a631e49e0a",
+    "bytes": 6991
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_fig_dominio_ventanas_regiones.py": {
+    "sha256": "57c325cfa86c66f4a8129aec48f97cd6d9c6402b69171be04efd9dcc45166897",
+    "bytes": 6489
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_fig_rr_regiones.py": {
+    "sha256": "8b4847ded50f7da0f1ee3dfa90ba75f595ffd5e6526caa214dd3318d62c74e9e",
+    "bytes": 5396
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_pregunta9_pdf_loglog_cuencas.py": {
+    "sha256": "89d943969155038325241b60844a9609db2a27e90f0e0633601732f81aa95296",
+    "bytes": 11051
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_generar_tablaS1_sensibilidad_chile.py": {
+    "sha256": "8791f40deed14831ebad8c63fe3662bb56dd687212666b9a97d2ee03c4fb4e50",
+    "bytes": 1943
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta7_outputs/R0_local_map.npz": {
+    "sha256": "bb8abd829e18f87e62b5bb978e496706a1f8aba250f7c2906830a77a888bd437",
+    "bytes": 368168
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta7_outputs/metrics_integrado_cache.npz": {
+    "sha256": "a2dc723212e61e21d5329718b17057921cb63c6382c6a838dd300df027cb18e7",
+    "bytes": 577010
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta7_outputs/resumen_pregunta7.csv": {
+    "sha256": "9d28c0ec9e4e558bf354452961c6779c90d079664f70de4f1271f9db2cd445fc",
+    "bytes": 2059
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_calibracion_outputs/resumen_sensibilidad_umbral_4cuencas.csv": {
+    "sha256": "c5a479489433c4b2326ef0bcd6b5ce007db5780a011655ac748dd7c30e8bc5d5",
+    "bytes": 921
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_calibracion_outputs/spell_durations_sensibilidad_4cuencas.pkl": {
+    "sha256": "df4d0ec4f00bd074135bf5b48371d74346b5b8e8b8000abe92bdb505b61569d9",
+    "bytes": 13897988
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "67625e748d3a3cfaf27f2eca4c866ef6cfcf7f81d44a18273d29a0f6e2170659",
+    "bytes": 128593
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_Loa_i_global_loglog.png": {
+    "sha256": "9f822a25ef13c4e8229c73c4e03ea0fa1b20f775ae39a3d0de31021527878722",
+    "bytes": 131005
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "8de1df9c49df5408bf25faf14cf8249ef3832e162822b2b785e5ab3cdaa01074",
+    "bytes": 126280
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_Maule_i_global_loglog.png": {
+    "sha256": "463f53bdbb3d4c65f874c025b635d1420e6985c99b11907858a7ac30426a5e04",
+    "bytes": 125026
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_pregunta9_outputs/pdf_durations_i_global.pkl": {
+    "sha256": "702630aa07b1cb1c06f9861042a3b052cbe9f4f71b97245c76326a2dfbc209bd",
+    "bytes": 9334239
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_referencia_markov_rr_regiones.py": {
+    "sha256": "4aeacd982eebb21926c6e10e4ca5017ed792fe6e373790ffac6e46e873539602",
+    "bytes": 8281
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_run_pregunta5_aladin.py": {
+    "sha256": "f1eb80a0ed15e68ff157f2dd77ba8f4e0136982848571aa9d5aa46c4164f9993",
+    "bytes": 16169
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_run_pregunta7_bootstrap.py": {
+    "sha256": "5dd75842005fd6cd4e7b140f51ef7c666cb06da1e878071f1df1f638eb0b2333",
+    "bytes": 16762
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_sensibilidad_minimo_rachas.py": {
+    "sha256": "169746e6f93e2fb9b5f23c82b7bd1873f4777de7e5e9cae92baee0d549e1ee4b",
+    "bytes": 4639
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado/cr2met_lineal_vs_area.npz": {
+    "sha256": "4396a3aca7443d57b33e8fbabe59cb8ddb9138a620c00228912a89f77e2d9e50",
+    "bytes": 366879108
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado/cuencas_cr2met_lineal_vs_area.csv": {
+    "sha256": "08115ac0129efe23087f8e5115aba4fdc84cef1090d919e32447545a9acc72d1",
+    "bytes": 452
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado/mapas_lineal_vs_area.csv": {
+    "sha256": "995ee9df65afb0261988dfb3b53f7da80f49b5c7a09bf3cb0e51fce204d35cd9",
+    "bytes": 1266
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado/r0_lineal_vs_area.json": {
+    "sha256": "bc90afb3bd1f5b53f8cbd580dfab9123e8b651844b280591665dd2a89e5ca8d4",
+    "bytes": 453
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado/rachas_censuradas_por_cuenca.csv": {
+    "sha256": "8308145a5d120ef6de6584136c253f137acf0c8ea255bf98c199c62f8079ec1e",
+    "bytes": 1088
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/_test_regrillado_conservativo.py": {
+    "sha256": "67068a780a036e2660186d11a1559756662e81b5ab731996edf22e2062d27a7a",
+    "bytes": 9219
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/calibrar_local.py": {
+    "sha256": "de7353bdc86f9e999a117ec5653d64beb12e07d97711751b2cdd33badfd8638d",
+    "bytes": 3765
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/diagnostico_regional.py": {
+    "sha256": "fbdbbdddaba48dad9f9e5111a072c5a61a2d5cd956b5d6b7fac5bb385041a39d",
+    "bytes": 1394
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/figura_calibracion_local.py": {
+    "sha256": "fd35561b5b1bac580032fd8f5bb881818229d0cc134a420f59813955cfe39a0c",
+    "bytes": 1374
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/results.json": {
+    "sha256": "16f5e48b3e7f89366748422e9dece4fd7dfb7a221c10b74621f03d17c3f507c6",
+    "bytes": 18861
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/rr_curves_aladin.png": {
+    "sha256": "f5cfa61a7a88ed3a50ce3cadedb771a107feb25b344597a9010c8d7459dd66d8",
+    "bytes": 178667
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/spells_coquimbo.csv": {
+    "sha256": "27938a5dd886231f7f2276a2092bfad595b06faf54b2dcd9eb7d4bd5fbb66672",
+    "bytes": 2480029
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/spells_la_araucania.csv": {
+    "sha256": "175ce58c2c165b4ae9d3b5b13a4753ccee8c96508e577c9f74065e7491723fb0",
+    "bytes": 5781040
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/spells_los_lagos.csv": {
+    "sha256": "28c4b2a5e169313137591dc0475a2cf21fa9be46ebdf35cab175a3a1477e53ba",
+    "bytes": 8050698
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/spells_o'higgins.csv": {
+    "sha256": "7610f864b2c9cfdc5973c52fcb1c23613d190bfb212e00b6dceacb584cc84b0a",
+    "bytes": 1986787
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/results.json": {
+    "sha256": "6af8464d6ffbe709b9b948652914f533dd6a0413d305de0aaf5002fade163e13",
+    "bytes": 18809
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/rr_curves_aladin.png": {
+    "sha256": "13724f6b3ad17968dd5dd11174e9e13105d84b9994b92aafb6f2e37cab1e33f7",
+    "bytes": 116251
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/spells_coquimbo.csv": {
+    "sha256": "443e3151d9d7cf465ac1cbc5669bb39ffde28e0f2caf8275673ac6a75ae491ad",
+    "bytes": 4061033
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/spells_la_araucania.csv": {
+    "sha256": "8b431f509005fa32f55c32872f4f5e1adf62088c006d766937348a1cfde32ced",
+    "bytes": 5554625
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/spells_los_lagos.csv": {
+    "sha256": "770bd3dc3933a3dd6e691dbfcd94a8669304d8e4199c98d8f0afe4ac582a690d",
+    "bytes": 7144652
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/spells_o'higgins.csv": {
+    "sha256": "f841a47652cef037ee4beb2043a94471d1e3d233f5990e4bee7610c29483cfb8",
+    "bytes": 2434116
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/results.json": {
+    "sha256": "370e9f400c5c317709191fa62966094ee85eaeec36c8ee6028388a87f6fd7053",
+    "bytes": 18882
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/rr_curves_aladin.png": {
+    "sha256": "60ca66011c64df3288456ff76905ee7c3b4c9988e43bf6e3ba55ebaedca6c8c3",
+    "bytes": 185903
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/spells_coquimbo.csv": {
+    "sha256": "053d81fb9b28ea3ff2f37ca8325a03c93fbf025edb1d22d366f45a350d14868e",
+    "bytes": 2507779
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/spells_la_araucania.csv": {
+    "sha256": "ebed40c5b15d9479bd0831ac522699bcb4cc3b9b5624c20e0a16a8263d037dbc",
+    "bytes": 5811250
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/spells_los_lagos.csv": {
+    "sha256": "f7c7004fcb164a8ec1bea319697c871d0724402a8320e7bf6994fe7f3a8d95c5",
+    "bytes": 8023977
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/spells_o'higgins.csv": {
+    "sha256": "10f6b4f1d75eb618a5ce2d7362b4cc8239ba92dfaee316cdaaf8667c7240ef1f",
+    "bytes": 1997841
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta7_bootstrap/bootstrap_summary.csv": {
+    "sha256": "e8c081362319a34416332dd26242e722b776002261ff7aebd01ec4ce4a3a24ba",
+    "bytes": 745
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta7_bootstrap/bootstrap_summary.json": {
+    "sha256": "bba433c513ea7f5ff72daba46a5616a16cabbaa628f983de4eb2854160a63d6d",
+    "bytes": 2384
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig02_dominio_cuencas_regiones.png": {
+    "sha256": "f23a0b2a1e5cc706b90d8c79f724af16c21952a5d47fa2685a9b021916c92e9d",
+    "bytes": 396360
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig03_calibracion_R0_ftau.png": {
+    "sha256": "dbcdbe93e86125b1a0e506681beb8389c2830aad8dcd762f8850bc2044b3ff6a",
+    "bytes": 229185
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig03_referencia_umbral_global.png": {
+    "sha256": "f22018bf1789e62e3189d1ee5489cb8401da38d8130cc4df80efc1679a386b25",
+    "bytes": 93505
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig05_mapas_persistencia_criterio_i.png": {
+    "sha256": "14a0e945085b144a040e806394b555b48d8172e106f16a8d791a64a31a668633",
+    "bytes": 530234
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig08_rr_curves_aladin.png": {
+    "sha256": "a3e8aa87c637c00057f40b6b1f289759b9fbfdde49e665b8b88e172473c78a37",
+    "bytes": 248154
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig42_pdf_cuencas_loglog_panel.png": {
+    "sha256": "1bb5e8cca32c86bc4bf95b05a80bf40d4e4d36383d471e41019419105e1b36c3",
+    "bytes": 441456
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS1_sensibilidad_umbral_cuencas.png": {
+    "sha256": "c59a25a354bdcd795b806880be3abeec20336e96ca976bd0b632b5f896e0400f",
+    "bytes": 504488
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS2_mapa_R0_local.png": {
+    "sha256": "47884b4deb4fc9396195d641f4beeea690f10f2ca2e134b075e1e29cbfb9cc0a",
+    "bytes": 177908
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS_rr_curves_aladin_1mm.png": {
+    "sha256": "d3569c9f3a87f925ccb291c2cd0a9e7769ffde13e465579dc5c80af910f1a35f",
+    "bytes": 162006
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figS_rr_curves_aladin_ssp370.png": {
+    "sha256": "6864bc07c80bfcaa1d2c3c3224037b062aa045b4900d748477bf34362d6dd5de",
+    "bytes": 256925
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figT01_referencia_sin_memoria.csv": {
+    "sha256": "c1183d63812c3ef941e7f0c18272781de6be92dbe7aa19515517e9d8b5b66721",
+    "bytes": 1136
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/figT01_referencia_sin_memoria.png": {
+    "sha256": "6a574d6459c8a1e9ea47aee5ab33ab4df3293dff374ce71b7a24d5babc02fd10",
+    "bytes": 303606
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig_esquema_dryspell.png": {
+    "sha256": "9a10b267945247c98e6d77c9219f88cef2ce065830641388c7b8daaf26a1d42e",
+    "bytes": 51374
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig_rr_regiones.png": {
+    "sha256": "18f3faf59a46773a7b444c14cca2e2f144c4b46af216f6b569622d87a602ef49",
+    "bytes": 300547
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "67625e748d3a3cfaf27f2eca4c866ef6cfcf7f81d44a18273d29a0f6e2170659",
+    "bytes": 128593
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/pdf_Loa_i_global_loglog.png": {
+    "sha256": "9f822a25ef13c4e8229c73c4e03ea0fa1b20f775ae39a3d0de31021527878722",
+    "bytes": 131005
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "8de1df9c49df5408bf25faf14cf8249ef3832e162822b2b785e5ab3cdaa01074",
+    "bytes": 126280
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/pdf_Maule_i_global_loglog.png": {
+    "sha256": "463f53bdbb3d4c65f874c025b635d1420e6985c99b11907858a7ac30426a5e04",
+    "bytes": 125026
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/tablaS1_sensibilidad_umbral_chile.csv": {
+    "sha256": "0a8a07af2a77b793d5b0e14f34efa658706af81c6f50266d7881d4be70323eeb",
+    "bytes": 587
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_mean.npz": {
+    "sha256": "47b6e5c56491b3b6cc659624e1e1fb496968e06b31bc0ccc0ee70dc7f545a7d4",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_t99.npz": {
+    "sha256": "c4bde41e6247475b1681d17cb0963364fdd091f80db1c3a388bd716fe6e0fd63",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_mean.npz": {
+    "sha256": "0420ced82c5f79a033a3eee2a0ed62d154c8faff4b49e50466cdba6adcaf6c54",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_t99.npz": {
+    "sha256": "7242ccb943b323158ce89cda2a2b82c9751c58bd1b58b8ce4f6f03f07d923835",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_C_umbral_local_mean.npz": {
+    "sha256": "2496d9e89db84d6b2a4a73e28a0864f5804da3ba7abeb6f36bdef8222b8bee4c",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/bootstrap_por_celda_C_umbral_local_t99.npz": {
+    "sha256": "bfc0271595b7163d8f54d8834eb77146ff93aea61add7cd4725327f09ee76d01",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/calibracion_R0.json": {
+    "sha256": "51f7f9719071c8ce9047f5d98a43cfb7b639d006df4b376e349cd45f87a41e89",
+    "bytes": 309
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/calibracion_local.json": {
+    "sha256": "171d88a31ba83b63e6fc59859a54b16401c9d7f493938b7c2f4ed44d5531d05d",
+    "bytes": 635
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/calibracion_local_por_celda.csv": {
+    "sha256": "eb00c20458e927f16f347e06f9070b31ee52c859633d3c67042ba3bac18a5525",
+    "bytes": 598560
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/contraste_persistencia_regiones.csv": {
+    "sha256": "1ec787aacbb99007cc39b9af7bbee18817757e78271a148a6f1de0e249ecaac6",
+    "bytes": 950
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/descomposicion_markov_rr_regiones.csv": {
+    "sha256": "8a13ce554564b1833aa9bfb64d89c640ea6b721c19fa7abb6de7cfe6c6341340",
+    "bytes": 8506
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/estacionalidad_marnov_regiones.csv": {
+    "sha256": "3d17ce5dd615fba4eb49ddae41a718cfa6ac8b64af1dbb0b3333a41d3e5b586b",
+    "bytes": 397
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/frecuencia_humeda_regiones_comparada.csv": {
+    "sha256": "dbd9bca1aaaa213fca135a66653aa0856565552a0c6df513c6a3ffbe7e5636fc",
+    "bytes": 999
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/frecuencia_humeda_ventanas.csv": {
+    "sha256": "b42ff37e50e3a71527f3e5810bb862c34b54b99a1bfd982b54f472cf174f5b00",
+    "bytes": 535
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/sensibilidad_minimo_rachas.csv": {
+    "sha256": "764049f46c13477f8657c31a989d18a27eadc5e3787f3b6d34bdbd2c5887b060",
+    "bytes": 533
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/sesgo_por_ventana.csv": {
+    "sha256": "c97f93e93d49eeb8e53a59aba1427237c80bddf0fdcee8c43f746ea4fc4ccb74",
+    "bytes": 1151
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/sesgo_relativo_criterios_ventanas.csv": {
+    "sha256": "24632b5b7c7896426ebdf479ccf4d1220e99a5b905edf62a184e152a4619e2e2",
+    "bytes": 990
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/resultados_tesis/tabla3_estadisticos_ventanas.csv": {
+    "sha256": "0d95b717d8543756980e9b20223c063da3c0527f02ba081ae96b25c44a488f3f",
+    "bytes": 961
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/umbral_local.py": {
+    "sha256": "a9951194a4966bd94b8991bb90e258d6c294bec9f74497c6c5e9587c68422fee",
+    "bytes": 481
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecucion/verificar_consistencia_local.py": {
+    "sha256": "07c4ac5c67d56abbd1f71c4161689aad936ccae9fadf2bb5f870af6a35fd4989",
+    "bytes": 8855
+  },
+  "temporal_umbral_por_celda_2026-10-24/ejecutar_local.py": {
+    "sha256": "a8d36ad17794ace9d6bec74caf53e0acb8c7569a49dda8821ed394b14335888b",
+    "bytes": 1936
+  },
+  "temporal_umbral_por_celda_2026-10-24/entorno.json": {
+    "sha256": "7d5b6173ddc605d9a031807395cc88396fbab78067c68156fb32cb67252af520",
+    "bytes": 522
+  },
+  "temporal_umbral_por_celda_2026-10-24/estado.json": {
+    "sha256": "6d04e91bde9d30d2cd2570a68bc96ce3174401b128b8df2fc5ca0e7ea23c39a5",
+    "bytes": 9500
+  },
+  "temporal_umbral_por_celda_2026-10-24/generar_comparativa.py": {
+    "sha256": "4d9790ecc8a0a69a89ad589e639dcd105bf571c968265ac28e133a28728b2d0c",
+    "bytes": 32355
+  },
+  "temporal_umbral_por_celda_2026-10-24/integridad_datos.json": {
+    "sha256": "d7a476a983528bd4993920e2cf85021a2554cbcf547a9f7cf48b0eaf5f71b081",
+    "bytes": 93
+  },
+  "temporal_umbral_por_celda_2026-10-24/integridad_datos_antes.json": {
+    "sha256": "9f6ba7bef5ea427efd4706c40e1c785a2aa6c808f009bbf3d4762ea6280fb55f",
+    "bytes": 93
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/00_calibrar_local.log": {
+    "sha256": "509af9ce2282f11730aef51edc0cf40ba0d2d467cfcaf15aa26a8f62f086adc1",
+    "bytes": 636
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/01__generar_fig03_calibracion_R0.log": {
+    "sha256": "7613acb3160ec3b3619566e104e70e9bb0362be2b5789dbe2293ba0eb35b4b0c",
+    "bytes": 550
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/02__run_pregunta7_bootstrap.log": {
+    "sha256": "0f812ede93d505cde57d505fe446b4b2c67254b7be8aaabf2d5c814c55b8991d",
+    "bytes": 5758
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/03__calcular_sesgo_ventanas.log": {
+    "sha256": "cb0bd3daa1ba42de63fb2d921436daaebbc20489fe7896ae3d442b8c9ac4cffe",
+    "bytes": 1325
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/04__generar_tablaS1_sensibilidad_chile.log": {
+    "sha256": "3f78b1fdbd081df60a1b7e560e7b4db97c099683a34142a63f7f7497092d02ee",
+    "bytes": 1270
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/05__run_pregunta5_aladin.log": {
+    "sha256": "fc69cdef60cad054524980417cc4b6475866beed66790a0d807c346ed0690e33",
+    "bytes": 2683
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/06__run_pregunta5_aladin.log": {
+    "sha256": "9f2b0b128727b9fe2672c9971eecd51252217d3841ddc6db640ebc82f0626a34",
+    "bytes": 2690
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/07__run_pregunta5_aladin.log": {
+    "sha256": "2b13b0fe62588ef0fc3f7ab31247c1c5621c4c968e65e7631628b1ff34eeea4b",
+    "bytes": 2696
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/08__referencia_markov_rr_regiones.log": {
+    "sha256": "8ee4bb0e17a5b9ab274933a29a2242485c20c87b2a699e202d2f2ff91a1ad2e0",
+    "bytes": 1426
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/09__contraste_persistencia_regiones.log": {
+    "sha256": "cb52e285ed1903bda04275a0f5f96c320ac1e42be5ab226caa2917a330c2b019",
+    "bytes": 1421
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/10__generar_pregunta9_pdf_loglog_cuencas.log": {
+    "sha256": "7734f3629a63d4f75dd031ca186534b77c4dc55809eec08691583f2c605afbab",
+    "bytes": 1043
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/11__generar_figS1_sensibilidad_umbral.log": {
+    "sha256": "ad3bcc9b9c4704e3fb6fc78c1d5a3f293a3309a0513e5ea86bfb44ab2d7e95fb",
+    "bytes": 1995
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/12__calcular_tabla3_ventanas.log": {
+    "sha256": "6612742b753451034c3a650f2ca93e2246edd37cbe853abb5660fec4592a5f30",
+    "bytes": 3601
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/13__calcular_frecuencia_humeda_ventanas.log": {
+    "sha256": "f9964fb4181ce823260c46c56eb45e376bf2e3841f21632266449cb3a5a3e4f5",
+    "bytes": 1212
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/14__calcular_estacionalidad_marnov_regiones.log": {
+    "sha256": "5c9186c24688e407592cd5af3907a91158fce334a34ba6f43fc6ce6ce083cc54",
+    "bytes": 1500
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/15__generar_figS2_mapa_R0_local.log": {
+    "sha256": "ed47c0fa98abefa4d68990099e4739cb22a20439c6799f40cd8291b65078bff6",
+    "bytes": 454
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/16__test_regrillado_conservativo.log": {
+    "sha256": "b46dd2b245754ca040327ee59199644a235f575caee20694f050ee048ac77282",
+    "bytes": 2172
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/17__cuantificar_censuradas.log": {
+    "sha256": "fee9343817ba18fa6fdd8141b83da4c42a4a788816119afff5d354b152317140",
+    "bytes": 2041
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/18__generar_figT01_referencia_sin_memoria.log": {
+    "sha256": "2fa7531753bc0f72ae78ed7f8e13fdcbb72690022fc7796bc0ded0123256f3f9",
+    "bytes": 1424
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/19__generar_fig_rr_regiones.log": {
+    "sha256": "feefe63c8dd126a21d08b60f3f4900b836f9b7429af7e17195b7f02f365d7989",
+    "bytes": 125
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/20__generar_fig05_mapas_persistencia.log": {
+    "sha256": "39c7efdfa9c45c544f8b0045c885402db69ec383f792ce0faaec524a8d441bdf",
+    "bytes": 145
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/21__generar_fig_dominio_ventanas_regiones.log": {
+    "sha256": "49dcccafa20298d145dd0db09fbaf77ecf3ae77b2dfe2b151f80a6acabd0f556",
+    "bytes": 140
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/22__generar_fig02_esquema_dryspell.log": {
+    "sha256": "a231cb54e826997bee93c9a997b5514046e61b30cd29032bb79da867be949507",
+    "bytes": 130
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/23__sensibilidad_minimo_rachas.log": {
+    "sha256": "52f4554397f450ea1fad7f9bdc618a698b9fe6660a12b53e441bf14e05aee3e9",
+    "bytes": 819
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/24_diagnostico_regional.log": {
+    "sha256": "25ab27c83269eb8d12e42cf1a2449b345bafa577518afce36ffba6e95a793473",
+    "bytes": 902
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/24_verificar_consistencia_local.log": {
+    "sha256": "e6c9c55697e9f4c2728f2f4989f5de37937bfd3b11eb450dffc549d70f270e3e",
+    "bytes": 4659
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/25_figura_calibracion_local.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/26_verificar_consistencia_local.log": {
+    "sha256": "e6c9c55697e9f4c2728f2f4989f5de37937bfd3b11eb450dffc549d70f270e3e",
+    "bytes": 4659
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/27_verificar_datos.log": {
+    "sha256": "d043f2785331a5b6d01399cd291158c9504c3958b72902d57f0c8747d20904cf",
+    "bytes": 84
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/28_generar_comparativa.log": {
+    "sha256": "c3a63d263f50d8848c4c3f1e36413ec88b1163f16b19560aca5ffdfdf214380a",
+    "bytes": 1675
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/controles_preliminares.log": {
+    "sha256": "e6c9c55697e9f4c2728f2f4989f5de37937bfd3b11eb450dffc549d70f270e3e",
+    "bytes": 4659
+  },
+  "temporal_umbral_por_celda_2026-10-24/logs/diagnostico_regional.log": {
+    "sha256": "25ab27c83269eb8d12e42cf1a2449b345bafa577518afce36ffba6e95a793473",
+    "bytes": 902
+  },
+  "temporal_umbral_por_celda_2026-10-24/originales_sha256_antes.json": {
+    "sha256": "062f3a8e3a7a6d053b43108ef8ba2fc716b761fca79f6a57bcf7ff4340391c6d",
+    "bytes": 14132
+  },
+  "temporal_umbral_por_celda_2026-10-24/originales_sha256_despues.json": {
+    "sha256": "062f3a8e3a7a6d053b43108ef8ba2fc716b761fca79f6a57bcf7ff4340391c6d",
+    "bytes": 14132
+  },
+  "temporal_umbral_por_celda_2026-10-24/pasos.json": {
+    "sha256": "86233fc061e5259c319bc88fc9ac9f9d52ef994af8b041210d27f4acd2672fe0",
+    "bytes": 1177
+  },
+  "temporal_umbral_por_celda_2026-10-24/preparar.py": {
+    "sha256": "6bb1edb02843e2e42d99ee85651f3ba4a4cf6aabc3f7e09338e67fcef943d2c3",
+    "bytes": 7681
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta7_outputs/R0_local_map.npz": {
+    "sha256": "b0e40ab5d423ddc7484a62b7a5d42e3daece7cfc6723a9a764c86a532c8f7dce",
+    "bytes": 365116
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta7_outputs/metrics_integrado_cache.npz": {
+    "sha256": "a8a38de46be7774a94032f98aa1056bf7e74a9e457f310a5e01c7b9ae026b557",
+    "bytes": 577010
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta7_outputs/resumen_pregunta7.csv": {
+    "sha256": "f65af3b020c2ee8342f08a4132381affd81bacdaddd29c3df74dd9fc0cd1ec98",
+    "bytes": 2077
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_calibracion_outputs/resumen_sensibilidad_umbral_4cuencas.csv": {
+    "sha256": "96d5e5cda192e652e72898b8e4a3538061dac17d85ecc3552a983d8b563f8fbc",
+    "bytes": 921
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_calibracion_outputs/spell_durations_sensibilidad_4cuencas.pkl": {
+    "sha256": "d822c9891ab3f565788fcd80ce87bf5307ad3fd832b200c2433a24d13a30b7f0",
+    "bytes": 13865876
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_outputs/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "4e46a3b7d878565d3a4049003de61ba2abe57f470765b788e2ed1af007ebf46f",
+    "bytes": 127056
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_outputs/pdf_Loa_i_global_loglog.png": {
+    "sha256": "20573f31d5196c84b5ffecb822ca73e7bb2afd44c8a5a81d7a443df112841408",
+    "bytes": 131221
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_outputs/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "7f840f621d2e30a53146e44333b436d1eee4caeb5ff52dbd5f70a62495bbadd1",
+    "bytes": 124915
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_outputs/pdf_Maule_i_global_loglog.png": {
+    "sha256": "4e83ab57cf1b330249aa81930779af3d112b97d32ba34b4008f9c0529ae3fa9d",
+    "bytes": 123955
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_pregunta9_outputs/pdf_durations_i_global.pkl": {
+    "sha256": "30210927f8cecb0e8360ee62dfd8384a7e0434debe1eabf52dc41cdad8a9d02f",
+    "bytes": 9621225
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_test_regrillado/cr2met_lineal_vs_area.npz": {
+    "sha256": "4396a3aca7443d57b33e8fbabe59cb8ddb9138a620c00228912a89f77e2d9e50",
+    "bytes": 366879108
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_test_regrillado/cuencas_cr2met_lineal_vs_area.csv": {
+    "sha256": "08115ac0129efe23087f8e5115aba4fdc84cef1090d919e32447545a9acc72d1",
+    "bytes": 452
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_test_regrillado/mapas_lineal_vs_area.csv": {
+    "sha256": "f578d723b31a5de2d2920c7dfdc00f8ffa15f2272a7ec4c777c1a523658f38cd",
+    "bytes": 953
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_test_regrillado/r0_lineal_vs_area.json": {
+    "sha256": "bc90afb3bd1f5b53f8cbd580dfab9123e8b651844b280591665dd2a89e5ca8d4",
+    "bytes": 453
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/_test_regrillado/rachas_censuradas_por_cuenca.csv": {
+    "sha256": "e211ac58df0777867072e45057f4ae96be64ec06aa5a453cb5d3d4eaad701ffb",
+    "bytes": 1090
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/results.json": {
+    "sha256": "2db538dac726e39313b5c5b2358dee9eb5b405cbb19ad29f306066f07d44ec29",
+    "bytes": 18896
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/rr_curves_aladin.png": {
+    "sha256": "e836b4369dd25453f286de9d8e64e147bd3a92b6df9ddbee5f7157958eb54f89",
+    "bytes": 121306
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/spells_coquimbo.csv": {
+    "sha256": "3a8a2ffa3de6c9e5f4332a650386660bfc7f004d38f2837e5f9ccd00d3119723",
+    "bytes": 2971231
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/spells_la_araucania.csv": {
+    "sha256": "6f251da53b354b258de0da2a44920e55392525069962650fc8f949d33af6be7c",
+    "bytes": 5802879
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/spells_los_lagos.csv": {
+    "sha256": "27205565db6589a7f30576671592476e83f3d812f898838829204af40226c71f",
+    "bytes": 8552040
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin/spells_o'higgins.csv": {
+    "sha256": "cef98ea2260e858a599e64868c387e534030d5ae28f11ace8dc612c3fb76f1a5",
+    "bytes": 2155931
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/results.json": {
+    "sha256": "6af8464d6ffbe709b9b948652914f533dd6a0413d305de0aaf5002fade163e13",
+    "bytes": 18809
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/rr_curves_aladin.png": {
+    "sha256": "13724f6b3ad17968dd5dd11174e9e13105d84b9994b92aafb6f2e37cab1e33f7",
+    "bytes": 116251
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/spells_coquimbo.csv": {
+    "sha256": "443e3151d9d7cf465ac1cbc5669bb39ffde28e0f2caf8275673ac6a75ae491ad",
+    "bytes": 4061033
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/spells_la_araucania.csv": {
+    "sha256": "8b431f509005fa32f55c32872f4f5e1adf62088c006d766937348a1cfde32ced",
+    "bytes": 5554625
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/spells_los_lagos.csv": {
+    "sha256": "770bd3dc3933a3dd6e691dbfcd94a8669304d8e4199c98d8f0afe4ac582a690d",
+    "bytes": 7144652
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_1mm/spells_o'higgins.csv": {
+    "sha256": "f841a47652cef037ee4beb2043a94471d1e3d233f5990e4bee7610c29483cfb8",
+    "bytes": 2434116
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/results.json": {
+    "sha256": "d20f35b851727627d92ac3a007c2e1a538303b39366f87a5d12635ceafa93117",
+    "bytes": 18885
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/rr_curves_aladin.png": {
+    "sha256": "7ffd1deaa26c0bc68adcb334149e2bd0c26a2418597762e6cc1598e408d98dfb",
+    "bytes": 126539
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/spells_coquimbo.csv": {
+    "sha256": "725fdd02b6f62826b07ee016953f917b47c71d30ab40f31ed42beae33f338f11",
+    "bytes": 3004057
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/spells_la_araucania.csv": {
+    "sha256": "1412958744a08fe443a1c63872870f082b5b93c725450d700b85a789c1328e50",
+    "bytes": 5832097
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/spells_los_lagos.csv": {
+    "sha256": "bc4291ec7c3e75b96e59454ae2b02436bea1a42a3240b8602b8f4edff3073722",
+    "bytes": 8531191
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta5_aladin_ssp370/spells_o'higgins.csv": {
+    "sha256": "52d7c54bb6e1135be9004fcab949f18362cb7cf77854ea94f347635835ea03b4",
+    "bytes": 2168304
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta7_bootstrap/bootstrap_summary.csv": {
+    "sha256": "a09a2a241f76b1da9367ade26cc5fcad03c0437c358b3a3eed659979d9fca23b",
+    "bytes": 744
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/outputs_pregunta7_bootstrap/bootstrap_summary.json": {
+    "sha256": "ba48f79267669505af9f6a84fa9146e879ce948362f7ca5af66e83f2eba58b22",
+    "bytes": 2380
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig02_dominio_cuencas_regiones.png": {
+    "sha256": "f23a0b2a1e5cc706b90d8c79f724af16c21952a5d47fa2685a9b021916c92e9d",
+    "bytes": 396360
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig03_calibracion_R0_ftau.png": {
+    "sha256": "f22018bf1789e62e3189d1ee5489cb8401da38d8130cc4df80efc1679a386b25",
+    "bytes": 93505
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig05_mapas_persistencia_criterio_i.png": {
+    "sha256": "6402ce2280efe9fa3c6b43f4a54275dc4cb14f2a5ac4acdfb76aa1b186cc9c6b",
+    "bytes": 530144
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig08_rr_curves_aladin.png": {
+    "sha256": "f3b9fd8e560882a931484c1d1ed3a01e87508b07a4d9a8bbfc071e4a4350da5b",
+    "bytes": 170760
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig42_pdf_cuencas_loglog_panel.png": {
+    "sha256": "0e9a8a29603c471f6e63cce5c49fa571c7ffe8d87b345d7dcb6cad420ea95fa2",
+    "bytes": 439209
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figS1_sensibilidad_umbral_cuencas.png": {
+    "sha256": "54f44524bf5548f2b2fd6c222be74ba03f72036c48975e8ba4fd66978f55a169",
+    "bytes": 504403
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figS2_mapa_R0_local.png": {
+    "sha256": "b657611cad83557d31de83e45539f9f21300a2792407aefea1335b2092869d2d",
+    "bytes": 181269
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figS_rr_curves_aladin_1mm.png": {
+    "sha256": "d3569c9f3a87f925ccb291c2cd0a9e7769ffde13e465579dc5c80af910f1a35f",
+    "bytes": 162006
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figS_rr_curves_aladin_ssp370.png": {
+    "sha256": "cc4bcb806e4e29bf5bd99dbbf9968b848407fc8ace749a94081eb43ff9da4974",
+    "bytes": 176354
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figT01_referencia_sin_memoria.csv": {
+    "sha256": "c1183d63812c3ef941e7f0c18272781de6be92dbe7aa19515517e9d8b5b66721",
+    "bytes": 1136
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/figT01_referencia_sin_memoria.png": {
+    "sha256": "d66c52c382cb262047fdea1a80a50f88efc869ad5179c31526aaad323fba031d",
+    "bytes": 303606
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig_esquema_dryspell.png": {
+    "sha256": "9a10b267945247c98e6d77c9219f88cef2ce065830641388c7b8daaf26a1d42e",
+    "bytes": 51374
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/fig_rr_regiones.png": {
+    "sha256": "a91171be16f92c09045ab87aba97c80a212b13b2da5cea37c133170aabc0e26b",
+    "bytes": 304832
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "4e46a3b7d878565d3a4049003de61ba2abe57f470765b788e2ed1af007ebf46f",
+    "bytes": 127056
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/pdf_Loa_i_global_loglog.png": {
+    "sha256": "20573f31d5196c84b5ffecb822ca73e7bb2afd44c8a5a81d7a443df112841408",
+    "bytes": 131221
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "7f840f621d2e30a53146e44333b436d1eee4caeb5ff52dbd5f70a62495bbadd1",
+    "bytes": 124915
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/pdf_Maule_i_global_loglog.png": {
+    "sha256": "4e83ab57cf1b330249aa81930779af3d112b97d32ba34b4008f9c0529ae3fa9d",
+    "bytes": 123955
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/paper_figuras/tablaS1_sensibilidad_umbral_chile.csv": {
+    "sha256": "9dac08e7c51bbb04759c4066b8aa491e49501b94da6985b8d6952fb1a2b84856",
+    "bytes": 587
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_mean.npz": {
+    "sha256": "47b6e5c56491b3b6cc659624e1e1fb496968e06b31bc0ccc0ee70dc7f545a7d4",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_t99.npz": {
+    "sha256": "c4bde41e6247475b1681d17cb0963364fdd091f80db1c3a388bd716fe6e0fd63",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_mean.npz": {
+    "sha256": "0420ced82c5f79a033a3eee2a0ed62d154c8faff4b49e50466cdba6adcaf6c54",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_t99.npz": {
+    "sha256": "7242ccb943b323158ce89cda2a2b82c9751c58bd1b58b8ce4f6f03f07d923835",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_C_umbral_local_mean.npz": {
+    "sha256": "98d37a36f9e4a8ade63683d66991ba7c54aee69d605a149acb880668e9ddb4a0",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/bootstrap_por_celda_C_umbral_local_t99.npz": {
+    "sha256": "7d2a7f3168e450679d5d7411755b3cf2da2b2125f8a47a3e18fc31b512f8ae2b",
+    "bytes": 487276
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/calibracion_R0.json": {
+    "sha256": "51f7f9719071c8ce9047f5d98a43cfb7b639d006df4b376e349cd45f87a41e89",
+    "bytes": 309
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/contraste_persistencia_regiones.csv": {
+    "sha256": "94b60e1e5e489c78424b54e588ba4b8385f29f2dd9ee93bb8de99cf07302ce20",
+    "bytes": 946
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/descomposicion_markov_rr_regiones.csv": {
+    "sha256": "51e86501dd72aef9ea3c2c71af83fdb21472163c62e71cc2db416da1de9da199",
+    "bytes": 8587
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/estacionalidad_marnov_regiones.csv": {
+    "sha256": "3d17ce5dd615fba4eb49ddae41a718cfa6ac8b64af1dbb0b3333a41d3e5b586b",
+    "bytes": 397
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/frecuencia_humeda_ventanas.csv": {
+    "sha256": "df2bd5c87c1a6df78bd16ab728dea2c8345591481df26839582d394b937dcf6e",
+    "bytes": 546
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/sensibilidad_minimo_rachas.csv": {
+    "sha256": "9a32b93783353d24e0cfa737df1ff273dcd527a08b677dee4583be688a92ad33",
+    "bytes": 537
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/sesgo_por_ventana.csv": {
+    "sha256": "96b1db528ddbd5a1f0a610c6b0c244aaa46f9c7f6087830dfd4d86bf5c467889",
+    "bytes": 1118
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/sesgo_relativo_criterios_ventanas.csv": {
+    "sha256": "93c66ff3e2b34247011c3a3e91c4ac5f3f7e14781aacf05e339028f7c7549524",
+    "bytes": 990
+  },
+  "temporal_umbral_por_celda_2026-10-24/referencia_global/resultados_tesis/tabla3_estadisticos_ventanas.csv": {
+    "sha256": "0e00e505267d0cc8095c8c9a890f69fa5204bd4a8bb2a5ea81f2c95034b10bf9",
+    "bytes": 956
+  },
+  "temporal_umbral_por_celda_2026-10-24/repetir_desde_cero.py": {
+    "sha256": "202ff8d37505650c969a18143582b26e56fca8208cc72c38192b3ffdba84652c",
+    "bytes": 1214
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_locales_sha256.json": {
+    "sha256": "f940b5e18b8ffc29f4961538bd55f03e964a388ca65a64d1019052e098c293c8",
+    "bytes": 3756
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_calcular_estacionalidad_marnov_regiones.py": {
+    "sha256": "1a6747645cb42e75f38bdf745129a74e94cdd44af6ad2f68a4dbca849821ed0f",
+    "bytes": 3553
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_calcular_frecuencia_humeda_ventanas.py": {
+    "sha256": "9f16a3fcfc7726925c70d6006fb865688c14f48fec3fd86e836b7096ff73dcc1",
+    "bytes": 2827
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_calcular_sesgo_ventanas.py": {
+    "sha256": "8f469d21a4e1a2e2dff50b01e16084c77af42cdb7a9bff258250cef6486b871b",
+    "bytes": 2393
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_calcular_tabla3_ventanas.py": {
+    "sha256": "a1aa5b039032e657a391aba1cc6af4ce33e50e09d9619701a1eca043dac3d2ef",
+    "bytes": 3706
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_contraste_persistencia_regiones.py": {
+    "sha256": "acb584459c2c225404f5f2b861e262db9a93fa657dfa10d86dfb8326502d8f8c",
+    "bytes": 4423
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_cuantificar_censuradas.py": {
+    "sha256": "833173a51f544c677bfee8ee3282e05e847d4c28c6530288be3de500662eba1e",
+    "bytes": 3327
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_fig02_esquema_dryspell.py": {
+    "sha256": "83c006c14e9d4ee2e25db5019fa9bfa1957a6f47663f0285f253d796ab1e98d1",
+    "bytes": 2339
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_fig03_calibracion_R0.py": {
+    "sha256": "45fe47de2ebddf997bdc3fe6f5bdf7412a806154492df474b1350e51c86d019f",
+    "bytes": 5212
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_fig05_mapas_persistencia.py": {
+    "sha256": "aafe039cb2fd635f9e9dfdb6b572f11dd3e2ff0990adb51c49568c25d2c4f299",
+    "bytes": 5400
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_figS1_sensibilidad_umbral.py": {
+    "sha256": "f75dde1c75e82af85a3bf9df7963008a0314ffb935fa83f1728aa57af8cf8b3c",
+    "bytes": 5304
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_figS2_mapa_R0_local.py": {
+    "sha256": "73bc6b567be897fa501b60530c8403a78ee4fe89ff3f2739aa49fe36217543bc",
+    "bytes": 3328
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_figT01_referencia_sin_memoria.py": {
+    "sha256": "3d2aa4510fb86a0875b1aa7c8e48f4b6ca8416d8263820a723f220a631e49e0a",
+    "bytes": 6991
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_fig_dominio_ventanas_regiones.py": {
+    "sha256": "57c325cfa86c66f4a8129aec48f97cd6d9c6402b69171be04efd9dcc45166897",
+    "bytes": 6489
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_fig_rr_regiones.py": {
+    "sha256": "04eedc653fe4b26683ef39ffabd5bfdc1f885839a4a543202c08ac39fc255fcb",
+    "bytes": 5376
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_pregunta9_pdf_loglog_cuencas.py": {
+    "sha256": "8bc1c7ec8e330697cdb46357019509a305d1906fa3a7a0569de9d6885b178d19",
+    "bytes": 10801
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_generar_tablaS1_sensibilidad_chile.py": {
+    "sha256": "8791f40deed14831ebad8c63fe3662bb56dd687212666b9a97d2ee03c4fb4e50",
+    "bytes": 1943
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_referencia_markov_rr_regiones.py": {
+    "sha256": "2cffaf745b90e47e8969658c761681eece65666d4a252af09c0aa66fd15785e8",
+    "bytes": 8231
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_run_pregunta5_aladin.py": {
+    "sha256": "3f9f6bb62bab8f01e6eaa750db94c3e29294bd1ea7f9a4a22f91678cc1ee4da9",
+    "bytes": 15945
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_run_pregunta7_bootstrap.py": {
+    "sha256": "5365c038d999ebf5c18fad216ed040d2e680f8ecce9279ea072c0fc843c45d63",
+    "bytes": 16612
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_sensibilidad_minimo_rachas.py": {
+    "sha256": "367855391380e8d26635880293e73e7e1f1cb4efd38ea0a8132eff9c45ac76da",
+    "bytes": 4619
+  },
+  "temporal_umbral_por_celda_2026-10-24/scripts_originales/_test_regrillado_conservativo.py": {
+    "sha256": "876de664928f36ffcb9fd4f97d6824a17f4f90a74408e2710fdb5a059a0b0689",
+    "bytes": 9185
+  },
+  "temporal_umbral_por_celda_2026-10-24/verificar_datos.py": {
+    "sha256": "aed7ff797dac97d6b685f1c950221797b8ceb877ea66882283695a87bc82bed3",
+    "bytes": 928
+  },
+  "umbral_0p1mm_nacional/_calcular_estacionalidad_marnov_regiones.py": {
+    "sha256": "142b7f8b00a5e22063262ad74620bed2e0beae9d3a4914104d7f0bbd97dc321c",
+    "bytes": 2946
+  },
+  "umbral_0p1mm_nacional/_calcular_frecuencia_humeda_ventanas.py": {
+    "sha256": "ba679ab312ffb32fb61002570b28622f6be48058ed09a2dea0b3afce985e456a",
+    "bytes": 2839
+  },
+  "umbral_0p1mm_nacional/_calcular_sesgo_ventanas.py": {
+    "sha256": "8f469d21a4e1a2e2dff50b01e16084c77af42cdb7a9bff258250cef6486b871b",
+    "bytes": 2393
+  },
+  "umbral_0p1mm_nacional/_calcular_tabla3_ventanas.py": {
+    "sha256": "12145fac26ddfd54ef66b347cb73fbdc1afb8d7918c1c9316f2242eba786cd37",
+    "bytes": 3712
+  },
+  "umbral_0p1mm_nacional/_contraste_persistencia_regiones.py": {
+    "sha256": "11095c950890cc39cdd69a298f3b8f2a97e2ae1a7db8413fe7276a03e1d98576",
+    "bytes": 4423
+  },
+  "umbral_0p1mm_nacional/_cuantificar_censuradas.py": {
+    "sha256": "2794acf00b23942029150a4e1aab333b8e71df179563baec04456c988a2dd17f",
+    "bytes": 3331
+  },
+  "umbral_0p1mm_nacional/_generar_fig03_calibracion_R0.py": {
+    "sha256": "e5619e0f77064e30575a4286590a15b547161bfcd61a2a264f5229038559bf07",
+    "bytes": 5297
+  },
+  "umbral_0p1mm_nacional/_generar_fig05_mapas_persistencia.py": {
+    "sha256": "aafe039cb2fd635f9e9dfdb6b572f11dd3e2ff0990adb51c49568c25d2c4f299",
+    "bytes": 5400
+  },
+  "umbral_0p1mm_nacional/_generar_figS1_sensibilidad_umbral.py": {
+    "sha256": "99805addc4ae56fd4e0ba8825fb312e9b201b16ebb148947f64541ec9fdb270e",
+    "bytes": 5316
+  },
+  "umbral_0p1mm_nacional/_generar_figS2_mapa_R0_local.py": {
+    "sha256": "73bc6b567be897fa501b60530c8403a78ee4fe89ff3f2739aa49fe36217543bc",
+    "bytes": 3328
+  },
+  "umbral_0p1mm_nacional/_generar_figT01_referencia_sin_memoria.py": {
+    "sha256": "5fd12ff1feaa8d027e10ee00812ba6dc31fd90a08d8b9ca956d27551e9d2f295",
+    "bytes": 6993
+  },
+  "umbral_0p1mm_nacional/_generar_fig_dominio_ventanas_regiones.py": {
+    "sha256": "245d1e47f048755939251bf15688a1e705f3a3bf9e82b2f8786aaf37b906dd57",
+    "bytes": 5476
+  },
+  "umbral_0p1mm_nacional/_generar_fig_rr_regiones.py": {
+    "sha256": "abd9da7b704ea7432e3aa43b4fa98787ae1e56911d08ae1db6cb16f66c917148",
+    "bytes": 5376
+  },
+  "umbral_0p1mm_nacional/_generar_pregunta9_pdf_loglog_cuencas.py": {
+    "sha256": "6080c9c1d78e2758755a089c9e99a089f9ee687f07557f91287b431bbad34ff9",
+    "bytes": 10801
+  },
+  "umbral_0p1mm_nacional/_generar_tablaS1_sensibilidad_chile.py": {
+    "sha256": "ae00928dc4df07e39fad19bc8ab169ecd029981e9627b3c4c9aba354447abee1",
+    "bytes": 1945
+  },
+  "umbral_0p1mm_nacional/_pregunta7_outputs/R0_local_map.npz": {
+    "sha256": "f740e53b8537ceb8d7c412ca9602f5e19c35efc84383c3f22bbe209c61c58791",
+    "bytes": 365116
+  },
+  "umbral_0p1mm_nacional/_pregunta7_outputs/metrics_integrado_cache.npz": {
+    "sha256": "b3c55e98f96cb12b368def440e3bb4a4f94fc4b16561533934240c96a23447f6",
+    "bytes": 577010
+  },
+  "umbral_0p1mm_nacional/_pregunta7_outputs/resumen_pregunta7.csv": {
+    "sha256": "606882fa51cffe80a4ffb6d8aaac7befe5cdfeba82efb84f4f7578f2f0d999bf",
+    "bytes": 2072
+  },
+  "umbral_0p1mm_nacional/_pregunta9_calibracion_outputs/resumen_sensibilidad_umbral_4cuencas.csv": {
+    "sha256": "73c8cd58d7da98db67ea2af4cd6f268ae8b104252cb4693eb7f9bcc09df4d0ee",
+    "bytes": 933
+  },
+  "umbral_0p1mm_nacional/_pregunta9_calibracion_outputs/spell_durations_sensibilidad_4cuencas.pkl": {
+    "sha256": "cbb3841b473daf45824dd10087ffe89fa515af5ed3c879f2b07a04a292831fac",
+    "bytes": 15157274
+  },
+  "umbral_0p1mm_nacional/_pregunta9_outputs/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "f8c8ba8068b1d5ae20d2fb07c48909bdf1049ea3cb4bf9fdb6e55b720c2ee03d",
+    "bytes": 123773
+  },
+  "umbral_0p1mm_nacional/_pregunta9_outputs/pdf_Loa_i_global_loglog.png": {
+    "sha256": "af0a670387f8c1ed2e46059d84c213ec68f82e7eeccda57891b589562f3060c7",
+    "bytes": 126338
+  },
+  "umbral_0p1mm_nacional/_pregunta9_outputs/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "42fa61130e421f5ca9eabcc7eed7fbe68ad81377e14d93188ee46c8ab99d2b22",
+    "bytes": 125968
+  },
+  "umbral_0p1mm_nacional/_pregunta9_outputs/pdf_Maule_i_global_loglog.png": {
+    "sha256": "654cccd9d07b18914f267577946fd5190dbb9d4dcf3674b82d6d797ddba6dd50",
+    "bytes": 128615
+  },
+  "umbral_0p1mm_nacional/_pregunta9_outputs/pdf_durations_i_global.pkl": {
+    "sha256": "ea752664a9628f313f4c416c4e1d5b6b6b285676f68fedc9d1ff21d8093aa9b0",
+    "bytes": 10267025
+  },
+  "umbral_0p1mm_nacional/_referencia_markov_rr_regiones.py": {
+    "sha256": "e8dfae77cf46432ad26f5c65b4098b5a6cb408d59f1a07dfd5a5dfef41a68cdb",
+    "bytes": 8231
+  },
+  "umbral_0p1mm_nacional/_run_pregunta5_aladin.py": {
+    "sha256": "448d69fd9b3c90e81cf76da128dd0a89cb0a15471d1d2784009e73a172fc5204",
+    "bytes": 15945
+  },
+  "umbral_0p1mm_nacional/_run_pregunta7_bootstrap.py": {
+    "sha256": "12c6e9697cb723bad0932b9c82e557d8d9a3d6c4331bfb76270729457fcf783e",
+    "bytes": 16612
+  },
+  "umbral_0p1mm_nacional/_sensibilidad_minimo_rachas.py": {
+    "sha256": "367855391380e8d26635880293e73e7e1f1cb4efd38ea0a8132eff9c45ac76da",
+    "bytes": 4619
+  },
+  "umbral_0p1mm_nacional/_test_regrillado/cr2met_lineal_vs_area.npz": {
+    "sha256": "4396a3aca7443d57b33e8fbabe59cb8ddb9138a620c00228912a89f77e2d9e50",
+    "bytes": 366879108
+  },
+  "umbral_0p1mm_nacional/_test_regrillado/cuencas_cr2met_lineal_vs_area.csv": {
+    "sha256": "e3156203e652e15f8b43d4f3dfaffb79f262551f93021c286064197b63652877",
+    "bytes": 461
+  },
+  "umbral_0p1mm_nacional/_test_regrillado/mapas_lineal_vs_area.csv": {
+    "sha256": "22513c24f1b0d8d7979476c32d13807ecce71fa96b611d08d5aee589e4e272c2",
+    "bytes": 959
+  },
+  "umbral_0p1mm_nacional/_test_regrillado/r0_lineal_vs_area.json": {
+    "sha256": "f59a46dba882b3057b66889fc6f4262e1b7a9fca9f917fae448aace5f1deba11",
+    "bytes": 467
+  },
+  "umbral_0p1mm_nacional/_test_regrillado/rachas_censuradas_por_cuenca.csv": {
+    "sha256": "df8775258b555d0ffd05781aca34aee165c6b6d385602c227143b2509ae80208",
+    "bytes": 1129
+  },
+  "umbral_0p1mm_nacional/_test_regrillado_conservativo.py": {
+    "sha256": "3010ab9a8dd58076f403fc128770aa888fced56d943f0f893c7676e8ef45e6c1",
+    "bytes": 9189
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/results.json": {
+    "sha256": "d831d7e52b43615d0a2ec59b15312486f39e2fd85d998283184ff2054ab239cf",
+    "bytes": 18880
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/rr_curves_aladin.png": {
+    "sha256": "c35088866a87afd6ef3bee08943d9c7d59d29d0eb632b15b6c2d752fe44221db",
+    "bytes": 117542
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/spells_coquimbo.csv": {
+    "sha256": "a1ebe26b2eb2bd8a07a1a9ff2887d4f7f45da0c626eed3d5bb5af81a6b654676",
+    "bytes": 3270626
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/spells_la_araucania.csv": {
+    "sha256": "9e85365629061d3b3bc2f5c0476b29fc3daf12a4248192d408f6e7bac6caa52f",
+    "bytes": 5788698
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/spells_los_lagos.csv": {
+    "sha256": "ec6c9db0a4eaae22fe972a4d81e98d538092359ec6fec69fbd60105cfcbc6e49",
+    "bytes": 8242624
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin/spells_o'higgins.csv": {
+    "sha256": "391f529bcd7826d97339b5ac83c9898d95e149f74f6aade514eafef32eabca2e",
+    "bytes": 2251081
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/results.json": {
+    "sha256": "3dadb830e3f9764fda45de3b8cd1eebe5547cd5a27fc57c9779c93552039b2aa",
+    "bytes": 18859
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/rr_curves_aladin.png": {
+    "sha256": "4397cada5a3701cc65095afcbc4f7cc234fc3ddb37734c4bba28c1db14fef24b",
+    "bytes": 127533
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/spells_coquimbo.csv": {
+    "sha256": "85dd2558e980b195e78faf6228382e63263c8eed9ec597b94195f09664cab0e3",
+    "bytes": 3300780
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/spells_la_araucania.csv": {
+    "sha256": "8cf3b1b0062eccf1a0d295addcb947a9ba786c4d8426234e10d256bc62da004b",
+    "bytes": 5809478
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/spells_los_lagos.csv": {
+    "sha256": "812aab75038f9a5c4474b9407a119a4b9e74cb76fd52b3430bfb3f26071da174",
+    "bytes": 8217705
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_ssp370/spells_o'higgins.csv": {
+    "sha256": "f283f1df8e09b238aa7b671d5b9729e709aa0202c09c748e3c4eee50b2329ee2",
+    "bytes": 2261342
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta7_bootstrap/bootstrap_summary.csv": {
+    "sha256": "5313790357077c4d63639bc8165d163ebe6b2d4c3dda53a4650f246b04606e37",
+    "bytes": 739
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta7_bootstrap/bootstrap_summary.json": {
+    "sha256": "5e55921b1c7c615c6f3a19fb873ffdfe87dd11f0a07a94b670b786cf57dabe70",
+    "bytes": 2355
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig02_dominio_cuencas_regiones.png": {
+    "sha256": "e46c2af21b14240dfda3d540ce08c91cae46901b37298f9ddda140fdf3599a4c",
+    "bytes": 381397
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig03_calibracion_R0_ftau.png": {
+    "sha256": "ccb7fb7554f75cff452ac5f30c876b799c6701d9ef9a4a68c1eb5011280626f0",
+    "bytes": 92871
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig05_mapas_persistencia_criterio_i.png": {
+    "sha256": "c27f34efe374ecb4474bb69f843545195cc2ff81487f7dfa8f72938f54abe0f1",
+    "bytes": 536218
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig08_rr_curves_aladin.png": {
+    "sha256": "8fb3cbf00a101d14285d7acd0c9d7d747839e61e1c076981858b074e6760c615",
+    "bytes": 164588
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig42_pdf_cuencas_loglog_panel.png": {
+    "sha256": "a969c7cfbb1379ce35ec2bc1680556dc2da2380dde860530e8a86c99c0f1651d",
+    "bytes": 437967
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figS1_sensibilidad_umbral_cuencas.png": {
+    "sha256": "f0c7eefecc3e10f7ef26b7ff23943708e58208de44bc400928058d8255615d14",
+    "bytes": 514050
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figS2_mapa_R0_local.png": {
+    "sha256": "588e112895a2bf37623de439b6bdf81991be537316eec12f36219521939fcbbf",
+    "bytes": 180294
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figS_rr_curves_aladin_0.1mm.png": {
+    "sha256": "406b810464c50616c9cecae20b244c4a75613a50b6f40e906a57d33a28500009",
+    "bytes": 168771
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figS_rr_curves_aladin_ssp370.png": {
+    "sha256": "e134bc4dd81b7ee86b6f71880035997ae78e9a016b02a56479f6e7f317eff31d",
+    "bytes": 179282
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figT01_referencia_sin_memoria.csv": {
+    "sha256": "dffff208023f08522d548e91ffce658bc77ffbe5f71ef190252832ceeca21c59",
+    "bytes": 1130
+  },
+  "umbral_0p1mm_nacional/paper_figuras/figT01_referencia_sin_memoria.png": {
+    "sha256": "776c115d5acf366cf5e6151b1300db478428fe1e06a61a295f3c884742a13508",
+    "bytes": 303916
+  },
+  "umbral_0p1mm_nacional/paper_figuras/fig_rr_regiones.png": {
+    "sha256": "211dcf9daf910eae989c24b3df128ddcefc44cfbe0aee4419117982192299ced",
+    "bytes": 305346
+  },
+  "umbral_0p1mm_nacional/paper_figuras/pdf_Biobio_i_global_loglog.png": {
+    "sha256": "f8c8ba8068b1d5ae20d2fb07c48909bdf1049ea3cb4bf9fdb6e55b720c2ee03d",
+    "bytes": 123773
+  },
+  "umbral_0p1mm_nacional/paper_figuras/pdf_Loa_i_global_loglog.png": {
+    "sha256": "af0a670387f8c1ed2e46059d84c213ec68f82e7eeccda57891b589562f3060c7",
+    "bytes": 126338
+  },
+  "umbral_0p1mm_nacional/paper_figuras/pdf_Maipo_i_global_loglog.png": {
+    "sha256": "42fa61130e421f5ca9eabcc7eed7fbe68ad81377e14d93188ee46c8ab99d2b22",
+    "bytes": 125968
+  },
+  "umbral_0p1mm_nacional/paper_figuras/pdf_Maule_i_global_loglog.png": {
+    "sha256": "654cccd9d07b18914f267577946fd5190dbb9d4dcf3674b82d6d797ddba6dd50",
+    "bytes": 128615
+  },
+  "umbral_0p1mm_nacional/paper_figuras/tablaS1_sensibilidad_umbral_chile.csv": {
+    "sha256": "82f867903d4154f705c76c18556b27ac85d1734103d97c4c4102cbd20b98c7c1",
+    "bytes": 589
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_mean.npz": {
+    "sha256": "ea348252b74a486b98710dd71ad158e96f9a4baf38f202fec539453e72b950e8",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_t99.npz": {
+    "sha256": "ab117b5404beb0675710048bf98afe8280add82b5c8d2bcecb437c2fb0dc09a2",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_mean.npz": {
+    "sha256": "35d3b10af03b3af3dc2cf50317857b85e8ee611ff96db3a42c839f7153c7f701",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_B_mismo_umbral_t99.npz": {
+    "sha256": "67a93e05d3d07d7802d3d08c1c4b9af4783932bcf85ae7a114b38d06793a3acb",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_C_umbral_local_mean.npz": {
+    "sha256": "99104ece07c47884b279f949237f3d85e1759717371a0a2e5e1500e172dfecdb",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/bootstrap_por_celda_C_umbral_local_t99.npz": {
+    "sha256": "3094804ceb27d6e30275fa168c05bf84ecdbf63bda535eb33e500990ea542eda",
+    "bytes": 487276
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/calibracion_R0.json": {
+    "sha256": "3a9544a7be14d600af83e52011d7fa4d83f67b52eb0048198089b062e9155e9e",
+    "bytes": 321
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/contraste_persistencia_regiones.csv": {
+    "sha256": "4094c8e143e95a67c1b58cab0ac4326175b03da57c4d046b99ea3f597b4b6106",
+    "bytes": 943
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/descomposicion_markov_rr_regiones.csv": {
+    "sha256": "17fd7f1004eefb80cda641b484bb42dcfe67334a88eb0e5d44e250604d05da7a",
+    "bytes": 8450
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/estacionalidad_marnov_regiones.csv": {
+    "sha256": "6fc2ad272452c2c19c1be437f353180ae79136cbf739427e83579a5e5657f14c",
+    "bytes": 398
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/frecuencia_humeda_ventanas.csv": {
+    "sha256": "a65fbff17bfd19e3837cf7f2dc3799a31dfbd34e9b0aa1da4522e50e307e6713",
+    "bytes": 553
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/sensibilidad_minimo_rachas.csv": {
+    "sha256": "3d8a0ef198cfc2d8be67bebf1027620cd34b1fe4fcdd24862b627e457bced067",
+    "bytes": 525
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/sesgo_por_ventana.csv": {
+    "sha256": "9612cf180c3f00aec47eb2a6c89f1b2266ec39cb5fe20b8ec27cf92ec0aee2d4",
+    "bytes": 1140
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/sesgo_relativo_criterios_ventanas.csv": {
+    "sha256": "93b0f889b69aab124856b7218dc218d6b045a4759d117b0c91b1ea65191a6a1a",
+    "bytes": 987
+  },
+  "umbral_0p1mm_nacional/resultados_tesis/tabla3_estadisticos_ventanas.csv": {
+    "sha256": "48e1840fcec242c261bf68c6e47dfdd113aa04574078f0e160cffe6c70d71d4c",
+    "bytes": 951
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/results.json": {
+    "sha256": "05277a954d94114f2a44b833ac527870c6ab750960dde900410563915280033b",
+    "bytes": 18707
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/rr_curves_aladin.png": {
+    "sha256": "bc20fcf0f6fb294b48f324cc198c7bac69b1c8ff75d106005740cdde10d4c32e",
+    "bytes": 120537
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/spells_coquimbo.csv": {
+    "sha256": "0697cf18bf5879d421eb1e58e02252cd869a1660c75e6e31a7db41a8577ba9bd",
+    "bytes": 5081777
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/spells_la_araucania.csv": {
+    "sha256": "a336bcc334c026d625fe941a3969c504f8f2164e2b78710d1832c3e710718f58",
+    "bytes": 5176803
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/spells_los_lagos.csv": {
+    "sha256": "a23835da71c7299ddf51d49454767032ac7b1420443e320695dc63f5c435d9cf",
+    "bytes": 5705078
+  },
+  "umbral_0p1mm_nacional/outputs_pregunta5_aladin_0.1mm/spells_o'higgins.csv": {
+    "sha256": "c85243e5c744fbf8ffb1901ea51ef28e1db6e8a72f03d362b22f04e6e40576e4",
+    "bytes": 2653308
+  }
+}

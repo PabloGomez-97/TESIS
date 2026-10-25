@@ -1,0 +1,38 @@
+1/4: Cargando ALADIN historico y futuro...
+Periodo hist: 1980-2014 (35 anos) | futuro: 2040-2074 (35 anos, ssp585)
+Dia seco ALADIN: umbral local por celda (o sensibilidad CLI) | Mar-Nov
+2/4: Extrayendo dry spells por region...
+  Coquimbo         | Coquimbo               | pixeles:  239 | spells: 429,765
+  O'Higgins        | Libertador General Bernardo O'Higgins | pixeles:  110 | spells: 260,477
+  La Araucanía     | La Araucanía           | pixeles:  223 | spells: 598,046
+  Los Lagos        | Los Lagos              | pixeles:  324 | spells: 771,670
+3/4: Risk ratio de conteos N_fut/N_hist (>= 20 dias)...
+
+--- Conteos ---
+      Region   Periodo  Dry spells totales  Spells >= 20 d
+    Coquimbo 1980-2014              223952           18366
+    Coquimbo 2040-2074              205813           22266
+   O'Higgins 1980-2014              136121            4370
+   O'Higgins 2040-2074              124356            5132
+La Araucanía 1980-2014              303771             360
+La Araucanía 2040-2074              294275            1429
+   Los Lagos 1980-2014              389076             107
+   Los Lagos 2040-2074              382594              27
+
+--- RR @ 20 dias (N_fut/N_hist) ---
+      Region  Pixeles  N_hist  N_fut  RR observado  RR bootstrap mediano  IC95 inferior  IC95 superior  Cruza RR=1  Sig aumento  Sig disminucion  Replicas descartadas (de 1000)
+    Coquimbo      239   18366  22266         1.212                 1.211          1.062          1.391       False         True            False                               0
+   O'Higgins      110    4370   5132         1.174                 1.180          0.956          1.466        True        False            False                               0
+La Araucanía      223     360   1429         3.969                 4.221          1.456         16.958       False         True            False                               0
+   Los Lagos      324     107     27         0.252                 0.265          0.014         28.075        True        False            False                              42
+4/4: Curvas RR vs umbral...
+
+--- Significancia @ 20d ---
+      Region  N_hist @ 20d  N_fut @ 20d  RR @ 20d  IC95 inf  IC95 sup Significancia
+    Coquimbo         18366        22266     1.212     1.062     1.391       aumento
+   O'Higgins          4370         5132     1.174     0.956     1.466            no
+La Araucanía           360         1429     3.969     1.456    16.958       aumento
+   Los Lagos           107           27     0.252     0.014    28.075            no
+
+Figura guardada en outputs_pregunta5_aladin_1mm/rr_curves_aladin.png
+Copia paper: paper_figuras/figS_rr_curves_aladin_1mm.png

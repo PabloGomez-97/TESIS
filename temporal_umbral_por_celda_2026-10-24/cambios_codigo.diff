@@ -1,0 +1,347 @@
+--- original/_calcular_frecuencia_humeda_ventanas.py
++++ local/_calcular_frecuencia_humeda_ventanas.py
+@@ -1,8 +1,8 @@
+-"""Fraccion de dias humedos por ventana y para el dominio: historico 1980-2014 (criterio i y 1 mm) y futuro 2040-2074.
++"""Fraccion de dias humedos por ventana y para el dominio: historico 1980-2014 (umbral local principal y 1 mm) y futuro 2040-2074.
+ 
+ R0 se calibra para igualar la fraccion media del dominio completo; este script mide cuanto se cumple esa igualdad dentro
+ de cada ventana (Loa, Maipo, Maule, Biobio) y cuanto cambia con R0 fijo en SSP5-8.5 y SSP3-7.0. Fraccion = promedio espacial (igual peso por celda) de la fraccion temporal
+-de dias con pr >= umbral. CR2MET: 1 mm, interpolado linealmente a la grilla ALADIN; ALADIN: R0 = 5,285 mm y 1 mm.
++de dias con pr >= umbral. CR2MET: 1 mm, interpolado linealmente a la grilla ALADIN; ALADIN: umbral histórico local por celda y 1 mm.
+ Mismas ventanas y mascara de Chile que _generar_pregunta9_pdf_loglog_cuencas.py.
+ 
+ Salida: resultados_tesis/frecuencia_humeda_ventanas.csv
+@@ -41,7 +41,7 @@
+     filas = []
+     for nombre, m in zonas.items():
+         cols = en_chile[m]
+-        f = lambda x, t: float((x[:, cols] >= t).mean(axis=0).mean() * 100)
++        f = lambda x, t: float((x[:, cols] >= (t.values[jj, ii][cols] if hasattr(t, 'dims') else t)).mean(axis=0).mean() * 100)
+         filas.append({
+             'zona': nombre, 'celdas': int(m.sum()),
+             'CR2MET_1mm_pct': f(c, 1.0), 'ALADIN_R0_pct': f(a, f6.TAU_ALADIN_DOMINIO), 'ALADIN_1mm_pct': f(a, 1.0),
+--- original/_calcular_sesgo_ventanas.py
++++ local/_calcular_sesgo_ventanas.py
+@@ -1,4 +1,4 @@
+-"""Sesgo historico de ALADIN respecto de CR2MET por ventana (Loa, Maipo, Maule, Biobio), criterio i, 1980-2014.
++"""Sesgo historico de ALADIN respecto de CR2MET por ventana (Loa, Maipo, Maule, Biobio), umbral local principal, 1980-2014.
+ 
+ Diferencia por celda (ALADIN - CR2MET) de la duracion media y del percentil 99 (t99) dentro de cada ventana de
+ latitud-longitud del paper, usando las celdas con al menos 30 rachas en ambos productos (mismas celdas y reglas
+--- original/_calcular_tabla3_ventanas.py
++++ local/_calcular_tabla3_ventanas.py
+@@ -1,7 +1,7 @@
+-"""Tabla 3: estadisticos del pool regional de duraciones de dry spells por ventana y producto (criterio i).
++"""Tabla 3: estadisticos del pool regional de duraciones de dry spells por ventana y producto (umbral local principal).
+ 
+ Lee las duraciones por ventana generadas por _generar_pregunta9_pdf_loglog_cuencas.py (cache
+-_pregunta9_outputs/pdf_durations_i_global.pkl; reglas §2.2: rachas censuradas excluidas, R0 = 5,285 mm en ALADIN,
++_pregunta9_outputs/pdf_durations_i_global.pkl; reglas §2.2: rachas censuradas excluidas, umbral histórico local por celda en ALADIN,
+ 1 mm en CR2MET). Calcula n_spells, media, mediana, p90, p99, maximo y numero/fraccion de rachas >= 20 d sin redondear, y el sesgo relativo
+ (ALADIN hist - CR2MET) / CR2MET de la media y del p99 del pool.
+ 
+--- original/_contraste_persistencia_regiones.py
++++ local/_contraste_persistencia_regiones.py
+@@ -4,7 +4,7 @@
+ este mide el parametro que describe el agrupamiento dia a dia, rho = P(seco hoy | seco ayer) - P(seco hoy | humedo ayer),
+ con su incertidumbre. Si rho no cambia, un aumento de rachas largas con menos dias humedos no requiere un cambio en el agrupamiento.
+ 
+-Por region (mismas mascaras y R0 = 5,285 mm que _run_pregunta5_aladin.py) y por celda y mes (marzo-noviembre, los meses de inicio
++Por region (mismas mascaras y umbral histórico local por celda que _run_pregunta5_aladin.py) y por celda y mes (marzo-noviembre, los meses de inicio
+ de racha de los risk ratios) se estiman p_dd, p_wd (con el suavizado +0,5/+1 de la referencia Markov), rho y la frecuencia seca.
+ El estadistico regional es el promedio simple sobre celdas y meses. IC95 por bootstrap de anios: 1 000 replicas, 35 anios con
+ reemplazo sorteados de forma independiente en cada periodo (igual que los risk ratios). Una transicion se asigna al anio y mes del
+@@ -64,8 +64,8 @@
+     ph = rr.open_aladin_period(rr.HIST_START, rr.HIST_END)
+     pf = rr.open_aladin_period(rr.FUT_START, rr.FUT_END, scenario='ssp585')
+     jj, ii, reg = mk.celdas_de_regiones(ph['lat'].values, ph['lon'].values)
+-    dry_h = mk.a_celdas(ph, jj, ii) < rr.DRY_THRESHOLD
+-    dry_f = mk.a_celdas(pf, jj, ii) < rr.DRY_THRESHOLD
++    dry_h = mk.a_celdas(ph, jj, ii) < rr.DRY_THRESHOLD.values[jj, ii]
++    dry_f = mk.a_celdas(pf, jj, ii) < rr.DRY_THRESHOLD.values[jj, ii]
+     cnt_h = conteos_por_anio_mes(dry_h, ph['time'])[:, MESES - 1]
+     cnt_f = conteos_por_anio_mes(dry_f, pf['time'])[:, MESES - 1]
+     rng = np.random.default_rng(SEED)
+--- original/_cuantificar_censuradas.py
++++ local/_cuantificar_censuradas.py
+@@ -1,7 +1,7 @@
+ """Cuantifica las rachas secas censuradas (tocan el primer o ultimo dia de la ventana) por cuenca.
+ 
+-Usa las mismas reglas que §2.2: NaN interrumpe la racha; umbral 1 mm en CR2MET y R0 = 5.285 mm en
+-ALADIN (criterio i). CR2MET interpolado linealmente se lee del cache de _test_regrillado_conservativo.py.
++Usa las mismas reglas que §2.2: NaN interrumpe la racha; umbral 1 mm en CR2MET y umbral histórico local por celda en
++ALADIN (umbral local principal). CR2MET interpolado linealmente se lee del cache de _test_regrillado_conservativo.py.
+ """
+ import warnings
+ warnings.filterwarnings('ignore')
+@@ -17,7 +17,8 @@
+ ROOT = Path(__file__).resolve().parent
+ CACHE_CR2 = ROOT / '_test_regrillado' / 'cr2met_lineal_vs_area.npz'
+ OUT_CSV = ROOT / '_test_regrillado' / 'rachas_censuradas_por_cuenca.csv'
+-R0 = 5.285
++from umbral_local import campo_umbral
++R0 = campo_umbral()
+ BASINS = {
+     'Loa': (-69.8, -68.2, -24.0, -21.5),
+     'Maipo': (-71.8, -69.8, -34.5, -33.2),
+@@ -37,7 +38,7 @@
+     n_time = pr.shape[0]
+     full, cens = [], []
+     for k in range(pr.shape[1]):
+-        x = np.isfinite(pr[:, k]) & (pr[:, k] < thr)
++        x = np.isfinite(pr[:, k]) & (pr[:, k] < (thr[k] if np.ndim(thr) else thr))
+         dx = np.diff(np.r_[False, x, False].astype(np.int8))
+         s, e = np.where(dx == 1)[0], np.where(dx == -1)[0]
+         edge = (s == 0) | (e == n_time)
+@@ -54,14 +55,14 @@
+     jj, ii = np.where(mask)
+     series = {
+         'CR2MET 1980-2014 (1 mm)': (np.load(CACHE_CR2)['lin'], 1.0),
+-        'ALADIN 1980-2014 (R0)': (load_aladin('historical', '1980-01-01', '2014-12-31', jj, ii), R0),
+-        'ALADIN 2040-2074 (R0)': (load_aladin('ssp585', '2040-01-01', '2074-12-31', jj, ii), R0),
++        'ALADIN 1980-2014 (R0)': (load_aladin('historical', '1980-01-01', '2014-12-31', jj, ii), R0.values[jj, ii]),
++        'ALADIN 2040-2074 (R0)': (load_aladin('ssp585', '2040-01-01', '2074-12-31', jj, ii), R0.values[jj, ii]),
+     }
+     rows = []
+     for name, (pr, thr) in series.items():
+         for b, (lo0, lo1, la0, la1) in BASINS.items():
+             sel = (lon2d[jj, ii] >= lo0) & (lon2d[jj, ii] <= lo1) & (lat2d[jj, ii] >= la0) & (lat2d[jj, ii] <= la1)
+-            full, cens = spells_with_censoring(pr[:, sel], thr)
++            full, cens = spells_with_censoring(pr[:, sel], thr[sel] if np.ndim(thr) else thr)
+             rows.append({
+                 'serie': name, 'cuenca': b, 'celdas': int(sel.sum()),
+                 'rachas_completas': full.size, 'censuradas': cens.size,
+--- original/_generar_fig05_mapas_persistencia.py
++++ local/_generar_fig05_mapas_persistencia.py
+@@ -1,6 +1,6 @@
+-"""Figura 5: mapas de persistencia de dry spells, criterio i (CR2MET regrillado, ALADIN historico y diferencia), 1980-2014.
++"""Figura 5: mapas de persistencia de dry spells, umbral local principal (CR2MET regrillado, ALADIN historico y diferencia), 1980-2014.
+ 
+-Los tres paneles de cada fila (CR2MET, ALADIN y Delta) muestran las mismas celdas: las 3 526 con al menos 30 rachas en ambos productos.
++Los tres paneles de cada fila (CR2MET, ALADIN y Delta) muestran las mismas celdas: las celdas con al menos 30 rachas en ambos productos.
+ Dibuja la duracion media y el percentil 99 (t99) por celda (>= 30 rachas, rachas censuradas excluidas) leidos de la cache
+ _pregunta7_outputs/metrics_integrado_cache.npz que genera _run_pregunta7_bootstrap.py. No recalcula nada.
+ Las celdas de Chile de la grilla ALADIN CHP12 recibida cubren 17,7-45,9 S: el mapa se recorta a esa zona.
+@@ -60,7 +60,7 @@
+         ('t99', 't99 (días)', 'Δ t99 (días)'),
+     ]
+     col_titles = ['CR2MET', 'ALADIN histórico', 'Δ = ALADIN − CR2MET']
+-    # Los tres paneles de cada fila usan las mismas celdas: Chile y >= 30 rachas en CR2MET y en ALADIN (3 526 celdas).
++    # Los tres paneles de cada fila usan las mismas celdas: Chile y >= 30 rachas en CR2MET y en ALADIN (cantidad determinada por los datos).
+     mask = maps['chile_mask']
+ 
+     fig = plt.figure(figsize=figsize)
+--- original/_generar_figS1_sensibilidad_umbral.py
++++ local/_generar_figS1_sensibilidad_umbral.py
+@@ -68,7 +68,7 @@
+         durs[name] = {
+             'CR2MET 1 mm': f6.extract_basin_spell_records(pr_cr2_m, f6.TAU_CR2MET_REF, bm),
+             'ALADIN 1 mm': f6.extract_basin_spell_records(pr_ala_m, f6.TAU_CR2MET_REF, bm),
+-            'ALADIN R0 global': f6.extract_basin_spell_records(pr_ala_m, f6.TAU_ALADIN_DOMINIO, bm),
++            'ALADIN R0 global': f6.extract_basin_spell_records(pr_ala_m, 5.285, bm),
+             'ALADIN R0 local': f6.extract_basin_spell_records(pr_ala_m, r0_local, bm),
+         }
+     OUT.mkdir(exist_ok=True)
+--- original/_generar_figS2_mapa_R0_local.py
++++ local/_generar_figS2_mapa_R0_local.py
+@@ -50,7 +50,7 @@
+           f'sin solucion: {int((chile & ~np.isfinite(r0)).sum())}')
+     print(f'R0 local: mediana {np.median(vals):.2f} | p10 {np.percentile(vals, 10):.2f} | '
+           f'p90 {np.percentile(vals, 90):.2f} | min {vals.min():.2f} | max {vals.max():.2f} mm/d')
+-    print(f'% pixeles con R0 local < {f6.TAU_ALADIN_DOMINIO}: {np.mean(vals < f6.TAU_ALADIN_DOMINIO) * 100:.1f}')
++    print(f'% pixeles con R0 local < {5.285}: {np.mean(vals < 5.285) * 100:.1f}')
+ 
+     fig = plt.figure(figsize=(5.2, 10))
+     ax = plt.axes(projection=ccrs.PlateCarree())
+@@ -58,10 +58,10 @@
+     ax.add_feature(cfeature.COASTLINE.with_scale('10m'), linewidth=0.6)
+     ax.add_feature(cfeature.BORDERS.with_scale('10m'), linestyle=':', linewidth=0.6)
+     pcm = ax.pcolormesh(lon, lat, np.where(valid, r0, np.nan), cmap='YlOrRd',
+-                        vmin=0, vmax=14, shading='auto', transform=ccrs.PlateCarree())
++                        vmin=0, vmax=float(np.ceil(vals.max())), shading='auto', transform=ccrs.PlateCarree())
+     cb = fig.colorbar(pcm, ax=ax, orientation='horizontal', pad=0.03, fraction=0.04, shrink=0.9)
+     cb.set_label('R₀ local de ALADIN (mm/día)')
+-    cb.ax.axvline(f6.TAU_ALADIN_DOMINIO, color='k', lw=1.5)
++    cb.ax.axvline(5.285, color='k', lw=1.5)
+     gl = ax.gridlines(draw_labels=True, linewidth=0.3, alpha=0.4)
+     gl.top_labels = gl.right_labels = False
+     ax.set_title('R₀ local de ALADIN (1980–2014)', fontweight='bold')
+--- original/_generar_fig_rr_regiones.py
++++ local/_generar_fig_rr_regiones.py
+@@ -1,7 +1,7 @@
+ """Figura de los risk ratios RR(D) = N_fut(t >= D) / N_hist(t >= D) por region, version 2x2 con eje y logaritmico.
+ 
+ Lee outputs_pregunta5_aladin/results.json (lo genera _run_pregunta5_aladin.py: ALADIN SSP5-8.5 2040-2074 frente a 1980-2014,
+-R0 = 5,285 mm, rachas con inicio mar-nov, IC95 por bootstrap de anios). No recalcula nada.
++umbral histórico local por celda, rachas con inicio mar-nov, IC95 por bootstrap de anios). No recalcula nada.
+ 
+ Elementos: eje y logaritmico (un aumento y una disminucion de igual factor quedan a la misma distancia de 1); letras (a)-(d); banda
+ IC95 solo donde ninguna replica del bootstrap se descarto (N_hist* = 0); donde se descartaron replicas el punto es un circulo hueco y
+--- original/_generar_pregunta9_pdf_loglog_cuencas.py
++++ local/_generar_pregunta9_pdf_loglog_cuencas.py
+@@ -26,7 +26,8 @@
+ FUT_START, FUT_END = '2040-01-01', '2074-12-31'
+ FUTURE_SCENARIO = 'ssp585'
+ TAU_CR2MET_REF = 1.0
+-TAU_ALADIN_DOMINIO = 5.285
++from umbral_local import campo_umbral
++TAU_ALADIN_DOMINIO = campo_umbral()
+ BISECTION_TAU_MAX, BISECTION_TOL = 15.0, 1e-4
+ PDF_BINS, MIN_DURATION = 25, 1
+ EXCLUDE_BOUNDARY_SPELLS = True
+@@ -44,7 +45,7 @@
+     'ALADIN (futuro)': {'color': 'crimson',   'ls': '--', 'lw': 2.0},
+ }
+ 
+-SCEN_TITLE = 'Criterio i — R0 global (5.285 mm en ALADIN)'
++SCEN_TITLE = 'Umbral local por celda, calibrado en 1980–2014 y fijo en el futuro'
+ 
+ 
+ def load_chile_geometry():
+@@ -97,9 +98,13 @@
+     if not np.isfinite(target_fraction):
+         return np.nan
+     f0, fmax = wet_fraction_1d(pr_series, 0.0), wet_fraction_1d(pr_series, BISECTION_TAU_MAX)
++    upper = BISECTION_TAU_MAX
++    if target_fraction < fmax - BISECTION_TOL:
++        upper = float(np.nextafter(np.nanmax(pr_series), np.inf))
++        fmax = wet_fraction_1d(pr_series, upper)
+     if target_fraction > f0 + BISECTION_TOL or target_fraction < fmax - BISECTION_TOL:
+         return np.nan
+-    lo, hi = 0.0, BISECTION_TAU_MAX
++    lo, hi = 0.0, upper
+     for _ in range(80):
+         mid = 0.5 * (lo + hi)
+         fmid = wet_fraction_1d(pr_series, mid)
+--- original/_referencia_markov_rr_regiones.py
++++ local/_referencia_markov_rr_regiones.py
+@@ -6,7 +6,7 @@
+   H  : parametros del historico (1980-2014)
+   F  : parametros del futuro (2040-2074, SSP5-8.5): cambian frecuencia y persistencia de 1.er orden
+   F0 : frecuencia seca del FUTURO por mes, con la persistencia (rho = p_dd - p_wd) del HISTORICO: solo frecuencia
+-Con las mismas reglas de rachas que _run_pregunta5_aladin.py (R0 = 5,285 mm; censuradas excluidas; inicio mar-nov)
++Con las mismas reglas de rachas que _run_pregunta5_aladin.py (umbral histórico local por celda; censuradas excluidas; inicio mar-nov)
+ se obtienen N_H, N_F, N_F0 y
+   RR_frec   = N_F0 / N_H   (cambio esperado si solo cambia la frecuencia de dias secos)
+   RR_markov = N_F  / N_H   (frecuencia + persistencia de 1.er orden)
+@@ -108,8 +108,8 @@
+     pf = rr.open_aladin_period(rr.FUT_START, rr.FUT_END, scenario='ssp585')
+     jj, ii, reg = celdas_de_regiones(ph['lat'].values, ph['lon'].values)
+     print('Celdas por region:', {n: int((reg == k).sum()) for k, n in enumerate(REGIONES)}, flush=True)
+-    dry_h = a_celdas(ph, jj, ii) < R0
+-    dry_f = a_celdas(pf, jj, ii) < R0
++    dry_h = a_celdas(ph, jj, ii) < R0.values[jj, ii]
++    dry_f = a_celdas(pf, jj, ii) < R0.values[jj, ii]
+     mh, mf = ph['time'].dt.month.values, pf['time'].dt.month.values
+     n = dry_h.shape[0]
+     assert dry_f.shape[0] == n
+--- original/_run_pregunta5_aladin.py
++++ local/_run_pregunta5_aladin.py
+@@ -28,7 +28,8 @@
+ FUT_END = '2074-12-31'
+ FUTURE_SCENARIO = 'ssp585'
+ 
+-DRY_THRESHOLD = 5.285  # tau* ALADIN (Pregunta 6)
++from umbral_local import campo_umbral
++DRY_THRESHOLD = campo_umbral()  # histórico fijo, usado también por Markov y contraste
+ EVENT_THRESHOLD = 20
+ BOOTSTRAP_ITER = 1000
+ RANDOM_SEED = 42
+@@ -231,8 +232,8 @@
+ def main():
+     global DRY_THRESHOLD, FUTURE_SCENARIO
+     parser = argparse.ArgumentParser()
+-    parser.add_argument('--umbral', type=float, default=DRY_THRESHOLD,
+-                        help='Umbral de dia humedo ALADIN (mm/dia). Por defecto R0 global.')
++    parser.add_argument('--umbral', type=float, default=5.285,
++                        help='Umbral de dia humedo ALADIN (mm/dia). Por defecto campo local histórico. El valor 5.285 actúa como selector heredado de ese campo.')
+     parser.add_argument('--escenario', default=FUTURE_SCENARIO, choices=['ssp585', 'ssp370'],
+                         help='Escenario futuro. Por defecto SSP5-8.5 (analisis principal).')
+     args = parser.parse_args()
+@@ -241,6 +242,8 @@
+     suffix = ('' if DRY_THRESHOLD == 5.285 else f'_{DRY_THRESHOLD:g}mm') + \
+         ('' if FUTURE_SCENARIO == 'ssp585' else f'_{FUTURE_SCENARIO}')
+ 
++    if args.umbral == 5.285:
++        DRY_THRESHOLD = campo_umbral()
+     print('1/4: Cargando ALADIN historico y futuro...')
+     pr_hist = open_aladin_period(HIST_START, HIST_END)
+     pr_fut = open_aladin_period(FUT_START, FUT_END, scenario=FUTURE_SCENARIO)
+@@ -256,7 +259,7 @@
+     n_y1 = PERIOD_1[1] - PERIOD_1[0] + 1
+     n_y2 = PERIOD_2[1] - PERIOD_2[0] + 1
+     print(f'Periodo hist: {PERIOD_1[0]}-{PERIOD_1[1]} ({n_y1} anos) | futuro: {PERIOD_2[0]}-{PERIOD_2[1]} ({n_y2} anos, {FUTURE_SCENARIO})')
+-    print(f'Dia seco ALADIN: pr < {DRY_THRESHOLD} mm/dia | Mar-Nov')
++    print('Dia seco ALADIN: umbral local por celda (o sensibilidad CLI) | Mar-Nov')
+ 
+     print('2/4: Extrayendo dry spells por region...')
+     region_data = {}
+--- original/_run_pregunta7_bootstrap.py
++++ local/_run_pregunta7_bootstrap.py
+@@ -86,6 +86,9 @@
+         return np.nan
+     f0 = wet_fraction_1d(pr_series, 0.0)
+     fmax = wet_fraction_1d(pr_series, tau_max)
++    if target_fraction < fmax - tol:
++        tau_max = float(np.nextafter(np.nanmax(pr_series), np.inf))
++        fmax = wet_fraction_1d(pr_series, tau_max)
+     if target_fraction > f0 + tol or target_fraction < fmax - tol:
+         return np.nan
+     lo, hi = 0.0, tau_max
+@@ -342,7 +345,7 @@
+             ala = full_period_metric(groups_ala, mask_stacked, metric_key)
+             resumen += resumen_rows(scen_key, 'Duracion media' if metric_key == 'mean' else 't99', cr2, ala)
+             maps[metric_key] = (cr2.reshape(ny, nx), ala.reshape(ny, nx))
+-        if scen_key == 'A_opcion_B_integrado':
++        if scen_key == 'C_umbral_local':
+             MAPS_DIR.mkdir(exist_ok=True)
+             np.savez(
+                 MAPS_CACHE,
+--- original/_sensibilidad_minimo_rachas.py
++++ local/_sensibilidad_minimo_rachas.py
+@@ -6,7 +6,7 @@
+ el resultado con 30: se informa como sensibilidad, no como analisis principal.
+ 
+ Reutiliza las funciones de _run_pregunta7_bootstrap.py (misma mascara, mismo regrillado, mismas reglas de rachas) y la
+-significancia por celda ya calculada (resultados_tesis/bootstrap_por_celda_A_opcion_B_integrado_*.npz): el bootstrap de cada
++significancia por celda ya calculada (resultados_tesis/bootstrap_por_celda_C_umbral_local_*.npz): el bootstrap de cada
+ celda no depende de que otras celdas se incluyan, por lo que los porcentajes de significancia son los de ese mismo analisis
+ restringidos a las celdas retenidas.
+ 
+@@ -25,6 +25,7 @@
+ import xarray as xr
+ 
+ import _run_pregunta7_bootstrap as b
++from umbral_local import campo_umbral
+ 
+ ROOT = Path(__file__).resolve().parent
+ OUT = ROOT / 'resultados_tesis' / 'sensibilidad_minimo_rachas.csv'
+@@ -48,7 +49,7 @@
+         dims=['y', 'x'])
+     flat = mask.stack(cell=('y', 'x')).values
+     g_cr, _ = b.extract_spell_groups_by_year(pr_cr2met.where(mask), b.TAU_CR2MET_REF, mask)
+-    g_al, _ = b.extract_spell_groups_by_year(pr_aladin.where(mask), b.TAU_ALADIN_DOMINIO, mask)
++    g_al, _ = b.extract_spell_groups_by_year(pr_aladin.where(mask), campo_umbral(), mask)
+     n_cr, n_al = conteos(g_cr), conteos(g_al)
+     ny, nx = mask_bool.shape
+     n_min = np.minimum(n_cr, n_al).reshape(ny, nx)
+@@ -63,7 +64,7 @@
+         assert np.allclose(rec_cr, medias[m][0], equal_nan=True, atol=1e-3), f'{m}: CR2MET difiere de la cache'
+         assert np.allclose(rec_al, medias[m][1], equal_nan=True, atol=1e-3), f'{m}: ALADIN difiere de la cache'
+ 
+-    boot = {m: np.load(BOOT / f'bootstrap_por_celda_A_opcion_B_integrado_{m}.npz') for m in ('mean', 't99')}
++    boot = {m: np.load(BOOT / f'bootstrap_por_celda_C_umbral_local_{m}.npz') for m in ('mean', 't99')}
+     lat = z['lat']
+     comunes = z['chile_mask'] & np.isfinite(medias['mean'][0]) & np.isfinite(medias['mean'][1]) \
+         & np.isfinite(medias['t99'][0]) & np.isfinite(medias['t99'][1])
+--- original/_test_regrillado_conservativo.py
++++ local/_test_regrillado_conservativo.py
+@@ -175,7 +175,7 @@
+         durs_cr = spells_per_cell(cr, TAU_CR2)
+         mc, tc = metrics(durs_cr)
+         m_ala['iii_' + name] = metrics(spells_per_cell(pr_ala, local_r0(cr, pr_ala)))
+-        for crit, (ma, ta) in (('i', m_ala['i']), ('ii', m_ala['ii']), ('iii', m_ala['iii_' + name])):
++        for crit, (ma, ta) in (('i', m_ala['iii_' + name]), ('ii', m_ala['ii']), ('iii', m_ala['iii_' + name]), ('global', m_ala['i'])):
+             for metric, a, c in (('media', ma, mc), ('t99', ta, tc)):
+                 ok = common & np.isfinite(a) & np.isfinite(c)
+                 rows.append({'cr2met': name, 'criterio': crit, 'metrica': metric,

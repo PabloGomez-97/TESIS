@@ -1,0 +1,7 @@
+Criterio,Métrica,CR2MET (días),ALADIN (días),Δ medio (días),Δ mediano (días),% celdas ALADIN < CR2MET (sig.),% celdas ALADIN > CR2MET (sig.),Celdas
+"i — R0 global (3,668 mm)",Duración media,28.8,28.7,-0.1,-1.1,61.0,12.4,3575
+"i — R0 global (3,668 mm)",t99,150.2,152.3,2.1,-2.8,23.6,9.6,3575
+ii — 0.1 mm en ambos,Duración media,29.0,7.7,-21.4,-7.7,99.0,0.0,3583
+ii — 0.1 mm en ambos,t99,151.2,42.8,-108.4,-50.5,95.9,0.0,3583
+iii — R0 local por píxel,Duración media,29.0,24.8,-4.2,-1.5,52.7,0.9,3583
+iii — R0 local por píxel,t99,151.2,139.8,-11.4,-2.0,15.2,11.2,3583

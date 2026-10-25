@@ -1,0 +1,5 @@
+region,celdas,meses,frec_seca_hist,frec_seca_fut,frec_seca_delta,frec_seca_delta_IC95_inf,frec_seca_delta_IC95_sup,frec_seca_IC_incluye_0,p_dd_hist,p_dd_fut,p_dd_delta,p_dd_delta_IC95_inf,p_dd_delta_IC95_sup,p_dd_IC_incluye_0,rho_hist,rho_fut,rho_delta,rho_delta_IC95_inf,rho_delta_IC95_sup,rho_IC_incluye_0
+Coquimbo,239,mar-nov,0.84315,0.86591,0.02276,0.00808,0.03704,False,0.89843,0.91204,0.0136,0.00561,0.02104,False,0.3234,0.30328,-0.02011,-0.04994,0.01117,True
+O'Higgins,110,mar-nov,0.7102,0.74586,0.03566,0.0156,0.05221,False,0.81308,0.83601,0.02294,0.00858,0.03521,False,0.31577,0.32261,0.00683,-0.02225,0.03469,True
+La Araucanía,223,mar-nov,0.51833,0.55877,0.04044,0.01939,0.05957,False,0.69223,0.72488,0.03264,0.01397,0.05201,False,0.35382,0.35997,0.00615,-0.018,0.02907,True
+Los Lagos,324,mar-nov,0.40387,0.42975,0.02588,0.00655,0.0445,False,0.62843,0.66093,0.0325,0.00905,0.05512,False,0.3693,0.39249,0.02318,-0.00076,0.04605,True

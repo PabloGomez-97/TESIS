@@ -1,0 +1,12 @@
+{
+  "repo_origen": "/Users/pablogomez/Documents/GitHub/TESIS",
+  "fecha": "2026-10-25",
+  "referencia_cr2met_mm": 0.1,
+  "comparacion_principal": "local 1 mm frente a local 0,1 mm",
+  "umbral_global_auxiliar_mm": 3.668,
+  "conservados": [
+    "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24",
+    "/Users/pablogomez/Documents/GitHub/TESIS/umbral_0p1mm_nacional",
+    "/Users/pablogomez/Documents/GitHub/TESIS"
+  ]
+}

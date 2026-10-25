@@ -1,0 +1,755 @@
+[
+  {
+    "doi_solicitado": "10.1002/wcc.147",
+    "doi": "10.1002/wcc.147",
+    "titulo": "Indices for monitoring changes in extremes based on daily temperature and precipitation data",
+    "revista": "WIREs Climate Change",
+    "autores": [
+      "Xuebin Zhang",
+      "Lisa Alexander",
+      "Gabriele C. Hegerl",
+      "Philip Jones",
+      "Albert Klein Tank",
+      "Thomas C. Peterson",
+      "Blair Trewin",
+      "Francis W. Zwiers"
+    ],
+    "publicado": [
+      [
+        2011,
+        10,
+        31
+      ]
+    ],
+    "publicado_online": [
+      [
+        2011,
+        10,
+        31
+      ]
+    ],
+    "volumen": "2",
+    "numero": "6",
+    "paginas": "851-870",
+    "articulo": null,
+    "url": "https://doi.org/10.1002/wcc.147",
+    "links": [
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwcc.147",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fwcc.147",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/wcc.147",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/wcc.147",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://wires.onlinelibrary.wiley.com/doi/pdf/10.1002/wcc.147",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1029/2005JD006290",
+    "doi": "10.1029/2005jd006290",
+    "titulo": "Global observed changes in daily climate extremes of temperature and precipitation",
+    "revista": "Journal of Geophysical Research: Atmospheres",
+    "autores": [
+      "L. V. Alexander",
+      "X. Zhang",
+      "T. C. Peterson",
+      "J. Caesar",
+      "B. Gleason",
+      "A. M. G. Klein Tank",
+      "M. Haylock",
+      "D. Collins",
+      "B. Trewin",
+      "F. Rahimzadeh",
+      "A. Tagipour",
+      "K. Rupa Kumar",
+      "J. Revadekar",
+      "G. Griffiths",
+      "L. Vincent",
+      "D. B. Stephenson",
+      "J. Burn",
+      "E. Aguilar",
+      "M. Brunet",
+      "M. Taylor",
+      "M. New",
+      "P. Zhai",
+      "M. Rusticucci",
+      "J. L. Vazquez‐Aguirre"
+    ],
+    "publicado": [
+      [
+        2006,
+        3,
+        15
+      ]
+    ],
+    "publicado_online": [
+      [
+        2006,
+        3,
+        15
+      ]
+    ],
+    "volumen": "111",
+    "numero": "D5",
+    "paginas": null,
+    "articulo": "2005JD006290",
+    "url": "https://doi.org/10.1029/2005jd006290",
+    "links": [
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2005JD006290",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2005JD006290",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1038/srep04364",
+    "doi": "10.1038/srep04364",
+    "titulo": "The key role of dry days in changing regional climate and precipitation regimes",
+    "revista": "Scientific Reports",
+    "autores": [
+      "Suraj D. Polade",
+      "David W. Pierce",
+      "Daniel R. Cayan",
+      "Alexander Gershunov",
+      "Michael D. Dettinger"
+    ],
+    "publicado": [
+      [
+        2014,
+        3,
+        13
+      ]
+    ],
+    "publicado_online": [
+      [
+        2014,
+        3,
+        13
+      ]
+    ],
+    "volumen": "4",
+    "numero": "1",
+    "paginas": null,
+    "articulo": "4364",
+    "url": "https://doi.org/10.1038/srep04364",
+    "links": [
+      {
+        "URL": "https://www.nature.com/articles/srep04364.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/srep04364",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/srep04364.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1038/s41586-024-07887-y",
+    "estado": "verificado",
+    "doi": "10.1038/s41586-024-07887-y",
+    "titulo": "Observation-constrained projections reveal longer-than-expected dry spells",
+    "revista": "Nature",
+    "autores": [
+      "Irina Y. Petrova",
+      "Diego G. Miralles",
+      "Florent Brient",
+      "Markus G. Donat",
+      "Seung-Ki Min",
+      "Yeon-Hee Kim",
+      "Margot Bador"
+    ],
+    "publicado": [
+      [
+        2024,
+        9,
+        18
+      ]
+    ],
+    "publicado_online": [
+      [
+        2024,
+        9,
+        18
+      ]
+    ],
+    "volumen": "633",
+    "numero": "8030",
+    "paginas": "594-600",
+    "articulo": null,
+    "url": "https://doi.org/10.1038/s41586-024-07887-y",
+    "links": [
+      {
+        "URL": "https://www.nature.com/articles/s41586-024-07887-y.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41586-024-07887-y",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41586-024-07887-y.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ]
+  },
+  {
+    "doi_solicitado": "10.1002/ael2.70037",
+    "doi": "10.1002/ael2.70037",
+    "titulo": "Shifting dry spells in Central Chile: Implications for agricultural water planning",
+    "revista": "Agricultural &amp; Environmental Letters",
+    "autores": [
+      "Daniela Latoja",
+      "Diego Rivera",
+      "Mario Lillo",
+      "Álex Godoy‐Faúndez"
+    ],
+    "publicado": [
+      [
+        2025,
+        10,
+        22
+      ]
+    ],
+    "publicado_online": [
+      [
+        2025,
+        10,
+        22
+      ]
+    ],
+    "volumen": "10",
+    "numero": "2",
+    "paginas": null,
+    "articulo": "e70037",
+    "url": "https://doi.org/10.1002/ael2.70037",
+    "links": [
+      {
+        "URL": "https://acsess.onlinelibrary.wiley.com/doi/pdf/10.1002/ael2.70037",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1007/s41748-024-00526-6",
+    "doi": "10.1007/s41748-024-00526-6",
+    "titulo": "Decadal Variability of Dry Days in Central Chile",
+    "revista": "Earth Systems and Environment",
+    "autores": [
+      "Daniela Latoja",
+      "Mario Lillo-Saavedra",
+      "Consuelo Gonzalo-Martin",
+      "Alex Godoy-Faúndez",
+      "Marcelo Somos-Valenzuela",
+      "Diego Rivera"
+    ],
+    "publicado": [
+      [
+        2024,
+        11,
+        21
+      ]
+    ],
+    "publicado_online": [
+      [
+        2024,
+        11,
+        21
+      ]
+    ],
+    "volumen": "9",
+    "numero": "2",
+    "paginas": "1117-1134",
+    "articulo": null,
+    "url": "https://doi.org/10.1007/s41748-024-00526-6",
+    "links": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s41748-024-00526-6.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s41748-024-00526-6/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s41748-024-00526-6.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1088/1748-9326/ab7d05",
+    "doi": "10.1088/1748-9326/ab7d05",
+    "titulo": "Extreme dry and wet spells face changes in their duration and timing",
+    "revista": "Environmental Research Letters",
+    "autores": [
+      "Korbinian Breinl",
+      "Giuliano Di Baldassarre",
+      "Maurizio Mazzoleni",
+      "David Lun",
+      "Giulia Vico"
+    ],
+    "publicado": [
+      [
+        2020,
+        7,
+        1
+      ]
+    ],
+    "publicado_online": [
+      [
+        2020,
+        7,
+        6
+      ]
+    ],
+    "volumen": "15",
+    "numero": "7",
+    "paginas": "074040",
+    "articulo": null,
+    "url": "https://doi.org/10.1088/1748-9326/ab7d05",
+    "links": [
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05",
+        "content-type": "text/html",
+        "content-version": "am",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "similarity-checking"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      },
+      {
+        "URL": "https://iopscience.iop.org/article/10.1088/1748-9326/ab7d05/pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1016/j.jhydrol.2022.127645",
+    "doi": "10.1016/j.jhydrol.2022.127645",
+    "titulo": "Intermittency analysis of dry spell magnitude and timing using different spell definitions",
+    "revista": "Journal of Hydrology",
+    "autores": [
+      "Eva Paton"
+    ],
+    "publicado": [
+      [
+        2022,
+        5
+      ]
+    ],
+    "publicado_online": null,
+    "volumen": "608",
+    "numero": null,
+    "paginas": "127645",
+    "articulo": "127645",
+    "url": "https://doi.org/10.1016/j.jhydrol.2022.127645",
+    "links": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0022169422002207?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0022169422002207?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1175/JHM-D-15-0100.1",
+    "doi": "10.1175/jhm-d-15-0100.1",
+    "titulo": "Seasonal and Interannual Variability of Wet and Dry Spells over Two Urban Regions in the Western Maritime Continent",
+    "revista": "Journal of Hydrometeorology",
+    "autores": [
+      "Pradeep V. Mandapaka",
+      "Xiaosheng Qin",
+      "Edmond Yat-Man Lo"
+    ],
+    "publicado": [
+      [
+        2016,
+        5,
+        1
+      ]
+    ],
+    "publicado_online": [
+      [
+        2016,
+        5,
+        20
+      ]
+    ],
+    "volumen": "17",
+    "numero": "5",
+    "paginas": "1579-1600",
+    "articulo": null,
+    "url": "https://doi.org/10.1175/jhm-d-15-0100.1",
+    "links": [
+      {
+        "URL": "http://journals.ametsoc.org/jhm/article-pdf/17/5/1579/4136797/jhm-d-15-0100_1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://journals.ametsoc.org/jhm/article-pdf/17/5/1579/4136797/jhm-d-15-0100_1.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.3354/cr031035",
+    "doi": "10.3354/cr031035",
+    "titulo": "Defining dry/wet spells for point observations, observed area averages, and regional climate model gridboxes in Europe",
+    "revista": "Climate Research",
+    "autores": [
+      "L Bärring",
+      "T Holt",
+      "ML Linderson",
+      "M Radziejewski",
+      "M Moriondo",
+      "JP Palutikof"
+    ],
+    "publicado": [
+      [
+        2006,
+        6,
+        26
+      ]
+    ],
+    "publicado_online": null,
+    "volumen": "31",
+    "numero": null,
+    "paginas": "35-49",
+    "articulo": null,
+    "url": "https://doi.org/10.3354/cr031035",
+    "links": [
+      {
+        "URL": "http://www.int-res.com/articles/cr2006/31/c031p035.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.5194/hess-25-3493-2021",
+    "doi": "10.5194/hess-25-3493-2021",
+    "titulo": "Comparison of statistical downscaling methods for climate change impact analysis on precipitation-driven drought",
+    "revista": "Hydrology and Earth System Sciences",
+    "autores": [
+      "Hossein Tabari",
+      "Santiago Mendoza Paz",
+      "Daan Buekenhout",
+      "Patrick Willems"
+    ],
+    "publicado": [
+      [
+        2021,
+        6,
+        21
+      ]
+    ],
+    "publicado_online": [
+      [
+        2021,
+        6,
+        21
+      ]
+    ],
+    "volumen": "25",
+    "numero": "6",
+    "paginas": "3493-3517",
+    "articulo": null,
+    "url": "https://doi.org/10.5194/hess-25-3493-2021",
+    "links": [
+      {
+        "URL": "https://hess.copernicus.org/articles/25/3493/2021/hess-25-3493-2021.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1175/JCLI-D-11-00498.1",
+    "doi": "10.1175/jcli-d-11-00498.1",
+    "titulo": "Changes in the Duration of European Wet and Dry Spells during the Last 60 Years",
+    "revista": "Journal of Climate",
+    "autores": [
+      "Olga Zolina",
+      "Clemens Simmer",
+      "Konstantin Belyaev",
+      "Sergey K. Gulev",
+      "Peter Koltermann"
+    ],
+    "publicado": [
+      [
+        2013,
+        3,
+        15
+      ]
+    ],
+    "publicado_online": null,
+    "volumen": "26",
+    "numero": "6",
+    "paginas": "2022-2047",
+    "articulo": null,
+    "url": "https://doi.org/10.1175/jcli-d-11-00498.1",
+    "links": [
+      {
+        "URL": "https://journals.ametsoc.org/view/journals/clim/26/6/jcli-d-11-00498.1.xml",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://journals.ametsoc.org/jcli/article-pdf/26/6/2022/4002407/jcli-d-11-00498_1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://journals.ametsoc.org/downloadpdf/journals/clim/26/6/jcli-d-11-00498.1.xml",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://journals.ametsoc.org/downloadpdf/journals/clim/26/6/jcli-d-11-00498.1.xml",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.1175/JCLI-D-21-0590.1",
+    "doi": "10.1175/jcli-d-21-0590.1",
+    "titulo": "Exploratory Precipitation Metrics: Spatiotemporal Characteristics, Process-Oriented, and Phenomena-Based",
+    "revista": "Journal of Climate",
+    "autores": [
+      "L. Ruby Leung",
+      "William R. Boos",
+      "Jennifer L. Catto",
+      "Charlotte A. DeMott",
+      "Gill M. Martin",
+      "J. David Neelin",
+      "Travis A. O’Brien",
+      "Shaocheng Xie",
+      "Zhe Feng",
+      "Nicholas P. Klingaman",
+      "Yi-Hung Kuo",
+      "Robert W. Lee",
+      "Cristian Martinez-Villalobos",
+      "S. Vishnu",
+      "Matthew D. K. Priestley",
+      "Cheng Tao",
+      "Yang Zhou"
+    ],
+    "publicado": [
+      [
+        2022,
+        6,
+        15
+      ]
+    ],
+    "publicado_online": null,
+    "volumen": "35",
+    "numero": "12",
+    "paginas": "3659-3686",
+    "articulo": null,
+    "url": "https://doi.org/10.1175/jcli-d-21-0590.1",
+    "links": [
+      {
+        "URL": "https://journals.ametsoc.org/view/journals/clim/35/12/JCLI-D-21-0590.1.xml",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.ametsoc.org/downloadpdf/journals/clim/35/12/JCLI-D-21-0590.1.xml",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://journals.ametsoc.org/downloadpdf/journals/clim/35/12/JCLI-D-21-0590.1.xml",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  },
+  {
+    "doi_solicitado": "10.5194/nhess-21-1051-2021",
+    "doi": "10.5194/nhess-21-1051-2021",
+    "titulo": "Wet and dry spells in Senegal: comparison of detection based  on satellite products, reanalysis, and in situ estimates",
+    "revista": "Natural Hazards and Earth System Sciences",
+    "autores": [
+      "Cheikh Modou Noreyni Fall",
+      "Christophe Lavaysse",
+      "Mamadou Simina Drame",
+      "Geremy Panthou",
+      "Amadou Thierno Gaye"
+    ],
+    "publicado": [
+      [
+        2021,
+        3,
+        19
+      ]
+    ],
+    "publicado_online": [
+      [
+        2021,
+        3,
+        19
+      ]
+    ],
+    "volumen": "21",
+    "numero": "3",
+    "paginas": "1051-1069",
+    "articulo": null,
+    "url": "https://doi.org/10.5194/nhess-21-1051-2021",
+    "links": [
+      {
+        "URL": "https://nhess.copernicus.org/articles/21/1051/2021/nhess-21-1051-2021.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "estado": "verificado"
+  }
+]

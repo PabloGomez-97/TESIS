@@ -1,0 +1,487 @@
+--- local_1mm/_cuantificar_censuradas.py
++++ local_0p1mm/_cuantificar_censuradas.py
+@@ -1,6 +1,6 @@
+ """Cuantifica las rachas secas censuradas (tocan el primer o ultimo dia de la ventana) por cuenca.
+ 
+-Usa las mismas reglas que §2.2: NaN interrumpe la racha; umbral 1 mm en CR2MET y umbral histórico local por celda en
++Usa las mismas reglas que §2.2: NaN interrumpe la racha; umbral 0,1 mm en CR2MET y umbral histórico local por celda en
+ ALADIN (umbral local principal). CR2MET interpolado linealmente se lee del cache de _test_regrillado_conservativo.py.
+ """
+ import warnings
+@@ -54,7 +54,7 @@
+     mask = build_chile_mask_on_aladin_grid(lat2d, lon2d, load_chile_geometry())
+     jj, ii = np.where(mask)
+     series = {
+-        'CR2MET 1980-2014 (1 mm)': (np.load(CACHE_CR2)['lin'], 1.0),
++        'CR2MET 1980-2014 (0.1 mm)': (np.load(CACHE_CR2)['lin'], 0.1),
+         'ALADIN 1980-2014 (R0)': (load_aladin('historical', '1980-01-01', '2014-12-31', jj, ii), R0.values[jj, ii]),
+         'ALADIN 2040-2074 (R0)': (load_aladin('ssp585', '2040-01-01', '2074-12-31', jj, ii), R0.values[jj, ii]),
+     }
+--- local_1mm/_generar_pregunta9_pdf_loglog_cuencas.py
++++ local_0p1mm/_generar_pregunta9_pdf_loglog_cuencas.py
+@@ -25,7 +25,7 @@
+ HIST_START, HIST_END = '1980-01-01', '2014-12-31'
+ FUT_START, FUT_END = '2040-01-01', '2074-12-31'
+ FUTURE_SCENARIO = 'ssp585'
+-TAU_CR2MET_REF = 1.0
++TAU_CR2MET_REF = 0.1
+ from umbral_local import campo_umbral
+ TAU_ALADIN_DOMINIO = campo_umbral()
+ BISECTION_TAU_MAX, BISECTION_TOL = 15.0, 1e-4
+@@ -45,7 +45,7 @@
+     'ALADIN (futuro)': {'color': 'crimson',   'ls': '--', 'lw': 2.0},
+ }
+ 
+-SCEN_TITLE = 'Umbral local por celda, calibrado en 1980–2014 y fijo en el futuro'
++SCEN_TITLE = 'Umbral local por celda · CR2MET 0,1 mm · campo histórico fijo en el futuro'
+ 
+ 
+ def load_chile_geometry():
+--- local_1mm/figura_calibracion_local.py
++++ local_0p1mm/figura_calibracion_local.py
+@@ -5,11 +5,11 @@
+ import matplotlib.pyplot as plt
+ R=Path(__file__).resolve().parent
+ p=R/'paper_figuras';p.mkdir(exist_ok=True)
+-a=R.parent/'referencia_global/paper_figuras/fig03_calibracion_R0_ftau.png'
++a=R.parent/'referencia_global_0p1mm/paper_figuras/fig03_calibracion_R0_ftau.png'
+ (p/'fig03_referencia_umbral_global.png').write_bytes(a.read_bytes())
+ d=pd.read_csv(R/'resultados_tesis/calibracion_local_por_celda.csv')
+ fig,axes=plt.subplots(1,3,figsize=(14,4.5))
+-axes[0].hist(d.umbral_local_mm,bins=40,color='#c16436');axes[0].axvline(5.285,ls='--',color='#436e9b',label='Global = 5,285');axes[0].set(xlabel='Umbral local (mm/día)',ylabel='Celdas');axes[0].legend()
++axes[0].hist(d.umbral_local_mm,bins=40,color='#c16436');axes[0].axvline(3.668,ls='--',color='#436e9b',label='Global = 3,668');axes[0].set(xlabel='Umbral local (mm/día)',ylabel='Celdas');axes[0].legend()
+ for ax,col,title in ((axes[1],'aladin_global_humeda_pct','Umbral global'),(axes[2],'aladin_local_humeda_pct','Umbral local')):
+  ax.scatter(d.cr2met_humeda_pct,d[col],s=3,alpha=.3,color='#436e9b' if col=='aladin_global_humeda_pct' else '#c16436');ax.plot([0,100],[0,100],':',color='black');ax.set(xlim=(0,100),ylim=(0,100),xlabel='CR2MET: días húmedos (%)',ylabel='ALADIN: días húmedos (%)',title=title);ax.set_aspect('equal')
+-fig.suptitle('Calibración histórica por celda · 1980–2014 · CR2MET a 1 mm/día');fig.tight_layout();fig.savefig(p/'fig03_calibracion_R0_ftau.png',dpi=200);plt.close(fig)
++fig.suptitle('Calibración histórica por celda · 1980–2014 · CR2MET a 0,1 mm/día');fig.tight_layout();fig.savefig(p/'fig03_calibracion_R0_ftau.png',dpi=200);plt.close(fig)
+--- local_1mm/diagnostico_regional.py
++++ local_0p1mm/diagnostico_regional.py
+@@ -17,7 +17,7 @@
+         for k,name in enumerate(rr.REGION_SPECS):
+             s=reg==k
+             f=lambda x,thr:100*(x[h][:,s]>=thr).mean()
+-            ref=f(cv,1); fg=f(av,5.285);fl=f(av,t[s])
++            ref=f(cv,0.1); fg=f(av,3.668);fl=f(av,t[s])
+             rows.append(dict(region=name,estacion=season,celdas=int(s.sum()),CR2MET_pct=ref,global_pct=fg,local_pct=fl,exceso_global_pp=fg-ref,exceso_local_pp=fl-ref))
+     pd.DataFrame(rows).to_csv(ROOT/'resultados_tesis/frecuencia_humeda_regiones_comparada.csv',index=False)
+     print(pd.DataFrame(rows).round(4).to_string(index=False))
+--- local_1mm/_generar_figT01_referencia_sin_memoria.py
++++ local_0p1mm/_generar_figT01_referencia_sin_memoria.py
+@@ -1,6 +1,6 @@
+ """Figura del Capítulo 2 (§2.1.3): PDF observada de rachas secas frente a referencias sin memoria.
+ 
+-CR2MET 1980-2014, umbral 1 mm, mismas reglas que §3.2 (se excluyen las rachas censuradas).
++CR2MET 1980-2014, umbral 0,1 mm, mismas reglas que §3.2 (se excluyen las rachas censuradas).
+ Para cada píxel de la ventana se calculan dos referencias y se suman ponderadas por su número de rachas,
+ porque mezclar píxeles con distinta frecuencia de días secos ya produce una cola más pesada que una
+ geométrica única:
+@@ -24,7 +24,7 @@
+ CACHE_CR2 = ROOT / '_test_regrillado' / 'cr2met_lineal_vs_area.npz'
+ OUT_PNG = ROOT / 'paper_figuras' / 'figT01_referencia_sin_memoria.png'
+ OUT_CSV = ROOT / 'paper_figuras' / 'figT01_referencia_sin_memoria.csv'
+-THRESHOLD = 1.0
++THRESHOLD = 0.1
+ N_EDGES = 26
+ N_SIM = 20
+ SEED = 42
+--- local_1mm/_run_pregunta7_bootstrap.py
++++ local_0p1mm/_run_pregunta7_bootstrap.py
+@@ -21,8 +21,8 @@
+ 
+ START_DATE = '1980-01-01'
+ END_DATE = '2014-12-31'
+-TAU_CR2MET_REF = 1.0
+-TAU_ALADIN_DOMINIO = 5.285
++TAU_CR2MET_REF = 0.1
++TAU_ALADIN_DOMINIO = 3.668
+ BISECTION_TAU_MAX = 15.0
+ BISECTION_TOL = 1e-4
+ MIN_SPELLS_FOR_STATS = 30
+--- local_1mm/_generar_fig03_calibracion_R0.py
++++ local_0p1mm/_generar_fig03_calibracion_R0.py
+@@ -1,7 +1,7 @@
+-"""Figura 3: calibracion del umbral R0 de ALADIN frente a CR2MET a 1 mm (1980-2014).
++"""Figura 3: calibracion del umbral R0 de ALADIN frente a CR2MET a 0,1 mm (1980-2014).
+ 
+ Guarda tambien los valores de la calibracion en resultados_tesis/calibracion_R0.json (R0 sin redondear, F de cada producto
+-y F de ALADIN con el R0 redondeado a 3 decimales que usan todos los scripts, 5,285 mm).
++y F de ALADIN con el R0 redondeado a 3 decimales que usan todos los scripts, 3,668 mm).
+ """
+ import warnings
+ warnings.filterwarnings('ignore')
+@@ -22,7 +22,8 @@
+ ROOT = Path(__file__).resolve().parent
+ OUTS = [ROOT / 'paper_figuras' / 'fig03_calibracion_R0_ftau.png']
+ # Con R = 0 todo dia cuenta como humedo (pr >= 0): la curva parte en 0,1 mm para evitar ese artefacto.
+-R_GRID = np.round(np.arange(0.1, 8.0001, 0.05), 3)
++T_CR2 = 0.1  # umbral de dia humedo de CR2MET
++R_GRID = np.round(np.arange(0.05, 8.0001, 0.05), 3)
+ 
+ 
+ def load_chile_geometry():
+@@ -77,8 +78,8 @@
+     ala = pr_ala.values[:, jj, ii]
+     cr2 = pr_cr2.values[:, jj, ii]
+     curve_ala = [domain_fwet(ala, t) for t in R_GRID]
+-    f_cr2_1 = domain_fwet(cr2, 1.0)
+-    f_ala_1 = domain_fwet(ala, 1.0)
++    f_cr2_1 = domain_fwet(cr2, T_CR2)
++    f_ala_1 = domain_fwet(ala, T_CR2)
+ 
+     lo, hi = 0.0, 15.0
+     for _ in range(80):
+@@ -88,12 +89,12 @@
+         else:
+             hi = mid
+     r0 = 0.5 * (lo + hi)
+-    print(f'  F_CR2MET(1 mm) = {f_cr2_1:.2f}% | F_ALADIN(1 mm) = {f_ala_1:.2f}%')
++    print(f'  F_CR2MET(0,1 mm) = {f_cr2_1:.2f}% | F_ALADIN(0,1 mm) = {f_ala_1:.2f}%')
+     print(f'  R0 = {r0:.3f} mm')
+-    r0_usado = 5.285  # valor redondeado que usan todos los scripts (TAU_ALADIN_DOMINIO)
++    r0_usado = 3.668  # valor redondeado que usan todos los scripts (TAU_ALADIN_DOMINIO)
+     calib = {
+-        'periodo': '1980-2014', 'celdas': int(mask.sum()), 'umbral_cr2met_mm': 1.0,
+-        'F_cr2met_1mm_pct': f_cr2_1, 'F_aladin_1mm_pct': f_ala_1, 'exceso_aladin_1mm_pp': f_ala_1 - f_cr2_1,
++        'periodo': '1980-2014', 'celdas': int(mask.sum()), 'umbral_cr2met_mm': T_CR2,
++        'F_cr2met_0p1mm_pct': f_cr2_1, 'F_aladin_0p1mm_pct': f_ala_1, 'exceso_aladin_0p1mm_pp': f_ala_1 - f_cr2_1,
+         'R0_biseccion_mm': r0, 'R0_usado_mm': r0_usado, 'F_aladin_R0_usado_pct': domain_fwet(ala, r0_usado),
+     }
+     out_json = ROOT / 'resultados_tesis' / 'calibracion_R0.json'
+@@ -104,12 +105,12 @@
+     fig, ax = plt.subplots(figsize=(9, 5.5))
+     ax.plot(R_GRID, curve_ala, 'steelblue', lw=2.2, label=r'ALADIN $F(R)$')
+     ax.scatter(
+-        [1.0], [f_ala_1], s=80, facecolors='steelblue', edgecolors='white', linewidth=1.2, zorder=5,
+-        label=f'ALADIN a 1 mm ($F$ = {f_ala_1:.1f} %)'.replace('.', ','),
++        [T_CR2], [f_ala_1], s=80, facecolors='steelblue', edgecolors='white', linewidth=1.2, zorder=5,
++        label=f'ALADIN a 0,1 mm ($F$ = {f_ala_1:.1f} %)'.replace('.', ','),
+     )
+     ax.scatter(
+-        [1.0], [f_cr2_1], s=90, c='firebrick', zorder=5,
+-        label=f'CR2MET a 1 mm ($F$ = {f_cr2_1:.1f} %)'.replace('.', ','),
++        [T_CR2], [f_cr2_1], s=90, c='firebrick', zorder=5,
++        label=f'CR2MET a 0,1 mm ($F$ = {f_cr2_1:.1f} %)'.replace('.', ','),
+     )
+     ax.scatter(
+         [r0], [f_cr2_1], s=100, facecolors='white', edgecolors='firebrick',
+@@ -118,10 +119,10 @@
+     )
+     ax.axhline(f_cr2_1, color='firebrick', ls=':', alpha=0.6)
+     ax.annotate(
+-        '', xy=(1.0, f_cr2_1 + 0.6), xytext=(1.0, f_ala_1 - 0.6),
++        '', xy=(T_CR2, f_cr2_1 + 0.6), xytext=(T_CR2, f_ala_1 - 0.6),
+         arrowprops=dict(arrowstyle='<->', color='0.3', lw=1.3),
+     )
+-    ax.text(1.12, 0.5 * (f_cr2_1 + f_ala_1), f'+{f_ala_1 - f_cr2_1:.1f} p.p.'.replace('.', ',', 1),
++    ax.text(T_CR2 + 0.12, 0.5 * (f_cr2_1 + f_ala_1), f'+{f_ala_1 - f_cr2_1:.1f} p.p.'.replace('.', ',', 1),
+             va='center', fontsize=10, color='0.25')
+     ax.set_xlabel(r'Umbral $R$ (mm día$^{-1}$)')
+     ax.set_ylabel('Fracción media de días húmedos en Chile (%)')
+--- local_1mm/_generar_figS2_mapa_R0_local.py
++++ local_0p1mm/_generar_figS2_mapa_R0_local.py
+@@ -1,7 +1,7 @@
+ """Figura S2: mapa de R0 local de ALADIN (criterio iii, §2.2 y §2.7), 1980-2014.
+ 
+ En cada pixel, R0 local es el umbral que iguala la fraccion de dias humedos de ALADIN a la de
+-CR2MET con 1 mm. Mascara, regrillado y biseccion identicos a la Figura 6 y la Figura S1.
++CR2MET con 0,1 mm. Mascara, regrillado y biseccion identicos a la Figura 6 y la Figura S1.
+ """
+ import warnings
+ warnings.filterwarnings('ignore')
+@@ -50,7 +50,7 @@
+           f'sin solucion: {int((chile & ~np.isfinite(r0)).sum())}')
+     print(f'R0 local: mediana {np.median(vals):.2f} | p10 {np.percentile(vals, 10):.2f} | '
+           f'p90 {np.percentile(vals, 90):.2f} | min {vals.min():.2f} | max {vals.max():.2f} mm/d')
+-    print(f'% pixeles con R0 local < {5.285}: {np.mean(vals < 5.285) * 100:.1f}')
++    print(f'% pixeles con R0 local < {3.668}: {np.mean(vals < 3.668) * 100:.1f}')
+ 
+     fig = plt.figure(figsize=(5.2, 10))
+     ax = plt.axes(projection=ccrs.PlateCarree())
+@@ -61,7 +61,7 @@
+                         vmin=0, vmax=float(np.ceil(vals.max())), shading='auto', transform=ccrs.PlateCarree())
+     cb = fig.colorbar(pcm, ax=ax, orientation='horizontal', pad=0.03, fraction=0.04, shrink=0.9)
+     cb.set_label('R₀ local de ALADIN (mm/día)')
+-    cb.ax.axvline(5.285, color='k', lw=1.5)
++    cb.ax.axvline(3.668, color='k', lw=1.5)
+     gl = ax.gridlines(draw_labels=True, linewidth=0.3, alpha=0.4)
+     gl.top_labels = gl.right_labels = False
+     ax.set_title('R₀ local de ALADIN (1980–2014)', fontweight='bold')
+--- local_1mm/_test_regrillado_conservativo.py
++++ local_0p1mm/_test_regrillado_conservativo.py
+@@ -24,8 +24,8 @@
+ OUT = ROOT / '_test_regrillado'
+ CACHE = OUT / 'cr2met_lineal_vs_area.npz'
+ START, END = '1980-01-01', '2014-12-31'
+-TAU_CR2 = 1.0
+-R0_ACTUAL = 5.285
++TAU_CR2 = 0.1
++R0_ACTUAL = 3.668
+ MIN_SPELLS = 30
+ BASINS = {
+     'Loa': (-69.8, -68.2, -24.0, -21.5),
+@@ -79,13 +79,13 @@
+     for n, f in enumerate(files):
+         with xr.open_dataset(f) as ds:
+             pr = ds['pr'].load()
+-        lin_parts.append(pr.interp(lat=tlat, lon=tlon, method='linear').values.astype(np.float32))
++        lin_parts.append(pr.interp(lat=tlat, lon=tlon, method='linear').values.astype(np.float64))
+         flat = pr.values.reshape(pr.sizes['time'], -1)
+         valid = np.isfinite(flat)
+         s = W @ np.where(valid, flat, 0.0).T
+         c = W @ valid.T.astype(np.float64)
+         with np.errstate(invalid='ignore', divide='ignore'):
+-            area_parts.append(np.where(c > 0, s / c, np.nan).T.astype(np.float32))
++            area_parts.append(np.where(c > 0, s / c, np.nan).T.astype(np.float64))
+         t_parts.append(pd.DatetimeIndex(pr['time'].values).normalize())
+         if n % 60 == 0:
+             print(f'    CR2MET {f.name}', flush=True)
+@@ -132,7 +132,7 @@
+ 
+ def local_r0(pr_cr2, pr_ala):
+     f_t = np.nanmean(np.where(np.isfinite(pr_cr2), pr_cr2 >= TAU_CR2, np.nan), axis=0)
+-    return np.array([find_threshold_for_target_1d(pr_ala[:, k], f_t[k]) for k in range(pr_ala.shape[1])])
++    return np.array([find_threshold_for_target_1d(pr_ala[:, k], f_t[k]) for k in range(pr_ala.shape[1])], dtype=np.float32)
+ 
+ 
+ def main():
+@@ -153,6 +153,16 @@
+         cr_lin, cr_area, n_inside = build_cr2met_versions(cells, lat2d, lon2d, blat, blon, dates)
+         np.savez(CACHE, lin=cr_lin, area=cr_area, n_inside=n_inside)
+ 
++    # Comprobar clasificación canónica: el redondeo a float32 cerca de 0,1 mm puede cambiar días.
++    from umbral_local import campo_umbral
++    canonical = campo_umbral().values[jj, ii]
++    recalibrated = local_r0(cr_lin, pr_ala)
++    assert np.array_equal(canonical, recalibrated), 'El campo local no coincide con la referencia lineal sin redondear'
++    primary = np.load(ROOT / '_pregunta7_outputs' / 'metrics_integrado_cache.npz')
++    cr_mean, cr_t99 = metrics(spells_per_cell(cr_lin, TAU_CR2))
++    assert np.allclose(cr_mean, primary['mean_cr2'][jj, ii], atol=1e-3, rtol=0, equal_nan=True)
++    assert np.allclose(cr_t99, primary['t99_cr2'][jj, ii], atol=1e-3, rtol=0, equal_nan=True)
++    print('Control de precisión: campo local y métricas CR2MET coinciden con el principal', flush=True)
+     valid_lin = np.isfinite(cr_lin).any(axis=0)
+     valid_area = np.isfinite(cr_area).any(axis=0)
+     common = valid_lin & valid_area
+@@ -164,8 +174,8 @@
+     for name, cr, sel in (('lineal', cr_lin, valid_lin), ('area', cr_area, valid_area),
+                           ('lineal_comunes', cr_lin, common), ('area_comunes', cr_area, common)):
+         f = domain_fwet(cr[:, sel], TAU_CR2)
+-        res[name] = {'fwet_cr2_1mm_pct': 100 * f, 'R0': calibrate_r0(pr_ala[:, sel], f)}
+-        print(f'   {name:15s} fwet CR2MET@1mm = {100*f:.3f} %  ->  R0 = {res[name]["R0"]:.3f} mm', flush=True)
++        res[name] = {'fwet_cr2_0p1mm_pct': 100 * f, 'R0': calibrate_r0(pr_ala[:, sel], f)}
++        print(f'   {name:15s} fwet CR2MET@0.1mm = {100*f:.3f} %  ->  R0 = {res[name]["R0"]:.3f} mm', flush=True)
+ 
+     print('4/4 Spells, mapas y cuencas...', flush=True)
+     durs_ala = {'i': spells_per_cell(pr_ala, R0_ACTUAL), 'ii': spells_per_cell(pr_ala, TAU_CR2)}
+--- local_1mm/_calcular_frecuencia_humeda_ventanas.py
++++ local_0p1mm/_calcular_frecuencia_humeda_ventanas.py
+@@ -1,8 +1,8 @@
+-"""Fraccion de dias humedos por ventana y para el dominio: historico 1980-2014 (umbral local principal y 1 mm) y futuro 2040-2074.
++"""Fraccion de dias humedos por ventana y para el dominio: historico 1980-2014 (umbral local principal y 0,1 mm) y futuro 2040-2074.
+ 
+ R0 se calibra para igualar la fraccion media del dominio completo; este script mide cuanto se cumple esa igualdad dentro
+ de cada ventana (Loa, Maipo, Maule, Biobio) y cuanto cambia con R0 fijo en SSP5-8.5 y SSP3-7.0. Fraccion = promedio espacial (igual peso por celda) de la fraccion temporal
+-de dias con pr >= umbral. CR2MET: 1 mm, interpolado linealmente a la grilla ALADIN; ALADIN: umbral histórico local por celda y 1 mm.
++de dias con pr >= umbral. CR2MET: 0,1 mm, interpolado linealmente a la grilla ALADIN; ALADIN: umbral histórico local por celda y 0,1 mm.
+ Mismas ventanas y mascara de Chile que _generar_pregunta9_pdf_loglog_cuencas.py.
+ 
+ Salida: resultados_tesis/frecuencia_humeda_ventanas.csv
+@@ -44,13 +44,13 @@
+         f = lambda x, t: float((x[:, cols] >= (t.values[jj, ii][cols] if hasattr(t, 'dims') else t)).mean(axis=0).mean() * 100)
+         filas.append({
+             'zona': nombre, 'celdas': int(m.sum()),
+-            'CR2MET_1mm_pct': f(c, 1.0), 'ALADIN_R0_pct': f(a, f6.TAU_ALADIN_DOMINIO), 'ALADIN_1mm_pct': f(a, 1.0),
++            'CR2MET_0p1mm_pct': f(c, 0.1), 'ALADIN_R0_pct': f(a, f6.TAU_ALADIN_DOMINIO), 'ALADIN_0p1mm_pct': f(a, 0.1),
+             'ALADIN_R0_ssp585_2040_2074_pct': f(fut['ssp585'], f6.TAU_ALADIN_DOMINIO),
+             'ALADIN_R0_ssp370_2040_2074_pct': f(fut['ssp370'], f6.TAU_ALADIN_DOMINIO),
+         })
+     df = pd.DataFrame(filas)
+-    df['exceso_R0_pp'] = df['ALADIN_R0_pct'] - df['CR2MET_1mm_pct']
+-    df['exceso_1mm_pp'] = df['ALADIN_1mm_pct'] - df['CR2MET_1mm_pct']
++    df['exceso_R0_pp'] = df['ALADIN_R0_pct'] - df['CR2MET_0p1mm_pct']
++    df['exceso_0p1mm_pp'] = df['ALADIN_0p1mm_pct'] - df['CR2MET_0p1mm_pct']
+     for esc in ('ssp585', 'ssp370'):
+         col = f'ALADIN_R0_{esc}_2040_2074_pct'
+         df[f'cambio_rel_{esc}_pct'] = 100 * (df[col] - df['ALADIN_R0_pct']) / df['ALADIN_R0_pct']
+--- local_1mm/verificar_consistencia_local.py
++++ local_0p1mm/verificar_consistencia_local.py
+@@ -56,13 +56,13 @@
+             counts, _ = np.histogram(a, bins=edges)
+             check(f"Histograma conserva eventos: {basin}/{dataset}",
+                   counts.sum() == a.size)
+-        for main, sensitivity in (("CR2MET (hist)", "CR2MET 1 mm"),
++        for main, sensitivity in (("CR2MET (hist)", "CR2MET 0.1 mm"),
+                                    ("ALADIN (hist)", "ALADIN R0 local")):
+             check(f"PDF principal y sensibilidad coinciden: {basin}/{main}",
+                   np.array_equal(datasets[main], sens[basin][sensitivity]))
+ 
+     rr_values = {}
+-    for suffix in ("", "_1mm", "_ssp370"):
++    for suffix in ("", "_0.1mm", "_ssp370"):
+         folder = "outputs_pregunta5_aladin" + suffix
+         result = load_json(folder + "/results.json")
+         rr_values[suffix] = result
+@@ -139,7 +139,7 @@
+               row.N_fut_obs == curve[row.region, row.D]["N2"]
+               for row in markov.itertuples()))
+     censored = pd.read_csv(root / "_test_regrillado/rachas_censuradas_por_cuenca.csv")
+-    labels = {"CR2MET 1980-2014 (1 mm)": "CR2MET (hist)",
++    labels = {"CR2MET 1980-2014 (0.1 mm)": "CR2MET (hist)",
+               "ALADIN 1980-2014 (R0)": "ALADIN (hist)",
+               "ALADIN 2040-2074 (R0)": "ALADIN (futuro)"}
+     check("Rachas completas en diagnóstico de censura y PDFs",
+@@ -147,7 +147,7 @@
+               for row in censored.itertuples()))
+     calibration = load_json("resultados_tesis/calibracion_R0.json")
+     check("R0 global de referencia coincide con su calibración escalar",
+-          round(calibration["R0_biseccion_mm"], 3) == calibration["R0_usado_mm"] == 5.285)
++          round(calibration["R0_biseccion_mm"], 3) == calibration["R0_usado_mm"] == 3.668)
+     result = {"passed": all(x["passed"] for x in checks),
+               "checks": len(checks), "failures": [x for x in checks if not x["passed"]],
+               "details": checks}
+--- local_1mm/_generar_fig02_esquema_dryspell.py
++++ local_0p1mm/_generar_fig02_esquema_dryspell.py
+@@ -11,7 +11,7 @@
+ ROOT = Path(__file__).resolve().parent
+ OUT = ROOT / 'paper_figuras' / 'fig_esquema_dryspell.png'
+ 
+-R = 1.0
++R = 0.1
+ PR = np.array([3.2, 0.3, 0.0, 0.2, 0.0, 0.1, 0.0, 2.4, 0.4, 0.0, 5.1, 1.6])
+ WET_COLOR, DRY_COLOR, SPELL_COLOR = '#2B6CB0', '#C05621', '#9B2C2C'
+ 
+--- local_1mm/_generar_figS1_sensibilidad_umbral.py
++++ local_0p1mm/_generar_figS1_sensibilidad_umbral.py
+@@ -1,6 +1,6 @@
+ """Figura S1: sensibilidad de las PDFs historicas por cuenca a la eleccion del umbral (§2.7).
+ 
+-Cuatro series 1980-2014 por cuenca: CR2MET 1 mm, ALADIN 1 mm (criterio ii), ALADIN R0 global
++Cuatro series 1980-2014 por cuenca: CR2MET 0.1 mm, ALADIN 0.1 mm (criterio ii), ALADIN R0 global
+ (criterio i) y ALADIN R0 local (criterio iii). Bins, mascaras y reglas de spells identicos a la
+ Figura 6 (_generar_pregunta9_pdf_loglog_cuencas.py).
+ """
+@@ -24,8 +24,8 @@
+ FIG = f6.PAPER / 'figS1_sensibilidad_umbral_cuencas.png'
+ 
+ SERIES_STYLE = {
+-    'CR2MET 1 mm':       {'color': 'black',       'ls': '-',  'lw': 2.2, 'marker': 'o', 'ms': 3.5},
+-    'ALADIN 1 mm':       {'color': 'crimson',     'ls': '--', 'lw': 1.8, 'marker': 's', 'ms': 3.5},
++    'CR2MET 0.1 mm':       {'color': 'black',       'ls': '-',  'lw': 2.2, 'marker': 'o', 'ms': 3.5},
++    'ALADIN 0.1 mm':       {'color': 'crimson',     'ls': '--', 'lw': 1.8, 'marker': 's', 'ms': 3.5},
+     'ALADIN R0 global':  {'color': 'steelblue',   'ls': '-',  'lw': 1.8, 'marker': '^', 'ms': 3.5},
+     'ALADIN R0 local':   {'color': 'forestgreen', 'ls': '-.', 'lw': 1.8, 'marker': 'D', 'ms': 3.0},
+ }
+@@ -66,9 +66,9 @@
+     for name, bm in basin_masks.items():
+         print(f'  {name}...')
+         durs[name] = {
+-            'CR2MET 1 mm': f6.extract_basin_spell_records(pr_cr2_m, f6.TAU_CR2MET_REF, bm),
+-            'ALADIN 1 mm': f6.extract_basin_spell_records(pr_ala_m, f6.TAU_CR2MET_REF, bm),
+-            'ALADIN R0 global': f6.extract_basin_spell_records(pr_ala_m, 5.285, bm),
++            'CR2MET 0.1 mm': f6.extract_basin_spell_records(pr_cr2_m, f6.TAU_CR2MET_REF, bm),
++            'ALADIN 0.1 mm': f6.extract_basin_spell_records(pr_ala_m, f6.TAU_CR2MET_REF, bm),
++            'ALADIN R0 global': f6.extract_basin_spell_records(pr_ala_m, 3.668, bm),
+             'ALADIN R0 local': f6.extract_basin_spell_records(pr_ala_m, r0_local, bm),
+         }
+     OUT.mkdir(exist_ok=True)
+--- local_1mm/calibrar_local.py
++++ local_0p1mm/calibrar_local.py
+@@ -28,14 +28,14 @@
+         covered |= rm
+     jj,ii=np.where(covered)
+     av=a.values[:,jj,ii]; cv=c.values[:,jj,ii]
+-    ft=(cv>=1).mean(0)
++    ft=(cv>=0.1).mean(0)
+     rr=[]; expanded=[]
+     for k in range(jj.size):
+         expanded.append(ft[k] < b.wet_fraction_1d(av[:,k],15)-b.BISECTION_TOL)
+         rr.append(b.find_threshold_for_target_1d(av[:,k],ft[k]))
+     rr=np.asarray(rr,dtype=np.float32)
+     assert np.isfinite(rr).all(), 'Quedan celdas sin solución; no continuar silenciosamente.'
+-    local=(av>=rr).mean(0); glob=(av>=5.285).mean(0)
++    local=(av>=rr).mean(0); glob=(av>=3.668).mean(0)
+     full=np.full(m.shape,np.nan,np.float32);full[jj,ii]=rr
+     (ROOT/'_pregunta7_outputs').mkdir(exist_ok=True)
+     np.savez(ROOT/'_pregunta7_outputs/R0_local_map.npz',r0=full,chile=m,lat=a.lat.values,lon=a.lon.values,y=a.y.values,x=a.x.values)
+@@ -44,7 +44,7 @@
+         error_local_pp=100*(local-ft),error_global_pp=100*(glob-ft),n_validos_cr2=np.isfinite(cv).sum(0),n_validos_aladin=np.isfinite(av).sum(0)))
+     (ROOT/'resultados_tesis').mkdir(exist_ok=True)
+     df.to_csv(ROOT/'resultados_tesis/calibracion_local_por_celda.csv',index=False)
+-    s=dict(periodo='1980-2014',referencia_cr2met_mm=1.0,umbral_futuro='mismo campo histórico; sin recalibrar',
++    s=dict(periodo='1980-2014',referencia_cr2met_mm=0.1,umbral_futuro='mismo campo histórico; sin recalibrar',
+         tolerancia_fraccion=b.BISECTION_TOL,celdas_dominio=int(m.sum()),celdas_cubiertas=int(covered.sum()),
+         celdas_administrativas_fuera_mascara=int((covered&~m).sum()),ampliaron_busqueda=int(sum(expanded)),
+         umbral_min=float(rr.min()),umbral_p10=float(np.percentile(rr,10)),umbral_mediana=float(np.median(rr)),
+--- local_1mm/_run_pregunta5_aladin.py
++++ local_0p1mm/_run_pregunta5_aladin.py
+@@ -232,17 +232,17 @@
+ def main():
+     global DRY_THRESHOLD, FUTURE_SCENARIO
+     parser = argparse.ArgumentParser()
+-    parser.add_argument('--umbral', type=float, default=5.285,
+-                        help='Umbral de dia humedo ALADIN (mm/dia). Por defecto campo local histórico. El valor 5.285 actúa como selector heredado de ese campo.')
++    parser.add_argument('--umbral', type=float, default=None,
++                        help='Umbral de dia humedo ALADIN (mm/dia). Por defecto campo local histórico. Un valor explícito selecciona la sensibilidad escalar.')
+     parser.add_argument('--escenario', default=FUTURE_SCENARIO, choices=['ssp585', 'ssp370'],
+                         help='Escenario futuro. Por defecto SSP5-8.5 (analisis principal).')
+     args = parser.parse_args()
+     DRY_THRESHOLD, FUTURE_SCENARIO = args.umbral, args.escenario
+-    is_main = DRY_THRESHOLD == 5.285 and FUTURE_SCENARIO == 'ssp585'
+-    suffix = ('' if DRY_THRESHOLD == 5.285 else f'_{DRY_THRESHOLD:g}mm') + \
++    is_main = args.umbral is None and FUTURE_SCENARIO == 'ssp585'
++    suffix = ('' if args.umbral is None else f'_{args.umbral:g}mm') + \
+         ('' if FUTURE_SCENARIO == 'ssp585' else f'_{FUTURE_SCENARIO}')
+ 
+-    if args.umbral == 5.285:
++    if args.umbral is None:
+         DRY_THRESHOLD = campo_umbral()
+     print('1/4: Cargando ALADIN historico y futuro...')
+     pr_hist = open_aladin_period(HIST_START, HIST_END)
+--- local_1mm/_calcular_tabla3_ventanas.py
++++ local_0p1mm/_calcular_tabla3_ventanas.py
+@@ -2,12 +2,12 @@
+ 
+ Lee las duraciones por ventana generadas por _generar_pregunta9_pdf_loglog_cuencas.py (cache
+ _pregunta9_outputs/pdf_durations_i_global.pkl; reglas §2.2: rachas censuradas excluidas, umbral histórico local por celda en ALADIN,
+-1 mm en CR2MET). Calcula n_spells, media, mediana, p90, p99, maximo y numero/fraccion de rachas >= 20 d sin redondear, y el sesgo relativo
++0,1 mm en CR2MET). Calcula n_spells, media, mediana, p90, p99, maximo y numero/fraccion de rachas >= 20 d sin redondear, y el sesgo relativo
+ (ALADIN hist - CR2MET) / CR2MET de la media y del p99 del pool.
+ 
+ Tambien calcula, con las duraciones de la Figura S1 (_pregunta9_calibracion_outputs/spell_durations_sensibilidad_4cuencas.pkl),
+-el sesgo relativo de la media y del p99 del pool de cada ventana para los tres criterios de umbral (ii: 1 mm; i: R0 global;
+-iii: R0 local), respecto de CR2MET a 1 mm.
++el sesgo relativo de la media y del p99 del pool de cada ventana para los tres criterios de umbral (ii: 0,1 mm; i: R0 global;
++iii: R0 local), respecto de CR2MET a 0,0,1 mm.
+ 
+ Salidas: resultados_tesis/tabla3_estadisticos_ventanas.csv y resultados_tesis/sesgo_relativo_criterios_ventanas.csv
+ """
+@@ -22,7 +22,7 @@
+ SALIDA = ROOT / 'resultados_tesis' / 'tabla3_estadisticos_ventanas.csv'
+ ENTRADA_S1 = ROOT / '_pregunta9_calibracion_outputs' / 'spell_durations_sensibilidad_4cuencas.pkl'
+ SALIDA_S1 = ROOT / 'resultados_tesis' / 'sesgo_relativo_criterios_ventanas.csv'
+-CRITERIOS = [('ALADIN 1 mm', 'ii (1 mm)'), ('ALADIN R0 global', 'i (R0 global)'), ('ALADIN R0 local', 'iii (R0 local)')]
++CRITERIOS = [('ALADIN 0.1 mm', 'ii (0.1 mm)'), ('ALADIN R0 global', 'i (R0 global)'), ('ALADIN R0 local', 'iii (R0 local)')]
+ PRODUCTOS = [('CR2MET (hist)', 'CR2MET hist'), ('ALADIN (hist)', 'ALADIN hist'), ('ALADIN (futuro)', 'ALADIN fut')]
+ 
+ 
+@@ -54,7 +54,7 @@
+         s1 = pickle.load(f)
+     filas = []
+     for ventana, series in s1.items():
+-        ref = np.asarray(series['CR2MET 1 mm'], dtype=float)
++        ref = np.asarray(series['CR2MET 0.1 mm'], dtype=float)
+         for clave, etiqueta in CRITERIOS:
+             d = np.asarray(series[clave], dtype=float)
+             filas.append({
+--- local_1mm/_generar_tablaS1_sensibilidad_chile.py
++++ local_0p1mm/_generar_tablaS1_sensibilidad_chile.py
+@@ -11,8 +11,8 @@
+ BOOT = ROOT / 'outputs_pregunta7_bootstrap' / 'bootstrap_summary.csv'
+ OUT_CSV = ROOT / 'paper_figuras' / 'tablaS1_sensibilidad_umbral_chile.csv'
+ CRITERIOS = [
+-    ('A_opcion_B_integrado', 'Forma A', 'i — R0 global (5,285 mm)'),
+-    ('B_mismo_umbral', 'Forma B', 'ii — 1 mm en ambos'),
++    ('A_opcion_B_integrado', 'Forma A', 'i — R0 global (3,668 mm)'),
++    ('B_mismo_umbral', 'Forma B', 'ii — 0.1 mm en ambos'),
+     ('C_umbral_local', 'Forma C', 'iii — R0 local por píxel'),
+ ]
+ METRICAS = [('Duracion media', 'Duracion media', 'Duración media'), ('t99', 't99', 't99')]

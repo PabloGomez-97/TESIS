@@ -1,0 +1,794 @@
+{
+  "total": 188,
+  "correctos": 188,
+  "controles": [
+    {
+      "control": "Cuatro tablas y seis figuras en el manuscrito",
+      "ok": true
+    },
+    {
+      "control": "Trece tablas y cinco figuras en el suplemento",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Loa CR2MET hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Loa ALADIN hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Loa ALADIN fut",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maipo CR2MET hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maipo ALADIN hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maipo ALADIN fut",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maule CR2MET hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maule ALADIN hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Maule ALADIN fut",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Biobio CR2MET hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Biobio ALADIN hist",
+      "ok": true
+    },
+    {
+      "control": "Tabla 3 Biobio ALADIN fut",
+      "ok": true
+    },
+    {
+      "control": "Tabla 4 Coquimbo",
+      "ok": true
+    },
+    {
+      "control": "Tabla 4 O'Higgins",
+      "ok": true
+    },
+    {
+      "control": "Tabla 4 La Araucanía",
+      "ok": true
+    },
+    {
+      "control": "Tabla 4 Los Lagos",
+      "ok": true
+    },
+    {
+      "control": "Solo Araucanía significativa en el principal",
+      "ok": true
+    },
+    {
+      "control": "paper sin notas pendientes ni volcado xarray",
+      "ok": true
+    },
+    {
+      "control": "paper conserva geometría de página",
+      "ok": true
+    },
+    {
+      "control": "paper incluye sensibilidad de Los Lagos",
+      "ok": true
+    },
+    {
+      "control": "paper celdas comunes identificadas",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 23",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 24",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 25",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 26",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 27",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 28",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 29",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 30",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 31",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 32",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 33",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 34",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 35",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 36",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 37",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 38",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 39",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 40",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 41",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 42",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 43",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 44",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 45",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 46",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 47",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 48",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 49",
+      "ok": true
+    },
+    {
+      "control": "paper fila protegida 50",
+      "ok": true
+    },
+    {
+      "control": "suplemento sin notas pendientes ni volcado xarray",
+      "ok": true
+    },
+    {
+      "control": "suplemento conserva geometría de página",
+      "ok": true
+    },
+    {
+      "control": "suplemento incluye sensibilidad de Los Lagos",
+      "ok": true
+    },
+    {
+      "control": "suplemento celdas comunes identificadas",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 55",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 56",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 57",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 58",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 59",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 60",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 61",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 62",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 63",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 64",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 65",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 66",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 67",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 68",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 69",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 70",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 71",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 72",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 73",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 74",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 75",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 76",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 77",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 78",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 79",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 80",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 81",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 82",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 83",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 84",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 85",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 86",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 87",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 88",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 89",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 90",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 91",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 92",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 93",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 94",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 95",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 96",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 97",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 98",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 99",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 100",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 101",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 102",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 103",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 104",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 105",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 106",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 107",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 108",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 109",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 110",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 111",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 112",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 113",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 114",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 115",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 116",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 117",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 118",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 119",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 120",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 121",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 122",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 123",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 124",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 125",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 126",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 127",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 128",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 129",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 130",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 131",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 132",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 133",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 134",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 135",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 136",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 137",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 138",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 139",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 140",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 141",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 142",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 143",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 144",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 145",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 146",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 147",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 148",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 149",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 150",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 151",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 152",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 153",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 154",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 155",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 156",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 157",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 158",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 159",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 160",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 161",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 162",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 163",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 164",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 165",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 166",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 167",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 168",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 169",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 170",
+      "ok": true
+    },
+    {
+      "control": "suplemento fila protegida 171",
+      "ok": true
+    },
+    {
+      "control": "paper original inalterado",
+      "ok": true
+    },
+    {
+      "control": "paper copia fuente idéntica",
+      "ok": true
+    },
+    {
+      "control": "suplemento original inalterado",
+      "ok": true
+    },
+    {
+      "control": "suplemento copia fuente idéntica",
+      "ok": true
+    },
+    {
+      "control": "Comentarios archivados y eliminados solo de la entrega",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_01.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_02.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_03.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_04.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_05.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_06.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_S1.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_S2.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_S3.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_S4.png",
+      "ok": true
+    },
+    {
+      "control": "Integridad figura Figura_S5.png",
+      "ok": true
+    }
+  ],
+  "comparacion_paquetes": {
+    "paper": {
+      "cambiadas": [
+        "word/styles.xml",
+        "word/document.xml",
+        "word/_rels/document.xml.rels",
+        "word/media/image3.png",
+        "word/media/image1.png",
+        "word/media/image4.png",
+        "word/media/image6.png",
+        "word/media/image2.png",
+        "word/media/image5.png",
+        "[Content_Types].xml"
+      ],
+      "eliminadas": [
+        "word/comments.xml"
+      ],
+      "nuevas": []
+    },
+    "suplemento": {
+      "cambiadas": [
+        "word/styles.xml",
+        "word/document.xml",
+        "word/_rels/document.xml.rels",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image1.png",
+        "word/media/image4.png",
+        "[Content_Types].xml"
+      ],
+      "eliminadas": [],
+      "nuevas": [
+        "word/media/image5.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+                    serie cuenca  celdas  rachas_completas  censuradas  pct_censuradas  p99_completas  max_completas  mediana_censuradas  censuradas_sobre_p99
+CR2MET 1980-2014 (0.1 mm)    Loa     298             81422         596            0.73         303.00           1419                79.0                     7
+CR2MET 1980-2014 (0.1 mm)  Maipo     154            168183         244            0.14          81.00            249                12.0                     1
+CR2MET 1980-2014 (0.1 mm)  Maule     171            196589         268            0.14          62.12            159                32.0                     0
+CR2MET 1980-2014 (0.1 mm) Biobio     243            357067         310            0.09          35.00             85                11.0                    66
+    ALADIN 1980-2014 (R0)    Loa     298            101023         506            0.50         255.00           1127                23.0                    13
+    ALADIN 1980-2014 (R0)  Maipo     154            172448         270            0.16          93.00            215                23.0                     0
+    ALADIN 1980-2014 (R0)  Maule     171            221195         342            0.15          63.00            160                10.0                     0
+    ALADIN 1980-2014 (R0) Biobio     243            401930         474            0.12          33.00            153                 5.0                     0
+    ALADIN 2040-2074 (R0)    Loa     298             95236         583            0.61         273.00           1037                44.0                    33
+    ALADIN 2040-2074 (R0)  Maipo     154            151913         308            0.20         123.00            245                89.0                     7
+    ALADIN 2040-2074 (R0)  Maule     171            194145         342            0.18          81.00            201                30.0                    48
+    ALADIN 2040-2074 (R0) Biobio     243            374135         486            0.13          38.00            120                 8.0                    12

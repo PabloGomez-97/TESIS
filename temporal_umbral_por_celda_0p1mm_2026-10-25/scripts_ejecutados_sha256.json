@@ -1,0 +1,106 @@
+{
+  "_calcular_estacionalidad_marnov_regiones.py": {
+    "sha256": "1a6747645cb42e75f38bdf745129a74e94cdd44af6ad2f68a4dbca849821ed0f",
+    "bytes": 3553
+  },
+  "_calcular_frecuencia_humeda_ventanas.py": {
+    "sha256": "71043820a06c93723facfb32b53dac4f396ee2e2f5d3ec78ebefd04a93f58c00",
+    "bytes": 2929
+  },
+  "_calcular_sesgo_ventanas.py": {
+    "sha256": "da6c14c28e7d175bf43a5056b41f17a29d8ba1a484458808d3d071ca4bf9a75b",
+    "bytes": 2405
+  },
+  "_calcular_tabla3_ventanas.py": {
+    "sha256": "b737a6f1461a9ea678d0f3ce5db6242d8cc30c7f7926c799f5eb0bfb8785f1eb",
+    "bytes": 3752
+  },
+  "_contraste_persistencia_regiones.py": {
+    "sha256": "f21a71d389660380a1da8354936487d80b5c2b78e3ad9388485f36874eb4be06",
+    "bytes": 4473
+  },
+  "_cuantificar_censuradas.py": {
+    "sha256": "eb815c6da40325574dd6587350f060b76d4e49ff9533cc9bf6b3b41f6f7928bc",
+    "bytes": 3500
+  },
+  "_generar_fig02_esquema_dryspell.py": {
+    "sha256": "c7f70509812f0f99ceb805885a9f23359d9fe7e9095642a8f5bd3abcedb6179d",
+    "bytes": 2339
+  },
+  "_generar_fig03_calibracion_R0.py": {
+    "sha256": "e5619e0f77064e30575a4286590a15b547161bfcd61a2a264f5229038559bf07",
+    "bytes": 5297
+  },
+  "_generar_fig05_mapas_persistencia.py": {
+    "sha256": "01c070f4e07cace6f3d55f3eb5ca20fe72f34bd6f779e9c94e6d0e017d04aaf0",
+    "bytes": 5435
+  },
+  "_generar_figS1_sensibilidad_umbral.py": {
+    "sha256": "9af94cea8cd073b3fcc16ea86988773b4575eacecf21eb8327dfb9f4623c6473",
+    "bytes": 5300
+  },
+  "_generar_figS2_mapa_R0_local.py": {
+    "sha256": "6e8d289cbc837601f10f2c078685bd5cc7a17f62e60060fce8bbb173eb4b32e4",
+    "bytes": 3306
+  },
+  "_generar_figT01_referencia_sin_memoria.py": {
+    "sha256": "5fd12ff1feaa8d027e10ee00812ba6dc31fd90a08d8b9ca956d27551e9d2f295",
+    "bytes": 6993
+  },
+  "_generar_fig_dominio_ventanas_regiones.py": {
+    "sha256": "57c325cfa86c66f4a8129aec48f97cd6d9c6402b69171be04efd9dcc45166897",
+    "bytes": 6489
+  },
+  "_generar_fig_rr_regiones.py": {
+    "sha256": "8b4847ded50f7da0f1ee3dfa90ba75f595ffd5e6526caa214dd3318d62c74e9e",
+    "bytes": 5396
+  },
+  "_generar_pregunta9_pdf_loglog_cuencas.py": {
+    "sha256": "087c0e0de59d4ba79ab1caf17f1d49f3d783d88f096af1a10cc68614d6b44eb9",
+    "bytes": 11060
+  },
+  "_generar_tablaS1_sensibilidad_chile.py": {
+    "sha256": "ae00928dc4df07e39fad19bc8ab169ecd029981e9627b3c4c9aba354447abee1",
+    "bytes": 1945
+  },
+  "_referencia_markov_rr_regiones.py": {
+    "sha256": "4aeacd982eebb21926c6e10e4ca5017ed792fe6e373790ffac6e46e873539602",
+    "bytes": 8281
+  },
+  "_run_pregunta5_aladin.py": {
+    "sha256": "20e28c2f75e865d875d284ce2a911d4e85dc62a317da1e2b37126dba92c63e7a",
+    "bytes": 16156
+  },
+  "_run_pregunta7_bootstrap.py": {
+    "sha256": "19edee90f4be7618c4ad745beb1044f57d4a7f11f77160cddf0591f3c0afcdf2",
+    "bytes": 16762
+  },
+  "_sensibilidad_minimo_rachas.py": {
+    "sha256": "169746e6f93e2fb9b5f23c82b7bd1873f4777de7e5e9cae92baee0d549e1ee4b",
+    "bytes": 4639
+  },
+  "_test_regrillado_conservativo.py": {
+    "sha256": "1561b1831d123d47005384b76602beb00493c16b87046b3b62426cb9c74db73b",
+    "bytes": 10037
+  },
+  "calibrar_local.py": {
+    "sha256": "4398c0c6c7503f286256aeef835cfe46013c3520aee61ab81713dd489af0ffa7",
+    "bytes": 3767
+  },
+  "diagnostico_regional.py": {
+    "sha256": "9e2e964f267dc1352bf0951c4306d58adac9f43f4593f2951bb5257a35575150",
+    "bytes": 1396
+  },
+  "figura_calibracion_local.py": {
+    "sha256": "aa3c2dec58b23ff4d333c1a438c6ec558c78d8931c58025f5ee7d2fd4e6d2767",
+    "bytes": 1382
+  },
+  "umbral_local.py": {
+    "sha256": "a9951194a4966bd94b8991bb90e258d6c294bec9f74497c6c5e9587c68422fee",
+    "bytes": 481
+  },
+  "verificar_consistencia_local.py": {
+    "sha256": "c0d74f19c83d2bf1c68abc8bd754f7b864f8b2e5c1e532b2d2cda03b1a482ff3",
+    "bytes": 8861
+  }
+}

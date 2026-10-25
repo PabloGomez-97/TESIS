@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "control": "CR2MET mapas idénticos mean",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap control idéntico A_opcion_B_integrado/mean",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap control idéntico B_mismo_umbral/mean",
+      "passed": true
+    },
+    {
+      "control": "CR2MET mapas idénticos t99",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap control idéntico A_opcion_B_integrado/t99",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap control idéntico B_mismo_umbral/t99",
+      "passed": true
+    },
+    {
+      "control": "RR 1 mm idénticos",
+      "passed": true
+    },
+    {
+      "control": "Estacionalidad y acumulados idénticos",
+      "passed": true
+    },
+    {
+      "control": "Máscara geográfica idéntica",
+      "passed": true
+    },
+    {
+      "control": "Umbrales locales previos preservados",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap local previo idéntico en celdas previamente válidas mean",
+      "passed": true
+    },
+    {
+      "control": "Bootstrap local previo idéntico en celdas previamente válidas t99",
+      "passed": true
+    },
+    {
+      "control": "Cobertura completa de calibración",
+      "passed": true
+    },
+    {
+      "control": "Scripts y salidas originales sin cambios",
+      "passed": true
+    },
+    {
+      "control": "Controles cruzados de cadena local",
+      "passed": true
+    },
+    {
+      "control": "680 NetCDF coinciden con el registro",
+      "passed": true
+    }
+  ]
+}

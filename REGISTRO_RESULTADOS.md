@@ -107,3 +107,7 @@ Numeración de las figuras y tablas = la del Doc del paper al 2026-10-22 (Fig. 1
 - **Notebooks y `Anteriores/`** (12 + 5): exploratorios, ningún resultado vigente depende de ellos.
 - **Heredado**: los `.docx` antiguos y sus 6 generadores, `presentacion_tesis/`, `disertacion/`, `tesis/` (LaTeX, con zip de Overleaf), `__pycache__/`.
 - **Se conservan**: `Introducción v1 (1).docx`, el PDF de la tesis de olas de calor (modelo de redacción), `Shifting dry spells…pdf` (Latoja et al.), `s40641-016-0050-x.pdf` (Maraun 2016), `Writing-an-Effective-Abstract-2023.pdf`, `VERIFICACION_CITAS.md`.
+
+## Actualización visual de la Figura 1 — 2026-10-24
+
+A solicitud del usuario, `_generar_fig_dominio_ventanas_regiones.py` añade divisiones orientativas en 26°, 32°, 35° y 38°S y etiquetas Norte, Centro norte, Centro, Centro sur y Sur. Salida regenerada: `paper_figuras/fig02_dominio_cuencas_regiones.png`. Estas líneas no son máscaras de análisis ni una regionalización climática validada; se mantienen las cuatro ventanas y cuatro regiones originales y todos los resultados numéricos. Respaldo previo fuera del repositorio: `~/Documents/TESIS_respaldos/figura1_antes_divisiones_20261024/`.

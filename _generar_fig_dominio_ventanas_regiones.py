@@ -56,6 +56,11 @@ REGION_STYLE = {
 }
 REGION_LABEL_LON = -66.6
 
+# División visual orientativa aprobada por el usuario; no define máscaras de análisis.
+ZONE_BOUNDARIES = (-26, -32, -35, -38)
+ZONE_LABELS = [('Norte', -21.85), ('Centro norte', -29), ('Centro', -33.5),
+               ('Centro sur', -36.5), ('Sur', -41.95)]
+
 
 def normalize_text(text):
     text = unicodedata.normalize('NFKD', str(text).lower())
@@ -85,6 +90,17 @@ def main():
     ax.add_feature(cfeature.OCEAN, facecolor='#E8F4FC', zorder=0)
     ax.add_feature(cfeature.COASTLINE, linewidth=0.8, zorder=2)
     ax.add_feature(cfeature.BORDERS, linestyle=':', linewidth=0.5, zorder=2)
+
+    for lat in ZONE_BOUNDARIES:
+        ax.plot([-76, -65], [lat, lat], color='#666666', lw=0.9,
+                linestyle=(0, (5, 4)), transform=ccrs.PlateCarree(), zorder=3)
+        ax.text(-75.7, lat + 0.12, f'{abs(lat)}°S', fontsize=7,
+                ha='left', va='bottom', color='#555555',
+                transform=ccrs.PlateCarree(), zorder=7)
+    for label, lat in ZONE_LABELS:
+        ax.text(-75.7, lat, label, fontsize=8, ha='left', va='center',
+                color='#555555', transform=ccrs.PlateCarree(), zorder=7,
+                bbox=dict(fc='white', ec='none', alpha=0.8, pad=2))
 
     for name, spec in REGION_SPECS.items():
         rec = find_region_record(spec['query'], admin_records)
@@ -124,6 +140,8 @@ def main():
     legend_items += [
         Line2D([0], [0], color=color, lw=2.5, label=f'Ventana {label}') for label, color in BASIN_STYLE.values()
     ]
+    legend_items.append(Line2D([0], [0], color='#666666', lw=0.9,
+                             linestyle=(0, (5, 4)), label='División orientativa'))
     ax.legend(handles=legend_items, loc='lower left', fontsize=7, framealpha=0.9, ncol=1)
     ax.set_title(
         'Dominio de estudio — Chile entre 17,7°S y 45,9°S (grilla ALADIN CHP12)\n'

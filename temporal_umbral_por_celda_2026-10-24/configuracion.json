@@ -1,0 +1,8 @@
+{
+  "repo_origen": "/Users/pablogomez/Documents/GitHub/TESIS",
+  "fecha_experimento": "2026-10-24",
+  "referencia_cr2met_mm_dia": 1.0,
+  "umbral_global_referencia_mm_dia": 5.285,
+  "umbral_principal": "por celda; calibrado en 1980–2014 y fijo en 2040–2074",
+  "nota": "La bisección local amplía el límite de 15 mm/día únicamente cuando la celda lo requiere."
+}

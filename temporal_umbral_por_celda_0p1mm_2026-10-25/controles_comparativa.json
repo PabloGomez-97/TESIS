@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "control": "Mismas 3587 celdas de calibración",
+      "passed": true
+    },
+    {
+      "control": "Frecuencia húmeda CR2MET no disminuye al bajar referencia",
+      "passed": true
+    },
+    {
+      "control": "Umbral local no aumenta al bajar referencia",
+      "passed": true
+    },
+    {
+      "control": "Todas las celdas locales cumplen tolerancia",
+      "passed": true
+    },
+    {
+      "control": "Campo local 0,1 previo preservado en sus celdas válidas",
+      "passed": true
+    },
+    {
+      "control": "Máscara espacial preservada",
+      "passed": true
+    },
+    {
+      "control": "Identidad cambio sesgo = cambio ALADIN − cambio CR2MET mean",
+      "passed": true
+    },
+    {
+      "control": "Identidad cambio sesgo = cambio ALADIN − cambio CR2MET t99",
+      "passed": true
+    },
+    {
+      "control": "Control histórico global 0,1 previo idéntico A_opcion_B_integrado/mean",
+      "passed": true
+    },
+    {
+      "control": "Control histórico global 0,1 previo idéntico B_mismo_umbral/mean",
+      "passed": true
+    },
+    {
+      "control": "Local 0,1 previo coincide en celdas previamente válidas mean",
+      "passed": true
+    },
+    {
+      "control": "Control histórico global 0,1 previo idéntico A_opcion_B_integrado/t99",
+      "passed": true
+    },
+    {
+      "control": "Control histórico global 0,1 previo idéntico B_mismo_umbral/t99",
+      "passed": true
+    },
+    {
+      "control": "Local 0,1 previo coincide en celdas previamente válidas t99",
+      "passed": true
+    },
+    {
+      "control": "RR escalar 0,1 idéntico al cálculo previo",
+      "passed": true
+    },
+    {
+      "control": "Acumulados y estacionalidad sin cambios",
+      "passed": true
+    },
+    {
+      "control": "Caché float64 conserva los valores a la precisión float32 previa",
+      "passed": true
+    },
+    {
+      "control": "Controles internos de la cadena",
+      "passed": true
+    },
+    {
+      "control": "Todos los análisis previos y NetCDF preservados",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Cargando datos...
+Calculando F(R)...
+  F_CR2MET(1 mm) = 20.94% | F_ALADIN(1 mm) = 30.68%
+  R0 = 5.285 mm
+{
+  "periodo": "1980-2014",
+  "celdas": 3587,
+  "umbral_cr2met_mm": 1.0,
+  "F_cr2met_1mm_pct": 20.94477153453247,
+  "F_aladin_1mm_pct": 30.68494455538059,
+  "exceso_aladin_1mm_pp": 9.740173020848118,
+  "R0_biseccion_mm": 5.28459906578064,
+  "R0_usado_mm": 5.285,
+  "F_aladin_R0_usado_pct": 20.94415220726494
+}
+-> /Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/paper_figuras/fig03_calibracion_R0_ftau.png

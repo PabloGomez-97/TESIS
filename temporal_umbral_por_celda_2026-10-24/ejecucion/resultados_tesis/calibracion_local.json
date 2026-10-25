@@ -1,0 +1,21 @@
+{
+  "periodo": "1980-2014",
+  "referencia_cr2met_mm": 1.0,
+  "umbral_futuro": "mismo campo histórico; sin recalibrar",
+  "tolerancia_fraccion": 0.0001,
+  "celdas_dominio": 3587,
+  "celdas_cubiertas": 3587,
+  "celdas_administrativas_fuera_mascara": 0,
+  "ampliaron_busqueda": 82,
+  "umbral_min": 0.039081573486328125,
+  "umbral_p10": 2.28515625,
+  "umbral_mediana": 6.4892578125,
+  "umbral_p90": 11.6015625,
+  "umbral_max": 25.025732040405273,
+  "max_error_absoluto_pp": 0.007822277847313597,
+  "error_medio_pp": 1.3084378891547225e-05,
+  "celdas_fuera_tolerancia": 0,
+  "dias_historicos": 12784,
+  "NaN_cr2met": 0,
+  "NaN_aladin": 0
+}

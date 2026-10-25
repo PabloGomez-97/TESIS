@@ -1,0 +1,98 @@
+{
+  "INFORME_COMPARATIVO_LOCAL_0p1mm_VS_1mm.md": {
+    "sha256": "fc99517d4363fbd279cd920f67c5fee02ba68f551167e36e93b909a51741e2ba",
+    "bytes": 32910
+  },
+  "comparativa/01_calibracion_por_celda.csv": {
+    "sha256": "93b73dea226c271d8c0e3d87a479f7adefb819440635438325b544636407e136",
+    "bytes": 1404885
+  },
+  "comparativa/02_frecuencia_ventanas.csv": {
+    "sha256": "a59a431b97f63186ac887efd0addc16cf40cbe20aca57dc5b62c769c0e4753ee",
+    "bytes": 2157
+  },
+  "comparativa/03_frecuencia_regiones.csv": {
+    "sha256": "7c892b167c2d3a179585d2ce3f0ab9eeb50e0dd68e9249cac599dd0aff443480",
+    "bytes": 2786
+  },
+  "comparativa/04_resumen_espacial.csv": {
+    "sha256": "e43aac292b2fe0f70db95f48969167f9ad734468f9ab609e9eb05e9f44265bf5",
+    "bytes": 1719
+  },
+  "comparativa/05_metricas_por_celda.csv": {
+    "sha256": "df6a7e2c24a973019cfc9c78eefd445133d7e5fc1a2c007e4312a1cbb195b89d",
+    "bytes": 1220517
+  },
+  "comparativa/06_sesgo_ventanas.csv": {
+    "sha256": "ff2c7642a566735280ca2531f68488a520aa5d2f2bcdfa136625349e08f652fd",
+    "bytes": 3061
+  },
+  "comparativa/07_tabla3_completa.csv": {
+    "sha256": "4fe29ec4bb3819431fe52db0a547e0b0cf699893df180a56e587abe247f324c0",
+    "bytes": 2980
+  },
+  "comparativa/08_cambios_futuros_ventanas.csv": {
+    "sha256": "15773099c6a314b3896c9ce4855a9a6efc5837148879d7ca0aff1cc7ff98d77c",
+    "bytes": 1201
+  },
+  "comparativa/09_RR_D20.csv": {
+    "sha256": "4e5021f23d9e383db72fe565a1cc600ceb03ed5ae2c73ee0532f641b0e26b8b8",
+    "bytes": 1716
+  },
+  "comparativa/10_RR_todas_duraciones.csv": {
+    "sha256": "db58acca54bc5dffd6753adff1b2aba3b0eb501278a1537a9f32c4466f0ec739",
+    "bytes": 17166
+  },
+  "comparativa/11_persistencia.csv": {
+    "sha256": "8e9d5c153765b9ae2590a8b30526e99d5709745434ee8ecec084fcfeac8430e7",
+    "bytes": 3590
+  },
+  "comparativa/12_markov.csv": {
+    "sha256": "58cfada4ac19aa2f12d273989c8c334ac2b84d32071e2b24e0795c012b2e51d1",
+    "bytes": 26079
+  },
+  "comparativa/13_censuradas.csv": {
+    "sha256": "7e54e0126c884a792d418101ef18d2c488d8fff8d6e155b089aa07b1e4a34901",
+    "bytes": 2655
+  },
+  "comparativa/14_minimo_rachas.csv": {
+    "sha256": "612d0eaa315b36098ad138b607aeff37e52757c2f44c9c3d0fa290c9159e1846",
+    "bytes": 1962
+  },
+  "comparativa/15_regrillado.csv": {
+    "sha256": "be372537704036e864a6b5d11aa6f54d324d1d5839a8203012269fa78f25e894",
+    "bytes": 3337
+  },
+  "comparativa/16_inventario_salidas.csv": {
+    "sha256": "f8edd732e9b541eb8f30ff7ff48955382c336b7e78e2c414ef7329113cfbd015",
+    "bytes": 5450
+  },
+  "comparativa/17_comparacion_cuatro_versiones_historico.csv": {
+    "sha256": "a167ba73b7299385a77ff19e4d150d843a3c44b4b494325a9eee6f9176633233",
+    "bytes": 2061
+  },
+  "comparativa/18_comparacion_cuatro_versiones_RR.csv": {
+    "sha256": "e27a7e528f08b64c5846694c68d1b5f12cb1edafc0b4672c69502462ba53aa18",
+    "bytes": 24969
+  },
+  "comparativa/comparacion_RR.png": {
+    "sha256": "8417f5e63fa0b4dd6d1e1905e54d7a5bcdf2cf8371d3031f01fd42ebb8d8f743",
+    "bytes": 290827
+  },
+  "comparativa/comparacion_duraciones.png": {
+    "sha256": "8820511f3d46ace78c0107b46f10e57d47292fbd01c0e22c011d2b7e9bf805de",
+    "bytes": 57145
+  },
+  "comparativa/comparacion_mapas_umbrales.png": {
+    "sha256": "af2dff8ab629776e56cbbd56f4db8bfd57a95ba04ad5e0d3f3f75fd0dc1b649f",
+    "bytes": 321028
+  },
+  "comparativa/comparacion_sesgos.png": {
+    "sha256": "a1ef214f2516ab0b0dbd9be3bb4939332b600175aec72a3ec6b57c53372ff068",
+    "bytes": 53817
+  },
+  "comparativa/comparacion_umbrales.png": {
+    "sha256": "9d4b97d8894f6e4b98cccc6eb35d2b97d7798d93c64f04541e65d79fc4ad49f0",
+    "bytes": 151086
+  }
+}

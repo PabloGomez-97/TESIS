@@ -1,0 +1,767 @@
+{
+  "source": "/Users/pablogomez/Downloads/Introducción v1 (3).docx",
+  "sha256": "830cbee9361156fb89b0598e6b2eb19c183ace7a7ec86b6627bb9aad4a1423ef",
+  "sections": [
+    {
+      "width": 8.5,
+      "height": 11.0,
+      "margins": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "styles": {
+    "Normal": {
+      "font": null,
+      "size": "None",
+      "spacing": "None"
+    },
+    "Title": {
+      "font": "Times New Roman",
+      "size": "355600",
+      "spacing": "1.0"
+    },
+    "Heading 1": {
+      "font": "Times New Roman",
+      "size": "203200",
+      "spacing": "1.0"
+    },
+    "Heading 2": {
+      "font": "Times New Roman",
+      "size": "165100",
+      "spacing": "1.0"
+    }
+  },
+  "paragraphs": [
+    {
+      "i": 0,
+      "style": "normal",
+      "text": "Enlace a Material Suplementario: https://docs.google.com/document/d/1WbTTi7W3Z1LzmHBDiIljFgcH0cO4THieM43yMrFOeaU/edit?usp=sharing"
+    },
+    {
+      "i": 1,
+      "style": "normal",
+      "text": "Draft:"
+    },
+    {
+      "i": 2,
+      "style": "normal",
+      "text": "https://docs.google.com/document/d/1VQ-EY_sHaBgFI4uBxufe_CYbQIrBkKJVwjGnMGdQg5A/edit?usp=sharing"
+    },
+    {
+      "i": 3,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 4,
+      "style": "normal",
+      "text": "Duración de las rachas secas en Chile a lo largo de un gradiente climático: evaluación de un modelo regional y cambio proyectado a mediados de siglo bajo SSP5-8.5"
+    },
+    {
+      "i": 5,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 6,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 7,
+      "style": "normal",
+      "text": "Nuestro objeto es la distribución de todas las rachas completas: cuántas hay, cuánto duran normalmente y cómo son las más prolongadas."
+    },
+    {
+      "i": 8,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 9,
+      "style": "Heading 1",
+      "text": ""
+    },
+    {
+      "i": 10,
+      "style": "Heading 1",
+      "text": ""
+    },
+    {
+      "i": 11,
+      "style": "Heading 1",
+      "text": "1. Introducción"
+    },
+    {
+      "i": 12,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 13,
+      "style": "normal",
+      "text": "Chile central ha atravesado desde 2010 una megasequía sin precedentes en el registro instrumental, acompañada de una marcada variabilidad hidrológica interanual (Garreaud et al., 2017, 2020; Boisier et al., 2016, 2018). Las métricas agregadas de precipitación no capturan por completo cómo se organizan en el tiempo los períodos secos: dos climas con el mismo acumulado anual —por ejemplo, 300 mm en dos eventos frente a quince— pueden tener consecuencias muy distintas para embalses, agricultura y ecosistemas, según cuán prolongadas sean las rachas secas. La pregunta no es exclusiva de Chile central: el país abarca desde el desierto de Atacama, con rachas secas de meses o años, hasta el sur húmedo, donde las rachas son mucho más cortas, lo que permite estudiar la persistencia seca a lo largo de un gradiente climático extremo."
+    },
+    {
+      "i": 14,
+      "style": "normal",
+      "text": "Este trabajo estudia esa persisteƒncia mediante dry spells: rachas consecutivas de días secos, definidos como días con precipitación por debajo de un umbral de día húmedo. En lugar de preguntar cuánto llueve en promedio, el enfoque distributivo pregunta con qué frecuencia ocurren las rachas y qué tan largas llegan a ser, incluida la cola de eventos extremadamente prolongados. Las PDFs de duración ofrecen un marco parsimonioso para caracterizar esa intermitencia, permitiendo distinguir cambios en la frecuencia total de rachas, en la forma de la distribución y, particularmente, en su cola (Stechmann y Neelin, 2014 [VERIFICAR: referencia ausente de la lista; Martinez-Villalobos y Neelin (2018, 2019) tratan acumulaciones e intensidades, no duraciones de rachas])."
+    },
+    {
+      "i": 15,
+      "style": "normal",
+      "text": "En la literatura climática, la persistencia seca se ha cuantificado sobre todo con índices escalares. El más difundido es el de días secos consecutivos (CDD), definido por el ETCCDI como el máximo anual o estacional de días seguidos con precipitación inferior a 1 mm (Zhang et al., 2011; Sillmann et al., 2013a, 2013b). Otros trabajos reportan el número de días secos o la duración media de las rachas (Giorgi et al., 2011, 2019; Polade et al., 2014). Un conjunto más reducido examina la distribución completa de duraciones: Zolina et al. (2013) mostraron que los cambios en rachas húmedas y secas en Europa no se reducen a un cambio en el número de días húmedos, sino a una reorganización de su agrupación temporal; Lana et al. (2006) ajustaron distribuciones a dry spells largos en la Península Ibérica. En Chile, ajustes paramétricos confirman colas pesadas y desviaciones de un proceso sin memoria (Herrera-Marín et al., 2026). Estas distinciones importan porque un mismo aumento de días secos puede fragmentarse en muchas rachas cortas o concentrarse en pocas rachas muy largas. El CDD retiene el extremo de la cola en cada año, pero no describe con qué frecuencia ocurren spells de 10, 20 o 50 días ni cómo se desplaza esa cola (Trenberth et al., 2003; Pendergrass y Knutti, 2018)."
+    },
+    {
+      "i": 16,
+      "style": "normal",
+      "text": "A ese panorama se suman las proyecciones de menor precipitación en Chile central bajo calentamiento, con señal robusta en CMIP6 hacia fines de siglo, incluidas trayectorias de altas emisiones como SSP5-8.5 (Araya-Osses et al., 2020; Salazar et al., 2024). A escala global, CMIP5/CMIP6 proyectan más días secos y dry spells más largos en subtrópicos y climas mediterráneos, Chile incluido: el aumento de días secos explica gran parte del secado proyectado (Polade et al., 2014, 2017 [VERIFICAR: respaldan más días secos, no rachas más largas]; Sillmann et al., 2013b; Giorgi et al., 2019; Wainwright et al., 2021). Saber que \"llueve menos en promedio\" no equivale, sin embargo, a saber cómo cambia la distribución de duraciones de las rachas secas. Un mismo secado puede expresarse como muchas rachas relativamente cortas o como menos interrupciones y rachas mucho más persistentes, y solo la distribución completa, en particular su cola, permite distinguir entre ambas formas. La pregunta central es, por tanto, cómo cambia la distribución de dry spells bajo calentamiento y, en especial, la frecuencia de rachas muy largas."
+    },
+    {
+      "i": 17,
+      "style": "normal",
+      "text": "En Chile, el diagnóstico del secado reciente se ha construido sobre anomalías y tendencias de precipitación y caudales (Boisier et al., 2016, 2018; Garreaud et al., 2017, 2020), y las proyecciones, sobre acumulados o impactos hidrológicos (Araya-Osses et al., 2020; Bozkurt et al., 2018; Salazar et al., 2024). Índices estandarizados (SPI, SPEI, SSI) caracterizan el déficit en escalas temporales, pero no la estructura día a día de las rachas (Báez-Villanueva et al., 2024). Herrera-Marín (2026) y Herrera-Marín et al. (2026) modelan, con CR2MET, los inicios de dry spells y su agrupación, pero no el cambio de la distribución de duraciones bajo calentamiento. El antecedente más cercano es Latoja et al. (2025), quienes, con CR2MET, encuentran que entre 1960 y 2021 los dry spells en Chile central (32°–40°S) se volvieron más numerosos y más cortos en promedio, con más días secos sobre todo al sur de 36°S (el largo medio de las rachas solo cambia de forma significativa entre 35°S y 38°S): la precipitación se volvió más intermitente. Esa tendencia contrasta con las rachas más largas que los modelos globales proyectan para climas mediterráneos. Queda abierto, por tanto, si el secado futuro de Chile repetirá la mayor intermitencia documentada en el período observado o si se expresará como menos rachas y más largas."
+    },
+    {
+      "i": 18,
+      "style": "normal",
+      "text": "Responder esa pregunta con un modelo regional exige, primero, saber si el modelo representa la persistencia histórica. Los modelos tienden a llover demasiado a menudo y con poca intensidad (Stephens et al., 2010; Martinez-Villalobos et al., 2022), lo que fragmenta las rachas secas. La mayoría de los modelos CMIP5 y CMIP6 subestima la racha seca anual más larga observada, y los que más la subestiman tienden a proyectar aumentos futuros menores (Petrova et al., 2024). Comparar persistencia entre observaciones y modelos exige, por tanto, controlar la frecuencia de días húmedos antes de interpretar diferencias de duración (Leung et al., 2022), y evaluar la cola histórica es condición para juzgar la credibilidad y la magnitud del cambio proyectado."
+    },
+    {
+      "i": 19,
+      "style": "normal",
+      "text": "En este estudio, centrado en Chile entre 17,7°S y 45,9°S y con especial relevancia para Chile central, examinamos cómo cambia la distribución de duraciones de dry spells hacia mediados de siglo bajo SSP5-8.5 y, en particular, la frecuencia de rachas prolongadas. Como paso previo para interpretar esa señal futura, evaluamos en qué medida el modelo regional ALADIN reproduce la distribución histórica respecto del producto grillado CR2MET, una vez controladas las diferencias en la frecuencia de días húmedos. Así abordamos cómo cambia la distribución de duraciones de las rachas secas, en particular la frecuencia de rachas largas, y en qué medida ese cambio está asociado a la menor frecuencia de días húmedos."
+    },
+    {
+      "i": 20,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 21,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 22,
+      "style": "Heading 1",
+      "text": "2. Métodos"
+    },
+    {
+      "i": 23,
+      "style": "Heading 2",
+      "text": "2.1 Datos"
+    },
+    {
+      "i": 24,
+      "style": "normal",
+      "text": "El análisis utiliza dos fuentes de precipitación diaria. Como referencia observacional se emplea CR2MET v2.5 (Centro de Ciencia del Clima y la Resiliencia, CR2), un producto grillado de precipitación diaria para Chile en una grilla regular de latitud–longitud de 0,05° (~5 km). CR2MET combina observaciones de estaciones con información de reanálisis y se usa de manera rutinaria como referencia hidroclimática en el país (Álvarez-Garretón et al., 2018; Latoja et al., 2025; Herrera-Marín et al., 2026). Como modelo climático regional (RCM) se utiliza la simulación CNRM-ALADIN64 sobre el dominio CHP12 (~12 km). Su precipitación, entregada en kg m⁻² s⁻¹, se convierte a mm día⁻¹ multiplicando por 86 400. Se usa una única simulación regional, de modo que la comparación entre histórico y futuro se realiza dentro de un mismo modelo; como sensibilidad al escenario, los risk ratios se repiten con SSP3-7.0 (Material Suplementario, S6), y la incertidumbre asociada a otros modelos se discute en §4.3."
+    },
+    {
+      "i": 25,
+      "style": "normal",
+      "text": "El dominio de estudio es Chile entre 17,7°S y 45,9°S, la cobertura del dominio ALADIN CHP12 recibido. La máscara terrestre se construye con la geometría de Chile de Natural Earth (escala 1:10 m), considerando las celdas de ALADIN cuyo centro cae dentro del polígono, lo que resulta en 3 587 celdas. Para permitir comparaciones píxel a píxel, CR2MET se interpola linealmente a los centros de celda de la grilla de ALADIN."
+    },
+    {
+      "i": 26,
+      "style": "normal",
+      "text": "Analizamos dos ventanas de 35 años: el histórico 1980–2014 (CR2MET y ALADIN) y el futuro 2040–2074 bajo SSP5-8.5 (solo ALADIN). El histórico termina en 2014, año final del experimento histórico de CMIP6, de modo que no mezcla forzante histórico y de escenario; el futuro representa mediados de siglo."
+    },
+    {
+      "i": 27,
+      "style": "normal",
+      "text": "Las PDFs de duración se calculan en cuatro ventanas representativas del gradiente climático chileno: Loa (norte árido), Maipo y Maule (zona central mediterránea) y Biobío (sur más húmedo). No son polígonos oficiales de cuenca, sino cajas de latitud–longitud sobre la grilla de ALADIN, intersectadas con la máscara continental, y se eligieron para ilustrar el gradiente norte–sur. Los risk ratios se calculan sobre cuatro regiones administrativas completas (Coquimbo, O'Higgins, La Araucanía y Los Lagos; geometrías de Natural Earth), unidades usadas en la gestión hídrica y agrícola. Las cajas se usan para describir la forma de la PDF, en particular su cola, y las regiones para cuantificar el cambio en el número de rachas largas (Figura 1; Tabla 1)."
+    },
+    {
+      "i": 28,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 29,
+      "style": "normal",
+      "text": "Figura 1. Dominio de estudio: Chile entre 17,7°S y 45,9°S. Los rectángulos indican las ventanas de latitud–longitud usadas para las PDFs de duración de dry spells: Loa (21,5–24,0°S; 68,2–69,8°O; 298 celdas), Maipo (33,2–34,5°S; 69,8–71,8°O; 154 celdas), Maule (34,8–36,5°S; 71,0–72,8°O; 171 celdas) y Biobío (36,5–38,5°S; 71,5–73,8°O; 243 celdas). Las áreas sombreadas son las regiones administrativas usadas para los risk ratios: Coquimbo (239 celdas), O'Higgins (110), La Araucanía (223) y Los Lagos (324)."
+    },
+    {
+      "i": 30,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 31,
+      "style": "normal",
+      "text": "Tabla 1. Conjuntos de datos: producto, rol, grilla, período y umbral de día húmedo."
+    },
+    {
+      "i": 32,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 33,
+      "style": "Heading 2",
+      "text": "2.2 Definición de días húmedos/secos y dry spells"
+    },
+    {
+      "i": 34,
+      "style": "normal",
+      "text": "Se define wet day (día húmedo) como un día con precipitación diaria pr ≥ R, donde R es un umbral en mm día⁻¹, y dry day (día seco) como un día con pr < R. Un dry spell es una racha consecutiva de dry days; su duración t es el número de días de la racha, con mínimo de un día (Figura 2). El umbral de 1 mm día⁻¹ en CR2MET sigue la convención ETCCDI/Climdex usada para CDD (Zhang et al., 2011; Sillmann et al., 2013a) y la misma definición operativa de dry day que Latoja et al. (2025) y Herrera-Marín et al. (2026). En cada ventana temporal (1980–2014 o 2040–2074) se identifican todas las rachas de la serie diaria completa y se excluyen las censuradas, es decir, las que comienzan el primer día de la ventana o terminan el último, porque su duración verdadera es desconocida. Así, solo entran rachas cuyo inicio y término quedan dentro de la ventana. En Loa, donde las rachas pueden superar varios años, esta regla evita incluir duraciones truncadas, que subestimarían la cola, a costa de descartar algunas de las rachas más largas: las rachas censuradas representan menos del 1,1 % del total en Loa y menos del 0,2 % en las demás ventanas."
+    },
+    {
+      "i": 35,
+      "style": "normal",
+      "text": "A diferencia del índice CDD, que resume cada año con su racha seca más larga, aquí se analizan todas las rachas, y una racha puede cruzar el 1 de enero: se conserva entera y se etiqueta con el año calendario de su inicio. En el norte árido esto es esencial, porque las rachas de cientos de días no caben en un año calendario. Para las PDFs y los mapas tampoco se restringe el análisis a una estación, a diferencia de Herrera-Marín et al. (2026), quienes modelan inicios de racha en mayo–agosto; solo los risk ratios se limitan a rachas iniciadas entre marzo y noviembre (§2.6). El objeto de estudio es la duración de cada racha, no el máximo anual ni la tasa de inicios."
+    },
+    {
+      "i": 36,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 37,
+      "style": "normal",
+      "text": "Figura 2. Definición operativa. Un día es húmedo si pr ≥ R y seco si pr < R. Un dry spell es la racha consecutiva de días secos; su duración t es el número de días de la racha. En el ejemplo, R = 1 mm día⁻¹ produce un spell de t = 6 días y otro de t = 2 días, separados por un día húmedo. Los puntos marcan días secos con 0 mm."
+    },
+    {
+      "i": 38,
+      "style": "normal",
+      "text": "Los criterios de umbral que se comparan en el análisis se resumen en la Tabla 2 y se justifican en §2.3."
+    },
+    {
+      "i": 39,
+      "style": "normal",
+      "text": "Tabla 2. Criterios de umbral para definir días húmedos. El análisis principal usa el criterio i."
+    },
+    {
+      "i": 40,
+      "style": "Heading 2",
+      "text": "2.3 Calibración del umbral R₀"
+    },
+    {
+      "i": 41,
+      "style": "normal",
+      "text": "Con R = 1 mm día⁻¹ en ambos productos, ALADIN presenta una fracción de días húmedos sustancialmente mayor que CR2MET, coherente con el sesgo de llovizna de los modelos (Stephens et al., 2010; Petrova et al., 2024 [VERIFICAR: Petrova et al. no trata el sesgo de llovizna; solo se leyó su resumen]; Martinez-Villalobos et al., 2022). Ese exceso fragmenta las rachas secas y produce spells artificialmente más cortos y numerosos, de modo que un umbral común de 1 mm no permite una comparación equitativa de la persistencia seca. Por ello el análisis principal adopta el criterio i (umbral global calibrado): CR2MET con R = 1 mm día⁻¹ y ALADIN con R₀, el umbral que iguala la fracción espacial media de días húmedos de CR2MET a 1 mm; este umbral dependiente del modelo sigue el criterio usado para evaluar PDFs de duración de dry spells frente a observaciones (Leung et al., 2022, §3.b). Como sensibilidad se consideran el criterio ii (1 mm día⁻¹ en ambos) y el criterio iii (un R₀(x,y) por píxel, de modo que en cada celda la fracción temporal de días húmedos de ALADIN iguale la de CR2MET a 1 mm), que permiten separar cuánto del sesgo histórico se debe a la definición de día húmedo y cuánto permanece como diferencia estructural del modelo (Tabla 2). La calibración de R₀ busca el umbral tal que el promedio espacial sobre el dominio de estudio de la fracción temporal de días con pr ≥ R en ALADIN iguale la fracción correspondiente de CR2MET con R = 1 mm día⁻¹. Si F(R) denota esa fracción espacial media de wet days, calculada con igual peso para cada celda de la grilla de ALADIN, se resuelve F_ALADIN(R₀) = F_CR2MET(1 mm) mediante bisección. En 1980–2014, CR2MET a 1 mm produce F = 20,94 % y ALADIN a 1 mm produce F = 30,68 % (+9,7 puntos porcentuales). El umbral R₀ = 5,285 mm día⁻¹ reproduce F = 20,94 % en ALADIN (Figura 3)."
+    },
+    {
+      "i": 42,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 43,
+      "style": "normal",
+      "text": "Figura 3. Calibración del umbral de día húmedo en ALADIN frente a CR2MET (1980–2014). La curva azul es F(R), la fracción media de días húmedos de ALADIN en el dominio de estudio en función del umbral R. El punto azul es ALADIN a 1 mm (F = 30,7 %) y el punto rojo es CR2MET a 1 mm (F = 20,9 %); la flecha indica el exceso de días húmedos de ALADIN (+9,7 puntos porcentuales), que, sin calibrar, acorta las rachas secas. El cuadrado marca R₀ = 5,285 mm día⁻¹, umbral con el que ALADIN iguala la fracción de CR2MET."
+    },
+    {
+      "i": 44,
+      "style": "normal",
+      "text": "R₀ representa un umbral que hace equivalentes las frecuencias de días húmedos de ambos productos: un día de ALADIN con 3 mm se trata como seco porque, en frecuencia, corresponde a un día bajo 1 mm en CR2MET. La calibración iguala la frecuencia en promedio sobre Chile, no en cada celda; el criterio iii (Tabla 2) evalúa ese efecto calibrando un umbral por píxel. Igualar la frecuencia de días húmedos tampoco impone que se distribuyan igual en el tiempo: dos series con el mismo número de días húmedos pueden producir rachas secas muy distintas si esos días aparecen agrupados o dispersos. Por ello, las diferencias de duración que persisten tras la calibración pueden deberse tanto a diferencias locales en la frecuencia de días húmedos como a diferencias en su agrupamiento temporal: con R₀ global la frecuencia queda 4,1 y 3,3 puntos porcentuales sobre la de CR2MET en Maipo y Maule, y con R₀ local (criterio iii) el sesgo de la media casi desaparece en Maipo (−3,5 %) pero persiste en Loa (−23 %), Maule (−14 %) y Biobío (−13 %)."
+    },
+    {
+      "i": 45,
+      "style": "Heading 2",
+      "text": "2.4 Construcción y normalización de las PDFs"
+    },
+    {
+      "i": 46,
+      "style": "normal",
+      "text": "Para caracterizar la distribución de duraciones se construyen PDFs empíricas de la variable t (días), con bins uniformes en log₁₀(t). En cada cuenca se usan los mismos bins para CR2MET, ALADIN histórico y ALADIN futuro: se generan 26 bordes en escala logarítmica entre 1 día y la duración máxima observada entre los tres conjuntos, y se redondean a enteros. Como las duraciones son enteras, los bordes repetidos se fusionan, de modo que cada bin contiene un número entero de días y el número efectivo de bins es de 21 a 23 según la cuenca."
+    },
+    {
+      "i": 47,
+      "style": "normal",
+      "text": "En cada bin, f(t) es el número de spells en el intervalo dividido por el ancho de bin, de modo que el área bajo la curva es igual al número total de spells del pool y los cambios en frecuencias y en forma son visibles a la vez. El binning solo afecta la representación gráfica: los estadísticos de la Tabla 3 y los risk ratios se calculan directamente sobre las duraciones."
+    },
+    {
+      "i": 48,
+      "style": "Heading 2",
+      "text": "2.5 Agrupación regional y estadísticas espaciales"
+    },
+    {
+      "i": 49,
+      "style": "normal",
+      "text": "Para las PDFs por cuenca se adopta un pool regional: todos los dry spells de todos los píxeles de la ventana se agrupan en un único conjunto de eventos. El pool aumenta el tamaño muestral y permite resolver la cola; a cambio, mezcla heterogeneidad espacial dentro de la caja. Como los píxeles vecinos no son independientes, n_spells no debe leerse como tamaño muestral efectivo para inferencia estadística."
+    },
+    {
+      "i": 50,
+      "style": "normal",
+      "text": "Para los mapas se calculan, en cada píxel, la duración media y el percentil 99 de las duraciones (t99), y se reportan las diferencias Δ = ALADIN − CR2MET en 1980–2014. Los estadísticos se calculan solo en píxeles con al menos 30 spells en el período en ambos productos, y la misma máscara se usa para las diferencias Δ, su significancia, los promedios espaciales de la media y del t99 de cada producto y los mapas de la Figura 4. Con pocas rachas por píxel, el t99 depende de uno o dos valores extremos, por lo que Δ en t99 es más ruidoso en el norte árido. Como sensibilidad, el análisis se repitió exigiendo al menos 50, 100 y 200 rachas por píxel; esta decisión se tomó después de conocer el resultado con 30 rachas (Material Suplementario, S1). La significancia de Δ se evalúa con bootstrap por años (1 000 réplicas). Primero se identifican los spells en la serie diaria de cada píxel con las reglas de §2.2, incluida la exclusión de rachas censuradas en los bordes del período. Cada spell conserva su duración íntegra aunque cruce el 1 de enero y se asigna al año calendario de su inicio. Con ello se forma, por píxel y producto, un conjunto {año: vector de duraciones}."
+    },
+    {
+      "i": 51,
+      "style": "normal",
+      "text": "En cada réplica se sortean 35 años calendario con reemplazo, de forma independiente para CR2MET y ALADIN. Se concatenan las duraciones de todos los spells cuyo año de inicio figura en el sorteo y se recalculan la media o t99 de cada producto y su diferencia Δ*. Se descartan las réplicas en que algún producto queda con menos de 30 rachas, y una celda con menos de 50 réplicas válidas se considera no significativa. El intervalo de confianza al 95 % de Δ corresponde a los percentiles 2,5 y 97,5 de las 1 000 réplicas de Δ*, y Δ se considera significativo cuando el intervalo no incluye el cero."
+    },
+    {
+      "i": 52,
+      "style": "Heading 2",
+      "text": "2.6 Risk ratios y cambios futuros"
+    },
+    {
+      "i": 53,
+      "style": "normal",
+      "text": "El cambio proyectado en la ocurrencia de dry spells largos se cuantifica con el risk ratio"
+    },
+    {
+      "i": 54,
+      "style": "normal",
+      "text": "(1)    RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D)"
+    },
+    {
+      "i": 55,
+      "style": "normal",
+      "text": "donde N(t ≥ D) es el número de dry spells con duración de al menos D días en ALADIN futuro (2040–2074) e histórico (1980–2014), ambos con R₀ = 5,285 mm día⁻¹ y con las reglas de §2.2, incluida la exclusión de rachas censuradas. Cada spell se contabiliza por celda y los conteos se agregan sobre la región. RR(D) > 1 indica más rachas largas en el futuro. Al no normalizar por el número total de spells de cada período, RR(D) es consistente con las PDFs (§2.4) y refleja el cambio en la ocurrencia de eventos largos, no solo en su fracción relativa."
+    },
+    {
+      "i": 56,
+      "style": "normal",
+      "text": "Los risk ratios se calculan sobre pools de las cuatro regiones administrativas (§2.1), considerando solo spells cuyo día de inicio cae entre marzo y noviembre (otoño, invierno y primavera), meses que concentran entre el 85,1 % y el 97,3 % de la precipitación anual en esas regiones según CR2MET y entre el 81,6 % y el 95,9 % según ALADIN. En verano la precipitación es escasa, sobre todo en Chile central, y las rachas largas forman parte del ciclo estacional esperado; los spells que comienzan en noviembre se cuentan con su duración completa aunque se extiendan al verano. Las PDFs, en cambio, incluyen spells de todo el año. Se calculan curvas RR(D) para D entre 5 y 60 días, y D = 20 días se usa como valor de referencia porque corresponde aproximadamente al percentil 90 de las duraciones en Chile central (Tabla 3; el p90 de la tabla es de todo el año y de las ventanas, mientras que los risk ratios usan inicio entre marzo y noviembre y regiones administrativas). Los intervalos de confianza al 95 % se obtienen con bootstrap por años (1 000 réplicas): en cada réplica se sortean con reemplazo 35 años de inicio del histórico y, de forma independiente, 35 del futuro, y se recalcula el cociente de conteos. RR(D) no está definido si N_hist(t ≥ D) = 0; en el bootstrap se descartan y se cuentan las réplicas sin rachas históricas (N_hist* = 0): a D = 20 no se descarta ninguna. Como se remuestrean años completos para todos los píxeles de la región a la vez, el procedimiento conserva la correlación espacial entre píxeles. El cambio se considera significativo cuando el IC95 queda por completo por encima de 1 (aumento) o por debajo de 1 (disminución). Como la curva evalúa varios valores de D, se interpreta su comportamiento conjunto y no un umbral aislado."
+    },
+    {
+      "i": 57,
+      "style": "Heading 2",
+      "text": "2.7 Sensibilidad a la elección del umbral"
+    },
+    {
+      "i": 58,
+      "style": "normal",
+      "text": "Para evaluar cuánto dependen los resultados de la definición de día húmedo, la comparación histórica entre CR2MET y ALADIN se repite con los tres criterios de la Tabla 2. A escala del dominio de estudio, se recalculan los mapas de duración media y t99, sus diferencias Δ y su significancia con el procedimiento de §2.5. A escala de cuenca, se comparan las PDFs de Loa, Maipo, Maule y Biobío en 1980–2014 para CR2MET a 1 mm y para ALADIN a 1 mm, a R₀ global y a R₀ local, con los bins de §2.4. Además, los risk ratios de §2.6 se recalculan con 1 mm en ALADIN y con el escenario SSP3-7.0. Los resultados de estas pruebas (Tablas S1–S6, Figuras S1–S4, incluido el mapa de R₀ local en la Figura S2) se presentan en el material suplementario."
+    },
+    {
+      "i": 59,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 60,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 61,
+      "style": "Heading 1",
+      "text": "3. Resultados"
+    },
+    {
+      "i": 62,
+      "style": "Heading 2",
+      "text": "3.1 Evaluación histórica (1980–2014)"
+    },
+    {
+      "i": 63,
+      "style": "normal",
+      "text": "Esta sección responde la primera pregunta del estudio: una vez igualada la frecuencia de días húmedos (criterio i; R₀ = 5,285 mm día⁻¹ en ALADIN y R = 1 mm día⁻¹ en CR2MET), ¿reproduce ALADIN la distribución histórica de duraciones de dry spells? "
+    },
+    {
+      "i": 64,
+      "style": "Heading 3",
+      "text": "3.1.1 Climatología de persistencia en CR2MET"
+    },
+    {
+      "i": 65,
+      "style": "normal",
+      "text": "CR2MET muestra un contraste norte–sur marcado en la persistencia de rachas secas, coherente con el gradiente climático de Chile y con diagnósticos recientes de dry spells en la zona central (Latoja et al., 2025; Herrera-Marín et al., 2026). En el norte árido la duración media supera con creces el mes: en la ventana del Loa el pool regional tiene media de 65,6 días y p99 de 456 días, con máximos por encima de 1 400 días. En el sur más húmedo las rachas son cortas y numerosas: en Biobío la media es 6,2 días y el p99, 44 días. Maipo y Maule ocupan el tramo intermedio (medias de 11,0 y 9,5 días; p99 de 119 y 83 días). Ese gradiente no es un artefacto de un índice anual: aparece tanto en la media como en la cola (t99) a escala de píxel (Figura 4, columnas CR2MET)."
+    },
+    {
+      "i": 66,
+      "style": "normal",
+      "text": "Dos implicaciones siguen de inmediato. Primera: un mismo estadístico agregado —por ejemplo, el CDD— comprime climas distintos en un solo máximo por año (Zhang et al., 2011; Sillmann et al., 2013a), mientras que aquí la cola de Loa y la de Biobío no son conmensurables. Segunda: cualquier evaluación de ALADIN tiene que respetar ese contraste latitudinal; un sesgo aceptable en el sur húmedo puede ser grave en el desierto si se pierde la cola de spells de cientos de días."
+    },
+    {
+      "i": 67,
+      "style": "Heading 3",
+      "text": "3.1.2 ALADIN reproduce el gradiente espacial, pero subestima la persistencia y la cola"
+    },
+    {
+      "i": 68,
+      "style": "normal",
+      "text": "Con el criterio i, ALADIN reproduce el patrón espacial —norte persistente, sur de rachas cortas— pero subestima la duración. Sobre el dominio de estudio, la duración media espacial (celdas comunes) es 41,0 días en CR2MET y 32,8 días en ALADIN (Δ, media espacial de las diferencias por píxel, = −8,2 días). El sesgo es mayor en la cola: t99 espacial de 215,8 días frente a 169,6 días (Δ = −46,3 días). Los mapas de diferencia (Figura 4) muestran Δ negativo en la mayor parte del dominio, más intenso en la transición norte–centro, donde CR2MET resuelve spells extremadamente largos que ALADIN acorta; en una franja del norte cercana a la costa ALADIN es más largo que CR2MET. El promedio de Δ está dominado por el norte: el Δ mediano es −2,2 días en la media y −17,2 días en t99 (Tabla S1). ALADIN es significativamente más corto en cerca de dos tercios de los píxeles para la duración media (66 %) y en el 43 % para t99 (bootstrap por años, IC95 de Δ que no incluye cero)."
+    },
+    {
+      "i": 69,
+      "style": "normal",
+      "text": "Ese residuo no se explica solo por el umbral. Con 1 mm en ambos productos (criterio ii) el sesgo aumenta mucho (Δ media ≈ −27 días; Δ t99 ≈ −135 días). El R₀ global (criterio i) lo reduce sustancialmente; a escala nacional, el R₀ local lo reduce algo más, pero no elimina el sesgo de cola (Tabla S1; Figura S1). El análisis principal usa el criterio i porque corrige la definición de día húmedo sin un campo heterogéneo de umbrales; el sesgo residual se interpreta como limitación del RCM."
+    },
+    {
+      "i": 70,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 71,
+      "style": "normal",
+      "text": "Figura 4. Persistencia histórica de dry spells (1980–2014), criterio i. Fila superior: duración media (días). Fila inferior: percentil 99 de las duraciones, t99 (días). Columnas: CR2MET regrillado (R = 1 mm), ALADIN histórico (R₀ = 5,285 mm) y Δ = ALADIN − CR2MET. Ambas fuentes reproducen el gradiente norte–sur; ALADIN subestima media y cola, con Δ negativo más marcado en t99. Los tres paneles de cada fila muestran las mismas 3 526 celdas, con al menos 30 rachas en ambos productos."
+    },
+    {
+      "i": 72,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 73,
+      "style": "Heading 3",
+      "text": "3.1.3 PDFs regionales: sesgo de ALADIN por ventana"
+    },
+    {
+      "i": 74,
+      "style": "normal",
+      "text": "Las distribuciones regionales muestran que ALADIN subestima las duraciones en las cuatro ventanas (Figura 5; Tabla 3). En días, el mayor sesgo está en Loa, donde las rachas son más largas; en porcentaje, el mayor déficit está en Maipo y Maule (media −21 % y −22 %; p99 −27 % y −31 %) frente a Loa (−17 %; −21 %) y Biobío (−15 %; −23 %). En Maipo, Maule y Biobío ALADIN subestima las duraciones (medias 8,6 frente a 11,0 días en Maipo; 7,3 frente a 9,5 en Maule; 5,3 frente a 6,2 en Biobío). En Loa el desacuerdo se concentra en la cola: CR2MET mantiene más probabilidad en spells de cientos de días (p99 = 456 días frente a 360 días en ALADIN; máximo 1 419 frente a 1 156). ALADIN produce, en todas las cuencas, más spells que CR2MET (p. ej. 66 267 frente a 55 015 en Loa), coherente con rachas algo más cortas y, con R₀ global, la frecuencia de días húmedos queda 4,1 y 3,3 puntos porcentuales sobre la de CR2MET en Maipo y Maule (la igualdad vale solo para el promedio del dominio)."
+    },
+    {
+      "i": 75,
+      "style": "normal",
+      "text": "En conjunto, la evaluación histórica muestra que ALADIN subestima las duraciones y la cola en las cuatro ventanas; en Maipo el sesgo casi desaparece al igualar la frecuencia píxel a píxel (media −3,5 %, criterio iii), pero no en Loa (−23 %), Maule (−14 %) ni Biobío (−13 %)."
+    },
+    {
+      "i": 76,
+      "style": "normal",
+      "text": "Tabla 3. Estadísticos de la distribución de duraciones de dry spells por ventana (criterio i; 1980–2014 y 2040–2074 bajo SSP5-8.5). n_spells es el número de rachas del pool de la ventana; media, mediana, p90, p99 y máximo están en días. Los estadísticos se calculan sobre el conjunto de todas las rachas de todas las celdas de la ventana."
+    },
+    {
+      "i": 77,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 78,
+      "style": "normal",
+      "text": "Figura 5. PDFs empíricas de duración de dry spells (criterio i, escala log–log; ∫ f dt = n_spells). Negro: CR2MET 1980–2014. Azul: ALADIN histórico. Rojo discontinuo: ALADIN futuro (SSP5-8.5, 2040–2074). ALADIN histórico subestima el percentil 99 de las duraciones en las cuatro ventanas (Tabla 3). Paneles, de izquierda a derecha y de arriba abajo: Loa, Maipo, Maule y Biobío. El futuro se discute en §3.2.2: n_spells disminuye y la cola derecha se extiende en las cuencas centrales y en Biobío."
+    },
+    {
+      "i": 79,
+      "style": "Heading 2",
+      "text": "3.2 Proyecciones futuras (SSP5-8.5, 2040–2074)"
+    },
+    {
+      "i": 80,
+      "style": "normal",
+      "text": "La segunda pregunta es si, bajo SSP5-8.5, cambia la probabilidad de rachas prolongadas. La comparación es ALADIN histórico versus ALADIN futuro, con el mismo R₀. "
+    },
+    {
+      "i": 81,
+      "style": "Heading 3",
+      "text": "3.2.1 Risk ratios: más dry spells largos"
+    },
+    {
+      "i": 82,
+      "style": "normal",
+      "text": "El risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) se estima en pools de regiones administrativas, con spells de inicio en marzo–noviembre y bootstrap por años (Figura 6; Tabla 4). A D = 20 días, Coquimbo pasa de 25 367 a 28 458 spells largos (RR = 1,12; IC95 [1,01, 1,25]); La Araucanía, de 2 397 a 4 118 (RR = 1,72; [1,10, 2,88]). En esas dos regiones el IC95 queda por completo sobre 1: el aumento es significativo. O'Higgins tiene RR = 1,15 (7 015 → 8 096), pero el IC95 [0,95, 1,40] cruza 1; aunque el RR es mayor que 1 en toda la cola, el intervalo solo queda marginalmente sobre 1 a D \t= 60 días (RR = 1,49; [1,01, 2,22]), por lo que no se interpreta como un aumento robusto. Los Lagos tiene RR = 2,15 (601 → 1 291), pero el IC95 [0,90, 8,50] cruza 1: el cociente es inestable porque los spells ≥ 20 días son raros en el histórico."
+    },
+    {
+      "i": 83,
+      "style": "normal",
+      "text": "La señal no es un desplazamiento uniforme de toda la distribución. En Coquimbo, a D = 5 días el RR de conteos es 0,94 (IC95 por debajo de 1): hay menos spells cortos, coherente con la caída de n_spells. El aumento es significativo a D = 20 días (límite inferior del IC95 = 1,0075; a D = 25 el IC cruza 1) y de forma sostenida entre 30 y 60 días (p. ej. RR = 1,26 a D = 30 días, IC95 [1,10, 1,43]). En La Araucanía el RR crece con D y alcanza 3,47 a 30 días, con IC95 amplio ([1,29, 11,8]): hay más ocurrencia de spells largos, pero la rareza histórica infla el cociente. Eso es lo que un CDD anual no muestra: el cambio está en la frecuencia de excedencias a lo largo de la cola, no en un único máximo por año (Sillmann et al., 2013b; Wainwright et al., 2021). Las sensibilidades matizan esta señal: con SSP3-7.0 los IC95 de Coquimbo [0,98; 1,24] y La Araucanía [0,99; 2,47] cruzan 1, y con 1 mm Los Lagos pasa a RR = 0,25 (107 → 27 rachas; no estimable), mientras que Coquimbo y La Araucanía siguen siendo significativos con 1 mm (Tablas S3 y S5)."
+    },
+    {
+      "i": 84,
+      "style": "normal",
+      "text": "Tabla 4. Risk ratio a D = 20 días. RR = N_fut(t ≥ 20) / N_hist(t ≥ 20). ALADIN, R₀ = 5,285 mm, inicio marzo–noviembre. IC95 por bootstrap de años (1 000 réplicas)."
+    },
+    {
+      "i": 85,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 86,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 87,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 88,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 89,
+      "style": "normal",
+      "text": "Figura 6. Risk ratio RR(D) = N_fut(t ≥ D) / N_hist(t ≥ D) de rachas secas con duración de al menos D días, para ALADIN bajo SSP5-8.5 (2040–2074) respecto de 1980–2014, con R₀ = 5,285 mm día⁻¹ y rachas iniciadas entre marzo y noviembre. Los círculos huecos indican umbrales con réplicas descartadas por ausencia de rachas históricas; A esa duración, Coquimbo y La Araucanía presentan aumentos significativos; O’Higgins y Los Lagos tienen intervalos que incluyen 1. La curva de Los Lagos termina en D = 30 días porque desde D = 35 no hay rachas históricas y el RR no está definido."
+    },
+    {
+      "i": 90,
+      "style": "Heading 3",
+      "text": "3.2.2 PDFs por cuenca: extensión de la cola futura"
+    },
+    {
+      "i": 91,
+      "style": "normal",
+      "text": " Las PDFs de la Figura 5, leídas ahora en la curva futura, muestran el cambio de forma y de n_spells. En las cuatro cuencas el futuro de ALADIN tiene menos spells que el histórico: n_spells disminuye en las cuatro ventanas. La señal es clara en Maipo–Maule–Biobío, donde suben la media y el p99 y la cola se extiende hacia duraciones de decenas a cientos de días; en Loa el cambio relativo de la media y del p99 es menor (Tabla 3; Figura 5). En escala log–log las curvas no son una traslación paralela: el exceso futuro se concentra a la derecha. La exclusión de rachas censuradas afecta más a la cola futura que a la histórica en Maipo, Maule y Biobío (12, 39 y 21 rachas censuradas superan el p99 de las completas en el futuro, y ninguna en el histórico), por lo que el alargamiento proyectado en esas ventanas tiende a estar subestimado."
+    },
+    {
+      "i": 92,
+      "style": "normal",
+      "text": "El máximo muestral es un estadístico ruidoso y no debe usarse solo. En Biobío, por ejemplo, el máximo del pool baja aunque media, p90, p99 y la fracción de spells de al menos 20 días suben (de 4,1 a 5,4 %) (Tabla 3). Eso ilustra por qué el objeto del trabajo es la distribución y las excedencias, no el récord de un píxel."
+    },
+    {
+      "i": 93,
+      "style": "normal",
+      "text": "En conjunto, los risk ratios y las distribuciones de duración muestran un alargamiento de los dry spells hacia mediados de siglo, concentrado especialmente en la cola de las ventanas de Maipo, Maule y Biobío y, según los risk ratios, de Coquimbo y La Araucanía. El cambio relativo es pequeño en Loa, mientras que en Los Lagos la estimación de la cola permanece incierta por la rareza de eventos largos."
+    },
+    {
+      "i": 94,
+      "style": "Heading 1",
+      "text": "4. Discusión"
+    },
+    {
+      "i": 95,
+      "style": "Heading 2",
+      "text": "4.1 Síntesis e interpretación"
+    },
+    {
+      "i": 96,
+      "style": "normal",
+      "text": "Tras igualar la frecuencia de días húmedos (criterio i), ALADIN reproduce el gradiente norte–sur de persistencia de CR2MET, pero subestima la duración de los dry spells, sobre todo en la cola (t99). La calibración de R₀ corrige gran parte del sesgo asociado al exceso de días con precipitación débil, un problema persistente en modelos climáticos, que tienden a llover con demasiada frecuencia y poca intensidad (Sun et al., 2006 [VERIFICAR: ausente de la lista de referencias]; Stephens et al., 2010; Chen et al., 2021 [VERIFICAR: ausente de la lista de referencias]; Martinez-Villalobos et al., 2022). Sin embargo, no elimina las diferencias en duración. Igualar la frecuencia en el promedio del dominio no basta: dentro de las ventanas la frecuencia queda desigual, y solo al igualarla píxel a píxel se separa el efecto de la frecuencia del de la persistencia día a día. Este sesgo de cola es coherente con Petrova et al. (2024), quienes encuentran que la mayoría de los modelos CMIP5 y CMIP6 subestiman la racha seca anual más larga observada y que los modelos que la subestiman en el histórico tienden a proyectar aumentos futuros menores."
+    },
+    {
+      "i": 97,
+      "style": "normal",
+      "text": "Hacia 2040–2074 bajo SSP5-8.5, ALADIN proyecta menos dry spells, pero más largos: aumenta el número de rachas de 20 días o más, con señal significativa en Coquimbo y La Araucanía en el análisis principal (no con SSP3-7.0; Tabla S5), y las PDFs de Maipo, Maule y Biobío extienden la cola. El signo de este cambio es opuesto al que Latoja et al. (2025) documentan con CR2MET en Chile central (32°–40°S) entre 1960 y 2021: más dry spells, pero más cortos, junto con menos precipitación por racha húmeda. Con R₀ fijo, la frecuencia de días húmedos de ALADIN disminuye 6 % en el dominio y 10–13 % en Maipo, Maule y Biobío (en Loa no disminuye: +1,4 %, y el contraste de persistencia no se calculó para esa ventana), y el aumento de rachas largas es de magnitud compatible con esa caída: el RR que predice un modelo de Markov de primer orden que solo cambia la frecuencia cae dentro del IC95 del RR observado en los 31 casos con N_hist ≥ 100 (los IC son amplios, y a D = 20 ese modelo reproduce solo el 70 % y el 89 % de las rachas históricas de Los Lagos y La Araucanía), y la persistencia de primer orden no cambia de forma detectable (el IC95 de Δρ incluye 0 en las cuatro regiones, aunque en Los Lagos por solo 0,002; Tabla S6). En las cuatro regiones de los risk ratios, la frecuencia de días secos de marzo a noviembre aumenta entre 2,1 y 3,9 pp (Tabla S6). No encontramos evidencia de un cambio en la persistencia día a día de primer orden, aunque la potencia es limitada. Los mecanismos no se diagnostican aquí. Parte del contraste puede deberse al forzante: la megasequía combina variabilidad interna con una contribución antrópica (Boisier et al., 2016; Garreaud et al., 2020). Con un solo miembro, aquí no se separa la señal forzada de la variabilidad interna. También difieren la métrica y la ventana: Latoja et al. analizan la tendencia de la duración media en seis décadas, y aquí se compara la cola entre dos períodos de 35 años. El cambio en la duración de las rachas no puede inferirse solo del signo del cambio en la precipitación total."
+    },
+    {
+      "i": 98,
+      "style": "Heading 2",
+      "text": "4.2 Implicaciones para evaluación de modelos y riesgo de sequía"
+    },
+    {
+      "i": 99,
+      "style": "normal",
+      "text": "Los resultados históricos tienen una implicación directa para la evaluación de RCMs en climas mediterráneos y áridos. Validar la precipitación media o la frecuencia de días húmedos no basta para juzgar la persistencia seca: aun después de igualar esa frecuencia, ALADIN acorta las rachas y, sobre todo, su cola. Una evaluación orientada a sequía debería, por tanto, comparar la distribución de duraciones tras controlar la frecuencia de días húmedos (Leung et al., 2022) y reportar explícitamente la cola. Esto importa también para las proyecciones: si, como encuentran Petrova et al. (2024), los modelos que subestiman las rachas largas históricas tienden a proyectar aumentos menores, el sesgo de cola histórico condiciona cuánto confiar en la magnitud del cambio futuro."
+    },
+    {
+      "i": 100,
+      "style": "normal",
+      "text": "Para la gestión hídrica y la agricultura, el resultado central es que el cambio proyectado se concentra en las rachas largas. Un índice como el CDD, que retiene un solo extremo por año, tampoco captura ese cambio, que se distribuye a lo largo de la cola. "
+    },
+    {
+      "i": 101,
+      "style": "Heading 2",
+      "text": "4.3 Limitaciones y perspectivas"
+    },
+    {
+      "i": 102,
+      "style": "normal",
+      "text": "Varias limitaciones acotan la interpretación. Primera, se usa un único RCM y un único escenario principal de altas emisiones, con una sensibilidad adicional bajo SSP3-7.0; los cambios proyectados describen la respuesta de ALADIN bajo SSP5-8.5, no la incertidumbre multimodelo. Segunda, el umbral R₀ calibrado en el histórico se aplica también al futuro, lo que supone que el sesgo de frecuencia de días húmedos del modelo no cambia con el clima. Tercera, los píxeles de un mismo pool no son independientes, de modo que el número de spells sobrestima la información independiente; por eso la incertidumbre se estima remuestreando años y no spells individuales. Cuarta, en el norte árido ALADIN acorta la cola respecto de CR2MET incluso tras calibrar R₀, de modo que la frecuencia absoluta de spells muy largos en Loa debe leerse como conservadora. Quinta, en regiones muy húmedas como Los Lagos, los RR para umbrales altos son inestables: los pocos eventos históricos producen intervalos de confianza amplios aunque el cociente puntual sea alto. Además, 61 de 3 587 celdas (entre 18,4°S y 22,5°S) no entran en los mapas por tener menos de 30 rachas, y la exclusión de las rachas censuradas elimina las más largas (en Loa, entre 22 y 40 rachas censuradas por producto superan el p99 de las completas; en el futuro de ALADIN también en Maipo, Maule y Biobío, con 12, 39 y 21). Sexta, R₀ = 5,285 mm iguala frecuencias, no define un día seco físico: ALADIN produce entre 1,8 y 4,4 veces la precipitación anual de CR2MET en las cuatro regiones de los risk ratios (Coquimbo 1 093 frente a 248 mm; O'Higgins 2 299 / 953; La Araucanía 3 647 / 2 055; Los Lagos 5 026 / 2 728), y Leung et al. (2022) encuentra rachas más largas en los modelos que en las observaciones, el signo opuesto al de este trabajo [VERIFICAR: sin leer el suplemento de Leung et al.]. Finalmente, el trabajo caracteriza el cambio en la distribución de duraciones de las rachas secas, pero no diagnostica los mecanismos de circulación que la producen."
+    },
+    {
+      "i": 103,
+      "style": "normal",
+      "text": "El trabajo futuro puede avanzar en tres direcciones. La primera es extender el análisis a otros RCMs del dominio CHP y a otros escenarios, lo que permitiría además evaluar si, como sugieren Petrova et al. (2024), los modelos con mayor sesgo de cola histórico proyectan aumentos menores. La segunda es evaluar si ALADIN reproduce la tendencia observada hacia spells más numerosos y más cortos en Chile central (Latoja et al., 2025), y vincular el contraste con el futuro a cambios en la circulación. La tercera es relacionar las PDFs de duración con índices de sequía y caudales, para traducir el cambio en la cola a impactos hidrológicos."
+    },
+    {
+      "i": 104,
+      "style": "normal",
+      "text": "Los resultados muestran que, hacia 2040–2074 y bajo SSP5-8.5, el modelo proyecta rachas secas más prolongadas, de magnitud compatible con la menor frecuencia de días húmedos, con cambios particularmente visibles en la cola de la distribución de las ventanas de Maipo, Maule y Biobío y, según los risk ratios, de las regiones de Coquimbo y La Araucanía. Caracterizar la distribución de duraciones aporta una dimensión que un índice basado en un único extremo anual no recoge."
+    },
+    {
+      "i": 105,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 106,
+      "style": "normal",
+      "text": ""
+    },
+    {
+      "i": 107,
+      "style": "Heading 1",
+      "text": "5. Referencias"
+    },
+    {
+      "i": 108,
+      "style": "normal",
+      "text": "Álvarez-Garretón, C., Mendoza, P. A., Boisier, J. P., Addor, N., Galleguillos, M., Zambrano-Bigiarini, M., Lara, A., Puelma, C., Cortes, G., Garreaud, R., McPhee, J., y Ayala, A. (2018). The CAMELS-CL dataset: catchment attributes and meteorology for large sample studies – Chile. Hydrology and Earth System Sciences, 22, 5817–5846. https://doi.org/10.5194/hess-22-5817-2018"
+    },
+    {
+      "i": 109,
+      "style": "normal",
+      "text": "Araya-Osses, D., Casanueva, A., Román-Figueroa, C., Uribe, J. M., y Paneque, M. (2020). Climate change projections of temperature and precipitation in Chile based on statistical downscaling. Climate Dynamics, 54, 4309–4330. https://doi.org/10.1007/s00382-020-05231-4"
+    },
+    {
+      "i": 110,
+      "style": "normal",
+      "text": "Báez-Villanueva, O. M., Zambrano-Bigiarini, M., Miralles, D. G., Beck, H. E., Siegmund, J. F., Alvarez-Garreton, C., Verbist, K., Garreaud, R., Boisier, J. P., y Galleguillos, M. (2024). On the timescale of drought indices for monitoring streamflow drought considering catchment hydrological regimes. Hydrology and Earth System Sciences, 28, 1415–1439. https://doi.org/10.5194/hess-28-1415-2024"
+    },
+    {
+      "i": 111,
+      "style": "normal",
+      "text": "Boisier, J. P., Rondanelli, R., Garreaud, R. D., y Muñoz, F. (2016). Anthropogenic and natural contributions to the Southeast Pacific precipitation decline and recent megadrought in central Chile. Geophysical Research Letters, 43(1), 413–421. https://doi.org/10.1002/2015GL067265"
+    },
+    {
+      "i": 112,
+      "style": "normal",
+      "text": "Boisier, J. P., Alvarez-Garretón, C., Cordero, R. R., Damiani, A., Gallardo, L., Garreaud, R. D., Lambert, F., Ramallo, C., Rojas, M., y Rondanelli, R. (2018). Anthropogenic drying in central-southern Chile evidenced by long-term observations and climate model simulations. Elementa: Science of the Anthropocene, 6, 74. https://doi.org/10.1525/elementa.328"
+    },
+    {
+      "i": 113,
+      "style": "normal",
+      "text": "Bozkurt, D., Rojas, M., Boisier, J. P., y Valdivieso, J. (2018). Projected hydroclimate changes over Andean basins in central Chile from downscaled CMIP5 models under the low and high emission scenarios. Climatic Change, 150, 131–154. https://doi.org/10.1007/s10584-018-2246-7"
+    },
+    {
+      "i": 114,
+      "style": "normal",
+      "text": "Garreaud, R. D., Alvarez-Garreton, C., Barichivich, J., Boisier, J. P., Christie, D., Galleguillos, M., … Zambrano-Bigiarini, M. (2017). The 2010–2015 megadrought in central Chile: Impacts on regional hydroclimate and vegetation. Hydrology and Earth System Sciences, 21(12), 6307–6327. https://doi.org/10.5194/hess-21-6307-2017"
+    },
+    {
+      "i": 115,
+      "style": "normal",
+      "text": "Garreaud, R. D., Boisier, J. P., Rondanelli, R., Damiani, A., Veloso-Aguila, D., y Muñoz, F. (2020). The Central Chile Mega Drought (2010–2018): A climate dynamics perspective. International Journal of Climatology, 40(1), 421–439. https://doi.org/10.1002/joc.6219"
+    },
+    {
+      "i": 116,
+      "style": "normal",
+      "text": "Giorgi, F., Im, E.-S., Coppola, E., Diffenbaugh, N. S., Gao, X. J., Mariotti, L., y Shi, Y. (2011). Higher hydroclimatic intensity with global warming. Journal of Climate, 24(20), 5309–5324. https://doi.org/10.1175/2011JCLI3979.1"
+    },
+    {
+      "i": 117,
+      "style": "normal",
+      "text": "Giorgi, F., Raffaele, F., y Coppola, E. (2019). The response of precipitation characteristics to global warming from climate projections. Earth System Dynamics, 10, 73–89. https://doi.org/10.5194/esd-10-73-2019"
+    },
+    {
+      "i": 118,
+      "style": "normal",
+      "text": "Herrera-Marín, M. (2026). A stochastic hazard decomposition for dry-spell onset dynamics under non-stationary hydroclimatic forcing. Stochastic Environmental Research and Risk Assessment, 40(7), 172. https://doi.org/10.1007/s00477-026-03309-9"
+    },
+    {
+      "i": 119,
+      "style": "normal",
+      "text": "Herrera-Marín, M., Rivera, D., y Godoy-Faúndez, A. (2026). Drought begets drought: self-exciting onsets, spell persistence, and network structure in hydroclimatic extremes. Environmental Research Communications, 8, 051001. https://doi.org/10.1088/2515-7620/ae639a"
+    },
+    {
+      "i": 120,
+      "style": "normal",
+      "text": "Lana, X., Martínez, M. D., Burgueño, A., Serra, C., Martín-Vide, J., y Gómez, L. (2006). Distributions of long dry spells in the Iberian Peninsula, years 1951–1990. International Journal of Climatology, 26(14), 1999–2021. https://doi.org/10.1002/joc.1354"
+    },
+    {
+      "i": 121,
+      "style": "normal",
+      "text": "Latoja, D., Rivera, D., Lillo-Saavedra, M., y Godoy-Faúndez, Á. (2025). Shifting dry spells in Central Chile: Implications for agricultural water planning. Agricultural & Environmental Letters, 10, e70037. https://doi.org/10.1002/ael2.70037"
+    },
+    {
+      "i": 122,
+      "style": "normal",
+      "text": "Leung, L. R., … Martinez-Villalobos, C., … y Zhou, Y. (2022). Exploratory precipitation "
+    },
+    {
+      "i": 123,
+      "style": "normal",
+      "text": "metrics: Spatiotemporal characteristics, process-oriented, and phenomena-based. "
+    },
+    {
+      "i": 124,
+      "style": "normal",
+      "text": "Journal of Climate, 35(12), 3659–3686. https://doi.org/10.1175/JCLI-D-21-0590.1"
+    },
+    {
+      "i": 125,
+      "style": "normal",
+      "text": "Martinez-Villalobos, C., y Neelin, J. D. (2018). Shifts in precipitation accumulation extremes during the warm season over the United States. Geophysical Research Letters, 45(16), 8586–8595. https://doi.org/10.1029/2018GL078465"
+    },
+    {
+      "i": 126,
+      "style": "normal",
+      "text": "Martinez-Villalobos, C., y Neelin, J. D. (2019). Why do precipitation intensities tend to follow gamma distributions? Journal of the Atmospheric Sciences, 76(11), 3611–3631. https://doi.org/10.1175/JAS-D-18-0343.1"
+    },
+    {
+      "i": 127,
+      "style": "normal",
+      "text": "Martinez-Villalobos, C., Neelin, J. D., y Pendergrass, A. G. (2022). Metrics for evaluating CMIP6 representation of daily precipitation probability distributions. Journal of Climate, 35(17), 5719–5743. https://doi.org/10.1175/JCLI-D-21-0617.1"
+    },
+    {
+      "i": 128,
+      "style": "normal",
+      "text": "Pendergrass, A. G., y Knutti, R. (2018). The uneven nature of daily precipitation and its change. Geophysical Research Letters, 45(21), 11980–11988. https://doi.org/10.1029/2018GL080298"
+    },
+    {
+      "i": 129,
+      "style": "normal",
+      "text": "Petrova, I. Y., Miralles, D. G., Brient, F., Donat, M. G., Min, S.-K., Kim, Y.-H., y Bador, M. (2024). Observation-constrained projections reveal longer-than-expected dry spells. Nature, 633, 594–600. https://doi.org/10.1038/s41586-024-07887-y"
+    },
+    {
+      "i": 130,
+      "style": "normal",
+      "text": "Polade, S. D., Pierce, D. W., Cayan, D. R., Gershunov, A., y Dettinger, M. D. (2014). The key role of dry days in changing regional climate and precipitation regimes. Scientific Reports, 4, 4364. https://doi.org/10.1038/srep04364"
+    },
+    {
+      "i": 131,
+      "style": "normal",
+      "text": "Polade, S. D., Gershunov, A., Cayan, D. R., Dettinger, M. D., y Pierce, D. W. (2017). Precipitation in a warming world: Assessing projected hydro-climate changes in California and other Mediterranean climate regions. Scientific Reports, 7, 10783. https://doi.org/10.1038/s41598-017-11285-y"
+    },
+    {
+      "i": 132,
+      "style": "normal",
+      "text": "Salazar, Á., Thatcher, M., Goubanova, K., Bernal, P., Gutiérrez, J., y Squeo, F. (2024). CMIP6 precipitation and temperature projections for Chile. Climate Dynamics. https://doi.org/10.1007/s00382-023-07034-9"
+    },
+    {
+      "i": 133,
+      "style": "normal",
+      "text": "Sillmann, J., Kharin, V. V., Zhang, X., Zwiers, F. W., y Bronaugh, D. (2013a). Climate extremes indices in the CMIP5 multimodel ensemble: Part 1. Model evaluation in the present climate. Journal of Geophysical Research: Atmospheres, 118, 1716–1733. https://doi.org/10.1002/jgrd.50203"
+    },
+    {
+      "i": 134,
+      "style": "normal",
+      "text": "Sillmann, J., Kharin, V. V., Zwiers, F. W., Zhang, X., y Bronaugh, D. (2013b). Climate extremes indices in the CMIP5 multimodel ensemble: Part 2. Future climate projections. Journal of Geophysical Research: Atmospheres, 118, 2473–2493. https://doi.org/10.1002/jgrd.50188"
+    },
+    {
+      "i": 135,
+      "style": "normal",
+      "text": "Stephens, G. L., L’Ecuyer, T., Forbes, R., Gettelman, A., Golaz, J.-C., Bodas-Salcedo, A., Suzuki, K., Gabriel, P., y Haynes, J. (2010). Dreary state of precipitation in global models. Journal of Geophysical Research: Atmospheres, 115, D24211. https://doi.org/10.1029/2010JD014532"
+    },
+    {
+      "i": 136,
+      "style": "normal",
+      "text": "Trenberth, K. E., Dai, A., Rasmussen, R. M., y Parsons, D. B. (2003). The changing character of precipitation. Bulletin of the American Meteorological Society, 84(9), 1205–1218. https://doi.org/10.1175/BAMS-84-9-1205"
+    },
+    {
+      "i": 137,
+      "style": "normal",
+      "text": "Wainwright, C. M., Black, E., y Allan, R. P. (2021). Future changes in wet and dry season characteristics in CMIP5 and CMIP6 simulations. Journal of Hydrometeorology, 22, 2339–2357. https://doi.org/10.1175/JHM-D-21-0017.1"
+    },
+    {
+      "i": 138,
+      "style": "normal",
+      "text": "Zhang, X., Alexander, L., Hegerl, G. C., Jones, P., Klein Tank, A., Peterson, T. C., Trewin, B., y Zwiers, F. W. (2011). Indices for monitoring changes in extremes based on daily temperature and precipitation data. Wiley Interdisciplinary Reviews: Climate Change, 2(6), 851–870. https://doi.org/10.1002/wcc.147"
+    },
+    {
+      "i": 139,
+      "style": "normal",
+      "text": "Zolina, O., Simmer, C., Belyaev, K., Gulev, S. K., y Koltermann, P. (2013). Changes in the duration of European wet and dry spells during the last 60 years. Journal of Climate, 26(6), 2022–2047. https://doi.org/10.1175/JCLI-D-11-00498.1"
+    }
+  ],
+  "parts": {
+    "word/header1.xml": "0895fb162de11523be0726a34aac9275a146345dda6d4918a6e1470ee6f1064c",
+    "word/numbering.xml": "d2a3e08465525eee874ea10d780540816951a37b115e90f1cd56aefdd76adc2e",
+    "word/settings.xml": "26f2853fde05b88d4b0a9da0bb016d56a896901f60c9272dddf33c3f3fa61e4a",
+    "word/comments.xml": "23826eca607ff316826ac4cbbbd77fe5361d3cb5694cf8eadd6f29610046ccca",
+    "word/fontTable.xml": "afe1cd59076761ad28e773e51f7ebbb9e13c8079eba13d8f76fdf37ebc7b62c2",
+    "word/_rels/fontTable.xml.rels": "58a5800154730b8c4291adf10f37baabb95270b413756ead2fd22d0ffcd8a9d1",
+    "word/styles.xml": "f5410dcdb4ce3707c402e578bcdffbabddeca47d2bf57f12af41625978a21890",
+    "word/document.xml": "a242569e5804e4cc9c8d1b5859a23fab5a3bc3f03aa06be6adb77469ddba4c81",
+    "word/_rels/document.xml.rels": "1a3edb9f50ee5cd73703f7b6d9cd6eee8d85dcbda381cd113b84593fa34e779e",
+    "_rels/.rels": "1cc87395d4a229f21c23af406724de12dd9454071925f983e4b648a7b2be8cc5",
+    "word/theme/theme1.xml": "b2295d3198893d2c03f5e584c749a15751b798aefdcd9bee2889f13903d68cb2",
+    "word/media/image3.png": "c51e2b8c00b3e6ad231e701cbe6d17d3084521c90cb9773226dbdcbad91d20df",
+    "word/media/image1.png": "2d0aa21438913b5f48d8159cb8456bc7214af0455967e2471be42ecb5a36bb4e",
+    "word/fonts/Caudex-bold.ttf": "309a795d962fa15d988ea1870b03b1e51c9d0ff0fe1ad519ecde5f7dc8c80f76",
+    "word/media/image4.png": "9c28cf7f0c25b824a3ac4d34b4abbdbe0c63ad3392e7cf69d1781cab0bf6f235",
+    "word/fonts/Caudex-regular.ttf": "6bad3f1cb862b19b5e800eb7116cfaf8f8461bca8c6545940338feebc3228c5c",
+    "word/media/image6.png": "1d3e565c5c2958281ca80a96cd6dc8e543a39c1bfd8c4288f453cfe701df1cfe",
+    "word/media/image2.png": "78f4e78b1444470a250f0a6106fd8cab7967494f1459a84bc18bc77191c7468b",
+    "word/fonts/Cardo-bold.ttf": "58ea42a4bd3edc123fb1e876c07eacd2a3bfbd829d3473b0c53cec2ba1279bec",
+    "word/fonts/Cardo-regular.ttf": "2b86847db9b2737b09281cb404487b2d2c0c003d8db41b94abdac07d683d42ca",
+    "word/media/image5.png": "052d903e6941972b752d37bf4ddcd7e2ff4e1e0e9ddcba7dec7c18ebfc0b1c6c",
+    "word/fonts/Caudex-boldItalic.ttf": "27a4c14cc40440b2dd227c828238b43ab9349555328cd7734e8d77c79ae6a48f",
+    "word/fonts/Cardo-italic.ttf": "148086e3b40c970e2db79446c8b00cefc95cfd88c73f928caba731b4d4662bb6",
+    "word/fonts/Caudex-italic.ttf": "0d1f84575ce37ef0fbf0a099342a387489b425dcf3fc249e9b28fa3f9ecfbde5",
+    "[Content_Types].xml": "a4e25cca4e7783ef528f09876eb2b47c17e230599dd661a0bc9d6cb5512196cb"
+  }
+}

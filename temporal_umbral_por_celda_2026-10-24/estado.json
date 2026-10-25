@@ -1,0 +1,305 @@
+{
+  "status": "calculos_completos",
+  "started_utc": "2026-10-24T17:42:53.258971+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": [
+        "calibrar_local.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/00_calibrar_local.log",
+      "seconds": 108.047,
+      "returncode": 0
+    },
+    {
+      "index": 1,
+      "command": [
+        "_generar_fig03_calibracion_R0.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/01__generar_fig03_calibracion_R0.log",
+      "seconds": 22.963,
+      "returncode": 0
+    },
+    {
+      "index": 2,
+      "command": [
+        "_run_pregunta7_bootstrap.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/02__run_pregunta7_bootstrap.log",
+      "seconds": 607.984,
+      "returncode": 0
+    },
+    {
+      "index": 3,
+      "command": [
+        "_calcular_sesgo_ventanas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/03__calcular_sesgo_ventanas.log",
+      "seconds": 0.39,
+      "returncode": 0
+    },
+    {
+      "index": 4,
+      "command": [
+        "_generar_tablaS1_sensibilidad_chile.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/04__generar_tablaS1_sensibilidad_chile.log",
+      "seconds": 0.302,
+      "returncode": 0
+    },
+    {
+      "index": 5,
+      "command": [
+        "_run_pregunta5_aladin.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/05__run_pregunta5_aladin.log",
+      "seconds": 34.103,
+      "returncode": 0
+    },
+    {
+      "index": 6,
+      "command": [
+        "_run_pregunta5_aladin.py",
+        "--umbral",
+        "1"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/06__run_pregunta5_aladin.log",
+      "seconds": 34.552,
+      "returncode": 0
+    },
+    {
+      "index": 7,
+      "command": [
+        "_run_pregunta5_aladin.py",
+        "--escenario",
+        "ssp370"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/07__run_pregunta5_aladin.log",
+      "seconds": 32.832,
+      "returncode": 0
+    },
+    {
+      "index": 8,
+      "command": [
+        "_referencia_markov_rr_regiones.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/08__referencia_markov_rr_regiones.log",
+      "seconds": 15.806,
+      "returncode": 0
+    },
+    {
+      "index": 9,
+      "command": [
+        "_contraste_persistencia_regiones.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/09__contraste_persistencia_regiones.log",
+      "seconds": 8.155,
+      "returncode": 0
+    },
+    {
+      "index": 10,
+      "command": [
+        "_generar_pregunta9_pdf_loglog_cuencas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/10__generar_pregunta9_pdf_loglog_cuencas.log",
+      "seconds": 35.953,
+      "returncode": 0
+    },
+    {
+      "index": 11,
+      "command": [
+        "_generar_figS1_sensibilidad_umbral.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/11__generar_figS1_sensibilidad_umbral.log",
+      "seconds": 41.072,
+      "returncode": 0
+    },
+    {
+      "index": 12,
+      "command": [
+        "_calcular_tabla3_ventanas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/12__calcular_tabla3_ventanas.log",
+      "seconds": 0.589,
+      "returncode": 0
+    },
+    {
+      "index": 13,
+      "command": [
+        "_calcular_frecuencia_humeda_ventanas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/13__calcular_frecuencia_humeda_ventanas.log",
+      "seconds": 15.044,
+      "returncode": 0
+    },
+    {
+      "index": 14,
+      "command": [
+        "_calcular_estacionalidad_marnov_regiones.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/14__calcular_estacionalidad_marnov_regiones.log",
+      "seconds": 32.679,
+      "returncode": 0
+    },
+    {
+      "index": 15,
+      "command": [
+        "_generar_figS2_mapa_R0_local.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/15__generar_figS2_mapa_R0_local.log",
+      "seconds": 1.69,
+      "returncode": 0
+    },
+    {
+      "index": 16,
+      "command": [
+        "_test_regrillado_conservativo.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/16__test_regrillado_conservativo.log",
+      "seconds": 61.842,
+      "returncode": 0
+    },
+    {
+      "index": 17,
+      "command": [
+        "_cuantificar_censuradas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/17__cuantificar_censuradas.log",
+      "seconds": 3.706,
+      "returncode": 0
+    },
+    {
+      "index": 18,
+      "command": [
+        "_generar_figT01_referencia_sin_memoria.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/18__generar_figT01_referencia_sin_memoria.log",
+      "seconds": 5.044,
+      "returncode": 0
+    },
+    {
+      "index": 19,
+      "command": [
+        "_generar_fig_rr_regiones.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/19__generar_fig_rr_regiones.log",
+      "seconds": 0.763,
+      "returncode": 0
+    },
+    {
+      "index": 20,
+      "command": [
+        "_generar_fig05_mapas_persistencia.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/20__generar_fig05_mapas_persistencia.log",
+      "seconds": 3.108,
+      "returncode": 0
+    },
+    {
+      "index": 21,
+      "command": [
+        "_generar_fig_dominio_ventanas_regiones.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/21__generar_fig_dominio_ventanas_regiones.log",
+      "seconds": 3.721,
+      "returncode": 0
+    },
+    {
+      "index": 22,
+      "command": [
+        "_generar_fig02_esquema_dryspell.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/22__generar_fig02_esquema_dryspell.log",
+      "seconds": 0.487,
+      "returncode": 0
+    },
+    {
+      "index": 23,
+      "command": [
+        "_sensibilidad_minimo_rachas.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/23__sensibilidad_minimo_rachas.log",
+      "seconds": 133.199,
+      "returncode": 0
+    },
+    {
+      "index": 24,
+      "command": [
+        "diagnostico_regional.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/24_diagnostico_regional.log",
+      "seconds": 11.724,
+      "returncode": 0
+    },
+    {
+      "index": 25,
+      "command": [
+        "figura_calibracion_local.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/25_figura_calibracion_local.log",
+      "seconds": 0.767,
+      "returncode": 0
+    },
+    {
+      "index": 26,
+      "command": [
+        "verificar_consistencia_local.py",
+        "--ejecucion",
+        "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion",
+        "--salida",
+        "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/controles_consistencia.json"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/26_verificar_consistencia_local.log",
+      "seconds": 2.532,
+      "returncode": 0
+    },
+    {
+      "index": 27,
+      "command": [
+        "../verificar_datos.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/27_verificar_datos.log",
+      "seconds": 13.383,
+      "returncode": 0
+    },
+    {
+      "index": 28,
+      "command": [
+        "../generar_comparativa.py"
+      ],
+      "status": "completo",
+      "log": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/logs/28_generar_comparativa.log",
+      "seconds": 4.999,
+      "returncode": 0
+    }
+  ],
+  "finished_utc": "2026-10-24T18:26:50.639296+00:00"
+}

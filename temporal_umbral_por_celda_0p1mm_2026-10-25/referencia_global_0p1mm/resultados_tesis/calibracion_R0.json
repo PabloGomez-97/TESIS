@@ -1,0 +1,11 @@
+{
+  "periodo": "1980-2014",
+  "celdas": 3587,
+  "umbral_cr2met_mm": 0.1,
+  "F_cr2met_0p1mm_pct": 23.471661677738382,
+  "F_aladin_0p1mm_pct": 40.657690230295536,
+  "exceso_aladin_0p1mm_pp": 17.186028552557154,
+  "R0_biseccion_mm": 3.6679874658584595,
+  "R0_usado_mm": 3.668,
+  "F_aladin_R0_usado_pct": 23.471635508980594
+}

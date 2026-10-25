@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": {
+    "14_DOI_verificados": true,
+    "identidad_DOI": true,
+    "14_fichas": true,
+    "11_definiciones_y_3_sin_asignar": true,
+    "recuento_de_seleccion": true,
+    "14_entradas_bibliograficas": true,
+    "todas_con_fuente_y_localizador": true
+  }
+}

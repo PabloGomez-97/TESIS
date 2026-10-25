@@ -1,0 +1,11 @@
+Celdas por region: {'Coquimbo': 239, "O'Higgins": 110, 'La Araucanía': 223, 'Los Lagos': 324}
+  celdas 200/896
+  celdas 400/896
+  celdas 600/896
+  celdas 800/896
+  celdas 896/896
+      region  D  N_hist_obs  N_fut_obs  N_hist_markov  N_fut_markov  N_fut_solo_frec  cobertura_markov_hist  RR_obs  RR_markov  RR_markov_sd  RR_solo_frec  RR_solo_frec_sd  f_persist  f_residuo  IC95_obs_inf  IC95_obs_sup  solo_frec_dentro_IC95_obs
+    Coquimbo 20       26613      28788      27416.300     28934.850        28472.625                  1.030   1.082      1.055         0.003         1.039            0.003      1.016      1.025         0.986         1.204                       True
+   O'Higgins 20        8202       9511       8144.075      9518.825         9653.050                  0.993   1.160      1.169         0.007         1.185            0.007      0.986      0.992         0.974         1.386                       True
+La Araucanía 20        2185       3789       1951.300      3332.425         3489.150                  0.893   1.734      1.708         0.019         1.789            0.028      0.955      1.015         1.080         3.044                       True
+   Los Lagos 20         328        371        160.425       350.625          290.875                  0.489   1.131      2.194         0.146         1.820            0.126      1.206      0.515         0.326         8.114                       True

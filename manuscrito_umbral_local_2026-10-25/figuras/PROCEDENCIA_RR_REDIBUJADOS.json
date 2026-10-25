@@ -1,0 +1,17 @@
+[
+  {
+    "archivo": "Figura_06.png",
+    "fuente": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin/results.json",
+    "nota": "Redibujado sin alterar estimaciones; banda solo si no hay descartes; eje logarítmico sin recortar RR."
+  },
+  {
+    "archivo": "Figura_S3.png",
+    "fuente": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_1mm/results.json",
+    "nota": "Redibujado sin alterar estimaciones; banda solo si no hay descartes; eje logarítmico sin recortar RR."
+  },
+  {
+    "archivo": "Figura_S4.png",
+    "fuente": "/Users/pablogomez/Documents/GitHub/TESIS/temporal_umbral_por_celda_2026-10-24/ejecucion/outputs_pregunta5_aladin_ssp370/results.json",
+    "nota": "Redibujado sin alterar estimaciones; banda solo si no hay descartes; eje logarítmico sin recortar RR."
+  }
+]

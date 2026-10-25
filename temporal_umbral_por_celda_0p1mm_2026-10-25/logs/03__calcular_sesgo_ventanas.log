@@ -1,0 +1,11 @@
+       metrica            zona  celdas_ventana  celdas_validas  cr2met_prom  aladin_prom  delta_promedio  delta_mediana
+Duración media             Loa             298             298        57.21        48.40           -8.82          -7.83
+Duración media           Maipo             154             154        10.42         9.77           -0.65          -0.69
+Duración media           Maule             171             171         8.87         7.82           -1.05          -1.16
+Duración media          Biobio             243             243         5.94         5.27           -0.67          -0.76
+Duración media Todo el dominio            3587            3583        29.03        24.79           -4.24          -1.47
+  Percentil 99             Loa             298             298       279.20       236.90          -42.30         -36.82
+  Percentil 99           Maipo             154             154        82.02        94.78           12.76          12.46
+  Percentil 99           Maule             171             171        61.10        62.26            1.16          -0.98
+  Percentil 99          Biobio             243             243        33.85        30.81           -3.05          -4.00
+  Percentil 99 Todo el dominio            3587            3583       151.22       139.78          -11.44          -2.00

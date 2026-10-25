@@ -1,0 +1,89 @@
+OK Duraciones positivas enteras: Loa/CR2MET (hist)
+OK Tabla 3 desde duraciones: Loa/CR2MET (hist)
+OK Histograma conserva eventos: Loa/CR2MET (hist)
+OK Duraciones positivas enteras: Loa/ALADIN (hist)
+OK Tabla 3 desde duraciones: Loa/ALADIN (hist)
+OK Histograma conserva eventos: Loa/ALADIN (hist)
+OK Duraciones positivas enteras: Loa/ALADIN (futuro)
+OK Tabla 3 desde duraciones: Loa/ALADIN (futuro)
+OK Histograma conserva eventos: Loa/ALADIN (futuro)
+OK PDF principal y sensibilidad coinciden: Loa/CR2MET (hist)
+OK PDF principal y sensibilidad coinciden: Loa/ALADIN (hist)
+OK Duraciones positivas enteras: Maipo/CR2MET (hist)
+OK Tabla 3 desde duraciones: Maipo/CR2MET (hist)
+OK Histograma conserva eventos: Maipo/CR2MET (hist)
+OK Duraciones positivas enteras: Maipo/ALADIN (hist)
+OK Tabla 3 desde duraciones: Maipo/ALADIN (hist)
+OK Histograma conserva eventos: Maipo/ALADIN (hist)
+OK Duraciones positivas enteras: Maipo/ALADIN (futuro)
+OK Tabla 3 desde duraciones: Maipo/ALADIN (futuro)
+OK Histograma conserva eventos: Maipo/ALADIN (futuro)
+OK PDF principal y sensibilidad coinciden: Maipo/CR2MET (hist)
+OK PDF principal y sensibilidad coinciden: Maipo/ALADIN (hist)
+OK Duraciones positivas enteras: Maule/CR2MET (hist)
+OK Tabla 3 desde duraciones: Maule/CR2MET (hist)
+OK Histograma conserva eventos: Maule/CR2MET (hist)
+OK Duraciones positivas enteras: Maule/ALADIN (hist)
+OK Tabla 3 desde duraciones: Maule/ALADIN (hist)
+OK Histograma conserva eventos: Maule/ALADIN (hist)
+OK Duraciones positivas enteras: Maule/ALADIN (futuro)
+OK Tabla 3 desde duraciones: Maule/ALADIN (futuro)
+OK Histograma conserva eventos: Maule/ALADIN (futuro)
+OK PDF principal y sensibilidad coinciden: Maule/CR2MET (hist)
+OK PDF principal y sensibilidad coinciden: Maule/ALADIN (hist)
+OK Duraciones positivas enteras: Biobio/CR2MET (hist)
+OK Tabla 3 desde duraciones: Biobio/CR2MET (hist)
+OK Histograma conserva eventos: Biobio/CR2MET (hist)
+OK Duraciones positivas enteras: Biobio/ALADIN (hist)
+OK Tabla 3 desde duraciones: Biobio/ALADIN (hist)
+OK Histograma conserva eventos: Biobio/ALADIN (hist)
+OK Duraciones positivas enteras: Biobio/ALADIN (futuro)
+OK Tabla 3 desde duraciones: Biobio/ALADIN (futuro)
+OK Histograma conserva eventos: Biobio/ALADIN (futuro)
+OK PDF principal y sensibilidad coinciden: Biobio/CR2MET (hist)
+OK PDF principal y sensibilidad coinciden: Biobio/ALADIN (hist)
+OK Meses permitidos RR: /Coquimbo
+OK 10 RR y bootstrap independiente por conteos anuales: /Coquimbo
+OK Meses permitidos RR: /O'Higgins
+OK 10 RR y bootstrap independiente por conteos anuales: /O'Higgins
+OK Meses permitidos RR: /La Araucanía
+OK 10 RR y bootstrap independiente por conteos anuales: /La Araucanía
+OK Meses permitidos RR: /Los Lagos
+OK 10 RR y bootstrap independiente por conteos anuales: /Los Lagos
+OK Meses permitidos RR: _1mm/Coquimbo
+OK 10 RR y bootstrap independiente por conteos anuales: _1mm/Coquimbo
+OK Meses permitidos RR: _1mm/O'Higgins
+OK 10 RR y bootstrap independiente por conteos anuales: _1mm/O'Higgins
+OK Meses permitidos RR: _1mm/La Araucanía
+OK 10 RR y bootstrap independiente por conteos anuales: _1mm/La Araucanía
+OK Meses permitidos RR: _1mm/Los Lagos
+OK 10 RR y bootstrap independiente por conteos anuales: _1mm/Los Lagos
+OK Meses permitidos RR: _ssp370/Coquimbo
+OK 10 RR y bootstrap independiente por conteos anuales: _ssp370/Coquimbo
+OK Meses permitidos RR: _ssp370/O'Higgins
+OK 10 RR y bootstrap independiente por conteos anuales: _ssp370/O'Higgins
+OK Meses permitidos RR: _ssp370/La Araucanía
+OK 10 RR y bootstrap independiente por conteos anuales: _ssp370/La Araucanía
+OK Meses permitidos RR: _ssp370/Los Lagos
+OK 10 RR y bootstrap independiente por conteos anuales: _ssp370/Los Lagos
+OK Máscara Chile de 3587 celdas
+OK Máscara común principal mean
+OK Delta mapa y bootstrap mean
+OK Máscara común principal t99
+OK Delta mapa y bootstrap t99
+OK Significancia desde intervalos: A_opcion_B_integrado/mean
+OK Resumen desde NPZ: A_opcion_B_integrado/mean
+OK Significancia desde intervalos: A_opcion_B_integrado/t99
+OK Resumen desde NPZ: A_opcion_B_integrado/t99
+OK Significancia desde intervalos: B_mismo_umbral/mean
+OK Resumen desde NPZ: B_mismo_umbral/mean
+OK Significancia desde intervalos: B_mismo_umbral/t99
+OK Resumen desde NPZ: B_mismo_umbral/t99
+OK Significancia desde intervalos: C_umbral_local/mean
+OK Resumen desde NPZ: C_umbral_local/mean
+OK Significancia desde intervalos: C_umbral_local/t99
+OK Resumen desde NPZ: C_umbral_local/t99
+OK Conteos independientes Markov y RR
+OK Rachas completas en diagnóstico de censura y PDFs
+OK R0 global de referencia coincide con su calibración escalar
+{"passed": true, "checks": 88, "failures": []}

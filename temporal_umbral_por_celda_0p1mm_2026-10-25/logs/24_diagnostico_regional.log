@@ -1,0 +1,9 @@
+      region estacion  celdas  CR2MET_pct  global_pct  local_pct  exceso_global_pp  exceso_local_pp
+    Coquimbo    anual     239     11.5077     13.2443    11.5081            1.7366           0.0004
+   O'Higgins    anual     110     19.3682     23.3959    19.3682            4.0277           0.0000
+La Araucanía    anual     223     41.4148     41.9629    41.4146            0.5482          -0.0002
+   Los Lagos    anual     324     61.4423     55.9120    61.4419           -5.5303          -0.0003
+    Coquimbo  mar-nov     239     12.2837     15.6888    13.6800            3.4051           1.3963
+   O'Higgins  mar-nov     110     23.5306     29.0014    24.4237            5.4708           0.8931
+La Araucanía  mar-nov     223     47.2770     48.1879    47.6689            0.9109           0.3920
+   Los Lagos  mar-nov     324     65.9084     59.6297    64.9280           -6.2787          -0.9804

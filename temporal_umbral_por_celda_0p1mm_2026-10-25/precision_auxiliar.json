@@ -1,0 +1,11 @@
+{
+  "lin": {
+    "dias_celda_reclasificados": 17,
+    "celdas_afectadas": 17
+  },
+  "area": {
+    "dias_celda_reclasificados": 3767,
+    "celdas_afectadas": 1877
+  },
+  "nota": "Clasificación float64 frente a caché float32 previa a 0,1 mm; se repitieron regrillado, censura y T01."
+}
